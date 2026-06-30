@@ -1,5 +1,3 @@
-# intern-razeen-dw-project
-
 # Retail Sales Data Engineering Project
 
 End-to-end ETL pipeline built on Microsoft Fabric, transforming raw retail sales CSV data into a curated, analytics-ready Delta table and a multi-page Power BI dashboard.
@@ -64,6 +62,8 @@ SuperstoreLakehouse/
     └── dim_shipmode/
 ```
 
+![Lakehouse Tables](Screenshots/tables.png)
+
 ## Setup Steps
 
 1. **Create a Fabric workspace** — `RetailSalesProject`
@@ -89,10 +89,25 @@ The pipeline runs the ETL notebook on a daily schedule via Fabric Data Pipelines
 
 Four-page Power BI report (`Retail Sales Dashboard`):
 
-- **Executive** — KPI summary (Total Sales $2.30M, Total Profit $286.24K, Profit Margin 12.47%, Avg Discount 0.16, Total Quantity 37.82K), sales by category/segment/ship mode, profit by region, sales by state/city
-- **Sales** — category and quantity breakdowns, sales by city/state, with category/region/segment/ship mode slicers
-- **Profit** — category profit, average discount vs. profit by category, city profit ranking, loss state map
-- **Shipping** — ship mode usage and profit, region profit/sales, ship mode sales
+### Executive
+KPI summary (Total Sales $2.30M, Total Profit $286.24K, Profit Margin 12.47%, Avg Discount 0.16, Total Quantity 37.82K), sales by category/segment/ship mode, profit by region, sales by state/city.
+
+![Executive Dashboard](Screenshots/executive.png)
+
+### Sales
+Category and quantity breakdowns, sales by city/state, with category/region/segment/ship mode slicers.
+
+![Sales Page](Screenshots/sales.png)
+
+### Profit
+Category profit, average discount vs. profit by category, city profit ranking, loss state map.
+
+![Profit Page](Screenshots/profit.png)
+
+### Shipping
+Ship mode usage and profit, region profit/sales, ship mode sales.
+
+![Shipping Page](Screenshots/shipping.png)
 
 ## Sample SQL Queries
 
@@ -140,10 +155,11 @@ GROUP BY ship_mode;
 │   └── ETL_Notebook.py
 ├── sql/
 │   └── sample_queries.sql
-└── screenshots/
-    ├── executive_dashboard.png
-    ├── sales_page.png
-    ├── profit_page.png
-    ├── shipping_page.png
-    └── lakehouse_tables.png
+└── Screenshots/
+    ├── executive.png
+    ├── sales.png
+    ├── profit.png
+    ├── shipping.png
+    ├── tables.png
+    └── files.png
 ```
