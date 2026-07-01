@@ -1,0 +1,501 @@
+ticket_id,created_at,description,true_category,true_priority,true_sentiment,customer_name,ticket_length,description_clean,text_length,word_count,day_of_week,hour
+1,2026-06-08 16:09:05.864228,Your platform has transformed our workflow.,Other,Low,Neutral,Customer_9935,6,your platform has transformed our workflow,42,6,Monday,16
+2,2026-06-15 00:09:05.864228,Cannot login to my account. Getting 500 error on login page.,Bug,High,Positive,Customer_1434,11,cannot login to my account getting 500 error on login page,58,11,Monday,0
+3,2026-06-17 01:09:05.864228,I need to add team members to my workspace.,Account,Low,Neutral,Customer_5557,9,i need to add team members to my workspace,42,9,Wednesday,1
+4,2026-06-27 13:09:05.864228,Mobile app freezes when uploading files larger than 50MB.,Bug,High,Neutral,Customer_6514,9,mobile app freezes when uploading files larger than 50mb,56,9,Saturday,13
+5,2026-06-06 18:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Low,Positive,Customer_8527,12,export to csv feature crashes when i select more than 1000 rows,63,12,Saturday,18
+6,2026-06-04 23:09:05.864228,How do I change my email address?,Account,Low,Negative,Customer_6925,7,how do i change my email address?,33,7,Thursday,23
+7,2026-06-04 12:09:05.864228,"I forgot my password, please reset it. This is urgent!",Account,Low,Positive,Customer_2654,10,i forgot my password please reset it this is urgent!,52,10,Thursday,12
+8,2026-06-20 13:09:05.864228,How do I reset my API key?,Technical Support,Low,Neutral,Customer_5374,7,how do i reset my api key?,26,7,Saturday,13
+9,2026-06-13 20:09:05.864228,Can you recommend best practices for scaling?,Other,Critical,Negative,Customer_5010,7,can you recommend best practices for scaling?,45,7,Saturday,20
+10,2026-06-21 18:09:05.864228,Can you implement two-factor authentication?,Feature Request,Medium,Positive,Customer_4752,5,can you implement twofactor authentication?,43,5,Sunday,18
+11,2026-06-01 01:09:05.864228,Cannot login to my account. Getting 500 error on login page.,Bug,Critical,Negative,Customer_6155,11,cannot login to my account getting 500 error on login page,58,11,Monday,1
+12,2026-06-27 12:09:05.864228,We need API access for custom integrations.,Feature Request,Medium,Neutral,Customer_9830,7,we need api access for custom integrations,42,7,Saturday,12
+13,2026-06-24 15:09:05.864228,I was charged but didn't confirm the transaction.,Billing,High,Negative,Customer_9348,8,i was charged but didnt confirm the transaction,47,8,Wednesday,15
+14,2026-06-25 22:09:05.864228,How do I connect my database to the platform?,Technical Support,Low,Positive,Customer_7916,9,how do i connect my database to the platform?,45,9,Thursday,22
+15,2026-06-14 19:09:05.864228,How do I delete my account?,Account,Low,Neutral,Customer_2876,6,how do i delete my account?,27,6,Sunday,19
+16,2026-06-18 14:09:05.864228,Question about your roadmap priorities.,Other,High,Negative,Customer_8433,5,question about your roadmap priorities,38,5,Thursday,14
+17,2026-06-15 16:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows. Thanks in advance.,Bug,Critical,Negative,Customer_5889,15,export to csv feature crashes when i select more than 1000 rows thanks in advance,81,15,Monday,16
+18,2026-06-01 03:09:05.864228,Question about your roadmap priorities. Losing money on this.,Other,Medium,Positive,Customer_1009,9,question about your roadmap priorities losing money on this,59,9,Monday,3
+19,2026-06-24 18:09:05.864228,Can you update my billing address? Been waiting 3 days.,Account,Low,Positive,Customer_4946,10,can you update my billing address? been waiting 3 days,54,10,Wednesday,18
+20,2026-06-07 15:09:05.864228,How do I delete my account? Losing money on this.,Account,Critical,Neutral,Customer_3103,10,how do i delete my account? losing money on this,48,10,Sunday,15
+21,2026-06-12 06:09:05.864228,Question about your roadmap priorities.,Other,Medium,Neutral,Customer_4470,5,question about your roadmap priorities,38,5,Friday,6
+22,2026-06-09 23:09:05.864228,Can you update my billing address?,Account,High,Negative,Customer_7118,6,can you update my billing address?,34,6,Tuesday,23
+23,2026-06-21 19:09:05.864228,What's the maximum file size I can upload?,Technical Support,High,Negative,Customer_4770,8,whats the maximum file size i can upload?,41,8,Sunday,19
+24,2026-06-03 18:09:05.864228,How do I change my email address?,Account,Low,Positive,Customer_6413,7,how do i change my email address?,33,7,Wednesday,18
+25,2026-06-26 20:09:05.864228,Mobile app freezes when uploading files larger than 50MB.,Bug,High,Neutral,Customer_8744,9,mobile app freezes when uploading files larger than 50mb,56,9,Friday,20
+26,2026-06-10 06:09:05.864228,Would love to see integration with Slack for notifications.,Feature Request,High,Negative,Customer_6804,9,would love to see integration with slack for notifications,58,9,Wednesday,6
+27,2026-06-11 16:09:05.864228,How do I connect my database to the platform?,Technical Support,Medium,Negative,Customer_1993,9,how do i connect my database to the platform?,45,9,Thursday,16
+28,2026-06-25 02:09:05.864228,How do I connect my database to the platform?,Technical Support,Medium,Negative,Customer_8350,9,how do i connect my database to the platform?,45,9,Thursday,2
+29,2026-06-17 02:09:05.864228,Would love to see integration with Slack for notifications. This is urgent!,Feature Request,Medium,Positive,Customer_2604,12,would love to see integration with slack for notifications this is urgent!,74,12,Wednesday,2
+30,2026-06-26 06:09:05.864228,Cannot login to my account. Getting 500 error on login page. Thanks in advance.,Bug,High,Negative,Customer_8956,14,cannot login to my account getting 500 error on login page thanks in advance,76,14,Friday,6
+31,2026-07-01 07:09:05.864228,How do I connect my database to the platform?,Technical Support,Low,Neutral,Customer_5345,9,how do i connect my database to the platform?,45,9,Wednesday,7
+32,2026-06-16 15:09:05.864228,How do I backup my data?,Technical Support,Low,Neutral,Customer_4111,6,how do i backup my data?,24,6,Tuesday,15
+33,2026-06-21 18:09:05.864228,I was charged but didn't confirm the transaction.,Billing,Medium,Positive,Customer_1821,8,i was charged but didnt confirm the transaction,47,8,Sunday,18
+34,2026-06-01 03:09:05.864228,I need to add team members to my workspace.,Account,Medium,Negative,Customer_2312,9,i need to add team members to my workspace,42,9,Monday,3
+35,2026-06-01 01:09:05.864228,Would love to see integration with Slack for notifications.,Feature Request,Low,Positive,Customer_5033,9,would love to see integration with slack for notifications,58,9,Monday,1
+36,2026-06-13 03:09:05.864228,How do I delete my account?,Account,Medium,Neutral,Customer_6183,6,how do i delete my account?,27,6,Saturday,3
+37,2026-06-26 22:09:05.864228,I need an invoice for my payment on July 1st.,Billing,Medium,Neutral,Customer_5915,10,i need an invoice for my payment on july 1st,44,10,Friday,22
+38,2026-06-12 01:09:05.864228,How do I connect my database to the platform?,Technical Support,Low,Neutral,Customer_2638,9,how do i connect my database to the platform?,45,9,Friday,1
+39,2026-06-03 12:09:05.864228,"Dashboard widgets not loading. Tried refreshing, still broken. This is urgent!",Bug,High,Negative,Customer_7054,11,dashboard widgets not loading tried refreshing still broken this is urgent!,75,11,Wednesday,12
+40,2026-06-05 23:09:05.864228,Can I upgrade to the enterprise plan?,Billing,Low,Negative,Customer_9666,7,can i upgrade to the enterprise plan?,37,7,Friday,23
+41,2026-06-23 16:09:05.864228,Cannot login to my account. Getting 500 error on login page. Thanks in advance.,Bug,High,Negative,Customer_2753,14,cannot login to my account getting 500 error on login page thanks in advance,76,14,Tuesday,16
+42,2026-06-21 13:09:05.864228,Can you recommend best practices for scaling?,Other,Medium,Positive,Customer_5325,7,can you recommend best practices for scaling?,45,7,Sunday,13
+43,2026-06-18 11:09:05.864228,How do I change my email address?,Account,Medium,Negative,Customer_1722,7,how do i change my email address?,33,7,Thursday,11
+44,2026-06-17 02:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Medium,Positive,Customer_8007,12,export to csv feature crashes when i select more than 1000 rows,63,12,Wednesday,2
+45,2026-06-05 08:09:05.864228,"I forgot my password, please reset it.",Account,Low,Positive,Customer_3426,7,i forgot my password please reset it,36,7,Friday,8
+46,2026-06-10 12:09:05.864228,How do I connect my database to the platform? Thanks in advance.,Technical Support,Low,Neutral,Customer_2684,12,how do i connect my database to the platform? thanks in advance,63,12,Wednesday,12
+47,2026-06-02 12:09:05.864228,Do you offer annual subscription discounts? Thanks in advance.,Billing,High,Negative,Customer_3662,9,do you offer annual subscription discounts? thanks in advance,61,9,Tuesday,12
+48,2026-06-05 22:09:05.864228,Please add bulk edit functionality for records. Please help ASAP.,Feature Request,High,Positive,Customer_5065,10,please add bulk edit functionality for records please help asap,63,10,Friday,22
+49,2026-06-24 13:09:05.864228,Do you offer annual subscription discounts? Please help ASAP.,Billing,Low,Neutral,Customer_8541,9,do you offer annual subscription discounts? please help asap,60,9,Wednesday,13
+50,2026-06-10 13:09:05.864228,I need an invoice for my payment on July 1st.,Billing,Medium,Neutral,Customer_7528,10,i need an invoice for my payment on july 1st,44,10,Wednesday,13
+51,2026-06-15 07:09:05.864228,Can I upgrade to the enterprise plan?,Billing,Medium,Positive,Customer_9785,7,can i upgrade to the enterprise plan?,37,7,Monday,7
+52,2026-06-01 11:09:05.864228,Can I upgrade to the enterprise plan?,Billing,Critical,Neutral,Customer_1626,7,can i upgrade to the enterprise plan?,37,7,Monday,11
+53,2026-06-15 16:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows.,Bug,High,Neutral,Customer_7311,12,export to csv feature crashes when i select more than 1000 rows,63,12,Monday,16
+54,2026-06-02 02:09:05.864228,How do I delete my account?,Account,Low,Positive,Customer_4228,6,how do i delete my account?,27,6,Tuesday,2
+55,2026-06-10 16:09:05.864228,Can I upgrade to the enterprise plan?,Billing,Medium,Negative,Customer_5920,7,can i upgrade to the enterprise plan?,37,7,Wednesday,16
+56,2026-06-14 15:09:05.864228,How do I delete my account?,Account,Low,Neutral,Customer_4143,6,how do i delete my account?,27,6,Sunday,15
+57,2026-06-22 07:09:05.864228,What's the maximum file size I can upload?,Technical Support,Medium,Neutral,Customer_9977,8,whats the maximum file size i can upload?,41,8,Monday,7
+58,2026-06-21 05:09:05.864228,Search function returns no results even though records exist.,Bug,Medium,Positive,Customer_8238,9,search function returns no results even though records exist,60,9,Sunday,5
+59,2026-06-22 03:09:05.864228,What's the maximum file size I can upload?,Technical Support,Medium,Neutral,Customer_6491,8,whats the maximum file size i can upload?,41,8,Monday,3
+60,2026-06-25 15:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Critical,Negative,Customer_1400,12,export to csv feature crashes when i select more than 1000 rows,63,12,Thursday,15
+61,2026-06-02 23:09:05.864228,Cannot login to my account. Getting 500 error on login page.,Bug,Medium,Neutral,Customer_4185,11,cannot login to my account getting 500 error on login page,58,11,Tuesday,23
+62,2026-06-09 19:09:05.864228,Your platform has transformed our workflow.,Other,Medium,Neutral,Customer_2746,6,your platform has transformed our workflow,42,6,Tuesday,19
+63,2026-06-14 12:09:05.864228,How do I backup my data?,Technical Support,Low,Negative,Customer_2988,6,how do i backup my data?,24,6,Sunday,12
+64,2026-06-21 05:09:05.864228,How do I backup my data? Losing money on this.,Technical Support,Low,Neutral,Customer_9270,10,how do i backup my data? losing money on this,45,10,Sunday,5
+65,2026-06-17 11:09:05.864228,What's the maximum file size I can upload? Please help ASAP.,Technical Support,High,Negative,Customer_5050,11,whats the maximum file size i can upload? please help asap,58,11,Wednesday,11
+66,2026-06-23 05:09:05.864228,Is there a community forum?,Other,Low,Neutral,Customer_2269,5,is there a community forum?,27,5,Tuesday,5
+67,2026-06-27 15:09:05.864228,Question about your roadmap priorities. This is urgent!,Other,Low,Positive,Customer_4788,8,question about your roadmap priorities this is urgent!,54,8,Saturday,15
+68,2026-06-21 02:09:05.864228,How do I connect my database to the platform?,Technical Support,Medium,Neutral,Customer_8633,9,how do i connect my database to the platform?,45,9,Sunday,2
+69,2026-05-31 21:09:05.864228,Can you help me configure LDAP authentication? Losing money on this.,Technical Support,Low,Negative,Customer_1320,11,can you help me configure ldap authentication? losing money on this,67,11,Sunday,21
+70,2026-06-19 06:09:05.864228,Can you update my billing address?,Account,Low,Positive,Customer_9818,6,can you update my billing address?,34,6,Friday,6
+71,2026-06-23 06:09:05.864228,Your platform has transformed our workflow.,Other,Medium,Neutral,Customer_8956,6,your platform has transformed our workflow,42,6,Tuesday,6
+72,2026-06-02 15:09:05.864228,Mobile app freezes when uploading files larger than 50MB. Please help ASAP.,Bug,Medium,Neutral,Customer_9751,12,mobile app freezes when uploading files larger than 50mb please help asap,73,12,Tuesday,15
+73,2026-06-18 15:09:05.864228,Cannot login to my account. Getting 500 error on login page.,Bug,Critical,Negative,Customer_8564,11,cannot login to my account getting 500 error on login page,58,11,Thursday,15
+74,2026-06-21 07:09:05.864228,Would love to see integration with Slack for notifications.,Feature Request,Low,Neutral,Customer_5558,9,would love to see integration with slack for notifications,58,9,Sunday,7
+75,2026-06-01 08:09:05.864228,How do I connect my database to the platform? This is urgent!,Technical Support,Low,Positive,Customer_4673,12,how do i connect my database to the platform? this is urgent!,61,12,Monday,8
+76,2026-06-25 19:09:05.864228,Just wanted to say thanks for great support! Thanks in advance.,Other,Low,Negative,Customer_3496,11,just wanted to say thanks for great support! thanks in advance,62,11,Thursday,19
+77,2026-06-09 11:09:05.864228,Can you implement two-factor authentication? Please help ASAP.,Feature Request,Low,Neutral,Customer_7043,8,can you implement twofactor authentication? please help asap,60,8,Tuesday,11
+78,2026-06-01 10:09:05.864228,Can we add dark mode to the platform? Thanks in advance.,Feature Request,Medium,Negative,Customer_2771,11,can we add dark mode to the platform? thanks in advance,55,11,Monday,10
+79,2026-06-09 13:09:05.864228,How do I delete my account?,Account,Low,Neutral,Customer_2245,6,how do i delete my account?,27,6,Tuesday,13
+80,2026-06-21 22:09:05.864228,How do I change my email address?,Account,Medium,Neutral,Customer_2983,7,how do i change my email address?,33,7,Sunday,22
+81,2026-06-29 03:09:05.864228,How do I delete my account?,Account,High,Neutral,Customer_6590,6,how do i delete my account?,27,6,Monday,3
+82,2026-06-19 23:09:05.864228,Cannot login to my account. Getting 500 error on login page.,Bug,Critical,Negative,Customer_8532,11,cannot login to my account getting 500 error on login page,58,11,Friday,23
+83,2026-06-12 02:09:05.864228,Can you recommend best practices for scaling? Been waiting 3 days.,Other,Low,Positive,Customer_8921,11,can you recommend best practices for scaling? been waiting 3 days,65,11,Friday,2
+84,2026-06-24 17:09:05.864228,How do I reset my API key?,Technical Support,Medium,Neutral,Customer_5569,7,how do i reset my api key?,26,7,Wednesday,17
+85,2026-06-21 19:09:05.864228,How do I backup my data?,Technical Support,Low,Neutral,Customer_9098,6,how do i backup my data?,24,6,Sunday,19
+86,2026-06-03 00:09:05.864228,Can I upgrade to the enterprise plan?,Billing,Low,Positive,Customer_5526,7,can i upgrade to the enterprise plan?,37,7,Wednesday,0
+87,2026-06-18 04:09:05.864228,How do I change my email address?,Account,Low,Negative,Customer_4937,7,how do i change my email address?,33,7,Thursday,4
+88,2026-06-22 12:09:05.864228,Is there a community forum? This is urgent!,Other,Medium,Neutral,Customer_7625,8,is there a community forum? this is urgent!,43,8,Monday,12
+89,2026-06-15 08:09:05.864228,Question about your roadmap priorities.,Other,Low,Neutral,Customer_7971,5,question about your roadmap priorities,38,5,Monday,8
+90,2026-06-23 12:09:05.864228,Is there a community forum?,Other,Medium,Neutral,Customer_2976,5,is there a community forum?,27,5,Tuesday,12
+91,2026-06-25 13:09:05.864228,Can you recommend best practices for scaling? Thanks in advance.,Other,Low,Positive,Customer_8933,10,can you recommend best practices for scaling? thanks in advance,63,10,Thursday,13
+92,2026-06-28 13:09:05.864228,I was charged but didn't confirm the transaction.,Billing,High,Negative,Customer_5853,8,i was charged but didnt confirm the transaction,47,8,Sunday,13
+93,2026-06-30 18:09:05.864228,Can you implement two-factor authentication?,Feature Request,Low,Neutral,Customer_5786,5,can you implement twofactor authentication?,43,5,Tuesday,18
+94,2026-07-01 01:09:05.864228,Is there a community forum?,Other,Critical,Negative,Customer_5658,5,is there a community forum?,27,5,Wednesday,1
+95,2026-06-04 04:09:05.864228,How do I connect my database to the platform?,Technical Support,Medium,Neutral,Customer_2869,9,how do i connect my database to the platform?,45,9,Thursday,4
+96,2026-06-06 01:09:05.864228,Cannot login to my account. Getting 500 error on login page.,Bug,High,Positive,Customer_5978,11,cannot login to my account getting 500 error on login page,58,11,Saturday,1
+97,2026-06-06 00:09:05.864228,Mobile app freezes when uploading files larger than 50MB.,Bug,Critical,Neutral,Customer_4697,9,mobile app freezes when uploading files larger than 50mb,56,9,Saturday,0
+98,2026-06-22 01:09:05.864228,Can you update my billing address? Please help ASAP.,Account,Low,Negative,Customer_1986,9,can you update my billing address? please help asap,51,9,Monday,1
+99,2026-06-22 22:09:05.864228,"I forgot my password, please reset it.",Account,Critical,Neutral,Customer_2330,7,i forgot my password please reset it,36,7,Monday,22
+100,2026-06-16 21:09:05.864228,Would love to see integration with Slack for notifications.,Feature Request,Low,Neutral,Customer_8699,9,would love to see integration with slack for notifications,58,9,Tuesday,21
+101,2026-06-28 22:09:05.864228,Can I upgrade to the enterprise plan? Please help ASAP.,Billing,Low,Positive,Customer_4824,10,can i upgrade to the enterprise plan? please help asap,54,10,Sunday,22
+102,2026-06-14 12:09:05.864228,I need an invoice for my payment on July 1st.,Billing,High,Negative,Customer_3441,10,i need an invoice for my payment on july 1st,44,10,Sunday,12
+103,2026-06-08 01:09:05.864228,I need an invoice for my payment on July 1st. Losing money on this.,Billing,High,Positive,Customer_5728,14,i need an invoice for my payment on july 1st losing money on this,65,14,Monday,1
+104,2026-06-14 04:09:05.864228,Can you help me configure LDAP authentication? Losing money on this.,Technical Support,Low,Neutral,Customer_8172,11,can you help me configure ldap authentication? losing money on this,67,11,Sunday,4
+105,2026-07-01 17:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows.,Bug,High,Negative,Customer_4750,12,export to csv feature crashes when i select more than 1000 rows,63,12,Wednesday,17
+106,2026-06-13 18:09:05.864228,Just wanted to say thanks for great support! Been waiting 3 days.,Other,High,Negative,Customer_3870,12,just wanted to say thanks for great support! been waiting 3 days,64,12,Saturday,18
+107,2026-06-13 06:09:05.864228,How do I reset my API key?,Technical Support,Medium,Neutral,Customer_9056,7,how do i reset my api key?,26,7,Saturday,6
+108,2026-06-04 14:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows.,Bug,High,Negative,Customer_6403,12,export to csv feature crashes when i select more than 1000 rows,63,12,Thursday,14
+109,2026-06-30 05:09:05.864228,Can you help me configure LDAP authentication? Losing money on this.,Technical Support,Medium,Positive,Customer_2442,11,can you help me configure ldap authentication? losing money on this,67,11,Tuesday,5
+110,2026-06-10 02:09:05.864228,Do you offer annual subscription discounts? This is urgent!,Billing,Medium,Positive,Customer_8569,9,do you offer annual subscription discounts? this is urgent!,59,9,Wednesday,2
+111,2026-06-07 18:09:05.864228,How do I backup my data? Please help ASAP.,Technical Support,Low,Neutral,Customer_4335,9,how do i backup my data? please help asap,41,9,Sunday,18
+112,2026-06-28 19:09:05.864228,Do you offer annual subscription discounts? Please help ASAP.,Billing,Medium,Negative,Customer_4920,9,do you offer annual subscription discounts? please help asap,60,9,Sunday,19
+113,2026-06-24 16:09:05.864228,Can you recommend best practices for scaling?,Other,Low,Neutral,Customer_8560,7,can you recommend best practices for scaling?,45,7,Wednesday,16
+114,2026-06-23 06:09:05.864228,Export to CSV feature crashes when I select more than 1000 rows.,Bug,High,Neutral,Customer_8905,12,export to csv feature crashes when i select more than 1000 rows,63,12,Tuesday,6
+115,2026-06-12 03:09:05.864228,Can you help me configure LDAP authentication?,Technical Support,Low,Neutral,Customer_3236,7,can you help me configure ldap authentication?,46,7,Friday,3
+116,2026-06-06 03:09:05.864228,Mobile app freezes when uploading files larger than 50MB.,Bug,Medium,Neutral,Customer_5377,9,mobile app freezes when uploading files larger than 50mb,56,9,Saturday,3
+117,2026-06-10 04:09:05.864228,Search function returns no results even though records exist.,Bug,Medium,Positive,Customer_3434,9,search function returns no results even though records exist,60,9,Wednesday,4
+118,2026-06-17 09:09:05.864228,How do I backup my data? Please help ASAP.,Technical Support,Medium,Neutral,Customer_4090,9,how do i backup my data? please help asap,41,9,Wednesday,9
+119,2026-06-08 04:09:05.864228,Is there a community forum?,Other,Low,Neutral,Customer_7246,5,is there a community forum?,27,5,Monday,4
+120,2026-06-30 15:09:05.864228,What's the maximum file size I can upload?,Technical Support,Critical,Negative,Customer_9229,8,whats the maximum file size i can upload?,41,8,Tuesday,15
+121,2026-06-02 05:09:05.864228,How do I delete my account?,Account,Low,Positive,Customer_1251,6,how do i delete my account?,27,6,Tuesday,5
+122,2026-06-06 11:09:05.864228,Your platform has transformed our workflow.,Other,Low,Negative,Customer_6546,6,your platform has transformed our workflow,42,6,Saturday,11
+123,2026-06-19 09:09:05.864228,Can you update my billing address? Losing money on this.,Account,Medium,Neutral,Customer_8994,10,can you update my billing address? losing money on this,55,10,Friday,9
+124,2026-06-18 16:09:05.864228,Can you update my billing address? This is urgent!,Account,Low,Positive,Customer_2646,9,can you update my billing address? this is urgent!,50,9,Thursday,16
+125,2026-06-06 18:09:05.864228,How do I connect my database to the platform?,Technical Support,Low,Positive,Customer_5806,9,how do i connect my database to the platform?,45,9,Saturday,18
+126,2026-06-10 14:09:05.864228,I was charged but didn't confirm the transaction.,Billing,Medium,Positive,Customer_3785,8,i was charged but didnt confirm the transaction,47,8,Wednesday,14
+127,2026-06-16 01:09:05.864228,Can you implement two-factor authentication?,Feature Request,Low,Negative,Customer_3344,5,can you implement twofactor authentication?,43,5,Tuesday,1
+128,2026-06-03 05:09:05.864228,Please add bulk edit functionality for records.,Feature Request,Medium,Positive,Customer_5712,7,please add bulk edit functionality for records,46,7,Wednesday,5
+129,2026-06-11 06:09:05.864228,Question about your roadmap priorities. Been waiting 3 days.,Other,Medium,Positive,Customer_5097,9,question about your roadmap priorities been waiting 3 days,58,9,Thursday,6
+130,2026-06-24 07:09:05.864228,Can you help me configure LDAP authentication? This is urgent!,Technical Support,High,Neutral,Customer_6881,10,can you help me configure ldap authentication? this is urgent!,62,10,Wednesday,7
+131,2026-06-23 19:09:05.864228,How do I change my email address? Please help ASAP.,Account,Low,Neutral,Customer_1803,10,how do i change my email address? please help asap,50,10,Tuesday,19
+132,2026-06-12 08:09:05.864228,Can you update my billing address? Thanks in advance.,Account,Medium,Negative,Customer_4588,9,can you update my billing address? thanks in advance,52,9,Friday,8
+133,2026-06-02 23:09:05.864228,Your platform has transformed our workflow.,Other,Low,Positive,Customer_1645,6,your platform has transformed our workflow,42,6,Tuesday,23
+134,2026-06-02 10:09:05.864228,Can I upgrade to the enterprise plan? This is urgent!,Billing,High,Positive,Customer_6352,10,can i upgrade to the enterprise plan? this is urgent!,53,10,Tuesday,10
+135,2026-06-15 03:09:05.864228,Can you recommend best practices for scaling? Been waiting 3 days.,Other,Medium,Positive,Customer_5465,11,can you recommend best practices for scaling? been waiting 3 days,65,11,Monday,3
+136,2026-06-08 09:09:05.864228,We need API access for custom integrations. Been waiting 3 days.,Feature Request,Low,Negative,Customer_2886,11,we need api access for custom integrations been waiting 3 days,62,11,Monday,9
+137,2026-06-01 02:09:05.864228,What's the maximum file size I can upload? Please help ASAP.,Technical Support,Critical,Neutral,Customer_6992,11,whats the maximum file size i can upload? please help asap,58,11,Monday,2
+138,2026-06-19 22:09:05.864228,Search function returns no results even though records exist.,Bug,High,Positive,Customer_5295,9,search function returns no results even though records exist,60,9,Friday,22
+139,2026-06-24 04:09:05.867152,Can you update my billing address?,Account,Low,Neutral,Customer_1410,6,can you update my billing address?,34,6,Wednesday,4
+140,2026-06-28 23:09:05.867152,I need to add team members to my workspace.,Account,High,Negative,Customer_8606,9,i need to add team members to my workspace,42,9,Sunday,23
+141,2026-06-30 10:09:05.867152,Your platform has transformed our workflow.,Other,Low,Neutral,Customer_9071,6,your platform has transformed our workflow,42,6,Tuesday,10
+142,2026-06-19 22:09:05.867152,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,Low,Negative,Customer_9850,8,dashboard widgets not loading tried refreshing still broken,59,8,Friday,22
+143,2026-06-05 04:09:05.867152,Can you help me configure LDAP authentication?,Technical Support,Medium,Neutral,Customer_7686,7,can you help me configure ldap authentication?,46,7,Friday,4
+144,2026-06-24 08:09:05.867152,Do you offer annual subscription discounts?,Billing,Low,Neutral,Customer_2627,6,do you offer annual subscription discounts?,43,6,Wednesday,8
+145,2026-06-23 13:09:05.867152,Question about your roadmap priorities.,Other,Low,Negative,Customer_3001,5,question about your roadmap priorities,38,5,Tuesday,13
+146,2026-06-06 09:09:05.867152,How do I backup my data? This is urgent!,Technical Support,Low,Positive,Customer_4990,9,how do i backup my data? this is urgent!,40,9,Saturday,9
+147,2026-06-25 12:09:05.867152,Can you implement two-factor authentication?,Feature Request,High,Neutral,Customer_6383,5,can you implement twofactor authentication?,43,5,Thursday,12
+148,2026-06-27 02:09:05.867152,Please add bulk edit functionality for records. Thanks in advance.,Feature Request,High,Negative,Customer_5106,10,please add bulk edit functionality for records thanks in advance,64,10,Saturday,2
+149,2026-06-06 12:09:05.867152,Would love to see integration with Slack for notifications.,Feature Request,Low,Negative,Customer_6304,9,would love to see integration with slack for notifications,58,9,Saturday,12
+150,2026-06-08 17:09:05.867152,Mobile app freezes when uploading files larger than 50MB.,Bug,Medium,Positive,Customer_8802,9,mobile app freezes when uploading files larger than 50mb,56,9,Monday,17
+151,2026-06-24 00:09:05.867152,How do I connect my database to the platform?,Technical Support,High,Negative,Customer_1710,9,how do i connect my database to the platform?,45,9,Wednesday,0
+152,2026-06-11 19:09:05.867152,Can you recommend best practices for scaling?,Other,High,Negative,Customer_1996,7,can you recommend best practices for scaling?,45,7,Thursday,19
+153,2026-06-02 05:09:05.867152,How do I connect my database to the platform?,Technical Support,High,Negative,Customer_2204,9,how do i connect my database to the platform?,45,9,Tuesday,5
+154,2026-06-11 01:09:05.867152,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,Medium,Positive,Customer_9984,8,dashboard widgets not loading tried refreshing still broken,59,8,Thursday,1
+155,2026-06-15 00:09:05.867152,Can you recommend best practices for scaling?,Other,Low,Negative,Customer_8048,7,can you recommend best practices for scaling?,45,7,Monday,0
+156,2026-06-18 05:09:05.867152,Search function returns no results even though records exist. Thanks in advance.,Bug,High,Neutral,Customer_4743,12,search function returns no results even though records exist thanks in advance,78,12,Thursday,5
+157,2026-06-18 09:09:05.867152,Can you help me configure LDAP authentication? Been waiting 3 days.,Technical Support,Low,Neutral,Customer_5176,11,can you help me configure ldap authentication? been waiting 3 days,66,11,Thursday,9
+158,2026-06-05 17:09:05.867152,Do you offer annual subscription discounts?,Billing,Critical,Negative,Customer_2527,6,do you offer annual subscription discounts?,43,6,Friday,17
+159,2026-06-13 02:09:05.867152,What's the maximum file size I can upload?,Technical Support,Low,Neutral,Customer_6400,8,whats the maximum file size i can upload?,41,8,Saturday,2
+160,2026-06-01 10:09:05.867152,Is there a community forum? This is urgent!,Other,Low,Neutral,Customer_6119,8,is there a community forum? this is urgent!,43,8,Monday,10
+161,2026-06-24 16:09:05.867152,I need an invoice for my payment on July 1st.,Billing,Low,Neutral,Customer_6736,10,i need an invoice for my payment on july 1st,44,10,Wednesday,16
+162,2026-06-18 02:09:05.867152,I need to add team members to my workspace.,Account,Low,Neutral,Customer_1430,9,i need to add team members to my workspace,42,9,Thursday,2
+163,2026-06-22 21:09:05.867152,Can you update my billing address?,Account,Critical,Negative,Customer_6062,6,can you update my billing address?,34,6,Monday,21
+164,2026-06-19 17:09:05.867152,I need an invoice for my payment on July 1st.,Billing,Medium,Positive,Customer_3324,10,i need an invoice for my payment on july 1st,44,10,Friday,17
+165,2026-06-18 05:09:05.867152,Can you recommend best practices for scaling?,Other,Medium,Positive,Customer_6585,7,can you recommend best practices for scaling?,45,7,Thursday,5
+166,2026-06-03 18:09:05.867152,Can you implement two-factor authentication?,Feature Request,Low,Neutral,Customer_3549,5,can you implement twofactor authentication?,43,5,Wednesday,18
+167,2026-06-10 06:09:05.867152,Can we add dark mode to the platform?,Feature Request,High,Positive,Customer_8957,8,can we add dark mode to the platform?,37,8,Wednesday,6
+168,2026-06-18 16:09:05.867152,I need to add team members to my workspace.,Account,Medium,Positive,Customer_5640,9,i need to add team members to my workspace,42,9,Thursday,16
+169,2026-06-19 00:09:05.867152,Question about your roadmap priorities.,Other,Medium,Neutral,Customer_1897,5,question about your roadmap priorities,38,5,Friday,0
+170,2026-06-21 16:09:05.867152,"Dashboard widgets not loading. Tried refreshing, still broken. Been waiting 3 days.",Bug,Medium,Negative,Customer_1126,12,dashboard widgets not loading tried refreshing still broken been waiting 3 days,79,12,Sunday,16
+171,2026-06-24 03:09:05.867152,Can you help me configure LDAP authentication?,Technical Support,Medium,Positive,Customer_6802,7,can you help me configure ldap authentication?,46,7,Wednesday,3
+172,2026-06-02 17:09:05.867152,Mobile app freezes when uploading files larger than 50MB.,Bug,Medium,Neutral,Customer_6129,9,mobile app freezes when uploading files larger than 50mb,56,9,Tuesday,17
+173,2026-06-19 19:09:05.867152,How do I delete my account?,Account,Medium,Neutral,Customer_6321,6,how do i delete my account?,27,6,Friday,19
+174,2026-06-04 16:09:05.867152,Please add bulk edit functionality for records.,Feature Request,High,Negative,Customer_4986,7,please add bulk edit functionality for records,46,7,Thursday,16
+175,2026-06-24 09:09:05.867152,Can you help me configure LDAP authentication? Been waiting 3 days.,Technical Support,Medium,Neutral,Customer_3754,11,can you help me configure ldap authentication? been waiting 3 days,66,11,Wednesday,9
+176,2026-06-07 08:09:05.867152,Search function returns no results even though records exist.,Bug,High,Neutral,Customer_6752,9,search function returns no results even though records exist,60,9,Sunday,8
+177,2026-06-27 11:09:05.867152,Your platform has transformed our workflow.,Other,Critical,Negative,Customer_4232,6,your platform has transformed our workflow,42,6,Saturday,11
+178,2026-06-06 23:09:05.867152,Can we add dark mode to the platform?,Feature Request,Medium,Neutral,Customer_9095,8,can we add dark mode to the platform?,37,8,Saturday,23
+179,2026-06-03 01:09:05.867152,Can you help me configure LDAP authentication?,Technical Support,High,Negative,Customer_6295,7,can you help me configure ldap authentication?,46,7,Wednesday,1
+180,2026-06-22 11:09:05.867152,Is there a community forum?,Other,Low,Neutral,Customer_1920,5,is there a community forum?,27,5,Monday,11
+181,2026-06-20 10:09:05.867152,Do you offer annual subscription discounts?,Billing,Medium,Neutral,Customer_2257,6,do you offer annual subscription discounts?,43,6,Saturday,10
+182,2026-06-19 05:09:05.867152,Can you recommend best practices for scaling?,Other,High,Negative,Customer_1672,7,can you recommend best practices for scaling?,45,7,Friday,5
+183,2026-06-16 03:09:05.867152,What's the maximum file size I can upload?,Technical Support,Critical,Negative,Customer_3471,8,whats the maximum file size i can upload?,41,8,Tuesday,3
+184,2026-06-14 23:09:05.867152,Export to CSV feature crashes when I select more than 1000 rows. This is urgent!,Bug,High,Negative,Customer_3827,15,export to csv feature crashes when i select more than 1000 rows this is urgent!,79,15,Sunday,23
+185,2026-06-12 14:09:05.867152,Mobile app freezes when uploading files larger than 50MB.,Bug,Medium,Neutral,Customer_6962,9,mobile app freezes when uploading files larger than 50mb,56,9,Friday,14
+186,2026-06-29 23:09:05.867152,Can I upgrade to the enterprise plan?,Billing,Critical,Negative,Customer_6482,7,can i upgrade to the enterprise plan?,37,7,Monday,23
+187,2026-06-07 22:09:05.867152,Mobile app freezes when uploading files larger than 50MB.,Bug,Medium,Neutral,Customer_3463,9,mobile app freezes when uploading files larger than 50mb,56,9,Sunday,22
+188,2026-06-10 21:09:05.867152,Can I upgrade to the enterprise plan?,Billing,Low,Neutral,Customer_7421,7,can i upgrade to the enterprise plan?,37,7,Wednesday,21
+189,2026-06-11 09:09:05.867152,Please add bulk edit functionality for records.,Feature Request,Medium,Negative,Customer_3093,7,please add bulk edit functionality for records,46,7,Thursday,9
+190,2026-06-10 06:09:05.867152,Can you recommend best practices for scaling?,Other,Medium,Negative,Customer_9331,7,can you recommend best practices for scaling?,45,7,Wednesday,6
+191,2026-06-07 04:09:05.867152,I need an invoice for my payment on July 1st.,Billing,Low,Neutral,Customer_4145,10,i need an invoice for my payment on july 1st,44,10,Sunday,4
+192,2026-06-15 02:09:05.867152,Please add bulk edit functionality for records. This is urgent!,Feature Request,Critical,Neutral,Customer_9626,10,please add bulk edit functionality for records this is urgent!,62,10,Monday,2
+193,2026-06-19 15:09:05.867152,Search function returns no results even though records exist.,Bug,High,Negative,Customer_3658,9,search function returns no results even though records exist,60,9,Friday,15
+194,2026-06-18 08:09:05.867152,Would love to see integration with Slack for notifications. This is urgent!,Feature Request,High,Negative,Customer_4891,12,would love to see integration with slack for notifications this is urgent!,74,12,Thursday,8
+195,2026-06-24 10:09:05.867152,Can you help me configure LDAP authentication?,Technical Support,Medium,Neutral,Customer_8684,7,can you help me configure ldap authentication?,46,7,Wednesday,10
+196,2026-06-22 07:09:05.867152,We need API access for custom integrations.,Feature Request,Low,Negative,Customer_9239,7,we need api access for custom integrations,42,7,Monday,7
+197,2026-06-04 11:09:05.867152,"I forgot my password, please reset it. Thanks in advance.",Account,Medium,Positive,Customer_1854,10,i forgot my password please reset it thanks in advance,54,10,Thursday,11
+198,2026-06-04 16:09:05.867152,Just wanted to say thanks for great support! Losing money on this.,Other,Medium,Neutral,Customer_5670,12,just wanted to say thanks for great support! losing money on this,65,12,Thursday,16
+199,2026-06-18 17:09:05.867152,Search function returns no results even though records exist.,Bug,High,Neutral,Customer_4637,9,search function returns no results even though records exist,60,9,Thursday,17
+200,2026-06-15 08:09:05.867152,Can you help me configure LDAP authentication?,Technical Support,High,Negative,Customer_4862,7,can you help me configure ldap authentication?,46,7,Monday,8
+201,2026-06-27 21:09:05.867152,How do I connect my database to the platform?,Technical Support,Critical,Negative,Customer_6493,9,how do i connect my database to the platform?,45,9,Saturday,21
+202,2026-06-26 21:09:05.867152,We need API access for custom integrations.,Feature Request,Low,Positive,Customer_8685,7,we need api access for custom integrations,42,7,Friday,21
+203,2026-06-05 15:09:05.867152,How do I connect my database to the platform?,Technical Support,Medium,Negative,Customer_9991,9,how do i connect my database to the platform?,45,9,Friday,15
+204,2026-06-28 18:09:05.867152,Question about your roadmap priorities.,Other,Medium,Neutral,Customer_4906,5,question about your roadmap priorities,38,5,Sunday,18
+205,2026-06-03 04:09:05.867152,How do I connect my database to the platform?,Technical Support,Medium,Neutral,Customer_9782,9,how do i connect my database to the platform?,45,9,Wednesday,4
+206,2026-07-01 00:09:05.867152,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,High,Negative,Customer_6780,8,dashboard widgets not loading tried refreshing still broken,59,8,Wednesday,0
+207,2026-06-20 17:09:05.867152,Can we add dark mode to the platform?,Feature Request,Medium,Positive,Customer_9618,8,can we add dark mode to the platform?,37,8,Saturday,17
+208,2026-06-04 04:09:05.867152,I need to add team members to my workspace.,Account,Medium,Negative,Customer_1713,9,i need to add team members to my workspace,42,9,Thursday,4
+209,2026-06-29 08:09:05.867152,Just wanted to say thanks for great support!,Other,Low,Neutral,Customer_4950,8,just wanted to say thanks for great support!,44,8,Monday,8
+210,2026-06-27 18:09:05.867152,Can you recommend best practices for scaling? Been waiting 3 days.,Other,Medium,Positive,Customer_6772,11,can you recommend best practices for scaling? been waiting 3 days,65,11,Saturday,18
+211,2026-06-11 14:09:05.867152,How do I delete my account? Please help ASAP.,Account,Low,Neutral,Customer_3209,9,how do i delete my account? please help asap,44,9,Thursday,14
+212,2026-06-30 13:09:05.867152,Cannot login to my account. Getting 500 error on login page.,Bug,High,Negative,Customer_1686,11,cannot login to my account getting 500 error on login page,58,11,Tuesday,13
+213,2026-06-29 23:09:05.867152,I was charged but didn't confirm the transaction.,Billing,Critical,Negative,Customer_4131,8,i was charged but didnt confirm the transaction,47,8,Monday,23
+214,2026-06-06 08:09:05.867152,Can I upgrade to the enterprise plan?,Billing,Medium,Neutral,Customer_8159,7,can i upgrade to the enterprise plan?,37,7,Saturday,8
+215,2026-06-26 04:09:05.867152,Can you help me configure LDAP authentication?,Technical Support,Medium,Negative,Customer_9151,7,can you help me configure ldap authentication?,46,7,Friday,4
+216,2026-06-18 00:09:05.867152,Why was I charged twice this month? This is urgent!,Billing,Critical,Negative,Customer_3956,10,why was i charged twice this month? this is urgent!,51,10,Thursday,0
+217,2026-06-22 05:09:05.867152,Can you update my billing address?,Account,Low,Positive,Customer_7981,6,can you update my billing address?,34,6,Monday,5
+218,2026-06-12 06:09:05.867152,Can we add dark mode to the platform? Been waiting 3 days.,Feature Request,Medium,Neutral,Customer_5498,12,can we add dark mode to the platform? been waiting 3 days,57,12,Friday,6
+219,2026-06-19 08:09:05.867152,Just wanted to say thanks for great support!,Other,Critical,Negative,Customer_9406,8,just wanted to say thanks for great support!,44,8,Friday,8
+220,2026-06-30 15:09:05.867152,Your platform has transformed our workflow. Please help ASAP.,Other,Medium,Negative,Customer_2101,9,your platform has transformed our workflow please help asap,59,9,Tuesday,15
+221,2026-06-12 15:09:05.867152,We need API access for custom integrations. This is urgent!,Feature Request,High,Neutral,Customer_8371,10,we need api access for custom integrations this is urgent!,58,10,Friday,15
+222,2026-06-20 07:09:05.867152,I was charged but didn't confirm the transaction.,Billing,Medium,Neutral,Customer_6150,8,i was charged but didnt confirm the transaction,47,8,Saturday,7
+223,2026-06-15 07:09:05.867152,Just wanted to say thanks for great support! Please help ASAP.,Other,Low,Negative,Customer_2929,11,just wanted to say thanks for great support! please help asap,61,11,Monday,7
+224,2026-06-09 04:09:05.867152,I need an invoice for my payment on July 1st. Been waiting 3 days.,Billing,High,Negative,Customer_4279,14,i need an invoice for my payment on july 1st been waiting 3 days,64,14,Tuesday,4
+225,2026-06-28 22:09:05.868157,"Dashboard widgets not loading. Tried refreshing, still broken. Please help ASAP.",Bug,Medium,Positive,Customer_6236,11,dashboard widgets not loading tried refreshing still broken please help asap,76,11,Sunday,22
+226,2026-06-22 14:09:05.868157,Can you recommend best practices for scaling?,Other,Low,Positive,Customer_3852,7,can you recommend best practices for scaling?,45,7,Monday,14
+227,2026-06-06 04:09:05.868157,I need an invoice for my payment on July 1st. Thanks in advance.,Billing,Medium,Positive,Customer_1430,13,i need an invoice for my payment on july 1st thanks in advance,62,13,Saturday,4
+228,2026-06-03 17:09:05.868157,I was charged but didn't confirm the transaction.,Billing,Medium,Neutral,Customer_2077,8,i was charged but didnt confirm the transaction,47,8,Wednesday,17
+229,2026-06-07 06:09:05.868157,Do you offer annual subscription discounts?,Billing,Medium,Neutral,Customer_2208,6,do you offer annual subscription discounts?,43,6,Sunday,6
+230,2026-06-15 08:09:05.868157,We need API access for custom integrations.,Feature Request,Critical,Negative,Customer_3102,7,we need api access for custom integrations,42,7,Monday,8
+231,2026-06-02 18:09:05.868157,"I forgot my password, please reset it.",Account,Medium,Positive,Customer_3034,7,i forgot my password please reset it,36,7,Tuesday,18
+232,2026-06-20 03:09:05.868157,Can you update my billing address? Thanks in advance.,Account,Low,Positive,Customer_5653,9,can you update my billing address? thanks in advance,52,9,Saturday,3
+233,2026-06-11 10:09:05.868157,Search function returns no results even though records exist.,Bug,Medium,Neutral,Customer_9740,9,search function returns no results even though records exist,60,9,Thursday,10
+234,2026-06-10 00:09:05.868157,Search function returns no results even though records exist.,Bug,High,Neutral,Customer_6531,9,search function returns no results even though records exist,60,9,Wednesday,0
+235,2026-06-11 01:09:05.868157,How do I change my email address?,Account,Low,Negative,Customer_5336,7,how do i change my email address?,33,7,Thursday,1
+236,2026-06-15 23:09:05.868157,Can you recommend best practices for scaling?,Other,Low,Neutral,Customer_9938,7,can you recommend best practices for scaling?,45,7,Monday,23
+237,2026-06-22 05:09:05.868157,I need an invoice for my payment on July 1st. Please help ASAP.,Billing,Medium,Neutral,Customer_2195,13,i need an invoice for my payment on july 1st please help asap,61,13,Monday,5
+238,2026-06-21 00:09:05.868157,Is there a community forum?,Other,Low,Neutral,Customer_3353,5,is there a community forum?,27,5,Sunday,0
+239,2026-06-07 08:09:05.868157,Can I upgrade to the enterprise plan? Thanks in advance.,Billing,High,Neutral,Customer_9437,10,can i upgrade to the enterprise plan? thanks in advance,55,10,Sunday,8
+240,2026-06-24 15:09:05.868157,How do I change my email address?,Account,Low,Positive,Customer_2586,7,how do i change my email address?,33,7,Wednesday,15
+241,2026-06-01 14:09:05.868157,Search function returns no results even though records exist.,Bug,Medium,Neutral,Customer_6364,9,search function returns no results even though records exist,60,9,Monday,14
+242,2026-06-15 05:09:05.868157,"I forgot my password, please reset it.",Account,Medium,Positive,Customer_9171,7,i forgot my password please reset it,36,7,Monday,5
+243,2026-06-01 12:09:05.868157,Do you offer annual subscription discounts?,Billing,Medium,Positive,Customer_4524,6,do you offer annual subscription discounts?,43,6,Monday,12
+244,2026-06-04 23:09:05.868157,How do I delete my account?,Account,Low,Positive,Customer_8710,6,how do i delete my account?,27,6,Thursday,23
+245,2026-06-22 20:09:05.868157,Do you offer annual subscription discounts?,Billing,Medium,Negative,Customer_6992,6,do you offer annual subscription discounts?,43,6,Monday,20
+246,2026-06-20 02:09:05.868157,How do I backup my data?,Technical Support,Low,Neutral,Customer_5728,6,how do i backup my data?,24,6,Saturday,2
+247,2026-06-11 22:09:05.868157,Search function returns no results even though records exist.,Bug,Medium,Neutral,Customer_2946,9,search function returns no results even though records exist,60,9,Thursday,22
+248,2026-06-20 15:09:05.868157,Please add bulk edit functionality for records.,Feature Request,Critical,Negative,Customer_4261,7,please add bulk edit functionality for records,46,7,Saturday,15
+249,2026-06-09 09:09:05.868157,How do I change my email address?,Account,Medium,Neutral,Customer_8761,7,how do i change my email address?,33,7,Tuesday,9
+250,2026-06-02 00:09:05.868157,I need to add team members to my workspace.,Account,Medium,Neutral,Customer_6218,9,i need to add team members to my workspace,42,9,Tuesday,0
+251,2026-06-15 03:09:05.868157,Please add bulk edit functionality for records.,Feature Request,Low,Neutral,Customer_9721,7,please add bulk edit functionality for records,46,7,Monday,3
+252,2026-06-10 16:09:05.868157,How do I connect my database to the platform?,Technical Support,Medium,Positive,Customer_7824,9,how do i connect my database to the platform?,45,9,Wednesday,16
+253,2026-06-22 23:09:05.868157,How do I change my email address?,Account,Low,Negative,Customer_4728,7,how do i change my email address?,33,7,Monday,23
+254,2026-06-12 07:09:05.868157,Can you recommend best practices for scaling?,Other,Low,Neutral,Customer_3421,7,can you recommend best practices for scaling?,45,7,Friday,7
+255,2026-06-17 09:09:05.868157,Just wanted to say thanks for great support!,Other,Low,Neutral,Customer_7861,8,just wanted to say thanks for great support!,44,8,Wednesday,9
+256,2026-06-03 20:09:05.868157,Can you implement two-factor authentication? Please help ASAP.,Feature Request,Medium,Positive,Customer_2020,8,can you implement twofactor authentication? please help asap,60,8,Wednesday,20
+257,2026-06-15 07:09:05.868157,Question about your roadmap priorities. Please help ASAP.,Other,Low,Positive,Customer_6140,8,question about your roadmap priorities please help asap,55,8,Monday,7
+258,2026-06-06 20:09:05.868157,Can you implement two-factor authentication?,Feature Request,Medium,Neutral,Customer_5331,5,can you implement twofactor authentication?,43,5,Saturday,20
+259,2026-06-24 10:09:05.868157,Can you update my billing address?,Account,Medium,Negative,Customer_5735,6,can you update my billing address?,34,6,Wednesday,10
+260,2026-06-13 20:09:05.868157,Question about your roadmap priorities.,Other,Low,Neutral,Customer_5480,5,question about your roadmap priorities,38,5,Saturday,20
+261,2026-06-05 08:09:05.868157,Do you offer annual subscription discounts? Please help ASAP.,Billing,Low,Neutral,Customer_3399,9,do you offer annual subscription discounts? please help asap,60,9,Friday,8
+262,2026-06-16 23:09:05.868157,Why was I charged twice this month?,Billing,Low,Negative,Customer_5201,7,why was i charged twice this month?,35,7,Tuesday,23
+263,2026-06-13 21:09:05.868157,Can you recommend best practices for scaling?,Other,Medium,Positive,Customer_5450,7,can you recommend best practices for scaling?,45,7,Saturday,21
+264,2026-06-10 03:09:05.868157,Would love to see integration with Slack for notifications.,Feature Request,Low,Neutral,Customer_4697,9,would love to see integration with slack for notifications,58,9,Wednesday,3
+265,2026-06-10 15:09:05.868157,Question about your roadmap priorities. This is urgent!,Other,Low,Positive,Customer_1084,8,question about your roadmap priorities this is urgent!,54,8,Wednesday,15
+266,2026-06-25 10:09:05.868157,How do I delete my account?,Account,Critical,Neutral,Customer_6262,6,how do i delete my account?,27,6,Thursday,10
+267,2026-06-24 02:09:05.868157,Why was I charged twice this month?,Billing,Medium,Negative,Customer_1611,7,why was i charged twice this month?,35,7,Wednesday,2
+268,2026-06-06 04:09:05.868157,Can we add dark mode to the platform? Please help ASAP.,Feature Request,Medium,Negative,Customer_4052,11,can we add dark mode to the platform? please help asap,54,11,Saturday,4
+269,2026-06-13 00:09:05.868157,Just wanted to say thanks for great support!,Other,Critical,Negative,Customer_2758,8,just wanted to say thanks for great support!,44,8,Saturday,0
+270,2026-06-03 15:09:05.868157,I was charged but didn't confirm the transaction.,Billing,Medium,Negative,Customer_9261,8,i was charged but didnt confirm the transaction,47,8,Wednesday,15
+271,2026-06-16 23:09:05.868157,How do I reset my API key?,Technical Support,Low,Negative,Customer_5215,7,how do i reset my api key?,26,7,Tuesday,23
+272,2026-06-07 13:09:05.868157,Question about your roadmap priorities.,Other,Low,Neutral,Customer_3875,5,question about your roadmap priorities,38,5,Sunday,13
+273,2026-06-29 07:09:05.868157,How do I delete my account?,Account,High,Negative,Customer_2562,6,how do i delete my account?,27,6,Monday,7
+274,2026-06-19 12:09:05.868157,Would love to see integration with Slack for notifications.,Feature Request,Critical,Negative,Customer_8319,9,would love to see integration with slack for notifications,58,9,Friday,12
+275,2026-06-11 08:09:05.868157,I was charged but didn't confirm the transaction.,Billing,Critical,Negative,Customer_4871,8,i was charged but didnt confirm the transaction,47,8,Thursday,8
+276,2026-06-14 21:09:05.868157,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,High,Negative,Customer_6095,8,dashboard widgets not loading tried refreshing still broken,59,8,Sunday,21
+277,2026-06-24 12:09:05.868157,Question about your roadmap priorities.,Other,Low,Negative,Customer_3188,5,question about your roadmap priorities,38,5,Wednesday,12
+278,2026-06-09 02:09:05.868157,How do I backup my data?,Technical Support,Low,Neutral,Customer_8714,6,how do i backup my data?,24,6,Tuesday,2
+279,2026-06-12 17:09:05.868157,"I forgot my password, please reset it.",Account,High,Negative,Customer_9609,7,i forgot my password please reset it,36,7,Friday,17
+280,2026-06-05 02:09:05.868157,How do I backup my data?,Technical Support,Medium,Neutral,Customer_9281,6,how do i backup my data?,24,6,Friday,2
+281,2026-06-27 22:09:05.868157,Please add bulk edit functionality for records. Please help ASAP.,Feature Request,Medium,Positive,Customer_4365,10,please add bulk edit functionality for records please help asap,63,10,Saturday,22
+282,2026-06-30 05:09:05.868157,Can you recommend best practices for scaling?,Other,Medium,Positive,Customer_3161,7,can you recommend best practices for scaling?,45,7,Tuesday,5
+283,2026-06-06 10:09:05.868157,I need to add team members to my workspace.,Account,Medium,Neutral,Customer_1356,9,i need to add team members to my workspace,42,9,Saturday,10
+284,2026-06-30 06:09:05.868157,What's the maximum file size I can upload?,Technical Support,Low,Positive,Customer_6644,8,whats the maximum file size i can upload?,41,8,Tuesday,6
+285,2026-06-30 10:09:05.868157,Just wanted to say thanks for great support! Please help ASAP.,Other,Low,Negative,Customer_7698,11,just wanted to say thanks for great support! please help asap,61,11,Tuesday,10
+286,2026-06-03 07:09:05.868157,We need API access for custom integrations.,Feature Request,High,Negative,Customer_8348,7,we need api access for custom integrations,42,7,Wednesday,7
+287,2026-06-04 08:09:05.868157,How do I backup my data?,Technical Support,Low,Neutral,Customer_2943,6,how do i backup my data?,24,6,Thursday,8
+288,2026-06-05 19:09:05.868157,Would love to see integration with Slack for notifications. Thanks in advance.,Feature Request,Critical,Negative,Customer_1372,12,would love to see integration with slack for notifications thanks in advance,76,12,Friday,19
+289,2026-06-05 12:09:05.868157,Do you offer annual subscription discounts?,Billing,Medium,Neutral,Customer_5055,6,do you offer annual subscription discounts?,43,6,Friday,12
+290,2026-06-10 06:09:05.868157,How do I connect my database to the platform?,Technical Support,Low,Positive,Customer_1256,9,how do i connect my database to the platform?,45,9,Wednesday,6
+291,2026-06-09 21:09:05.868157,Can we add dark mode to the platform?,Feature Request,Low,Positive,Customer_1797,8,can we add dark mode to the platform?,37,8,Tuesday,21
+292,2026-06-07 18:09:05.868157,Would love to see integration with Slack for notifications.,Feature Request,Medium,Neutral,Customer_3295,9,would love to see integration with slack for notifications,58,9,Sunday,18
+293,2026-06-11 22:09:05.868157,I need to add team members to my workspace.,Account,Critical,Negative,Customer_6253,9,i need to add team members to my workspace,42,9,Thursday,22
+294,2026-06-22 11:09:05.868157,Can you implement two-factor authentication?,Feature Request,Low,Positive,Customer_1998,5,can you implement twofactor authentication?,43,5,Monday,11
+295,2026-06-18 02:09:05.868157,"I forgot my password, please reset it.",Account,Critical,Negative,Customer_9120,7,i forgot my password please reset it,36,7,Thursday,2
+296,2026-06-09 06:09:05.868157,Mobile app freezes when uploading files larger than 50MB. Been waiting 3 days.,Bug,Critical,Negative,Customer_7688,13,mobile app freezes when uploading files larger than 50mb been waiting 3 days,76,13,Tuesday,6
+297,2026-06-04 12:09:05.868157,Can you implement two-factor authentication?,Feature Request,Low,Positive,Customer_5927,5,can you implement twofactor authentication?,43,5,Thursday,12
+298,2026-06-01 06:09:05.868157,Just wanted to say thanks for great support!,Other,Low,Neutral,Customer_9683,8,just wanted to say thanks for great support!,44,8,Monday,6
+299,2026-06-02 05:09:05.868157,Please add bulk edit functionality for records.,Feature Request,Low,Positive,Customer_7079,7,please add bulk edit functionality for records,46,7,Tuesday,5
+300,2026-06-10 00:09:05.868157,Cannot login to my account. Getting 500 error on login page.,Bug,High,Negative,Customer_1647,11,cannot login to my account getting 500 error on login page,58,11,Wednesday,0
+301,2026-06-25 09:09:05.868157,Search function returns no results even though records exist.,Bug,Medium,Neutral,Customer_5967,9,search function returns no results even though records exist,60,9,Thursday,9
+302,2026-06-02 12:09:05.868157,Cannot login to my account. Getting 500 error on login page. Please help ASAP.,Bug,Medium,Positive,Customer_4350,14,cannot login to my account getting 500 error on login page please help asap,75,14,Tuesday,12
+303,2026-06-13 23:09:05.868157,How do I reset my API key?,Technical Support,Critical,Negative,Customer_6886,7,how do i reset my api key?,26,7,Saturday,23
+304,2026-06-05 20:09:05.868157,Do you offer annual subscription discounts?,Billing,Medium,Neutral,Customer_8692,6,do you offer annual subscription discounts?,43,6,Friday,20
+305,2026-06-04 12:09:05.868157,Do you offer annual subscription discounts?,Billing,Critical,Negative,Customer_3390,6,do you offer annual subscription discounts?,43,6,Thursday,12
+306,2026-06-27 13:09:05.868157,Search function returns no results even though records exist. Been waiting 3 days.,Bug,Medium,Negative,Customer_6404,13,search function returns no results even though records exist been waiting 3 days,80,13,Saturday,13
+307,2026-05-31 22:09:05.868157,We need API access for custom integrations.,Feature Request,Low,Negative,Customer_6530,7,we need api access for custom integrations,42,7,Sunday,22
+308,2026-06-08 08:09:05.868157,Do you offer annual subscription discounts?,Billing,High,Negative,Customer_3773,6,do you offer annual subscription discounts?,43,6,Monday,8
+309,2026-06-15 18:09:05.868157,Can you implement two-factor authentication? This is urgent!,Feature Request,Medium,Neutral,Customer_2217,8,can you implement twofactor authentication? this is urgent!,59,8,Monday,18
+310,2026-06-28 21:09:05.868157,Your platform has transformed our workflow. Thanks in advance.,Other,Low,Positive,Customer_3474,9,your platform has transformed our workflow thanks in advance,60,9,Sunday,21
+311,2026-06-10 00:09:05.868157,Cannot login to my account. Getting 500 error on login page.,Bug,Medium,Neutral,Customer_8916,11,cannot login to my account getting 500 error on login page,58,11,Wednesday,0
+312,2026-07-01 03:09:05.868157,Can you recommend best practices for scaling?,Other,Medium,Positive,Customer_5501,7,can you recommend best practices for scaling?,45,7,Wednesday,3
+313,2026-06-28 16:09:05.868157,How do I delete my account? Thanks in advance.,Account,Critical,Positive,Customer_9591,9,how do i delete my account? thanks in advance,45,9,Sunday,16
+314,2026-06-06 07:09:05.868157,Please add bulk edit functionality for records. Been waiting 3 days.,Feature Request,Low,Neutral,Customer_2294,11,please add bulk edit functionality for records been waiting 3 days,66,11,Saturday,7
+315,2026-06-21 22:09:05.868157,I need an invoice for my payment on July 1st. Thanks in advance.,Billing,Critical,Negative,Customer_2320,13,i need an invoice for my payment on july 1st thanks in advance,62,13,Sunday,22
+316,2026-06-19 07:09:05.868157,Just wanted to say thanks for great support!,Other,Critical,Negative,Customer_8798,8,just wanted to say thanks for great support!,44,8,Friday,7
+317,2026-06-17 23:09:05.868157,Cannot login to my account. Getting 500 error on login page.,Bug,High,Negative,Customer_6427,11,cannot login to my account getting 500 error on login page,58,11,Wednesday,23
+318,2026-06-24 21:09:05.868157,I need to add team members to my workspace. Thanks in advance.,Account,Critical,Negative,Customer_8790,12,i need to add team members to my workspace thanks in advance,60,12,Wednesday,21
+319,2026-06-10 18:09:05.868157,Can I upgrade to the enterprise plan? Losing money on this.,Billing,Low,Positive,Customer_3938,11,can i upgrade to the enterprise plan? losing money on this,58,11,Wednesday,18
+320,2026-06-02 17:09:05.868157,I need an invoice for my payment on July 1st. Please help ASAP.,Billing,Low,Positive,Customer_5903,13,i need an invoice for my payment on july 1st please help asap,61,13,Tuesday,17
+321,2026-06-14 09:09:05.868157,We need API access for custom integrations.,Feature Request,Medium,Neutral,Customer_7288,7,we need api access for custom integrations,42,7,Sunday,9
+322,2026-06-20 18:09:05.868157,Just wanted to say thanks for great support!,Other,Low,Negative,Customer_2600,8,just wanted to say thanks for great support!,44,8,Saturday,18
+323,2026-06-19 09:09:05.868157,How do I backup my data? Losing money on this.,Technical Support,Low,Positive,Customer_1485,10,how do i backup my data? losing money on this,45,10,Friday,9
+324,2026-06-14 07:09:05.868157,Is there a community forum?,Other,Low,Negative,Customer_8075,5,is there a community forum?,27,5,Sunday,7
+325,2026-06-06 12:09:05.868157,Can we add dark mode to the platform? Been waiting 3 days.,Feature Request,Medium,Neutral,Customer_2204,12,can we add dark mode to the platform? been waiting 3 days,57,12,Saturday,12
+326,2026-06-20 16:09:05.868157,"Dashboard widgets not loading. Tried refreshing, still broken. Been waiting 3 days.",Bug,Medium,Neutral,Customer_2499,12,dashboard widgets not loading tried refreshing still broken been waiting 3 days,79,12,Saturday,16
+327,2026-06-29 14:09:05.868157,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Critical,Negative,Customer_8061,12,export to csv feature crashes when i select more than 1000 rows,63,12,Monday,14
+328,2026-06-20 02:09:05.868157,How do I connect my database to the platform?,Technical Support,Medium,Neutral,Customer_2524,9,how do i connect my database to the platform?,45,9,Saturday,2
+329,2026-06-18 07:09:05.868157,How do I delete my account?,Account,Medium,Neutral,Customer_2387,6,how do i delete my account?,27,6,Thursday,7
+330,2026-06-25 22:09:05.868157,Your platform has transformed our workflow.,Other,Critical,Negative,Customer_7237,6,your platform has transformed our workflow,42,6,Thursday,22
+331,2026-06-26 06:09:05.868157,We need API access for custom integrations.,Feature Request,Low,Neutral,Customer_5521,7,we need api access for custom integrations,42,7,Friday,6
+332,2026-06-23 20:09:05.868157,How do I reset my API key?,Technical Support,Low,Neutral,Customer_9123,7,how do i reset my api key?,26,7,Tuesday,20
+333,2026-06-01 07:09:05.868157,"I forgot my password, please reset it.",Account,Medium,Neutral,Customer_6443,7,i forgot my password please reset it,36,7,Monday,7
+334,2026-06-04 23:09:05.868157,How do I delete my account?,Account,Low,Negative,Customer_3230,6,how do i delete my account?,27,6,Thursday,23
+335,2026-06-26 07:09:05.868157,I need an invoice for my payment on July 1st.,Billing,Medium,Negative,Customer_6228,10,i need an invoice for my payment on july 1st,44,10,Friday,7
+336,2026-06-19 11:09:05.868157,I was charged but didn't confirm the transaction. Been waiting 3 days.,Billing,High,Negative,Customer_7437,12,i was charged but didnt confirm the transaction been waiting 3 days,67,12,Friday,11
+337,2026-06-10 02:09:05.868157,I was charged but didn't confirm the transaction. Thanks in advance.,Billing,Low,Neutral,Customer_1440,11,i was charged but didnt confirm the transaction thanks in advance,65,11,Wednesday,2
+338,2026-06-05 06:09:05.868157,Is there a community forum? This is urgent!,Other,Medium,Neutral,Customer_9180,8,is there a community forum? this is urgent!,43,8,Friday,6
+339,2026-06-29 05:09:05.868157,Would love to see integration with Slack for notifications. Please help ASAP.,Feature Request,Medium,Positive,Customer_8851,12,would love to see integration with slack for notifications please help asap,75,12,Monday,5
+340,2026-06-06 08:09:05.868157,How do I delete my account?,Account,Medium,Neutral,Customer_9796,6,how do i delete my account?,27,6,Saturday,8
+341,2026-06-20 14:09:05.868157,"I forgot my password, please reset it.",Account,Medium,Positive,Customer_1725,7,i forgot my password please reset it,36,7,Saturday,14
+342,2026-06-01 06:09:05.868157,How do I delete my account? Been waiting 3 days.,Account,Critical,Negative,Customer_2735,10,how do i delete my account? been waiting 3 days,47,10,Monday,6
+343,2026-06-09 01:09:05.868157,Search function returns no results even though records exist.,Bug,Low,Positive,Customer_4621,9,search function returns no results even though records exist,60,9,Tuesday,1
+344,2026-06-27 08:09:05.868157,How do I backup my data?,Technical Support,Low,Neutral,Customer_1402,6,how do i backup my data?,24,6,Saturday,8
+345,2026-05-31 20:09:05.868157,How do I connect my database to the platform?,Technical Support,Low,Neutral,Customer_3321,9,how do i connect my database to the platform?,45,9,Sunday,20
+346,2026-06-20 04:09:05.868157,I need an invoice for my payment on July 1st.,Billing,Medium,Neutral,Customer_2599,10,i need an invoice for my payment on july 1st,44,10,Saturday,4
+347,2026-06-05 21:09:05.868157,How do I connect my database to the platform?,Technical Support,Medium,Neutral,Customer_2885,9,how do i connect my database to the platform?,45,9,Friday,21
+348,2026-06-15 14:09:05.868157,"Dashboard widgets not loading. Tried refreshing, still broken. Thanks in advance.",Bug,Critical,Negative,Customer_3623,11,dashboard widgets not loading tried refreshing still broken thanks in advance,77,11,Monday,14
+349,2026-06-25 23:09:05.868157,I need an invoice for my payment on July 1st. Thanks in advance.,Billing,Medium,Negative,Customer_8080,13,i need an invoice for my payment on july 1st thanks in advance,62,13,Thursday,23
+350,2026-06-18 07:09:05.868157,What's the maximum file size I can upload?,Technical Support,Low,Neutral,Customer_1072,8,whats the maximum file size i can upload?,41,8,Thursday,7
+351,2026-06-06 02:09:05.868157,Just wanted to say thanks for great support!,Other,Low,Positive,Customer_4063,8,just wanted to say thanks for great support!,44,8,Saturday,2
+352,2026-06-16 03:09:05.868157,Can I upgrade to the enterprise plan?,Billing,Medium,Neutral,Customer_6134,7,can i upgrade to the enterprise plan?,37,7,Tuesday,3
+353,2026-06-04 05:09:05.868157,How do I change my email address?,Account,Low,Neutral,Customer_3826,7,how do i change my email address?,33,7,Thursday,5
+354,2026-06-10 15:09:05.868157,Can you recommend best practices for scaling?,Other,Medium,Positive,Customer_6131,7,can you recommend best practices for scaling?,45,7,Wednesday,15
+355,2026-06-15 07:09:05.868157,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Medium,Positive,Customer_7852,12,export to csv feature crashes when i select more than 1000 rows,63,12,Monday,7
+356,2026-06-13 21:09:05.868157,"I forgot my password, please reset it.",Account,Low,Neutral,Customer_3838,7,i forgot my password please reset it,36,7,Saturday,21
+357,2026-06-17 00:09:05.868157,"I forgot my password, please reset it.",Account,Low,Positive,Customer_1878,7,i forgot my password please reset it,36,7,Wednesday,0
+358,2026-06-14 23:09:05.868157,I need an invoice for my payment on July 1st. Losing money on this.,Billing,Critical,Negative,Customer_9109,14,i need an invoice for my payment on july 1st losing money on this,65,14,Sunday,23
+359,2026-06-29 01:09:05.868157,Can you help me configure LDAP authentication?,Technical Support,Medium,Neutral,Customer_1505,7,can you help me configure ldap authentication?,46,7,Monday,1
+360,2026-06-07 05:09:05.868157,Can you implement two-factor authentication?,Feature Request,Low,Positive,Customer_9115,5,can you implement twofactor authentication?,43,5,Sunday,5
+361,2026-06-14 18:09:05.868157,Can you update my billing address? Been waiting 3 days.,Account,Medium,Neutral,Customer_8231,10,can you update my billing address? been waiting 3 days,54,10,Sunday,18
+362,2026-06-30 05:09:05.868157,"I forgot my password, please reset it.",Account,Low,Neutral,Customer_5305,7,i forgot my password please reset it,36,7,Tuesday,5
+363,2026-06-24 20:09:05.868157,Why was I charged twice this month? Thanks in advance.,Billing,High,Positive,Customer_6744,10,why was i charged twice this month? thanks in advance,53,10,Wednesday,20
+364,2026-06-25 13:09:05.868157,Can you recommend best practices for scaling?,Other,Medium,Neutral,Customer_1972,7,can you recommend best practices for scaling?,45,7,Thursday,13
+365,2026-06-09 10:09:05.868157,I need to add team members to my workspace.,Account,Low,Positive,Customer_5740,9,i need to add team members to my workspace,42,9,Tuesday,10
+366,2026-06-07 06:09:05.868157,How do I change my email address?,Account,Low,Negative,Customer_1971,7,how do i change my email address?,33,7,Sunday,6
+367,2026-06-09 09:09:05.868157,I need an invoice for my payment on July 1st.,Billing,High,Neutral,Customer_5055,10,i need an invoice for my payment on july 1st,44,10,Tuesday,9
+368,2026-06-19 05:09:05.868157,Question about your roadmap priorities.,Other,Low,Positive,Customer_2237,5,question about your roadmap priorities,38,5,Friday,5
+369,2026-06-22 21:09:05.868157,Is there a community forum?,Other,High,Negative,Customer_7046,5,is there a community forum?,27,5,Monday,21
+370,2026-06-08 05:09:05.868157,How do I connect my database to the platform? This is urgent!,Technical Support,Critical,Negative,Customer_6869,12,how do i connect my database to the platform? this is urgent!,61,12,Monday,5
+371,2026-06-23 09:09:05.868157,Mobile app freezes when uploading files larger than 50MB. Please help ASAP.,Bug,High,Neutral,Customer_5646,12,mobile app freezes when uploading files larger than 50mb please help asap,73,12,Tuesday,9
+372,2026-06-30 16:09:05.868157,Do you offer annual subscription discounts? This is urgent!,Billing,Medium,Positive,Customer_8529,9,do you offer annual subscription discounts? this is urgent!,59,9,Tuesday,16
+373,2026-06-01 06:09:05.868157,Mobile app freezes when uploading files larger than 50MB.,Bug,Medium,Negative,Customer_4314,9,mobile app freezes when uploading files larger than 50mb,56,9,Monday,6
+374,2026-06-02 11:09:05.868157,Question about your roadmap priorities.,Other,Critical,Negative,Customer_2529,5,question about your roadmap priorities,38,5,Tuesday,11
+375,2026-06-11 10:09:05.868157,Your platform has transformed our workflow.,Other,Low,Positive,Customer_4836,6,your platform has transformed our workflow,42,6,Thursday,10
+376,2026-06-29 15:09:05.868157,How do I connect my database to the platform?,Technical Support,Medium,Neutral,Customer_4705,9,how do i connect my database to the platform?,45,9,Monday,15
+377,2026-06-09 15:09:05.868157,Can you update my billing address? Please help ASAP.,Account,Medium,Positive,Customer_8826,9,can you update my billing address? please help asap,51,9,Tuesday,15
+378,2026-06-20 10:09:05.868157,Cannot login to my account. Getting 500 error on login page.,Bug,Medium,Positive,Customer_3246,11,cannot login to my account getting 500 error on login page,58,11,Saturday,10
+379,2026-06-10 15:09:05.868157,What's the maximum file size I can upload?,Technical Support,High,Negative,Customer_2120,8,whats the maximum file size i can upload?,41,8,Wednesday,15
+380,2026-06-08 13:09:05.868157,"I forgot my password, please reset it.",Account,Medium,Neutral,Customer_3480,7,i forgot my password please reset it,36,7,Monday,13
+381,2026-06-28 15:09:05.868157,What's the maximum file size I can upload?,Technical Support,Medium,Neutral,Customer_3017,8,whats the maximum file size i can upload?,41,8,Sunday,15
+382,2026-06-27 12:09:05.868157,How do I delete my account?,Account,Medium,Neutral,Customer_5537,6,how do i delete my account?,27,6,Saturday,12
+383,2026-06-06 21:09:05.870165,Can you recommend best practices for scaling? Been waiting 3 days.,Other,Low,Neutral,Customer_1439,11,can you recommend best practices for scaling? been waiting 3 days,65,11,Saturday,21
+384,2026-06-08 07:09:05.870165,Can you recommend best practices for scaling?,Other,High,Neutral,Customer_5842,7,can you recommend best practices for scaling?,45,7,Monday,7
+385,2026-06-28 12:09:05.870165,Your platform has transformed our workflow.,Other,Low,Negative,Customer_9185,6,your platform has transformed our workflow,42,6,Sunday,12
+386,2026-06-27 07:09:05.870165,Just wanted to say thanks for great support! Been waiting 3 days.,Other,Medium,Neutral,Customer_7895,12,just wanted to say thanks for great support! been waiting 3 days,64,12,Saturday,7
+387,2026-07-01 01:09:05.870165,Do you offer annual subscription discounts? This is urgent!,Billing,Medium,Positive,Customer_2106,9,do you offer annual subscription discounts? this is urgent!,59,9,Wednesday,1
+388,2026-06-15 10:09:05.870165,Cannot login to my account. Getting 500 error on login page. Please help ASAP.,Bug,Medium,Positive,Customer_9209,14,cannot login to my account getting 500 error on login page please help asap,75,14,Monday,10
+389,2026-06-27 11:09:05.870165,How do I backup my data?,Technical Support,Medium,Neutral,Customer_2369,6,how do i backup my data?,24,6,Saturday,11
+390,2026-06-19 01:09:05.870165,I need an invoice for my payment on July 1st.,Billing,Low,Negative,Customer_2083,10,i need an invoice for my payment on july 1st,44,10,Friday,1
+391,2026-06-29 06:09:05.870165,I need an invoice for my payment on July 1st.,Billing,Medium,Neutral,Customer_2900,10,i need an invoice for my payment on july 1st,44,10,Monday,6
+392,2026-06-09 15:09:05.870165,What's the maximum file size I can upload?,Technical Support,Medium,Positive,Customer_1185,8,whats the maximum file size i can upload?,41,8,Tuesday,15
+393,2026-06-26 08:09:05.870165,Can you implement two-factor authentication? Been waiting 3 days.,Feature Request,Medium,Neutral,Customer_3079,9,can you implement twofactor authentication? been waiting 3 days,63,9,Friday,8
+394,2026-06-21 06:09:05.870165,Just wanted to say thanks for great support! This is urgent!,Other,High,Neutral,Customer_5456,11,just wanted to say thanks for great support! this is urgent!,60,11,Sunday,6
+395,2026-06-16 05:09:05.870165,I need to add team members to my workspace.,Account,Low,Neutral,Customer_9368,9,i need to add team members to my workspace,42,9,Tuesday,5
+396,2026-06-23 16:09:05.870165,I need an invoice for my payment on July 1st.,Billing,Low,Negative,Customer_2889,10,i need an invoice for my payment on july 1st,44,10,Tuesday,16
+397,2026-06-16 08:09:05.870165,Can we add dark mode to the platform?,Feature Request,Medium,Positive,Customer_7274,8,can we add dark mode to the platform?,37,8,Tuesday,8
+398,2026-06-01 21:09:05.870165,Can we add dark mode to the platform?,Feature Request,Low,Negative,Customer_7870,8,can we add dark mode to the platform?,37,8,Monday,21
+399,2026-06-29 01:09:05.870165,Please add bulk edit functionality for records.,Feature Request,Low,Neutral,Customer_7108,7,please add bulk edit functionality for records,46,7,Monday,1
+400,2026-06-15 18:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,High,Negative,Customer_7568,8,dashboard widgets not loading tried refreshing still broken,59,8,Monday,18
+401,2026-06-14 05:09:05.870165,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Critical,Negative,Customer_1130,12,export to csv feature crashes when i select more than 1000 rows,63,12,Sunday,5
+402,2026-06-17 08:09:05.870165,Can I upgrade to the enterprise plan? Thanks in advance.,Billing,Medium,Neutral,Customer_9083,10,can i upgrade to the enterprise plan? thanks in advance,55,10,Wednesday,8
+403,2026-06-02 06:09:05.870165,Would love to see integration with Slack for notifications.,Feature Request,Medium,Neutral,Customer_1391,9,would love to see integration with slack for notifications,58,9,Tuesday,6
+404,2026-06-06 22:09:05.870165,Can we add dark mode to the platform? This is urgent!,Feature Request,Medium,Neutral,Customer_7164,11,can we add dark mode to the platform? this is urgent!,53,11,Saturday,22
+405,2026-06-16 18:09:05.870165,Can you recommend best practices for scaling? Please help ASAP.,Other,Medium,Positive,Customer_3332,10,can you recommend best practices for scaling? please help asap,62,10,Tuesday,18
+406,2026-06-17 21:09:05.870165,Your platform has transformed our workflow. Losing money on this.,Other,Low,Positive,Customer_7102,10,your platform has transformed our workflow losing money on this,63,10,Wednesday,21
+407,2026-06-11 07:09:05.870165,How do I connect my database to the platform?,Technical Support,Critical,Neutral,Customer_2226,9,how do i connect my database to the platform?,45,9,Thursday,7
+408,2026-06-23 09:09:05.870165,"I forgot my password, please reset it.",Account,Medium,Neutral,Customer_7438,7,i forgot my password please reset it,36,7,Tuesday,9
+409,2026-06-29 13:09:05.870165,Is there a community forum?,Other,High,Neutral,Customer_3230,5,is there a community forum?,27,5,Monday,13
+410,2026-06-18 16:09:05.870165,How do I delete my account?,Account,Low,Positive,Customer_9780,6,how do i delete my account?,27,6,Thursday,16
+411,2026-06-04 16:09:05.870165,Can I upgrade to the enterprise plan?,Billing,Critical,Negative,Customer_2481,7,can i upgrade to the enterprise plan?,37,7,Thursday,16
+412,2026-06-05 09:09:05.870165,Can you implement two-factor authentication?,Feature Request,High,Neutral,Customer_3430,5,can you implement twofactor authentication?,43,5,Friday,9
+413,2026-06-10 10:09:05.870165,Mobile app freezes when uploading files larger than 50MB.,Bug,High,Negative,Customer_5262,9,mobile app freezes when uploading files larger than 50mb,56,9,Wednesday,10
+414,2026-06-14 12:09:05.870165,We need API access for custom integrations.,Feature Request,Low,Neutral,Customer_2551,7,we need api access for custom integrations,42,7,Sunday,12
+415,2026-06-05 12:09:05.870165,How do I connect my database to the platform?,Technical Support,Low,Neutral,Customer_3141,9,how do i connect my database to the platform?,45,9,Friday,12
+416,2026-06-23 17:09:05.870165,Can we add dark mode to the platform?,Feature Request,High,Neutral,Customer_1357,8,can we add dark mode to the platform?,37,8,Tuesday,17
+417,2026-06-04 09:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,Medium,Neutral,Customer_3007,8,dashboard widgets not loading tried refreshing still broken,59,8,Thursday,9
+418,2026-06-08 07:09:05.870165,Search function returns no results even though records exist.,Bug,Critical,Neutral,Customer_9128,9,search function returns no results even though records exist,60,9,Monday,7
+419,2026-06-26 11:09:05.870165,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Medium,Neutral,Customer_5585,12,export to csv feature crashes when i select more than 1000 rows,63,12,Friday,11
+420,2026-06-11 10:09:05.870165,How do I backup my data?,Technical Support,High,Positive,Customer_9173,6,how do i backup my data?,24,6,Thursday,10
+421,2026-06-27 06:09:05.870165,How do I connect my database to the platform?,Technical Support,High,Negative,Customer_4267,9,how do i connect my database to the platform?,45,9,Saturday,6
+422,2026-06-05 21:09:05.870165,Can you recommend best practices for scaling? Please help ASAP.,Other,High,Negative,Customer_6883,10,can you recommend best practices for scaling? please help asap,62,10,Friday,21
+423,2026-06-19 11:09:05.870165,How do I backup my data?,Technical Support,Medium,Neutral,Customer_3946,6,how do i backup my data?,24,6,Friday,11
+424,2026-06-16 03:09:05.870165,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Medium,Positive,Customer_6856,12,export to csv feature crashes when i select more than 1000 rows,63,12,Tuesday,3
+425,2026-06-24 11:09:05.870165,How do I change my email address?,Account,Critical,Negative,Customer_9743,7,how do i change my email address?,33,7,Wednesday,11
+426,2026-06-06 07:09:05.870165,Your platform has transformed our workflow.,Other,Low,Negative,Customer_6813,6,your platform has transformed our workflow,42,6,Saturday,7
+427,2026-06-08 21:09:05.870165,Please add bulk edit functionality for records. This is urgent!,Feature Request,Low,Neutral,Customer_6761,10,please add bulk edit functionality for records this is urgent!,62,10,Monday,21
+428,2026-06-14 10:09:05.870165,"I forgot my password, please reset it. Please help ASAP.",Account,Medium,Neutral,Customer_3876,10,i forgot my password please reset it please help asap,53,10,Sunday,10
+429,2026-06-15 04:09:05.870165,How do I backup my data?,Technical Support,Low,Positive,Customer_1011,6,how do i backup my data?,24,6,Monday,4
+430,2026-06-26 09:09:05.870165,I need an invoice for my payment on July 1st.,Billing,Critical,Negative,Customer_1975,10,i need an invoice for my payment on july 1st,44,10,Friday,9
+431,2026-06-04 08:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken. Losing money on this.",Bug,Medium,Neutral,Customer_2188,12,dashboard widgets not loading tried refreshing still broken losing money on this,80,12,Thursday,8
+432,2026-06-22 09:09:05.870165,I was charged but didn't confirm the transaction.,Billing,High,Negative,Customer_3235,8,i was charged but didnt confirm the transaction,47,8,Monday,9
+433,2026-06-25 21:09:05.870165,We need API access for custom integrations.,Feature Request,Medium,Neutral,Customer_6846,7,we need api access for custom integrations,42,7,Thursday,21
+434,2026-06-09 10:09:05.870165,We need API access for custom integrations.,Feature Request,Medium,Negative,Customer_3086,7,we need api access for custom integrations,42,7,Tuesday,10
+435,2026-06-07 01:09:05.870165,Can you implement two-factor authentication?,Feature Request,Medium,Negative,Customer_1530,5,can you implement twofactor authentication?,43,5,Sunday,1
+436,2026-06-13 16:09:05.870165,Can you implement two-factor authentication?,Feature Request,Medium,Negative,Customer_9129,5,can you implement twofactor authentication?,43,5,Saturday,16
+437,2026-06-11 17:09:05.870165,Please add bulk edit functionality for records. Thanks in advance.,Feature Request,Low,Positive,Customer_6500,10,please add bulk edit functionality for records thanks in advance,64,10,Thursday,17
+438,2026-06-06 16:09:05.870165,How do I connect my database to the platform?,Technical Support,Low,Positive,Customer_1020,9,how do i connect my database to the platform?,45,9,Saturday,16
+439,2026-06-03 07:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken. Please help ASAP.",Bug,Medium,Neutral,Customer_6754,11,dashboard widgets not loading tried refreshing still broken please help asap,76,11,Wednesday,7
+440,2026-06-10 12:09:05.870165,I need to add team members to my workspace.,Account,Low,Negative,Customer_3664,9,i need to add team members to my workspace,42,9,Wednesday,12
+441,2026-06-23 16:09:05.870165,How do I reset my API key?,Technical Support,Low,Negative,Customer_2215,7,how do i reset my api key?,26,7,Tuesday,16
+442,2026-06-03 17:09:05.870165,Why was I charged twice this month?,Billing,Low,Neutral,Customer_6536,7,why was i charged twice this month?,35,7,Wednesday,17
+443,2026-06-11 14:09:05.870165,How do I change my email address?,Account,Critical,Negative,Customer_8113,7,how do i change my email address?,33,7,Thursday,14
+444,2026-06-13 20:09:05.870165,Would love to see integration with Slack for notifications.,Feature Request,Low,Neutral,Customer_9849,9,would love to see integration with slack for notifications,58,9,Saturday,20
+445,2026-06-13 02:09:05.870165,Why was I charged twice this month?,Billing,Medium,Positive,Customer_9043,7,why was i charged twice this month?,35,7,Saturday,2
+446,2026-06-09 23:09:05.870165,Can we add dark mode to the platform?,Feature Request,Low,Positive,Customer_8869,8,can we add dark mode to the platform?,37,8,Tuesday,23
+447,2026-06-04 16:09:05.870165,Please add bulk edit functionality for records. Please help ASAP.,Feature Request,Low,Positive,Customer_6052,10,please add bulk edit functionality for records please help asap,63,10,Thursday,16
+448,2026-06-14 07:09:05.870165,How do I reset my API key?,Technical Support,Medium,Negative,Customer_4029,7,how do i reset my api key?,26,7,Sunday,7
+449,2026-06-17 05:09:05.870165,Do you offer annual subscription discounts?,Billing,High,Neutral,Customer_5315,6,do you offer annual subscription discounts?,43,6,Wednesday,5
+450,2026-06-28 22:09:05.870165,Would love to see integration with Slack for notifications. This is urgent!,Feature Request,High,Negative,Customer_6632,12,would love to see integration with slack for notifications this is urgent!,74,12,Sunday,22
+451,2026-06-05 07:09:05.870165,"I forgot my password, please reset it.",Account,Medium,Neutral,Customer_9561,7,i forgot my password please reset it,36,7,Friday,7
+452,2026-06-24 04:09:05.870165,Can you help me configure LDAP authentication?,Technical Support,Critical,Negative,Customer_5896,7,can you help me configure ldap authentication?,46,7,Wednesday,4
+453,2026-06-03 03:09:05.870165,Cannot login to my account. Getting 500 error on login page.,Bug,Medium,Negative,Customer_3415,11,cannot login to my account getting 500 error on login page,58,11,Wednesday,3
+454,2026-06-27 18:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken. Thanks in advance.",Bug,Critical,Negative,Customer_7936,11,dashboard widgets not loading tried refreshing still broken thanks in advance,77,11,Saturday,18
+455,2026-06-20 20:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken. Been waiting 3 days.",Bug,Critical,Negative,Customer_2097,12,dashboard widgets not loading tried refreshing still broken been waiting 3 days,79,12,Saturday,20
+456,2026-06-17 19:09:05.870165,Export to CSV feature crashes when I select more than 1000 rows. Losing money on this.,Bug,Medium,Neutral,Customer_9561,16,export to csv feature crashes when i select more than 1000 rows losing money on this,84,16,Wednesday,19
+457,2026-06-07 16:09:05.870165,How do I backup my data?,Technical Support,Low,Positive,Customer_2730,6,how do i backup my data?,24,6,Sunday,16
+458,2026-06-23 07:09:05.870165,I need to add team members to my workspace. Please help ASAP.,Account,High,Negative,Customer_8955,12,i need to add team members to my workspace please help asap,59,12,Tuesday,7
+459,2026-06-12 00:09:05.870165,Can you update my billing address?,Account,Medium,Positive,Customer_7581,6,can you update my billing address?,34,6,Friday,0
+460,2026-06-16 11:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,Medium,Negative,Customer_7102,8,dashboard widgets not loading tried refreshing still broken,59,8,Tuesday,11
+461,2026-06-15 21:09:05.870165,Export to CSV feature crashes when I select more than 1000 rows.,Bug,Medium,Neutral,Customer_2609,12,export to csv feature crashes when i select more than 1000 rows,63,12,Monday,21
+462,2026-06-22 20:09:05.870165,We need API access for custom integrations. Been waiting 3 days.,Feature Request,Low,Negative,Customer_7828,11,we need api access for custom integrations been waiting 3 days,62,11,Monday,20
+463,2026-06-08 04:09:05.870165,"I forgot my password, please reset it. Please help ASAP.",Account,Medium,Positive,Customer_9462,10,i forgot my password please reset it please help asap,53,10,Monday,4
+464,2026-06-09 03:09:05.870165,I need an invoice for my payment on July 1st.,Billing,High,Negative,Customer_7609,10,i need an invoice for my payment on july 1st,44,10,Tuesday,3
+465,2026-06-25 13:09:05.870165,Can you implement two-factor authentication?,Feature Request,High,Negative,Customer_1944,5,can you implement twofactor authentication?,43,5,Thursday,13
+466,2026-06-20 05:09:05.870165,Please add bulk edit functionality for records. Been waiting 3 days.,Feature Request,Low,Positive,Customer_9275,11,please add bulk edit functionality for records been waiting 3 days,66,11,Saturday,5
+467,2026-06-16 00:09:05.870165,How do I connect my database to the platform?,Technical Support,Medium,Positive,Customer_8308,9,how do i connect my database to the platform?,45,9,Tuesday,0
+468,2026-06-26 11:09:05.870165,Can you implement two-factor authentication?,Feature Request,Critical,Negative,Customer_2480,5,can you implement twofactor authentication?,43,5,Friday,11
+469,2026-06-04 12:09:05.870165,I was charged but didn't confirm the transaction. Thanks in advance.,Billing,Low,Positive,Customer_4688,11,i was charged but didnt confirm the transaction thanks in advance,65,11,Thursday,12
+470,2026-06-06 22:09:05.870165,Can you recommend best practices for scaling?,Other,Low,Neutral,Customer_1145,7,can you recommend best practices for scaling?,45,7,Saturday,22
+471,2026-06-23 00:09:05.870165,How do I backup my data? Thanks in advance.,Technical Support,Critical,Negative,Customer_6004,9,how do i backup my data? thanks in advance,42,9,Tuesday,0
+472,2026-06-17 11:09:05.870165,Is there a community forum? Been waiting 3 days.,Other,Critical,Negative,Customer_4575,9,is there a community forum? been waiting 3 days,47,9,Wednesday,11
+473,2026-06-28 19:09:05.870165,How do I backup my data?,Technical Support,Low,Neutral,Customer_9380,6,how do i backup my data?,24,6,Sunday,19
+474,2026-06-12 10:09:05.870165,Can you recommend best practices for scaling?,Other,Critical,Negative,Customer_5890,7,can you recommend best practices for scaling?,45,7,Friday,10
+475,2026-06-04 11:09:05.870165,Question about your roadmap priorities.,Other,Low,Positive,Customer_5278,5,question about your roadmap priorities,38,5,Thursday,11
+476,2026-06-15 12:09:05.870165,Question about your roadmap priorities.,Other,Medium,Negative,Customer_1930,5,question about your roadmap priorities,38,5,Monday,12
+477,2026-06-22 11:09:05.870165,"I forgot my password, please reset it. Please help ASAP.",Account,Medium,Neutral,Customer_7857,10,i forgot my password please reset it please help asap,53,10,Monday,11
+478,2026-06-07 21:09:05.870165,How do I backup my data? Been waiting 3 days.,Technical Support,Low,Positive,Customer_4643,10,how do i backup my data? been waiting 3 days,44,10,Sunday,21
+479,2026-06-04 14:09:05.870165,Question about your roadmap priorities.,Other,Medium,Neutral,Customer_3967,5,question about your roadmap priorities,38,5,Thursday,14
+480,2026-06-07 14:09:05.870165,Can I upgrade to the enterprise plan? Losing money on this.,Billing,Low,Positive,Customer_6499,11,can i upgrade to the enterprise plan? losing money on this,58,11,Sunday,14
+481,2026-06-03 09:09:05.870165,Question about your roadmap priorities.,Other,Low,Neutral,Customer_7089,5,question about your roadmap priorities,38,5,Wednesday,9
+482,2026-06-03 23:09:05.870165,Why was I charged twice this month?,Billing,Medium,Neutral,Customer_2166,7,why was i charged twice this month?,35,7,Wednesday,23
+483,2026-06-18 18:09:05.870165,Can you help me configure LDAP authentication?,Technical Support,High,Negative,Customer_3470,7,can you help me configure ldap authentication?,46,7,Thursday,18
+484,2026-06-27 09:09:05.870165,Can you implement two-factor authentication? Please help ASAP.,Feature Request,Critical,Negative,Customer_3954,8,can you implement twofactor authentication? please help asap,60,8,Saturday,9
+485,2026-06-30 19:09:05.870165,"Dashboard widgets not loading. Tried refreshing, still broken.",Bug,High,Negative,Customer_8406,8,dashboard widgets not loading tried refreshing still broken,59,8,Tuesday,19
+486,2026-06-06 17:09:05.870165,I was charged but didn't confirm the transaction. Please help ASAP.,Billing,Medium,Neutral,Customer_3120,11,i was charged but didnt confirm the transaction please help asap,64,11,Saturday,17
+487,2026-07-01 18:09:05.870165,How do I delete my account? Please help ASAP.,Account,Medium,Neutral,Customer_9745,9,how do i delete my account? please help asap,44,9,Wednesday,18
+488,2026-06-25 19:09:05.870165,Please add bulk edit functionality for records. Losing money on this.,Feature Request,Medium,Negative,Customer_1067,11,please add bulk edit functionality for records losing money on this,67,11,Thursday,19
+489,2026-06-28 07:09:05.870165,Question about your roadmap priorities.,Other,Medium,Positive,Customer_9246,5,question about your roadmap priorities,38,5,Sunday,7
+490,2026-06-22 05:09:05.870165,How do I change my email address?,Account,Low,Positive,Customer_9524,7,how do i change my email address?,33,7,Monday,5
+491,2026-06-03 04:09:05.870165,"I forgot my password, please reset it.",Account,Medium,Neutral,Customer_6885,7,i forgot my password please reset it,36,7,Wednesday,4
+492,2026-06-23 20:09:05.870165,We need API access for custom integrations.,Feature Request,Low,Negative,Customer_3149,7,we need api access for custom integrations,42,7,Tuesday,20
+493,2026-06-08 23:09:05.870165,Would love to see integration with Slack for notifications.,Feature Request,Medium,Neutral,Customer_1612,9,would love to see integration with slack for notifications,58,9,Monday,23
+494,2026-06-12 18:09:05.870165,How do I backup my data?,Technical Support,High,Neutral,Customer_2771,6,how do i backup my data?,24,6,Friday,18
+495,2026-06-19 16:09:05.870165,Just wanted to say thanks for great support!,Other,High,Positive,Customer_9966,8,just wanted to say thanks for great support!,44,8,Friday,16
+496,2026-06-10 16:09:05.870165,Why was I charged twice this month?,Billing,Medium,Positive,Customer_9524,7,why was i charged twice this month?,35,7,Wednesday,16
+497,2026-06-14 20:09:05.870165,Do you offer annual subscription discounts? This is urgent!,Billing,Medium,Neutral,Customer_2928,9,do you offer annual subscription discounts? this is urgent!,59,9,Sunday,20
+498,2026-06-07 11:09:05.870165,I need an invoice for my payment on July 1st.,Billing,Low,Positive,Customer_9571,10,i need an invoice for my payment on july 1st,44,10,Sunday,11
+499,2026-06-16 13:09:05.870165,Would love to see integration with Slack for notifications.,Feature Request,Low,Neutral,Customer_8875,9,would love to see integration with slack for notifications,58,9,Tuesday,13
+500,2026-06-10 04:09:05.870165,Why was I charged twice this month? Losing money on this.,Billing,Medium,Positive,Customer_3443,11,why was i charged twice this month? losing money on this,56,11,Wednesday,4

@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-07-01T19:09:07.072920",
+  "total_records": 500,
+  "columns": [
+    "ticket_id",
+    "created_at",
+    "description",
+    "true_category",
+    "true_priority",
+    "true_sentiment",
+    "customer_name",
+    "ticket_length",
+    "description_clean",
+    "text_length",
+    "word_count",
+    "day_of_week",
+    "hour"
+  ],
+  "null_values": {
+    "ticket_id": 0,
+    "created_at": 0,
+    "description": 0,
+    "true_category": 0,
+    "true_priority": 0,
+    "true_sentiment": 0,
+    "customer_name": 0,
+    "ticket_length": 0,
+    "description_clean": 0,
+    "text_length": 0,
+    "word_count": 0,
+    "day_of_week": 0,
+    "hour": 0
+  },
+  "data_types": {
+    "ticket_id": "int64",
+    "created_at": "datetime64[ns]",
+    "description": "object",
+    "true_category": "object",
+    "true_priority": "object",
+    "true_sentiment": "object",
+    "customer_name": "object",
+    "ticket_length": "int64",
+    "description_clean": "object",
+    "text_length": "int64",
+    "word_count": "int64",
+    "day_of_week": "object",
+    "hour": "int32"
+  },
+  "category_distribution": {
+    "Other": 90,
+    "Technical Support": 86,
+    "Account": 85,
+    "Feature Request": 81,
+    "Billing": 81,
+    "Bug": 77
+  },
+  "priority_distribution": {
+    "Medium": 186,
+    "Low": 170,
+    "High": 83,
+    "Critical": 61
+  },
+  "sentiment_distribution": {
+    "Neutral": 203,
+    "Negative": 170,
+    "Positive": 127
+  },
+  "text_statistics": {
+    "min_length": 24,
+    "max_length": 84,
+    "mean_length": 47.912,
+    "median_length": 45.0,
+    "min_words": 5,
+    "max_words": 16,
+    "mean_words": 8.472
+  },
+  "temporal_info": {
+    "date_range": "2026-05-31 20:09:05.868157 to 2026-07-01 18:09:05.870165",
+    "tickets_by_hour": {
+      "7": 30,
+      "16": 27,
+      "5": 26,
+      "12": 26,
+      "6": 25,
+      "18": 24,
+      "23": 24,
+      "15": 23,
+      "8": 23,
+      "21": 22,
+      "11": 21,
+      "2": 21,
+      "9": 21,
+      "10": 20,
+      "4": 20,
+      "22": 19,
+      "3": 18,
+      "0": 18,
+      "1": 18,
+      "13": 17,
+      "20": 15,
+      "17": 15,
+      "19": 14,
+      "14": 13
+    },
+    "tickets_by_day": {
+      "Monday": 83,
+      "Wednesday": 83,
+      "Tuesday": 75,
+      "Thursday": 69,
+      "Saturday": 68,
+      "Sunday": 62,
+      "Friday": 60
+    }
+  }
+}
