@@ -55,13 +55,27 @@ Proj 1/
 
 ## Screenshots
 
-| Live Classifier | Model Performance |
-|---|---|
-| ![Live Classifier](screenshots/Live_Classifier.png) | ![Model Performance](screenshots/Model_Performance.png) |
+### Live Classifier
+![Live Classifier](screenshots/Live_Classifier.png)
+Enter a support ticket description and get real-time predictions for category, sentiment, and priority. Try sample tickets with one click to see instant classification results.
 
-| Dataset Analysis | About |
-|---|---|
-| ![Dataset Analysis](screenshots/Dataset_Analysis.png) | ![About Page](screenshots/About_Page.png) |
+---
+
+### Model Performance
+![Model Performance](screenshots/Model_Performance.png)
+Comprehensive model metrics dashboard showing category classifier accuracy (79%), F1-score (78.8%), and sentiment analyzer performance. View per-category precision, recall, and F1-scores with confusion matrices.
+
+---
+
+### Dataset Analysis
+![Dataset Analysis](screenshots/Dataset_Analysis.png)
+Exploratory data analysis with 500 synthetic tickets. Interactive charts show category distribution, priority breakdown, sentiment analysis, and text length statistics. Browse sample data with full ticket descriptions.
+
+---
+
+### About Page
+![About Page](screenshots/About_Page.png)
+Project overview including tech stack (Python, scikit-learn, Streamlit), phases completed, key metrics, and next steps for production deployment. Built by Razeen in 1 week.
 
 ## Getting Started
 
