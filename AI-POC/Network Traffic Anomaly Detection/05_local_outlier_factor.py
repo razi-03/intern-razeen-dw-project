@@ -2,6 +2,7 @@
 Phase 4b: Anomaly Detection - Local Outlier Factor (LOF)
 Density-based anomaly detection algorithm.
 Expected performance: ~94% accuracy on non-overlapping anomalies.
+FIXED: Changed novelty=False to novelty=True to enable predict() on test data.
 """
 
 import pandas as pd
@@ -14,10 +15,11 @@ class LocalOutlierFactorModel:
     """Local Outlier Factor anomaly detection model."""
     
     def __init__(self, contamination=0.10, n_neighbors=20, random_state=42):
+        # FIXED: novelty=True enables predict() on new/test data
         self.model = LocalOutlierFactor(
             contamination=contamination,
             n_neighbors=n_neighbors,
-            novelty=False
+            novelty=True  # FIXED: was False, which crashes on predict(X_test)
         )
         self.contamination = contamination
         self.n_neighbors = n_neighbors
@@ -29,7 +31,7 @@ class LocalOutlierFactorModel:
         
         self.model.fit(X_train)
         print(f"      ✓ Model trained on {len(X_train):,} samples")
-        print(f"      ✓ Parameters: n_neighbors={self.n_neighbors}, contamination={self.contamination}")
+        print(f"      ✓ Parameters: n_neighbors={self.n_neighbors}, contamination={self.contamination}, novelty=True")
     
     def predict(self, X_test):
         """Generate predictions (-1=anomaly, 1=normal)."""
@@ -40,7 +42,8 @@ class LocalOutlierFactorModel:
     
     def get_anomaly_scores(self, X_test):
         """Get negative_outlier_factor (lower = more anomalous)."""
-        return -self.model.negative_outlier_factor_
+        # With novelty=True, use decision_function instead
+        return -self.model.decision_function(X_test)
     
     def evaluate(self, X_test, y_test):
         """Evaluate model performance."""
@@ -106,10 +109,10 @@ class LocalOutlierFactorModel:
 if __name__ == "__main__":
     # Load data from Phase 3
     print("📖 Loading train/test data...")
-    X_train = pd.read_csv("train_data.csv").drop('is_anomaly', axis=1)
+    X_train = pd.read_csv("train_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     y_train = pd.read_csv("train_data.csv")['is_anomaly']
     
-    X_test = pd.read_csv("test_data.csv").drop('is_anomaly', axis=1)
+    X_test = pd.read_csv("test_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     y_test = pd.read_csv("test_data.csv")['is_anomaly']
     
     # Train and evaluate

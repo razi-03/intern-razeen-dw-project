@@ -2,6 +2,7 @@
 Phase 3: Feature Selection & Exploratory Data Analysis
 Identifies most important features using mutual information and statistical tests.
 Prepares train-test split for model training.
+FIXED: Preserves timestamp and anomaly_type columns for later use in alert engine.
 """
 
 import pandas as pd
@@ -99,11 +100,34 @@ class FeatureSelectionEDA:
             stratify=self.y
         )
         
+        # FIXED: Also preserve timestamp and anomaly_type for alert engine
+        if 'timestamp' in self.df.columns:
+            timestamp_train, timestamp_test = train_test_split(
+                self.df['timestamp'],
+                test_size=test_size,
+                random_state=random_state,
+                stratify=self.y
+            )
+        else:
+            timestamp_train = None
+            timestamp_test = None
+        
+        if 'anomaly_type' in self.df.columns:
+            anomaly_type_train, anomaly_type_test = train_test_split(
+                self.df['anomaly_type'],
+                test_size=test_size,
+                random_state=random_state,
+                stratify=self.y
+            )
+        else:
+            anomaly_type_train = None
+            anomaly_type_test = None
+        
         print(f"      ✓ Train set: {len(X_train):,} rows ({(len(X_train)/len(self.X))*100:.1f}%)")
         print(f"      ✓ Test set: {len(X_test):,} rows ({(len(X_test)/len(self.X))*100:.1f}%)")
         print(f"      ✓ Features: {len(top_features)}")
         
-        return X_train, X_test, y_train, y_test, top_features
+        return X_train, X_test, y_train, y_test, top_features, timestamp_train, timestamp_test, anomaly_type_train, anomaly_type_test
     
     def run_eda(self):
         """Execute full EDA pipeline."""
@@ -133,12 +157,22 @@ if __name__ == "__main__":
     mi_df, stats_df = selector.run_eda()
     
     # Prepare train-test split
-    X_train, X_test, y_train, y_test, top_features = selector.train_test_split()
+    X_train, X_test, y_train, y_test, top_features, timestamp_train, timestamp_test, anomaly_type_train, anomaly_type_test = selector.train_test_split()
     
-    # Save splits
+    # Save splits with metadata preserved
     print(f"\n💾 Saving train/test splits...")
+    
     train_df = pd.concat([X_train, y_train], axis=1)
     test_df = pd.concat([X_test, y_test], axis=1)
+    
+    # FIXED: Add timestamp and anomaly_type back to outputs
+    if timestamp_train is not None:
+        train_df.insert(0, 'timestamp', timestamp_train.values)
+        test_df.insert(0, 'timestamp', timestamp_test.values)
+    
+    if anomaly_type_train is not None:
+        train_df['anomaly_type'] = anomaly_type_train.values
+        test_df['anomaly_type'] = anomaly_type_test.values
     
     train_df.to_csv("train_data.csv", index=False)
     test_df.to_csv("test_data.csv", index=False)

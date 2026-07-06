@@ -2,6 +2,7 @@
 Phase 4c: Anomaly Detection - ARIMA Time Series Model
 Univariate forecasting-based anomaly detection.
 Expected performance: ~91% accuracy on non-overlapping anomalies.
+FIXED: Limited training to first 50K rows to avoid excessive training time on 400K rows.
 """
 
 import pandas as pd
@@ -29,21 +30,30 @@ class ARIMAModel:
                 enforce_stationarity=False,
                 enforce_invertibility=False
             )
-            results = model.fit(disp=False)
+            results = model.fit(disp=False, maxiter=200)
             return results
         except Exception as e:
-            print(f"      ⚠️  Warning: ARIMA training failed for {feature_name}")
+            print(f"      ⚠️  Warning: ARIMA training failed for {feature_name}: {str(e)[:50]}")
             return None
     
     def train(self, X_train):
         """Train ARIMA models on all features."""
         print("   ⏳ Training ARIMA models...")
+        print("      ℹ️  Note: SARIMAX fitting can take several minutes on large datasets")
+        
+        # FIXED: Limit to first 50K rows to avoid excessive training time
+        if len(X_train) > 50000:
+            print(f"      ℹ️  Using first 50K of {len(X_train):,} rows for training (SARIMAX scaling)")
+            X_train_subset = X_train.iloc[:50000]
+        else:
+            X_train_subset = X_train
         
         trained_count = 0
-        features = X_train.columns[:5]  # Train on first 5 features for speed
+        features = X_train_subset.columns[:5]  # Train on first 5 features for speed
         
         for feature in features:
-            results = self.train_on_feature(X_train[feature].values, feature)
+            print(f"      ⏳ Training on {feature}...")
+            results = self.train_on_feature(X_train_subset[feature].values, feature)
             if results is not None:
                 self.models[feature] = results
                 trained_count += 1
@@ -139,10 +149,10 @@ class ARIMAModel:
 if __name__ == "__main__":
     # Load data from Phase 3
     print("📖 Loading train/test data...")
-    X_train = pd.read_csv("train_data.csv").drop('is_anomaly', axis=1)
+    X_train = pd.read_csv("train_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     y_train = pd.read_csv("train_data.csv")['is_anomaly']
     
-    X_test = pd.read_csv("test_data.csv").drop('is_anomaly', axis=1)
+    X_test = pd.read_csv("test_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     y_test = pd.read_csv("test_data.csv")['is_anomaly']
     
     # Train and evaluate

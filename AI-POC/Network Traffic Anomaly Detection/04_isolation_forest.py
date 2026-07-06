@@ -105,10 +105,10 @@ class IsolationForestModel:
 if __name__ == "__main__":
     # Load data from Phase 3
     print("📖 Loading train/test data...")
-    X_train = pd.read_csv("train_data.csv").drop('is_anomaly', axis=1)
+    X_train = pd.read_csv("train_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     y_train = pd.read_csv("train_data.csv")['is_anomaly']
     
-    X_test = pd.read_csv("test_data.csv").drop('is_anomaly', axis=1)
+    X_test = pd.read_csv("test_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     y_test = pd.read_csv("test_data.csv")['is_anomaly']
     
     # Train and evaluate

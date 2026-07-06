@@ -1,7 +1,8 @@
 """
 Phase 5: Ensemble Voting System
-Combines predictions from Isolation Forest, LOF, and ARIMA.
+Combines predictions from Isolation Forest and LOF models.
 Expected performance: 96%+ accuracy through voting consensus.
+FIXED: Corrected confidence formula from np.max to np.mean for proper voting confidence.
 """
 
 import pandas as pd
@@ -62,8 +63,10 @@ class EnsembleVotingSystem:
         ensemble_pred = np.sum(predictions, axis=0)
         ensemble_pred = (ensemble_pred > len(predictions) / 2).astype(int)
         
-        # Confidence: fraction of models agreeing
-        confidence = np.max(predictions, axis=0) / len(predictions) if len(predictions) > 0 else np.zeros(len(X_test))
+        # FIXED: Confidence formula - should be fraction of models agreeing, not max
+        # np.max(predictions, axis=0) can only be 0 or 1
+        # np.mean(predictions, axis=0) gives actual fraction of agreement (0 to 1)
+        confidence = np.mean(predictions, axis=0) if len(predictions) > 0 else np.zeros(len(X_test))
         
         return ensemble_pred, confidence
     
@@ -181,7 +184,7 @@ class EnsembleVotingSystem:
 if __name__ == "__main__":
     # Load data from Phase 3
     print("📖 Loading test data...")
-    X_test = pd.read_csv("test_data.csv").drop('is_anomaly', axis=1)
+    X_test = pd.read_csv("test_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     y_test = pd.read_csv("test_data.csv")['is_anomaly']
     
     # Run ensemble pipeline

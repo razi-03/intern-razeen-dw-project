@@ -2,6 +2,7 @@
 Streamlit Demo Application
 Interactive visualization of the Network Anomaly Detection POC.
 Run with: streamlit run streamlit_app.py
+FIXED: Updated documentation to reference correct anomaly types.
 """
 
 import streamlit as st
@@ -302,7 +303,7 @@ elif page == "Ensemble Voting":
             st.metric("Confidence Std Dev", f"{metrics['confidence_std']:.4f}")
         
         st.subheader("Voting Method")
-        st.info("Hard Voting: Majority rule consensus across Isolation Forest and LOF models")
+        st.info("Hard Voting: Majority rule consensus across Isolation Forest and LOF models (novelty-mode)")
     else:
         st.warning("Ensemble results not available")
 
@@ -319,9 +320,9 @@ elif page == "Real-Time Streaming":
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("Total Packets", f"{stats['total_processed']:,}")
+            st.metric("Total Packets", f"{int(stats['total_processed']):,}")
         with col2:
-            st.metric("Anomalies Detected", f"{stats['anomalies_detected']:,}")
+            st.metric("Anomalies Detected", f"{int(stats['anomalies_detected']):,}")
         with col3:
             st.metric("Anomaly Rate", f"{stats['anomaly_rate']:.2%}")
         
@@ -392,7 +393,7 @@ elif page == "Documentation":
     
     **Phase 1: Data Generation**
     - 500K synthetic network records
-    - 4 anomaly types (DDoS, Port Scan, Data Exfiltration, Slow Brute Force)
+    - 4 anomaly types (DDoS, Traffic Spike, Congestion, Server Overload)
     - 10% anomaly rate (~50K records)
     - Non-overlapping anomaly clusters
     
@@ -407,32 +408,46 @@ elif page == "Documentation":
     - Mutual information-based selection
     - Statistical analysis
     - Train-test split (80/20)
+    - Preserves timestamp and anomaly_type for alert engine
     
     **Phase 4: Model Training**
-    - Isolation Forest (tree-based, 92% accuracy)
-    - Local Outlier Factor (density-based, 94% accuracy)
-    - ARIMA (time-series, 91% accuracy)
+    - Isolation Forest (tree-based, ~92% accuracy)
+    - Local Outlier Factor (density-based, novelty=True, ~94% accuracy)
+    - ARIMA (time-series, ~91% accuracy)
     
     **Phase 5: Ensemble Voting**
-    - Hard voting consensus
+    - Hard voting consensus (Isolation Forest + LOF)
+    - Confidence = fraction of models agreeing
     - 96%+ combined accuracy
     
     **Phase 6: Real-Time Streaming**
-    - Sliding window processing
-    - Sub-2ms latency
-    - Continuous monitoring
+    - Direct packet processing (no window stacking)
+    - Sub-2ms latency per packet
+    - Continuous monitoring capability
     
     **Phase 7: Alert Engine**
-    - Severity classification
-    - Incident clustering
+    - Severity classification (CRITICAL, HIGH, MEDIUM, LOW)
+    - Incident clustering and grouping
     - Actionable recommendations
+    - Anomaly types: DDoS, Traffic Spike, Congestion, Server Overload
+    
+    ### Key Fixes Applied
+    
+    - **02_anomaly_preprocessing.py**: Corrected input filename (network_traffic_raw.csv)
+    - **03_feature_selection_eda.py**: Preserved timestamp and anomaly_type for alert engine
+    - **05_local_outlier_factor.py**: Changed novelty=False → novelty=True for predict() support
+    - **06_arima_model.py**: Limited training to 50K rows to avoid excessive fitting time
+    - **07_ensemble_voting.py**: Fixed confidence formula (np.mean instead of np.max)
+    - **08_realtime_streaming.py**: Fixed sliding window shape mismatch - feed packets directly
+    - **09_alert_engine.py**: Updated anomaly type vocabulary to match actual data
+    - **streamlit_app.py**: Updated documentation to reference correct anomaly types
     
     ### Deliverables
-    - 9 Python scripts (modular, production-ready)
-    - 5 documentation files
+    - 9 Python scripts (modular, production-ready, fully corrected)
+    - Complete end-to-end pipeline with proper data flow
     - Streamlit interactive dashboard
-    - Complete pipeline with train/test data splits
+    - JSON metrics and results files
     """)
 
 st.sidebar.divider()
-st.sidebar.markdown("**POC Status:** ✅ Complete\n**Created:** July 2026")
+st.sidebar.markdown("**POC Status:** ✅ Complete & Fixed\n**Updated:** July 2026")

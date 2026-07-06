@@ -1,7 +1,8 @@
 """
 Phase 6: Real-Time Streaming Simulation
-Simulates real-time network traffic processing with sliding window anomaly detection.
+Simulates real-time network traffic processing with anomaly detection.
 Expected latency: <2ms per packet.
+FIXED: Corrected sliding window logic - feed one packet at a time, not stacked packets.
 """
 
 import pandas as pd
@@ -12,11 +13,9 @@ from collections import deque
 from datetime import datetime
 
 class RealtimeAnomalyDetector:
-    """Real-time anomaly detection using sliding window approach."""
+    """Real-time anomaly detection using streaming approach."""
     
-    def __init__(self, window_size=100, model_path="isolation_forest_model.pkl"):
-        self.window_size = window_size
-        self.window = deque(maxlen=window_size)
+    def __init__(self, model_path="isolation_forest_model.pkl"):
         self.model = None
         self.load_model(model_path)
         self.stats = {
@@ -34,24 +33,25 @@ class RealtimeAnomalyDetector:
         except FileNotFoundError:
             print(f"   ⚠️  Model not found: {model_path}")
     
-    def process_packet(self, packet_data):
+    def process_packet(self, packet_features):
         """Process a single packet through the detector."""
         start_time = time.time()
         
-        # Add to window
-        self.window.append(packet_data)
-        
-        # Perform detection if window is full
         anomaly_score = 0.0
         is_anomaly = False
         
-        if len(self.window) == self.window_size and self.model is not None:
-            window_array = np.array(list(self.window)).reshape(1, -1)
+        # FIXED: Feed packet directly to model instead of stacking in window
+        # Each packet is already a complete feature vector
+        if self.model is not None:
             try:
-                anomaly_score = -self.model.score_samples(window_array)[0]
-                is_anomaly = self.model.predict(window_array)[0] == -1
+                # Reshape single row to (1, n_features) for sklearn
+                packet_array = np.array(packet_features).reshape(1, -1)
+                anomaly_score = -self.model.score_samples(packet_array)[0]
+                is_anomaly = self.model.predict(packet_array)[0] == -1
             except Exception as e:
+                # Shape mismatch or other error
                 anomaly_score = 0.0
+                is_anomaly = False
         
         # Update stats
         processing_time = (time.time() - start_time) * 1000  # Convert to ms
@@ -62,10 +62,9 @@ class RealtimeAnomalyDetector:
             self.stats['anomalies_detected'] += 1
         
         return {
-            'is_anomaly': is_anomaly,
-            'anomaly_score': anomaly_score,
-            'processing_time_ms': processing_time,
-            'window_full': len(self.window) == self.window_size
+            'is_anomaly': int(is_anomaly),
+            'anomaly_score': float(anomaly_score),
+            'processing_time_ms': processing_time
         }
     
     def get_stats(self):
@@ -92,11 +91,9 @@ class RealtimeAnomalyDetector:
         detections = []
         
         for idx, row in data.iterrows():
-            # Extract features (simplified)
-            features = row.values[:self.window_size] if len(row) >= self.window_size else np.pad(row.values, (0, self.window_size - len(row)))
-            
-            # Process packet
-            result = self.process_packet(features)
+            # FIXED: Feed each row (packet) directly to model
+            # No window stacking - each row is a complete feature vector
+            result = self.process_packet(row.values)
             detections.append(result)
             
             # Simulate network delay
@@ -137,10 +134,10 @@ class RealtimeAnomalyDetector:
 if __name__ == "__main__":
     # Load test data
     print("📖 Loading test data...")
-    test_data = pd.read_csv("test_data.csv").drop('is_anomaly', axis=1)
+    test_data = pd.read_csv("test_data.csv").drop(['is_anomaly', 'timestamp', 'anomaly_type'], axis=1, errors='ignore')
     
     # Run streaming simulation
-    detector = RealtimeAnomalyDetector(window_size=min(50, len(test_data.columns)))
+    detector = RealtimeAnomalyDetector()
     stream_results, stats = detector.run_pipeline(test_data.head(1000))  # Use first 1000 rows for speed
     
     # Save results

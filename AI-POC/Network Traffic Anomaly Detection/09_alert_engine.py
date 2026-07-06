@@ -1,6 +1,7 @@
 """
 Phase 7: Alert Engine & Incident Reporting
 Generates alerts, logs incidents, and creates actionable reports.
+FIXED: Updated anomaly type vocabulary to match actual data (ddos, traffic_spike, congestion, server_overload).
 """
 
 import pandas as pd
@@ -31,19 +32,21 @@ class AlertEngine:
         anomaly_score = anomaly_data.get('anomaly_score', 0)
         anomaly_type = anomaly_data.get('anomaly_type', 'Unknown')
         
+        # FIXED: Updated severity map to match actual anomaly types from Phase 1
+        # Phase 1 generates: ddos, traffic_spike, congestion, server_overload
         severity_map = {
-            'DDoS_Attack': 'CRITICAL',
-            'Data_Exfiltration': 'CRITICAL',
-            'Port_Scan': 'HIGH',
-            'Slow_Brute_Force': 'MEDIUM'
+            'ddos': 'CRITICAL',
+            'traffic_spike': 'HIGH',
+            'congestion': 'MEDIUM',
+            'server_overload': 'HIGH'
         }
         
-        severity = severity_map.get(anomaly_type, 'LOW')
+        severity = severity_map.get(str(anomaly_type).lower(), 'MEDIUM')
         
         # Adjust based on score
         if anomaly_score > 0.8:
             severity = 'CRITICAL'
-        elif anomaly_score > 0.6 and severity != 'CRITICAL':
+        elif anomaly_score > 0.6 and severity == 'MEDIUM':
             severity = 'HIGH'
         
         return severity
@@ -68,13 +71,14 @@ class AlertEngine:
     
     def _get_recommended_action(self, anomaly_type):
         """Get recommended mitigation action."""
+        # FIXED: Updated actions to match actual anomaly types
         actions = {
-            'DDoS_Attack': 'Enable rate limiting, activate DDoS protection, contact ISP',
-            'Port_Scan': 'Review firewall rules, check for unauthorized access attempts',
-            'Data_Exfiltration': 'Isolate affected systems, enable data loss prevention',
-            'Slow_Brute_Force': 'Implement fail2ban, increase authentication timeout'
+            'ddos': 'Activate DDoS protection, enable rate limiting, contact ISP',
+            'traffic_spike': 'Monitor bandwidth utilization, check for unusual activity sources',
+            'congestion': 'Increase capacity, optimize traffic routing, investigate bottlenecks',
+            'server_overload': 'Scale up resources, redistribute load, investigate process utilization'
         }
-        return actions.get(anomaly_type, 'Review logs and investigate')
+        return actions.get(str(anomaly_type).lower(), 'Review logs and investigate')
     
     def create_incident(self, start_time, anomaly_count, anomaly_types):
         """Create an incident report."""
@@ -103,16 +107,22 @@ class AlertEngine:
         anomaly_cluster = []
         
         for idx, row in detections_df.iterrows():
-            if row.get('is_anomaly', 0) == 1 or (ground_truth is not None and ground_truth[idx] == 1):
+            # Check if this is an anomaly
+            is_anomaly = row.get('is_anomaly', 0) == 1
+            if ground_truth is not None and idx < len(ground_truth):
+                is_anomaly = ground_truth[idx] == 1
+            
+            if is_anomaly:
                 anomaly_cluster.append(row)
                 
                 # Generate alert for each anomaly
+                # FIXED: Handle missing columns gracefully with .get() and defaults
                 alert = self.generate_alert(
                     row.get('timestamp', datetime.now()),
                     {
                         'anomaly_score': row.get('anomaly_score', 0.5),
                         'anomaly_type': row.get('anomaly_type', 'Unknown'),
-                        'metric': row.get('metric', 'N/A')
+                        'metric': 'network_traffic'
                     },
                     f"INC-{incident_count + 1:05d}"
                 )

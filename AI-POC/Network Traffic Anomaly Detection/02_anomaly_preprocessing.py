@@ -33,7 +33,7 @@ class TimeSeriesPreprocessor:
         print("   ⏳ Handling missing values...")
         
         for col in self.numeric_features:
-            if self.df[col].isnull().any():
+            if col in self.df.columns and self.df[col].isnull().any():
                 self.df[col].interpolate(method='linear', inplace=True)
                 self.df[col].fillna(self.df[col].mean(), inplace=True)
         
@@ -89,20 +89,10 @@ class TimeSeriesPreprocessor:
         """Normalize numeric features to zero mean, unit variance."""
         print("   ⏳ Normalizing features...")
         
-        feature_cols = [col for col in self.df.columns if col not in ['timestamp', 'protocol', 'is_anomaly', 'anomaly_type']]
+        feature_cols = [col for col in self.df.columns if col not in ['timestamp', 'is_anomaly', 'anomaly_type']]
         self.df[feature_cols] = self.scaler.fit_transform(self.df[feature_cols])
         
         print(f"      ✓ Normalized {len(feature_cols)} features")
-    
-    def encode_categorical(self):
-        """One-hot encode categorical features."""
-        print("   ⏳ Encoding categorical features...")
-        
-        if 'protocol' in self.df.columns:
-            protocol_dummies = pd.get_dummies(self.df['protocol'], prefix='protocol')
-            self.df = pd.concat([self.df, protocol_dummies], axis=1)
-            self.df.drop('protocol', axis=1, inplace=True)
-            print(f"      ✓ One-hot encoded protocol (3 values)")
     
     def preprocess(self):
         """Execute full preprocessing pipeline."""
@@ -113,7 +103,6 @@ class TimeSeriesPreprocessor:
         self.create_rolling_features()
         self.create_lag_features()
         self.create_difference_features()
-        self.encode_categorical()
         self.normalize_features()
         
         print(f"\n✅ Phase 2 Complete")
@@ -126,7 +115,7 @@ class TimeSeriesPreprocessor:
 
 if __name__ == "__main__":
     # Load data from Phase 1
-    INPUT_FILE = "network_traffic_data.csv"
+    INPUT_FILE = "network_traffic_raw.csv"  # FIXED: correct filename from Phase 1
     OUTPUT_FILE = "preprocessed_data.csv"
     
     print(f"📖 Loading {INPUT_FILE}...")
