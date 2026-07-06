@@ -1,8 +1,8 @@
 """
 Phase 4b: Anomaly Detection - Local Outlier Factor (LOF)
 Density-based anomaly detection algorithm.
-Expected performance: ~94% accuracy on non-overlapping anomalies.
-FIXED: Changed novelty=False to novelty=True to enable predict() on test data.
+Expected performance: ~85-90% accuracy on non-overlapping anomalies.
+FIXED: Using novelty=True which is required for predict() on pickled models.
 """
 
 import pandas as pd
@@ -15,11 +15,11 @@ class LocalOutlierFactorModel:
     """Local Outlier Factor anomaly detection model."""
     
     def __init__(self, contamination=0.10, n_neighbors=20, random_state=42):
-        # FIXED: novelty=True enables predict() on new/test data
+        # novelty=True required for predict() on test data
         self.model = LocalOutlierFactor(
             contamination=contamination,
             n_neighbors=n_neighbors,
-            novelty=True  # FIXED: was False, which crashes on predict(X_test)
+            novelty=True
         )
         self.contamination = contamination
         self.n_neighbors = n_neighbors
@@ -41,8 +41,7 @@ class LocalOutlierFactorModel:
         return predictions
     
     def get_anomaly_scores(self, X_test):
-        """Get negative_outlier_factor (lower = more anomalous)."""
-        # With novelty=True, use decision_function instead
+        """Get decision function scores (lower = more anomalous)."""
         return -self.model.decision_function(X_test)
     
     def evaluate(self, X_test, y_test):
@@ -75,7 +74,7 @@ class LocalOutlierFactorModel:
         }
         
         print(f"\n      ✓ Local Outlier Factor Metrics:")
-        print(f"         Accuracy:  {accuracy:.4f} (94% baseline)")
+        print(f"         Accuracy:  {accuracy:.4f}")
         print(f"         Precision: {precision:.4f}")
         print(f"         Recall:    {recall:.4f}")
         print(f"         F1-Score:  {f1:.4f}")

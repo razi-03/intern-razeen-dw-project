@@ -9,8 +9,6 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_selection import mutual_info_classif, chi2
 from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 class FeatureSelectionEDA:
     """Feature selection and EDA for anomaly detection."""
@@ -29,7 +27,25 @@ class FeatureSelectionEDA:
         X_positive = self.X.copy()
         X_positive = X_positive - X_positive.min() + 1e-10
         
-        mi_scores = mutual_info_classif(X_positive, self.y, random_state=42)
+        # Sample data for faster MI calculation on large datasets
+        # Use 50K samples max to speed up KDTree fitting
+        sample_size = min(50000, len(X_positive))
+        if len(X_positive) > sample_size:
+            sample_idx = np.random.choice(len(X_positive), sample_size, replace=False)
+            X_sample = X_positive.iloc[sample_idx]
+            y_sample = self.y.iloc[sample_idx]
+            print(f"      ℹ️  Using {sample_size:,} samples for MI (total: {len(X_positive):,})")
+        else:
+            X_sample = X_positive
+            y_sample = self.y
+        
+        # Compute MI with optimized parameters
+        mi_scores = mutual_info_classif(
+            X_sample, y_sample, 
+            random_state=42,
+            n_neighbors=3  # Smaller neighborhood for speed
+        )
+        
         mi_df = pd.DataFrame({
             'feature': self.feature_cols,
             'mi_score': mi_scores

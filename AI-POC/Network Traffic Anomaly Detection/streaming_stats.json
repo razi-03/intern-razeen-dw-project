@@ -1,0 +1,10 @@
+{
+  "total_processed": 1000,
+  "anomalies_detected": 112,
+  "anomaly_rate": 0.112,
+  "avg_latency_ms": 24.045842170715332,
+  "max_latency_ms": 94.29454803466797,
+  "min_latency_ms": 16.069412231445312,
+  "p95_latency_ms": 30.14920949935913,
+  "p99_latency_ms": 40.645918846130364
+}

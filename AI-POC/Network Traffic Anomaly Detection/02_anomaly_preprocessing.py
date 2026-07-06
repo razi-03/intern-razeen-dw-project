@@ -68,8 +68,8 @@ class TimeSeriesPreprocessor:
                 self.df[f'{col}_lag_{lag}'] = self.df[col].shift(lag)
             new_cols += 3
         
-        # Fill first few rows with forward fill
-        self.df = self.df.fillna(method='bfill')
+        # Fill first few rows with backward fill (pandas 2.0+ syntax)
+        self.df = self.df.bfill()
         
         print(f"      ✓ Created {new_cols} lag features (3 lags × 7 metrics)")
     
