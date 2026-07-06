@@ -1,288 +1,197 @@
 """
-Anomaly Detection Phase 4B: Alert Engine
-Purpose: Alert generation, escalation, and management
-Author: RAze
-Date: 2026-07-01
-Runtime: ~30 seconds
+Phase 7: Alert Engine & Incident Reporting
+Generates alerts, logs incidents, and creates actionable reports.
 """
 
-import json
 import pandas as pd
+import json
 from datetime import datetime
-from collections import defaultdict
+import pickle
 
 class AlertEngine:
-    """Alert generation and escalation system."""
+    """Alert and incident management system."""
     
-    def __init__(self, sensitivity='medium'):
-        """
-        Args:
-            sensitivity: 'low', 'medium', or 'high'
-                - low: threshold=0.7 (fewer alerts, may miss some)
-                - medium: threshold=0.6 (balanced)
-                - high: threshold=0.5 (more alerts, more false positives)
-        """
-        self.sensitivities = {
-            'low': {'threshold': 0.7, 'severity': 'low'},
-            'medium': {'threshold': 0.6, 'severity': 'medium'},
-            'high': {'threshold': 0.5, 'severity': 'high'}
-        }
-        self.sensitivity = sensitivity
-        self.threshold = self.sensitivities[sensitivity]['threshold']
-        
+    def __init__(self, sensitivity_level='medium'):
+        self.sensitivity_level = sensitivity_level
+        self.thresholds = self._set_thresholds()
+        self.incidents = []
         self.alerts = []
-        self.false_alarms = []
-        self.alert_count = defaultdict(int)
+    
+    def _set_thresholds(self):
+        """Set detection thresholds based on sensitivity level."""
+        thresholds = {
+            'high': {'anomaly_score': 0.7, 'consecutive_anomalies': 3},
+            'medium': {'anomaly_score': 0.5, 'consecutive_anomalies': 5},
+            'low': {'anomaly_score': 0.3, 'consecutive_anomalies': 10}
+        }
+        return thresholds.get(self.sensitivity_level, thresholds['medium'])
+    
+    def classify_alert(self, anomaly_data):
+        """Classify alert severity."""
+        anomaly_score = anomaly_data.get('anomaly_score', 0)
+        anomaly_type = anomaly_data.get('anomaly_type', 'Unknown')
         
-        print(f"🔔 Alert Engine Initialized")
-        print(f"   Sensitivity: {sensitivity}")
-        print(f"   Threshold: {self.threshold:.1f}")
-    
-    def should_alert(self, confidence):
-        """Determine if alert should be triggered based on confidence."""
-        return confidence >= self.threshold
-    
-    def determine_severity(self, confidence, anomaly_type):
-        """
-        Determine alert severity based on confidence and anomaly type.
+        severity_map = {
+            'DDoS_Attack': 'CRITICAL',
+            'Data_Exfiltration': 'CRITICAL',
+            'Port_Scan': 'HIGH',
+            'Slow_Brute_Force': 'MEDIUM'
+        }
         
-        Returns: 'low', 'medium', or 'high'
-        """
-        if anomaly_type == 'ddos':
-            # DDoS is always high severity
-            return 'high'
-        elif anomaly_type == 'congestion':
-            if confidence > 0.85:
-                return 'high'
-            else:
-                return 'medium'
-        elif anomaly_type == 'server_overload':
-            return 'high' if confidence > 0.80 else 'medium'
-        else:
-            # traffic_spike, others
-            return 'medium' if confidence > 0.75 else 'low'
-    
-    def escalate(self, severity):
-        """
-        Determine escalation action based on severity.
+        severity = severity_map.get(anomaly_type, 'LOW')
         
-        Returns: escalation action
-        - 'log': Only log (no action)
-        - 'slack': Send to ops Slack channel
-        - 'pagerduty': Page on-call engineer
-        """
-        if severity == 'high':
-            return 'pagerduty'
-        elif severity == 'medium':
-            return 'slack'
-        else:
-            return 'log'
+        # Adjust based on score
+        if anomaly_score > 0.8:
+            severity = 'CRITICAL'
+        elif anomaly_score > 0.6 and severity != 'CRITICAL':
+            severity = 'HIGH'
+        
+        return severity
     
-    def create_alert(self, timestamp, metric_values, anomaly_type, confidence, model_votes):
-        """Create and record an alert."""
-        severity = self.determine_severity(confidence, anomaly_type)
-        escalation = self.escalate(severity)
+    def generate_alert(self, timestamp, anomaly_data, incident_id):
+        """Generate an alert message."""
+        severity = self.classify_alert(anomaly_data)
         
         alert = {
             'timestamp': str(timestamp),
-            'anomaly_type': anomaly_type,
-            'confidence': float(confidence),
+            'incident_id': incident_id,
             'severity': severity,
-            'escalation': escalation,
-            'metrics': {
-                'packets_per_sec': float(metric_values.get('packets_per_sec', 0)),
-                'bandwidth_mbps': float(metric_values.get('bandwidth_mbps', 0)),
-                'latency_ms': float(metric_values.get('latency_ms', 0)),
-                'cpu_usage': float(metric_values.get('cpu_usage', 0)),
-                'error_rate': float(metric_values.get('error_rate', 0)),
-            },
-            'model_votes': model_votes,
-            'created_at': datetime.now().isoformat()
+            'anomaly_type': anomaly_data.get('anomaly_type', 'Unknown'),
+            'anomaly_score': anomaly_data.get('anomaly_score', 0),
+            'affected_metric': anomaly_data.get('metric', 'N/A'),
+            'description': f"{severity} severity anomaly detected: {anomaly_data.get('anomaly_type')}",
+            'recommended_action': self._get_recommended_action(anomaly_data.get('anomaly_type'))
         }
         
         self.alerts.append(alert)
-        self.alert_count[anomaly_type] += 1
-        
         return alert
     
-    def mark_false_alarm(self, alert_idx):
-        """Mark an alert as a false alarm for model retraining."""
-        if alert_idx < len(self.alerts):
-            alert = self.alerts[alert_idx]
-            alert['is_false_alarm'] = True
-            self.false_alarms.append(alert)
-            print(f"   ⚠️  Marked as false alarm: {alert['anomaly_type']}")
+    def _get_recommended_action(self, anomaly_type):
+        """Get recommended mitigation action."""
+        actions = {
+            'DDoS_Attack': 'Enable rate limiting, activate DDoS protection, contact ISP',
+            'Port_Scan': 'Review firewall rules, check for unauthorized access attempts',
+            'Data_Exfiltration': 'Isolate affected systems, enable data loss prevention',
+            'Slow_Brute_Force': 'Implement fail2ban, increase authentication timeout'
+        }
+        return actions.get(anomaly_type, 'Review logs and investigate')
     
-    def get_statistics(self):
-        """Get alert statistics."""
-        total_alerts = len(self.alerts)
-        false_alarm_count = len(self.false_alarms)
-        false_alarm_rate = false_alarm_count / max(total_alerts, 1)
+    def create_incident(self, start_time, anomaly_count, anomaly_types):
+        """Create an incident report."""
+        incident_id = f"INC-{len(self.incidents) + 1:05d}"
         
-        stats = {
-            'total_alerts': total_alerts,
-            'false_alarms': false_alarm_count,
-            'false_alarm_rate': float(false_alarm_rate),
-            'alerts_by_type': dict(self.alert_count),
-            'alerts_by_severity': {
-                'high': sum(1 for a in self.alerts if a['severity'] == 'high'),
-                'medium': sum(1 for a in self.alerts if a['severity'] == 'medium'),
-                'low': sum(1 for a in self.alerts if a['severity'] == 'low'),
-            },
-            'escalations': {
-                'pagerduty': sum(1 for a in self.alerts if a['escalation'] == 'pagerduty'),
-                'slack': sum(1 for a in self.alerts if a['escalation'] == 'slack'),
-                'log': sum(1 for a in self.alerts if a['escalation'] == 'log'),
+        incident = {
+            'incident_id': incident_id,
+            'start_time': str(start_time),
+            'anomaly_count': anomaly_count,
+            'anomaly_types': anomaly_types,
+            'severity': 'CRITICAL' if anomaly_count > 10 else 'HIGH' if anomaly_count > 5 else 'MEDIUM',
+            'status': 'OPEN',
+            'alerts': len(self.alerts),
+            'created_at': datetime.now().isoformat()
+        }
+        
+        self.incidents.append(incident)
+        return incident
+    
+    def process_detections(self, detections_df, ground_truth=None):
+        """Process detections and generate alerts."""
+        print("   ⏳ Processing detections and generating alerts...")
+        
+        incident_count = 0
+        alert_count = 0
+        anomaly_cluster = []
+        
+        for idx, row in detections_df.iterrows():
+            if row.get('is_anomaly', 0) == 1 or (ground_truth is not None and ground_truth[idx] == 1):
+                anomaly_cluster.append(row)
+                
+                # Generate alert for each anomaly
+                alert = self.generate_alert(
+                    row.get('timestamp', datetime.now()),
+                    {
+                        'anomaly_score': row.get('anomaly_score', 0.5),
+                        'anomaly_type': row.get('anomaly_type', 'Unknown'),
+                        'metric': row.get('metric', 'N/A')
+                    },
+                    f"INC-{incident_count + 1:05d}"
+                )
+                alert_count += 1
+            else:
+                # Create incident if cluster ends
+                if anomaly_cluster:
+                    incident = self.create_incident(
+                        anomaly_cluster[0].get('timestamp', datetime.now()),
+                        len(anomaly_cluster),
+                        list(set([a.get('anomaly_type', 'Unknown') for a in anomaly_cluster]))
+                    )
+                    incident_count += 1
+                    anomaly_cluster = []
+        
+        # Handle final cluster
+        if anomaly_cluster:
+            incident = self.create_incident(
+                anomaly_cluster[0].get('timestamp', datetime.now()),
+                len(anomaly_cluster),
+                list(set([a.get('anomaly_type', 'Unknown') for a in anomaly_cluster]))
+            )
+            incident_count += 1
+        
+        print(f"      ✓ Generated {alert_count} alerts and {incident_count} incidents")
+        return alert_count, incident_count
+    
+    def generate_report(self):
+        """Generate comprehensive incident report."""
+        print("   ⏳ Generating incident report...")
+        
+        report = {
+            'report_generated': datetime.now().isoformat(),
+            'sensitivity_level': self.sensitivity_level,
+            'total_incidents': len(self.incidents),
+            'total_alerts': len(self.alerts),
+            'incidents': self.incidents,
+            'alerts': self.alerts[:100],  # Sample of alerts
+            'summary': {
+                'critical_count': len([a for a in self.alerts if a['severity'] == 'CRITICAL']),
+                'high_count': len([a for a in self.alerts if a['severity'] == 'HIGH']),
+                'medium_count': len([a for a in self.alerts if a['severity'] == 'MEDIUM']),
+                'low_count': len([a for a in self.alerts if a['severity'] == 'LOW'])
             }
         }
         
-        return stats
+        print(f"      ✓ Report generated:")
+        print(f"         Total incidents: {report['total_incidents']}")
+        print(f"         Total alerts: {report['total_alerts']}")
+        print(f"         Critical: {report['summary']['critical_count']}")
+        print(f"         High: {report['summary']['high_count']}")
+        print(f"         Medium: {report['summary']['medium_count']}")
+        
+        return report
     
-    def print_statistics(self):
-        """Print alert statistics."""
-        stats = self.get_statistics()
+    def run_pipeline(self, test_data, ground_truth=None):
+        """Execute full alert engine pipeline."""
+        print("\n🚨 Phase 7: Alert Engine & Reporting")
+        print("=" * 60)
         
-        print("\n" + "="*80)
-        print("📊 ALERT ENGINE STATISTICS")
-        print("="*80)
+        alert_count, incident_count = self.process_detections(test_data, ground_truth)
+        report = self.generate_report()
         
-        print(f"\n🚨 Alert Summary:")
-        print(f"   Total Alerts: {stats['total_alerts']:,}")
-        print(f"   False Alarms: {stats['false_alarms']:,}")
-        print(f"   False Alarm Rate: {stats['false_alarm_rate']:.2%}")
+        print(f"\n✅ Phase 7 Complete")
         
-        print(f"\n📂 Alerts by Type:")
-        for atype, count in stats['alerts_by_type'].items():
-            print(f"   {atype:20}: {count:6,}")
-        
-        print(f"\n⚠️  Alerts by Severity:")
-        for severity, count in stats['alerts_by_severity'].items():
-            print(f"   {severity:20}: {count:6,}")
-        
-        print(f"\n🔔 Escalations:")
-        for action, count in stats['escalations'].items():
-            print(f"   {action:20}: {count:6,}")
-        
-        print("="*80)
-        
-        return stats
-
-
-class AlertSimulator:
-    """Simulate alert processing from streaming predictions."""
-    
-    def __init__(self, engine):
-        self.engine = engine
-        self.alerts_triggered = 0
-    
-    def process_prediction(self, row, prediction, confidence, model_votes):
-        """Process a single prediction and create alert if needed."""
-        if self.engine.should_alert(confidence):
-            alert = self.engine.create_alert(
-                timestamp=row['timestamp'],
-                metric_values={
-                    'packets_per_sec': row['packets_per_sec'],
-                    'bandwidth_mbps': row['bandwidth_mbps'],
-                    'latency_ms': row['latency_ms'],
-                    'cpu_usage': row['cpu_usage'],
-                    'error_rate': row['error_rate'],
-                },
-                anomaly_type=row['anomaly_type'],
-                confidence=confidence,
-                model_votes=model_votes
-            )
-            
-            self.alerts_triggered += 1
-            return alert
-        
-        return None
+        return report
 
 
 if __name__ == "__main__":
     # Load test data
-    print("📂 Loading test data...")
-    df = pd.read_csv('/home/claude/network_traffic_processed.csv')
-    print(f"   Loaded {len(df):,} records")
+    print("📖 Loading test data...")
+    test_data = pd.read_csv("test_data.csv")
     
-    print("\n" + "="*80)
-    print("🔔 ALERT ENGINE TEST")
-    print("="*80)
+    # Run alert engine
+    engine = AlertEngine(sensitivity_level='medium')
+    report = engine.run_pipeline(test_data)
     
-    # Create alert engines with different sensitivities
-    engines = {
-        'low': AlertEngine(sensitivity='low'),
-        'medium': AlertEngine(sensitivity='medium'),
-        'high': AlertEngine(sensitivity='high'),
-    }
+    # Save report
+    with open("alert_engine_report.json", "w") as f:
+        json.dump(report, f, indent=2)
     
-    # Simulate alerts
-    print("\n🚀 Simulating alerts on test data...\n")
-    
-    for sensitivity_level, engine in engines.items():
-        simulator = AlertSimulator(engine)
-        
-        # Simulate predictions (use is_anomaly as proxy)
-        for idx, (_, row) in enumerate(df.iterrows()):
-            if idx % 50000 == 0:
-                print(f"   [{sensitivity_level}] Processing: {idx:,} / {len(df):,}")
-            
-            # Simulate confidence based on anomaly type
-            if row['is_anomaly']:
-                confidence = 0.8 if row['anomaly_type'] != 'traffic_spike' else 0.65
-            else:
-                confidence = 0.3
-            
-            # Simple model votes (2 out of 3)
-            model_votes = {
-                'isolation_forest': row['is_anomaly'],
-                'lof': row['is_anomaly'],
-                'arima': row['is_anomaly'] if confidence > 0.7 else False
-            }
-            
-            alert = simulator.process_prediction(
-                row,
-                prediction=row['is_anomaly'],
-                confidence=confidence,
-                model_votes=model_votes
-            )
-        
-        print(f"   [{sensitivity_level}] Complete: {simulator.alerts_triggered:,} alerts triggered\n")
-    
-    # Print statistics
-    for sensitivity_level, engine in engines.items():
-        print(f"\n{'='*80}")
-        print(f"SENSITIVITY: {sensitivity_level.upper()}")
-        stats = engine.get_statistics()
-        print(f"{'='*80}")
-        print(f"Total Alerts: {stats['total_alerts']:,}")
-        print(f"False Alarm Rate: {stats['false_alarm_rate']:.2%}")
-        print(f"High Severity: {stats['alerts_by_severity']['high']:,}")
-        print(f"Medium Severity: {stats['alerts_by_severity']['medium']:,}")
-        print(f"Low Severity: {stats['alerts_by_severity']['low']:,}")
-    
-    # Save alert engine configuration
-    alert_config = {
-        'timestamp': datetime.now().isoformat(),
-        'sensitivities': {
-            'low': {'threshold': 0.7, 'description': 'Few alerts, may miss some anomalies'},
-            'medium': {'threshold': 0.6, 'description': 'Balanced approach'},
-            'high': {'threshold': 0.5, 'description': 'Many alerts, more false positives'},
-        },
-        'escalation_matrix': {
-            'high': 'PagerDuty (page on-call)',
-            'medium': 'Slack (notify ops)',
-            'low': 'Log only',
-        },
-        'anomaly_severity': {
-            'ddos': 'Always high (revenue threat)',
-            'congestion': 'Medium-High (service degradation)',
-            'server_overload': 'High (potential outage)',
-            'traffic_spike': 'Low-Medium (may be legitimate)',
-        }
-    }
-    
-    with open('/home/claude/alert_configuration.json', 'w') as f:
-        json.dump(alert_config, f, indent=2)
-    print("\n✅ Saved alert configuration to alert_configuration.json")
-    
-    print("\n🎉 Phase 4B Complete!")
+    print(f"✅ Report saved: alert_engine_report.json")
