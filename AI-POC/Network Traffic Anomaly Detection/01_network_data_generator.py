@@ -83,15 +83,15 @@ class NetworkTrafficGenerator:
         memory_usage = np.clip(memory_usage, 10, 90)
         
         return {
-            'timestamp': timestamps,
-            'packets_per_sec': packets,
-            'bandwidth_mbps': bandwidth,
-            'latency_ms': latency,
-            'active_connections': connections.astype(int),
-            'error_rate': error_rate,
-            'cpu_usage': cpu_usage,
-            'memory_usage': memory_usage
-        }
+                'timestamp': timestamps,
+                'packets_per_sec': packets,
+                'bandwidth_mbps': bandwidth,
+                'latency_ms': latency,
+                'active_connections': connections,  # keep as float until final DataFrame step
+                'error_rate': error_rate,
+                'cpu_usage': cpu_usage,
+                'memory_usage': memory_usage
+                }
     
     def inject_anomalies(self, data):
         """Inject realistic anomalies into the dataset."""
@@ -116,15 +116,37 @@ class NetworkTrafficGenerator:
         
         np.random.shuffle(type_assignments)
         
+        modified = np.zeros(self.num_rows, dtype=bool)  # tracks rows already scaled
+        total_marked = 0  # tracks how many rows have been flagged anomalous so far
+        
         # Inject anomalies
         for idx, anom_type in zip(anomaly_indices, type_assignments):
-            is_anomaly[idx] = True
-            anomaly_type[idx] = anom_type
+            # Stop once we've hit the intended overall anomaly budget
+            if total_marked >= self.num_anomalies:
+                break
             
             # Create anomaly clusters (multiple consecutive points)
             duration = np.random.randint(*self.anomaly_types[anom_type]['duration_range'])
             cluster_start = max(0, idx - duration // 2)
             cluster_end = min(self.num_rows, idx + duration // 2)
+            
+            # Skip if this region overlaps one already modified, to avoid
+            # compounding multipliers on the same rows
+            if modified[cluster_start:cluster_end].any():
+                continue
+            
+            # Trim the cluster so it doesn't push the total past the
+            # intended anomaly_rate budget (e.g. ~10% of rows)
+            remaining_budget = self.num_anomalies - total_marked
+            if (cluster_end - cluster_start) > remaining_budget:
+                cluster_end = cluster_start + remaining_budget
+                if cluster_end <= cluster_start:
+                    continue
+            
+            modified[cluster_start:cluster_end] = True
+            total_marked += (cluster_end - cluster_start)
+            is_anomaly[idx] = True
+            anomaly_type[idx] = anom_type
             
             if anom_type == 'ddos':
                 # 2-5x traffic spike
@@ -339,12 +361,12 @@ if __name__ == "__main__":
     
     # Save data
     print("\n💾 Saving data...")
-    df.to_csv('/home/claude/network_traffic_raw.csv', index=False)
+    df.to_csv('network_traffic_raw.csv', index=False)
     print("✅ Saved to network_traffic_raw.csv")
     
     # Save report
     report = summary.generate_report(df)
-    with open('/home/claude/network_traffic_eda.json', 'w') as f:
+    with open('network_traffic_eda.json', 'w') as f:
         json.dump(report, f, indent=2, default=str)
     print("✅ Saved EDA report to network_traffic_eda.json")
     

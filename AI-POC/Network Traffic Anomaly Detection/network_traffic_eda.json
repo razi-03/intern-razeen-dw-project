@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-07-06T10:54:24.349789",
+  "dataset_info": {
+    "total_rows": 500000,
+    "total_features": 9,
+    "date_range": "2026-06-01 to 2026-07-28",
+    "interval_seconds": 10,
+    "total_days": 30
+  },
+  "metrics_summary": {
+    "packets_per_sec": {
+      "min": 128.99594882181287,
+      "max": 8378.378547088967,
+      "mean": 1123.8480175410114,
+      "std": 586.1123270456734,
+      "median": 1035.569255819918
+    },
+    "bandwidth_mbps": {
+      "min": 153.51290413202565,
+      "max": 3874.3519174508297,
+      "mean": 574.9540480144019,
+      "std": 257.7460918476059,
+      "median": 532.5007674829386
+    },
+    "latency_ms": {
+      "min": 6.8037458542128535,
+      "max": 77.23707787469417,
+      "mean": 14.141492116462247,
+      "std": 8.304444403765812,
+      "median": 12.293469977270675
+    },
+    "active_connections": {
+      "min": 1930.0,
+      "max": 7413.0,
+      "mean": 4979.716462,
+      "std": 527.518361954773,
+      "median": 4992.0
+    },
+    "error_rate": {
+      "min": 0.0014575931698555498,
+      "max": 0.05764367743158402,
+      "mean": 0.01226472966095729,
+      "std": 0.0054067493087344865,
+      "median": 0.011250809306228612
+    },
+    "cpu_usage": {
+      "min": 5.0,
+      "max": 82.93509841527559,
+      "mean": 21.0876653523768,
+      "std": 11.895284351805323,
+      "median": 20.790629206056757
+    },
+    "memory_usage": {
+      "min": 10.0,
+      "max": 100.0,
+      "mean": 40.41190888006265,
+      "std": 10.562805919247511,
+      "median": 40.158657868337
+    }
+  },
+  "anomalies": {
+    "total_anomalies": 50001,
+    "anomaly_rate": 0.100002,
+    "distribution": {
+      "normal": 449999,
+      "ddos": 5966,
+      "congestion": 23355,
+      "traffic_spike": 13946,
+      "server_overload": 6734
+    }
+  },
+  "correlations": {
+    "packets_vs_bandwidth": 0.963749305771188,
+    "packets_vs_latency": -0.0839867770794786,
+    "error_rate_vs_cpu": 0.13498882910640997,
+    "connections_vs_cpu": -0.10264358594891064
+  }
+}
