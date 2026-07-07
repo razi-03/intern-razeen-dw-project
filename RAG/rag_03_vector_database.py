@@ -1,282 +1,218 @@
+#!/usr/bin/env python3
 """
-RAG Project - Phase 3: Vector Database with ChromaDB
-Purpose: Create embeddings and store in ChromaDB
-Author: RAze
-Date: 2026-07-07
-Runtime: ~2-5 minutes (depends on document size)
+RAG Vector Database - ChromaDB Vector Store
+Loads chunked documents and creates embeddings
 """
 
+import os
 import json
-from pathlib import Path
-import chromadb
-from chromadb.config import Settings
-from sentence_transformers import SentenceTransformer
 import logging
+from pathlib import Path
+from typing import List, Dict
+from sentence_transformers import SentenceTransformer
+import chromadb
 
-# Setup logging
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
-class EmbeddingGenerator:
-    """Generate embeddings for text chunks."""
-    
-    def __init__(self, model_name='all-MiniLM-L6-v2'):
-        """
-        Initialize embedding model.
-        
-        all-MiniLM-L6-v2: Fast, accurate, 384 dimensions
-        - Good for accuracy-first approach
-        - ~80MB model size
-        - ~5ms per chunk
-        """
-        logger.info(f"🔧 Loading embedding model: {model_name}")
-        self.model = SentenceTransformer(model_name)
-        self.dimension = self.model.get_sentence_embedding_dimension()
-        logger.info(f"   ✅ Model loaded (dimension: {self.dimension})")
-    
-    def embed_text(self, text):
-        """Generate embedding for a single text."""
-        try:
-            embedding = self.model.encode(text, convert_to_numpy=True)
-            return embedding.tolist()
-        except Exception as e:
-            logger.error(f"   ❌ Error embedding text: {e}")
-            return None
-    
-    def embed_batch(self, texts, batch_size=32):
-        """Generate embeddings for multiple texts."""
-        logger.info(f"🔄 Embedding {len(texts)} chunks...")
-        embeddings = self.model.encode(texts, batch_size=batch_size, convert_to_numpy=True)
-        return [emb.tolist() for emb in embeddings]
-
+# Configuration
+VECTOR_STORE_PATH = "./vector_store"
+METADATA_PATH = "./data/metadata"
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Fast & efficient embeddings
 
 class ChromaVectorStore:
-    """Manage ChromaDB vector storage."""
+    """ChromaDB Vector Store - Store embeddings and retrieve similar documents"""
     
-    def __init__(self, persist_directory='vector_store', collection_name='research_papers'):
-        """Initialize ChromaDB."""
-        logger.info(f"🗄️  Initializing ChromaDB...")
+    def __init__(self):
+        """Initialize ChromaDB with new API"""
+        logger.info("🗄️  Initializing ChromaDB...")
         
-        # Create settings for persistence
-        settings = Settings(
-            chroma_db_impl="duckdb+parquet",
-            persist_directory=persist_directory,
-            anonymized_telemetry=False
-        )
+        # Create vector store directory if it doesn't exist
+        Path(VECTOR_STORE_PATH).mkdir(parents=True, exist_ok=True)
         
-        # Initialize client
-        self.client = chromadb.Client(settings)
+        # NEW ChromaDB API - Use PersistentClient instead of deprecated Client
+        self.client = chromadb.PersistentClient(path=VECTOR_STORE_PATH)
         
-        # Create or get collection
+        # Get or create collection
         self.collection = self.client.get_or_create_collection(
-            name=collection_name,
-            metadata={'hnsw:space': 'cosine'}  # Cosine similarity for accuracy
+            name="research_papers",
+            metadata={"hnsw:space": "cosine"}
         )
         
-        self.persist_directory = persist_directory
-        logger.info(f"   ✅ ChromaDB initialized")
-    
-    def add_documents(self, chunks, embeddings):
-        """Add documents and embeddings to ChromaDB."""
-        logger.info(f"\n📥 Adding {len(chunks)} documents to ChromaDB...")
+        # Load embedding model
+        logger.info(f"📦 Loading embedding model: {EMBEDDING_MODEL}...")
+        self.model = SentenceTransformer(EMBEDDING_MODEL)
+        logger.info("✅ Embedding model loaded")
+        
+    def add_documents(self, documents: List[Dict]):
+        """Add documents with embeddings to ChromaDB"""
+        if not documents:
+            logger.warning("⚠️  No documents to add")
+            return
+            
+        logger.info(f"📝 Adding {len(documents)} documents to vector store...")
         
         ids = []
-        documents = []
+        embeddings = []
+        documents_list = []
         metadatas = []
-        vectors = []
         
-        for i, (chunk, embedding) in enumerate(zip(chunks, embeddings)):
-            chunk_id = f"{chunk['source']}_{chunk['chunk_index']}"
-            ids.append(chunk_id)
-            documents.append(chunk['text'])
-            metadatas.append({
-                'source': chunk['source'],
-                'chunk_index': str(chunk['chunk_index']),
-                'title': chunk['metadata'].get('title', 'Unknown'),
-                'pages': str(chunk['metadata'].get('pages', 'Unknown'))
-            })
-            vectors.append(embedding)
+        for i, doc in enumerate(documents):
+            # Generate ID
+            doc_id = f"doc_{doc.get('paper_id', 'unknown')}_{i}"
+            ids.append(doc_id)
             
-            # Progress indicator
-            if (i + 1) % 100 == 0:
-                logger.info(f"   Processed {i + 1}/{len(chunks)} documents")
+            # Get embedding
+            text = doc.get('text', '')
+            if not text:
+                logger.warning(f"⚠️  Document {i} has no text, skipping")
+                continue
+                
+            embedding = self.model.encode(text).tolist()
+            embeddings.append(embedding)
+            
+            # Store document
+            documents_list.append(text)
+            
+            # Store metadata
+            metadata = {
+                'paper_id': doc.get('paper_id', 'unknown'),
+                'chunk_index': str(doc.get('chunk_index', 0)),
+                'source': doc.get('source', 'unknown'),
+                'page': str(doc.get('page', 0))
+            }
+            metadatas.append(metadata)
+            
+            if (i + 1) % 20 == 0:
+                logger.info(f"   📊 Processed {i + 1}/{len(documents)} documents")
         
         # Add to collection
+        if not ids:
+            logger.error("❌ No valid documents to add")
+            return
+            
         try:
             self.collection.add(
                 ids=ids,
-                documents=documents,
-                embeddings=vectors,
+                embeddings=embeddings,
+                documents=documents_list,
                 metadatas=metadatas
             )
-            logger.info(f"   ✅ Successfully added {len(chunks)} documents")
-            return True
+            logger.info(f"✅ Successfully added {len(documents_list)} documents to ChromaDB")
         except Exception as e:
-            logger.error(f"   ❌ Error adding documents: {e}")
-            return False
+            logger.error(f"❌ Error adding documents: {e}")
+            raise
     
-    def persist(self):
-        """Persist the database to disk."""
-        logger.info(f"\n💾 Persisting ChromaDB to {self.persist_directory}...")
-        try:
-            self.client.persist()
-            logger.info(f"   ✅ Database persisted")
-            return True
-        except Exception as e:
-            logger.error(f"   ❌ Error persisting: {e}")
-            return False
+    def search(self, query: str, n_results: int = 5) -> List[Dict]:
+        """Search for similar documents"""
+        logger.info(f"🔍 Searching for: {query}")
+        
+        # Get embedding for query
+        query_embedding = self.model.encode(query).tolist()
+        
+        # Search
+        results = self.collection.query(
+            query_embeddings=[query_embedding],
+            n_results=n_results
+        )
+        
+        # Format results
+        formatted_results = []
+        if results['documents']:
+            for i, doc in enumerate(results['documents'][0]):
+                formatted_results.append({
+                    'id': results['ids'][0][i],
+                    'document': doc,
+                    'metadata': results['metadatas'][0][i],
+                    'distance': results['distances'][0][i]
+                })
+        
+        return formatted_results
     
-    def get_collection_stats(self):
-        """Get statistics about the collection."""
+    def get_stats(self) -> Dict:
+        """Get vector store statistics"""
         count = self.collection.count()
         return {
             'total_documents': count,
             'collection_name': self.collection.name
         }
 
-
-class VectorDBValidator:
-    """Validate the vector database."""
+def load_chunks():
+    """Load chunks from JSON file created by rag_02_data_loader.py"""
+    logger.info("📂 Loading document chunks...")
     
-    @staticmethod
-    def validate_storage(vector_store):
-        """Validate vector storage."""
-        logger.info("\n🔍 Validating Vector Database...")
-        
-        stats = vector_store.get_collection_stats()
-        
-        print(f"\n   📊 Collection Statistics:")
-        print(f"      Collection: {stats['collection_name']}")
-        print(f"      Documents: {stats['total_documents']}")
-        
-        if stats['total_documents'] == 0:
-            logger.warning("   ⚠️  No documents in database!")
-            return False
-        
-        logger.info("   ✅ Vector database valid!")
-        return True
+    chunks_file = Path(METADATA_PATH) / "chunks.json"
     
-    @staticmethod
-    def test_retrieval(vector_store, embedding_model, query_text="research methodology"):
-        """Test basic retrieval."""
-        logger.info(f"\n🧪 Testing retrieval with query: '{query_text}'")
-        
-        # Embed query
-        query_embedding = embedding_model.embed_text(query_text)
-        
-        if query_embedding is None:
-            logger.error("   ❌ Failed to embed query")
-            return False
-        
-        # Query the collection
-        try:
-            results = vector_store.collection.query(
-                query_embeddings=[query_embedding],
-                n_results=3
-            )
-            
-            if results['documents'] and len(results['documents'][0]) > 0:
-                logger.info(f"   ✅ Retrieval works!")
-                logger.info(f"      Found {len(results['documents'][0])} results")
-                
-                # Show top result
-                print(f"\n   Top result:")
-                print(f"      Distance: {results['distances'][0][0]:.4f}")
-                print(f"      Text: {results['documents'][0][0][:100]}...")
-                
-                return True
-            else:
-                logger.warning("   ⚠️  No results returned")
-                return False
-        
-        except Exception as e:
-            logger.error(f"   ❌ Error during retrieval: {e}")
-            return False
-
+    if not chunks_file.exists():
+        logger.error(f"❌ Chunks file not found at {chunks_file}")
+        logger.error("   Run rag_02_data_loader.py first to create chunks")
+        return []
+    
+    try:
+        with open(chunks_file, 'r', encoding='utf-8') as f:
+            chunks = json.load(f)
+        logger.info(f"✅ Loaded {len(chunks)} chunks from {chunks_file.name}")
+        return chunks
+    except Exception as e:
+        logger.error(f"❌ Error loading chunks: {e}")
+        return []
 
 def main():
-    """Setup vector database."""
+    """Main execution"""
     print("\n" + "="*80)
-    print("🗄️  VECTOR DATABASE SETUP")
-    print("="*80)
-    
-    # Load chunks from Phase 2
-    chunks_file = Path('data/metadata/chunks.json')
-    if not chunks_file.exists():
-        print(f"\n❌ Chunks file not found: {chunks_file}")
-        print("   Run Phase 2 first: python rag_02_data_loader.py")
-        return
-    
-    logger.info(f"📂 Loading chunks from {chunks_file}")
-    with open(chunks_file, 'r') as f:
-        chunks = json.load(f)
-    
-    print(f"\n   ✅ Loaded {len(chunks)} chunks")
-    
-    # Initialize embedding model
-    embedding_gen = EmbeddingGenerator('all-MiniLM-L6-v2')
-    
-    # Generate embeddings
-    print(f"\n" + "="*80)
-    print("🔤 GENERATING EMBEDDINGS")
-    print("="*80)
-    texts = [chunk['text'] for chunk in chunks]
-    embeddings = embedding_gen.embed_batch(texts)
-    
-    if not embeddings:
-        print("\n❌ Failed to generate embeddings")
-        return
-    
-    print(f"   ✅ Generated {len(embeddings)} embeddings")
-    
-    # Initialize ChromaDB
-    print(f"\n" + "="*80)
     print("🗄️  INITIALIZING CHROMADB")
-    print("="*80)
+    print("="*80 + "\n")
+    
+    # Initialize vector store
     vector_store = ChromaVectorStore()
     
-    # Add documents
-    if not vector_store.add_documents(chunks, embeddings):
-        print("\n❌ Failed to add documents to ChromaDB")
+    # Load chunks
+    chunks = load_chunks()
+    
+    if not chunks:
+        logger.error("❌ No chunks found! Please run rag_02_data_loader.py first")
         return
     
-    # Persist
-    vector_store.persist()
+    # Add to vector store
+    vector_store.add_documents(chunks)
     
-    # Validate
-    print(f"\n" + "="*80)
-    print("✅ VALIDATION")
-    print("="*80)
-    validator = VectorDBValidator()
-    validator.validate_storage(vector_store)
-    validator.test_retrieval(vector_store, embedding_gen)
+    # Get statistics
+    stats = vector_store.get_stats()
     
-    # Summary
     print("\n" + "="*80)
-    print("✅ VECTOR DATABASE READY!")
+    print("✅ VECTOR DATABASE CREATED SUCCESSFULLY!")
     print("="*80)
-    print(f"""
-✅ Completed:
-   • Generated embeddings for {len(chunks)} chunks
-   • Stored in ChromaDB (chromadb.ai)
-   • Persistent storage enabled
-   • Validated and tested retrieval
-
-📊 Database Info:
-   • Location: vector_store/
-   • Collection: research_papers
-   • Total chunks: {len(chunks)}
-   • Embedding model: all-MiniLM-L6-v2
-   • Distance metric: cosine (for accuracy)
-
-🔄 Next step:
-   Run: python rag_04_rag_pipeline.py
-""")
+    print(f"📊 Total documents: {stats['total_documents']}")
+    print(f"📍 Location: {VECTOR_STORE_PATH}/")
+    print(f"🔍 Collection: {stats['collection_name']}")
+    print("\n✅ Next step: python rag_04_rag_pipeline.py (optional demo)")
+    print("✅ Or start Q&A: python rag_05_cli_interface.py\n")
+    
+    # Test search
     print("="*80)
-
+    print("🧪 TESTING VECTOR SEARCH")
+    print("="*80 + "\n")
+    
+    test_queries = ["learning", "model", "data"]
+    
+    for test_query in test_queries:
+        results = vector_store.search(test_query, n_results=2)
+        
+        if results:
+            print(f"✅ Search for '{test_query}': Found {len(results)} results")
+            for i, result in enumerate(results[:1], 1):
+                preview = result['document'][:80].replace('\n', ' ')
+                print(f"   📝 {preview}...\n")
+        else:
+            print(f"⚠️  No results for '{test_query}'\n")
+    
+    print("="*80)
+    print("🚀 READY FOR RAG QUERIES!")
+    print("="*80 + "\n")
 
 if __name__ == "__main__":
     main()

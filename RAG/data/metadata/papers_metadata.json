@@ -1,0 +1,26 @@
+{
+  "2607.05391v1": {
+    "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+    "author": "Jacky Kwok; Shulu Li; Pranav Atreya; Yuejiang Liu; Yixing Jiang; Chelsea Finn; Marco Pavone; Ion Stoica; Azalia Mirhoseini",
+    "pages": 31,
+    "creation_date": "None"
+  },
+  "2607.05393v1": {
+    "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
+    "author": "Rapha\u00ebl Bonnet-Guerrini; Bruno Sanchez; Dominique Fouchez; Benjamin Racine; Maya Guy; Mariam Sabalbal; Manal Yassine; Vincenzo Piuri",
+    "pages": 20,
+    "creation_date": "None"
+  },
+  "2607.05394v1": {
+    "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+    "author": "Shiyuan Feng; Huan-ang Gao; Haohan Chi; Hanlin Wu; Zhilong Zhang; Zheng Jiang; Bingxiang He; Wei-Ying Ma; Ya-Qin Zhang; Hao Zhou",
+    "pages": 24,
+    "creation_date": "None"
+  },
+  "2607.05396v1": {
+    "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
+    "author": "Wenhao Li; Xueying Jiang; Quanhao Qian; Deli Zhao; Shijian Lu; Gongjie Zhang; Ran Xu",
+    "pages": 21,
+    "creation_date": "None"
+  }
+}
