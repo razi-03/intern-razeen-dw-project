@@ -1,0 +1,32 @@
+{
+  "models": {
+    "primary": "mistral:7b-instruct-q4_K_M",
+    "secondary": "neural-chat:7b-v3-q4_K_M",
+    "active_model": "mistral"
+  },
+  "vector_db": {
+    "type": "chromadb",
+    "persist_directory": "./vector_store",
+    "distance_metric": "cosine"
+  },
+  "embeddings": {
+    "model": "all-MiniLM-L6-v2",
+    "dimension": 384
+  },
+  "rag": {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "retrieval_top_k": 5,
+    "temperature": 0.3
+  },
+  "pdf": {
+    "extract_metadata": true,
+    "supported_formats": [
+      ".pdf"
+    ]
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "outputs/logs/rag.log"
+  }
+}
