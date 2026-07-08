@@ -1,0 +1,499 @@
+{
+  "metadata": {
+    "total_notes": 5,
+    "parsed_at": "2026-07-08T14:50:51.374949"
+  },
+  "notes": [
+    {
+      "id": "01_getting_started",
+      "title": "01_getting_started",
+      "file_metadata": {
+        "file_name": "01_getting_started.md",
+        "file_path": "01_getting_started.md",
+        "folder": "root",
+        "size_bytes": 570,
+        "created": "2026-07-08T14:49:16.083994",
+        "modified": "2026-07-08T14:49:16.083994"
+      },
+      "frontmatter": {},
+      "content": "# Getting Started with Python\n\nThis is a foundational note about Python programming.\n\n## What is Python?\n\nPython is a high-level, interpreted programming language known for its simplicity and readability.\n\n### Key Features\n- Easy to learn and read\n- Versatile (web, data science, automation)\n- Large standard library\n- Active community\n\n## Basic Syntax\n\n```python\n# Hello World\nprint(\"Hello, World!\")\n```\n\n## Related Topics\n- [[Data Science Basics]]\n- [[Python Best Practices]]\n- [[Programming Concepts]]\n\nTags: #python #programming #beginner\n",
+      "content_length": 543,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "What is Python?",
+          "Basic Syntax",
+          "Related Topics"
+        ],
+        "h3": [
+          "Key Features"
+        ],
+        "all": [
+          [
+            "h2",
+            "What is Python?"
+          ],
+          [
+            "h3",
+            "Key Features"
+          ],
+          [
+            "h2",
+            "Basic Syntax"
+          ],
+          [
+            "h2",
+            "Related Topics"
+          ]
+        ]
+      },
+      "code_blocks": [
+        {
+          "language": "python",
+          "code": "# Hello World\nprint(\"Hello, World!\")",
+          "lines": 2
+        }
+      ],
+      "code_block_count": 1,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Easy to learn and read",
+          "Versatile (web, data science, automation)",
+          "Large standard library",
+          "Active community",
+          "[[Data Science Basics]]",
+          "[[Python Best Practices]]",
+          "[[Programming Concepts]]"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [],
+      "important_concepts": [],
+      "links": [
+        "Data Science Basics",
+        "Python Best Practices",
+        "Programming Concepts"
+      ],
+      "tags": [
+        "programming",
+        "python",
+        "beginner"
+      ],
+      "readability": {
+        "total_lines": 28,
+        "non_empty_lines": 19,
+        "total_words": 80,
+        "total_sentences": 5,
+        "avg_words_per_line": 4.2105263157894735,
+        "avg_words_per_sentence": 16.0
+      },
+      "parsed_at": "2026-07-08T14:50:51.365034"
+    },
+    {
+      "id": "02_data_science",
+      "title": "02_data_science",
+      "file_metadata": {
+        "file_name": "02_data_science.md",
+        "file_path": "02_data_science.md",
+        "folder": "root",
+        "size_bytes": 890,
+        "created": "2026-07-08T14:49:16.083994",
+        "modified": "2026-07-08T14:49:16.083994"
+      },
+      "frontmatter": {},
+      "content": "# Data Science Basics\n\nAn introduction to the field of data science and its applications.\n\n## What is Data Science?\n\nData science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data.\n\n## Key Components\n\n1. **Statistics** - Understanding data distributions\n2. **Programming** - Implementing solutions (Python, R)\n3. **Domain Knowledge** - Understanding the problem\n4. **Visualization** - Communicating insights\n\n## Tools and Technologies\n\n- Python (pandas, NumPy, scikit-learn)\n- SQL (data querying)\n- Machine Learning frameworks (TensorFlow, PyTorch)\n- Visualization (Matplotlib, Seaborn, Plotly)\n\n## Important Concepts\n- [[Machine Learning Algorithms]]\n- [[Getting Started with Python]]\n- [[Data Visualization]]\n\nTags: #datascience #ai #analytics\n",
+      "content_length": 862,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "What is Data Science?",
+          "Key Components",
+          "Tools and Technologies",
+          "Important Concepts"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "What is Data Science?"
+          ],
+          [
+            "h2",
+            "Key Components"
+          ],
+          [
+            "h2",
+            "Tools and Technologies"
+          ],
+          [
+            "h2",
+            "Important Concepts"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Python (pandas, NumPy, scikit-learn)",
+          "SQL (data querying)",
+          "Machine Learning frameworks (TensorFlow, PyTorch)",
+          "Visualization (Matplotlib, Seaborn, Plotly)",
+          "[[Machine Learning Algorithms]]",
+          "[[Getting Started with Python]]",
+          "[[Data Visualization]]"
+        ],
+        "ordered": [
+          "**Statistics** - Understanding data distributions",
+          "**Programming** - Implementing solutions (Python, R)",
+          "**Domain Knowledge** - Understanding the problem",
+          "**Visualization** - Communicating insights"
+        ],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Statistics",
+        "Programming",
+        "Domain Knowledge",
+        "Visualization"
+      ],
+      "important_concepts": [
+        "Statistics",
+        "Programming",
+        "Domain Knowledge",
+        "Visualization"
+      ],
+      "links": [
+        "Machine Learning Algorithms",
+        "Getting Started with Python",
+        "Data Visualization"
+      ],
+      "tags": [
+        "ai",
+        "analytics",
+        "datascience"
+      ],
+      "readability": {
+        "total_lines": 29,
+        "non_empty_lines": 19,
+        "total_words": 115,
+        "total_sentences": 8,
+        "avg_words_per_line": 6.052631578947368,
+        "avg_words_per_sentence": 14.375
+      },
+      "parsed_at": "2026-07-08T14:50:51.365034"
+    },
+    {
+      "id": "03_machine_learning",
+      "title": "03_machine_learning",
+      "file_metadata": {
+        "file_name": "03_machine_learning.md",
+        "file_path": "03_machine_learning.md",
+        "folder": "root",
+        "size_bytes": 1140,
+        "created": "2026-07-08T14:49:16.083994",
+        "modified": "2026-07-08T14:49:16.099937"
+      },
+      "frontmatter": {},
+      "content": "# Machine Learning Algorithms\n\nAn overview of common machine learning algorithms and their applications.\n\n## What is Machine Learning?\n\nMachine Learning is a subset of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed.\n\n## Types of Learning\n\n### Supervised Learning\n- Regression (predicting continuous values)\n- Classification (predicting categories)\n- Examples: [[Getting Started with Python]], Linear Regression\n\n### Unsupervised Learning\n- Clustering (grouping similar data)\n- Dimensionality reduction\n- Pattern discovery\n\n### Reinforcement Learning\n- Learning through rewards and punishments\n- Game playing, robotics\n\n## Popular Algorithms\n\n| Algorithm | Type | Use Case |\n|-----------|------|----------|\n| Linear Regression | Supervised | Predicting continuous values |\n| Decision Trees | Supervised | Classification |\n| K-Means | Unsupervised | Clustering |\n| Neural Networks | Both | Complex pattern recognition |\n\n## Related Reading\n- [[Data Science Basics]]\n- [[Programming Concepts]]\n\nTags: #ml #ai #algorithms #datascience\n",
+      "content_length": 1102,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "What is Machine Learning?",
+          "Types of Learning",
+          "Popular Algorithms",
+          "Related Reading"
+        ],
+        "h3": [
+          "Supervised Learning",
+          "Unsupervised Learning",
+          "Reinforcement Learning"
+        ],
+        "all": [
+          [
+            "h2",
+            "What is Machine Learning?"
+          ],
+          [
+            "h2",
+            "Types of Learning"
+          ],
+          [
+            "h3",
+            "Supervised Learning"
+          ],
+          [
+            "h3",
+            "Unsupervised Learning"
+          ],
+          [
+            "h3",
+            "Reinforcement Learning"
+          ],
+          [
+            "h2",
+            "Popular Algorithms"
+          ],
+          [
+            "h2",
+            "Related Reading"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Regression (predicting continuous values)",
+          "Classification (predicting categories)",
+          "Examples: [[Getting Started with Python]], Linear Regression",
+          "Clustering (grouping similar data)",
+          "Dimensionality reduction",
+          "Pattern discovery",
+          "Learning through rewards and punishments",
+          "Game playing, robotics",
+          "[[Data Science Basics]]",
+          "[[Programming Concepts]]"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [],
+      "important_concepts": [],
+      "links": [
+        "Getting Started with Python",
+        "Data Science Basics",
+        "Programming Concepts"
+      ],
+      "tags": [
+        "ai",
+        "datascience",
+        "algorithms",
+        "ml"
+      ],
+      "readability": {
+        "total_lines": 39,
+        "non_empty_lines": 27,
+        "total_words": 153,
+        "total_sentences": 4,
+        "avg_words_per_line": 5.666666666666667,
+        "avg_words_per_sentence": 38.25
+      },
+      "parsed_at": "2026-07-08T14:50:51.365034"
+    },
+    {
+      "id": "04_programming_concepts",
+      "title": "04_programming_concepts",
+      "file_metadata": {
+        "file_name": "04_programming_concepts.md",
+        "file_path": "04_programming_concepts.md",
+        "folder": "root",
+        "size_bytes": 997,
+        "created": "2026-07-08T14:49:16.099937",
+        "modified": "2026-07-08T14:49:16.099937"
+      },
+      "frontmatter": {},
+      "content": "# Programming Concepts\n\nCore programming concepts that apply across languages.\n\n## Object-Oriented Programming (OOP)\n\nOOP is a programming paradigm based on the concept of objects, which can contain data and code.\n\n### Key OOP Principles\n- **Encapsulation** - Bundling data and methods\n- **Inheritance** - Deriving new classes from existing ones\n- **Polymorphism** - Using objects of different types interchangeably\n- **Abstraction** - Hiding complex implementation details\n\n## Functional Programming\n\nA programming paradigm where computation is treated as the evaluation of mathematical functions.\n\n### Key Concepts\n- First-class functions\n- Pure functions (no side effects)\n- Immutability\n- Higher-order functions\n\n## Design Patterns\n\nReusable solutions to common programming problems.\n\n- Singleton\n- Factory\n- Observer\n- Strategy\n\n## Important to Know\n- [[Getting Started with Python]]\n- [[Data Science Basics]]\n\nTags: #programming #concepts #architecture\n",
+      "content_length": 959,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "Object-Oriented Programming (OOP)",
+          "Functional Programming",
+          "Design Patterns",
+          "Important to Know"
+        ],
+        "h3": [
+          "Key OOP Principles",
+          "Key Concepts"
+        ],
+        "all": [
+          [
+            "h2",
+            "Object-Oriented Programming (OOP)"
+          ],
+          [
+            "h3",
+            "Key OOP Principles"
+          ],
+          [
+            "h2",
+            "Functional Programming"
+          ],
+          [
+            "h3",
+            "Key Concepts"
+          ],
+          [
+            "h2",
+            "Design Patterns"
+          ],
+          [
+            "h2",
+            "Important to Know"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "**Encapsulation** - Bundling data and methods",
+          "**Inheritance** - Deriving new classes from existing ones",
+          "**Polymorphism** - Using objects of different types interchangeably",
+          "**Abstraction** - Hiding complex implementation details",
+          "First-class functions",
+          "Pure functions (no side effects)",
+          "Immutability",
+          "Higher-order functions",
+          "Singleton",
+          "Factory",
+          "Observer",
+          "Strategy",
+          "[[Getting Started with Python]]",
+          "[[Data Science Basics]]"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "important_concepts": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "links": [
+        "Getting Started with Python",
+        "Data Science Basics"
+      ],
+      "tags": [
+        "programming",
+        "concepts",
+        "architecture"
+      ],
+      "readability": {
+        "total_lines": 39,
+        "non_empty_lines": 26,
+        "total_words": 134,
+        "total_sentences": 5,
+        "avg_words_per_line": 5.153846153846154,
+        "avg_words_per_sentence": 26.8
+      },
+      "parsed_at": "2026-07-08T14:50:51.365034"
+    },
+    {
+      "id": "05_ai_ethics",
+      "title": "05_ai_ethics",
+      "file_metadata": {
+        "file_name": "05_ai_ethics.md",
+        "file_path": "05_ai_ethics.md",
+        "folder": "root",
+        "size_bytes": 920,
+        "created": "2026-07-08T14:49:16.101952",
+        "modified": "2026-07-08T14:49:16.101952"
+      },
+      "frontmatter": {},
+      "content": "# AI Ethics\n\nImportant considerations when developing AI systems.\n\n## What is AI Ethics?\n\nAI Ethics is concerned with the responsible development and deployment of AI systems that respect human values, rights, and dignity.\n\n## Key Concerns\n\n1. **Bias and Fairness**\n   - Algorithmic bias can perpetuate discrimination\n   - Need diverse training data\n   - Regular audits for bias\n\n2. **Transparency and Explainability**\n   - Users should understand how AI makes decisions\n   - Black box models are problematic\n   - Need interpretable AI\n\n3. **Privacy**\n   - Data protection and security\n   - Informed consent\n   - Data minimization\n\n4. **Accountability**\n   - Who is responsible for AI decisions?\n   - Clear governance frameworks\n   - Liability considerations\n\n## Related Topics\n- [[Machine Learning Algorithms]]\n- [[Data Science Basics]]\n\nTags: #ai #ethics #responsibility #governance\n",
+      "content_length": 885,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "What is AI Ethics?",
+          "Key Concerns",
+          "Related Topics"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "What is AI Ethics?"
+          ],
+          [
+            "h2",
+            "Key Concerns"
+          ],
+          [
+            "h2",
+            "Related Topics"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Algorithmic bias can perpetuate discrimination",
+          "Need diverse training data",
+          "Regular audits for bias",
+          "Users should understand how AI makes decisions",
+          "Black box models are problematic",
+          "Need interpretable AI",
+          "Data protection and security",
+          "Informed consent",
+          "Data minimization",
+          "Who is responsible for AI decisions?",
+          "Clear governance frameworks",
+          "Liability considerations",
+          "[[Machine Learning Algorithms]]",
+          "[[Data Science Basics]]"
+        ],
+        "ordered": [
+          "**Bias and Fairness**",
+          "**Transparency and Explainability**",
+          "**Privacy**",
+          "**Accountability**"
+        ],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Bias and Fairness",
+        "Transparency and Explainability",
+        "Privacy",
+        "Accountability"
+      ],
+      "important_concepts": [
+        "Bias and Fairness",
+        "Transparency and Explainability",
+        "Privacy",
+        "Accountability"
+      ],
+      "links": [
+        "Machine Learning Algorithms",
+        "Data Science Basics"
+      ],
+      "tags": [
+        "ai",
+        "governance",
+        "responsibility",
+        "ethics"
+      ],
+      "readability": {
+        "total_lines": 36,
+        "non_empty_lines": 25,
+        "total_words": 124,
+        "total_sentences": 9,
+        "avg_words_per_line": 4.96,
+        "avg_words_per_sentence": 13.777777777777779
+      },
+      "parsed_at": "2026-07-08T14:50:51.365034"
+    }
+  ]
+}
