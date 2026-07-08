@@ -1,0 +1,31 @@
+# Obsidian AI Brain - Dependencies
+# Install with: pip install -r obsidian_requirements.txt
+
+# Core dependencies
+python-dotenv==1.0.0
+pyyaml==6.0
+
+# ML & Embeddings
+sentence-transformers==2.2.2
+torch==2.0.1
+
+# Vector Database
+chromadb==0.4.18
+
+# LLM Integration
+langchain==0.1.0
+ollama==0.1.0
+
+# Web Interface
+streamlit==1.28.0
+
+# Graph & Visualization
+networkx==3.2
+matplotlib==3.8.0
+
+# Data Processing
+pandas==2.1.1
+numpy==1.24.3
+
+# Utilities
+requests==2.31.0
