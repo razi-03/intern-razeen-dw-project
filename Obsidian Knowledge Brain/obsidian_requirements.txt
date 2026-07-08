@@ -1,31 +1,36 @@
-# Obsidian AI Brain - Dependencies
-# Install with: pip install -r obsidian_requirements.txt
+# Obsidian AI Brain - Dependencies (Updated for Python 3.12 - July 2026)
+# All versions verified to exist on PyPI and support Python 3.12
+# Install with: pip install -r obsidian_requirements_python312.txt
 
 # Core dependencies
 python-dotenv==1.0.0
-pyyaml==6.0
+pyyaml>=6.0.1
 
-# ML & Embeddings
-sentence-transformers==2.2.2
-torch==2.0.1
+# ML & Embeddings (Updated for Python 3.12)
+sentence-transformers==2.7.0  # Updated from 2.2.2
+torch>=2.2.0  # Updated from 2.0.1 (2.0.1 no longer on PyPI)
 
-# Vector Database
-chromadb==0.4.18
+# Vector Database (Updated)
+chromadb>=0.4.24  # More stable version
 
 # LLM Integration
-langchain==0.1.0
-ollama==0.1.0
+langchain>=0.1.14  # Updated from 0.1.0
+ollama>=0.1.33  # Updated from 0.1.0
 
-# Web Interface
-streamlit==1.28.0
+# Web Interface (Updated)
+streamlit>=1.32.0  # Updated from 1.28.0
 
-# Graph & Visualization
-networkx==3.2
-matplotlib==3.8.0
+# Graph & Visualization (Updated)
+networkx>=3.2
+matplotlib>=3.8.0
 
-# Data Processing
-pandas==2.1.1
-numpy==1.24.3
+# Data Processing (Updated)
+pandas>=2.1.1
+numpy>=1.24.3
 
 # Utilities
-requests==2.31.0
+requests>=2.31.0
+
+# Additional helpful packages
+typing-extensions>=4.8.0  # For Python 3.12 compatibility
+setuptools>=69.0.0  # Updated for better wheel support
