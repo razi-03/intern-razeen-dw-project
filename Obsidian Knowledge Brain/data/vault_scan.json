@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "total_notes": 5,
+    "total_files": 0,
+    "total_directories": 0,
+    "scan_date": "2026-07-08T14:49:37.398034"
+  },
+  "notes": [
+    {
+      "id": "01_getting_started",
+      "title": "01_getting_started",
+      "file_metadata": {
+        "file_name": "01_getting_started.md",
+        "file_path": "01_getting_started.md",
+        "folder": "root",
+        "size_bytes": 570,
+        "created": "2026-07-08T14:49:16.083994",
+        "modified": "2026-07-08T14:49:16.083994"
+      },
+      "frontmatter": {},
+      "content_preview": "# Getting Started with Python\n\nThis is a foundational note about Python programming.\n\n## What is Python?\n\nPython is a high-level, interpreted programming language known for its simplicity and readabil...",
+      "word_count": 80,
+      "links": [
+        "Data Science Basics",
+        "Python Best Practices",
+        "Programming Concepts"
+      ],
+      "tags": [
+        "programming",
+        "python",
+        "beginner"
+      ],
+      "linked_count": 3,
+      "tag_count": 3,
+      "scanned_at": "2026-07-08T14:49:37.420325"
+    },
+    {
+      "id": "02_data_science",
+      "title": "02_data_science",
+      "file_metadata": {
+        "file_name": "02_data_science.md",
+        "file_path": "02_data_science.md",
+        "folder": "root",
+        "size_bytes": 890,
+        "created": "2026-07-08T14:49:16.083994",
+        "modified": "2026-07-08T14:49:16.083994"
+      },
+      "frontmatter": {},
+      "content_preview": "# Data Science Basics\n\nAn introduction to the field of data science and its applications.\n\n## What is Data Science?\n\nData science is an interdisciplinary field that uses scientific methods, processes,...",
+      "word_count": 115,
+      "links": [
+        "Machine Learning Algorithms",
+        "Getting Started with Python",
+        "Data Visualization"
+      ],
+      "tags": [
+        "ai",
+        "analytics",
+        "datascience"
+      ],
+      "linked_count": 3,
+      "tag_count": 3,
+      "scanned_at": "2026-07-08T14:49:37.441048"
+    },
+    {
+      "id": "03_machine_learning",
+      "title": "03_machine_learning",
+      "file_metadata": {
+        "file_name": "03_machine_learning.md",
+        "file_path": "03_machine_learning.md",
+        "folder": "root",
+        "size_bytes": 1140,
+        "created": "2026-07-08T14:49:16.083994",
+        "modified": "2026-07-08T14:49:16.099937"
+      },
+      "frontmatter": {},
+      "content_preview": "# Machine Learning Algorithms\n\nAn overview of common machine learning algorithms and their applications.\n\n## What is Machine Learning?\n\nMachine Learning is a subset of artificial intelligence that ena...",
+      "word_count": 153,
+      "links": [
+        "Getting Started with Python",
+        "Data Science Basics",
+        "Programming Concepts"
+      ],
+      "tags": [
+        "ai",
+        "datascience",
+        "algorithms",
+        "ml"
+      ],
+      "linked_count": 3,
+      "tag_count": 4,
+      "scanned_at": "2026-07-08T14:49:37.456325"
+    },
+    {
+      "id": "04_programming_concepts",
+      "title": "04_programming_concepts",
+      "file_metadata": {
+        "file_name": "04_programming_concepts.md",
+        "file_path": "04_programming_concepts.md",
+        "folder": "root",
+        "size_bytes": 997,
+        "created": "2026-07-08T14:49:16.099937",
+        "modified": "2026-07-08T14:49:16.099937"
+      },
+      "frontmatter": {},
+      "content_preview": "# Programming Concepts\n\nCore programming concepts that apply across languages.\n\n## Object-Oriented Programming (OOP)\n\nOOP is a programming paradigm based on the concept of objects, which can contain d...",
+      "word_count": 134,
+      "links": [
+        "Getting Started with Python",
+        "Data Science Basics"
+      ],
+      "tags": [
+        "programming",
+        "concepts",
+        "architecture"
+      ],
+      "linked_count": 2,
+      "tag_count": 3,
+      "scanned_at": "2026-07-08T14:49:37.470949"
+    },
+    {
+      "id": "05_ai_ethics",
+      "title": "05_ai_ethics",
+      "file_metadata": {
+        "file_name": "05_ai_ethics.md",
+        "file_path": "05_ai_ethics.md",
+        "folder": "root",
+        "size_bytes": 920,
+        "created": "2026-07-08T14:49:16.101952",
+        "modified": "2026-07-08T14:49:16.101952"
+      },
+      "frontmatter": {},
+      "content_preview": "# AI Ethics\n\nImportant considerations when developing AI systems.\n\n## What is AI Ethics?\n\nAI Ethics is concerned with the responsible development and deployment of AI systems that respect human values...",
+      "word_count": 124,
+      "links": [
+        "Machine Learning Algorithms",
+        "Data Science Basics"
+      ],
+      "tags": [
+        "ai",
+        "governance",
+        "responsibility",
+        "ethics"
+      ],
+      "linked_count": 2,
+      "tag_count": 4,
+      "scanned_at": "2026-07-08T14:49:37.484577"
+    }
+  ],
+  "vault_structure": {
+    "root": {
+      "notes": [
+        "01_getting_started",
+        "02_data_science",
+        "03_machine_learning",
+        "04_programming_concepts",
+        "05_ai_ethics"
+      ],
+      "note_count": 5
+    }
+  }
+}
