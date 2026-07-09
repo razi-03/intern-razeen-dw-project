@@ -3,7 +3,7 @@
     "total_notes": 5,
     "total_files": 0,
     "total_directories": 0,
-    "scan_date": "2026-07-08T14:49:37.398034"
+    "scan_date": "2026-07-09T10:15:10.496602"
   },
   "notes": [
     {
@@ -26,13 +26,13 @@
         "Programming Concepts"
       ],
       "tags": [
-        "programming",
         "python",
-        "beginner"
+        "beginner",
+        "programming"
       ],
       "linked_count": 3,
       "tag_count": 3,
-      "scanned_at": "2026-07-08T14:49:37.420325"
+      "scanned_at": "2026-07-09T10:15:10.519466"
     },
     {
       "id": "02_data_science",
@@ -54,13 +54,13 @@
         "Data Visualization"
       ],
       "tags": [
-        "ai",
         "analytics",
-        "datascience"
+        "datascience",
+        "ai"
       ],
       "linked_count": 3,
       "tag_count": 3,
-      "scanned_at": "2026-07-08T14:49:37.441048"
+      "scanned_at": "2026-07-09T10:15:10.535965"
     },
     {
       "id": "03_machine_learning",
@@ -82,14 +82,14 @@
         "Programming Concepts"
       ],
       "tags": [
-        "ai",
-        "datascience",
         "algorithms",
-        "ml"
+        "datascience",
+        "ml",
+        "ai"
       ],
       "linked_count": 3,
       "tag_count": 4,
-      "scanned_at": "2026-07-08T14:49:37.456325"
+      "scanned_at": "2026-07-09T10:15:10.552838"
     },
     {
       "id": "04_programming_concepts",
@@ -110,13 +110,13 @@
         "Data Science Basics"
       ],
       "tags": [
+        "architecture",
         "programming",
-        "concepts",
-        "architecture"
+        "concepts"
       ],
       "linked_count": 2,
       "tag_count": 3,
-      "scanned_at": "2026-07-08T14:49:37.470949"
+      "scanned_at": "2026-07-09T10:15:10.570418"
     },
     {
       "id": "05_ai_ethics",
@@ -137,14 +137,14 @@
         "Data Science Basics"
       ],
       "tags": [
-        "ai",
-        "governance",
+        "ethics",
         "responsibility",
-        "ethics"
+        "governance",
+        "ai"
       ],
       "linked_count": 2,
       "tag_count": 4,
-      "scanned_at": "2026-07-08T14:49:37.484577"
+      "scanned_at": "2026-07-09T10:15:10.585873"
     }
   ],
   "vault_structure": {

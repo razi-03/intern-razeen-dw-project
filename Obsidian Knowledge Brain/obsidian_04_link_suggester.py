@@ -45,7 +45,7 @@ class LinkSuggester:
             persist_directory='vector_store',
             anonymized_telemetry=False
         )
-        self.client = chromadb.Client(settings)
+        self.client = chromadb.PersistentClient(path="vector_store")
         self.collection = self.client.get_collection('obsidian_notes')
     
     def suggest_by_content_similarity(self, note, top_k=5):

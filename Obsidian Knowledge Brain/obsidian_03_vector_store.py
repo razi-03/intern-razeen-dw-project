@@ -53,7 +53,7 @@ class VectorStoreManager:
             anonymized_telemetry=False
         )
         
-        self.client = chromadb.Client(settings)
+        self.client = chromadb.PersistentClient(path="vector_store")
         self.collection = self.client.get_or_create_collection(
             name=collection_name,
             metadata={'hnsw:space': 'cosine'}

@@ -1,0 +1,130 @@
+{
+  "01_getting_started": {
+    "note_title": "01_getting_started",
+    "suggestions": [
+      {
+        "title": "02_data_science",
+        "folder": "root",
+        "relevance": 0.5677586197853088,
+        "reason": "Similar content"
+      },
+      {
+        "title": "04_programming_concepts",
+        "folder": "root",
+        "relevance": 0.5590633749961853,
+        "reason": "Similar content"
+      },
+      {
+        "title": "03_machine_learning",
+        "folder": "root",
+        "relevance": 0.44681382179260254,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
+  },
+  "02_data_science": {
+    "note_title": "02_data_science",
+    "suggestions": [
+      {
+        "title": "03_machine_learning",
+        "folder": "root",
+        "relevance": 0.6228196620941162,
+        "reason": "Similar content"
+      },
+      {
+        "title": "01_getting_started",
+        "folder": "root",
+        "relevance": 0.5677587985992432,
+        "reason": "Similar content"
+      },
+      {
+        "title": "04_programming_concepts",
+        "folder": "root",
+        "relevance": 0.460624098777771,
+        "reason": "Similar content"
+      },
+      {
+        "title": "05_ai_ethics",
+        "folder": "root",
+        "shared_tags": [
+          "ai"
+        ],
+        "reason": "Shared tags: ai"
+      }
+    ],
+    "suggestion_count": 4
+  },
+  "03_machine_learning": {
+    "note_title": "03_machine_learning",
+    "suggestions": [
+      {
+        "title": "02_data_science",
+        "folder": "root",
+        "relevance": 0.6228194832801819,
+        "reason": "Similar content"
+      },
+      {
+        "title": "05_ai_ethics",
+        "folder": "root",
+        "relevance": 0.511407196521759,
+        "reason": "Similar content"
+      },
+      {
+        "title": "01_getting_started",
+        "folder": "root",
+        "relevance": 0.44681376218795776,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
+  },
+  "04_programming_concepts": {
+    "note_title": "04_programming_concepts",
+    "suggestions": [
+      {
+        "title": "01_getting_started",
+        "folder": "root",
+        "relevance": 0.5590634346008301,
+        "reason": "Similar content"
+      },
+      {
+        "title": "02_data_science",
+        "folder": "root",
+        "relevance": 0.46062397956848145,
+        "reason": "Similar content"
+      },
+      {
+        "title": "03_machine_learning",
+        "folder": "root",
+        "relevance": 0.41154420375823975,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
+  },
+  "05_ai_ethics": {
+    "note_title": "05_ai_ethics",
+    "suggestions": [
+      {
+        "title": "03_machine_learning",
+        "folder": "root",
+        "relevance": 0.511407196521759,
+        "reason": "Similar content"
+      },
+      {
+        "title": "02_data_science",
+        "folder": "root",
+        "relevance": 0.40727877616882324,
+        "reason": "Similar content"
+      },
+      {
+        "title": "04_programming_concepts",
+        "folder": "root",
+        "relevance": 0.2191144824028015,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
+  }
+}

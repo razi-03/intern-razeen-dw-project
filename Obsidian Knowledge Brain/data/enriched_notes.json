@@ -1,7 +1,7 @@
 {
   "metadata": {
     "total_notes": 5,
-    "parsed_at": "2026-07-08T14:50:51.374949"
+    "parsed_at": "2026-07-09T10:15:27.800019"
   },
   "notes": [
     {
@@ -78,9 +78,9 @@
         "Programming Concepts"
       ],
       "tags": [
-        "programming",
         "python",
-        "beginner"
+        "beginner",
+        "programming"
       ],
       "readability": {
         "total_lines": 28,
@@ -90,7 +90,7 @@
         "avg_words_per_line": 4.2105263157894735,
         "avg_words_per_sentence": 16.0
       },
-      "parsed_at": "2026-07-08T14:50:51.365034"
+      "parsed_at": "2026-07-09T10:15:27.791247"
     },
     {
       "id": "02_data_science",
@@ -174,9 +174,9 @@
         "Data Visualization"
       ],
       "tags": [
-        "ai",
         "analytics",
-        "datascience"
+        "datascience",
+        "ai"
       ],
       "readability": {
         "total_lines": 29,
@@ -186,7 +186,7 @@
         "avg_words_per_line": 6.052631578947368,
         "avg_words_per_sentence": 14.375
       },
-      "parsed_at": "2026-07-08T14:50:51.365034"
+      "parsed_at": "2026-07-09T10:15:27.792195"
     },
     {
       "id": "03_machine_learning",
@@ -274,10 +274,10 @@
         "Programming Concepts"
       ],
       "tags": [
-        "ai",
-        "datascience",
         "algorithms",
-        "ml"
+        "datascience",
+        "ml",
+        "ai"
       ],
       "readability": {
         "total_lines": 39,
@@ -287,7 +287,7 @@
         "avg_words_per_line": 5.666666666666667,
         "avg_words_per_sentence": 38.25
       },
-      "parsed_at": "2026-07-08T14:50:51.365034"
+      "parsed_at": "2026-07-09T10:15:27.793323"
     },
     {
       "id": "04_programming_concepts",
@@ -383,9 +383,9 @@
         "Data Science Basics"
       ],
       "tags": [
+        "architecture",
         "programming",
-        "concepts",
-        "architecture"
+        "concepts"
       ],
       "readability": {
         "total_lines": 39,
@@ -395,7 +395,7 @@
         "avg_words_per_line": 5.153846153846154,
         "avg_words_per_sentence": 26.8
       },
-      "parsed_at": "2026-07-08T14:50:51.365034"
+      "parsed_at": "2026-07-09T10:15:27.794432"
     },
     {
       "id": "05_ai_ethics",
@@ -480,10 +480,10 @@
         "Data Science Basics"
       ],
       "tags": [
-        "ai",
-        "governance",
+        "ethics",
         "responsibility",
-        "ethics"
+        "governance",
+        "ai"
       ],
       "readability": {
         "total_lines": 36,
@@ -493,7 +493,7 @@
         "avg_words_per_line": 4.96,
         "avg_words_per_sentence": 13.777777777777779
       },
-      "parsed_at": "2026-07-08T14:50:51.365034"
+      "parsed_at": "2026-07-09T10:15:27.795747"
     }
   ]
 }
