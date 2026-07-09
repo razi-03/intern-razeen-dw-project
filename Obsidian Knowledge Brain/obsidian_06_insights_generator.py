@@ -8,8 +8,8 @@ Date: 2026-07-08
 import json
 from pathlib import Path
 from langchain_community.llms import Ollama
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_core.prompts import PromptTemplate
+from langchain.chains.llm import LLMChain
 import logging
 
 logging.basicConfig(level=logging.INFO)
