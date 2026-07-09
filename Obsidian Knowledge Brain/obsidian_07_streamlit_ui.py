@@ -158,7 +158,7 @@ with tab2:
     for note in filtered_notes:
         with st.expander(f"📄 {note['title']} ({note['readability']['total_words']} words)"):
             st.write(f"**Folder:** {note['file_metadata']['folder']}")
-            st.write(f"**Preview:** {note['content_preview']}")
+            preview = note.get('content_preview', note.get('content', 'No preview available')[:200]); st.write(f"**Preview:** {preview}")
             
             if note['tags']:
                 tags = " ".join([f"`{t}`" for t in note['tags'][:5]])
