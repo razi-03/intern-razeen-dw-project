@@ -35,7 +35,17 @@ class LinkSuggester:
         with open(self.enriched_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        self.notes = data['notes']
+        if isinstance(data, list):
+                self.notes = {i: note for i, note in enumerate(data)}
+            elif isinstance(data, dict) and 'notes' in data:
+                if isinstance(data, list):
+                self.notes = {i: note for i, note in enumerate(data)}
+            elif isinstance(data, dict) and 'notes' in data:
+                self.notes = data['notes']
+            else:
+                self.notes = data
+            else:
+                self.notes = data
         logger.info(f"✅ Loaded {len(self.notes)} notes")
     
     def _load_vector_store(self):

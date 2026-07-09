@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "id": "AWS Marketplace",
+      "label": "AWS Marketplace",
+      "folder": "journey",
+      "word_count": 1011,
+      "tags": [],
+      "concepts": [
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling",
+        "Access",
+        "Expiration",
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling"
+      ]
+    },
+    {
+      "id": "CogniMuse - Journey",
+      "label": "CogniMuse - Journey",
+      "folder": "journey",
+      "word_count": 705,
+      "tags": [],
+      "concepts": [
+        "Why:",
+        "What:",
+        "How:",
+        "Results:",
+        "Why:",
+        "What:",
+        "How:",
+        "Strategy:",
+        "Why:",
+        "What:"
+      ]
+    },
+    {
+      "id": "Freelance Key Features",
+      "label": "Freelance Key Features",
+      "folder": "journey",
+      "word_count": 300,
+      "tags": [],
+      "concepts": []
+    },
+    {
+      "id": "Implementation of What & How",
+      "label": "Implementation of What & How",
+      "folder": "journey",
+      "word_count": 510,
+      "tags": [],
+      "concepts": [
+        "AI Strategy / Leadership (r/startups, r/Entrepreneur):",
+        "Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):",
+        "Technical / Implementation Leads (r/MachineLearning, r/DataScience):"
+      ]
+    },
+    {
+      "id": "Sales Workflow Features",
+      "label": "Sales Workflow Features",
+      "folder": "root",
+      "word_count": 240,
+      "tags": [],
+      "concepts": [
+        "Define Target URLs"
+      ]
+    },
+    {
+      "id": "Social Media Workflow Features",
+      "label": "Social Media Workflow Features",
+      "folder": "root",
+      "word_count": 456,
+      "tags": [],
+      "concepts": [
+        "Twitter API (Free Tier):",
+        "Facebook Graph API (Free Tier):",
+        "LinkedIn API:",
+        "Slack API (Free Tier):",
+        "Gmail API (Free Tier):"
+      ]
+    }
+  ],
+  "edges": [],
+  "stats": {
+    "total_nodes": 6,
+    "total_edges": 0
+  }
+}

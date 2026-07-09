@@ -1,0 +1,51 @@
+{
+  "nodes": [
+    {
+      "title": "AWS Marketplace",
+      "folder": "journey",
+      "word_count": 1011,
+      "tag_count": 0,
+      "concept_count": 10
+    },
+    {
+      "title": "CogniMuse - Journey",
+      "folder": "journey",
+      "word_count": 705,
+      "tag_count": 0,
+      "concept_count": 10
+    },
+    {
+      "title": "Freelance Key Features",
+      "folder": "journey",
+      "word_count": 300,
+      "tag_count": 0,
+      "concept_count": 0
+    },
+    {
+      "title": "Implementation of What & How",
+      "folder": "journey",
+      "word_count": 510,
+      "tag_count": 0,
+      "concept_count": 3
+    },
+    {
+      "title": "Sales Workflow Features",
+      "folder": "root",
+      "word_count": 240,
+      "tag_count": 0,
+      "concept_count": 1
+    },
+    {
+      "title": "Social Media Workflow Features",
+      "folder": "root",
+      "word_count": 456,
+      "tag_count": 0,
+      "concept_count": 5
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "total_nodes": 6,
+    "total_edges": 0
+  }
+}

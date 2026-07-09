@@ -15,6 +15,13 @@ from datetime import datetime
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+def generate_unique_id(note_id, content):
+    """Generate unique ID even for duplicate titles"""
+    import hashlib
+    # Use title + hash of content for uniqueness
+    content_hash = hashlib.md5(content.encode()).hexdigest()[:8]
+    return f"{note_id}_{content_hash}"
+
 
 class EmbeddingGenerator:
     """Generate embeddings for note content."""
@@ -126,7 +133,13 @@ def main():
     with open(enriched_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    notes = data['notes']
+    # Handle both list and dict formats
+    if isinstance(data, list):
+        notes = data
+    elif isinstance(data, dict) and 'notes' in data:
+        notes = data['notes']
+    else:
+        notes = data
     print(f"\n   ✅ Loaded {len(notes)} enriched notes")
     
     # Generate embeddings
