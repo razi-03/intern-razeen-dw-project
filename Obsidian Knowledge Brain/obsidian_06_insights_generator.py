@@ -7,7 +7,7 @@ Date: 2026-07-08
 
 import json
 from pathlib import Path
-from langchain.llms.ollama import Ollama
+from langchain_community.llms import Ollama
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 import logging
