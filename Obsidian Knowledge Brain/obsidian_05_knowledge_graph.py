@@ -23,10 +23,10 @@ class KnowledgeGraphBuilder:
     
     def load_data(self, enriched_file='data/enriched_notes.json', suggestions_file='data/link_suggestions.json'):
         """Load notes and suggestions."""
-        with open(enriched_file, 'r') as f:
+        with open(enriched_file, 'r', encoding='utf-8') as f:
             self.notes = json.load(f)['notes']
         
-        with open(suggestions_file, 'r') as f:
+        with open(suggestions_file, 'r', encoding='utf-8') as f:
             self.suggestions = json.load(f)
         
         logger.info(f"✅ Loaded {len(self.notes)} notes")
@@ -160,7 +160,7 @@ class KnowledgeGraphBuilder:
             }
         }
         
-        with open(output_file, 'w') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2)
         
         logger.info(f"✅ Exported graph data to {output_file}")
@@ -179,7 +179,7 @@ class KnowledgeGraphBuilder:
             }
         }
         
-        with open(output_file, 'w') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2)
         
         logger.info(f"✅ Saved graph to {output_file}")

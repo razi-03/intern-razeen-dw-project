@@ -33,13 +33,13 @@ with st.sidebar:
     @st.cache_data
     def load_data():
         try:
-            with open('data/enriched_notes.json', 'r') as f:
+            with open('data/enriched_notes.json', 'r', encoding='utf-8') as f:
                 notes = json.load(f)['notes']
-            with open('data/graph_data.json', 'r') as f:
+            with open('data/graph_data.json', 'r', encoding='utf-8') as f:
                 graph_data = json.load(f)
-            with open('data/insights.json', 'r') as f:
+            with open('data/insights.json', 'r', encoding='utf-8') as f:
                 insights = json.load(f)
-            with open('data/link_suggestions.json', 'r') as f:
+            with open('data/link_suggestions.json', 'r', encoding='utf-8') as f:
                 suggestions = json.load(f)
             return notes, graph_data, insights, suggestions
         except:

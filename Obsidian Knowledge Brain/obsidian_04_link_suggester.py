@@ -32,7 +32,7 @@ class LinkSuggester:
             logger.error(f"File not found: {self.enriched_file}")
             return
         
-        with open(self.enriched_file, 'r') as f:
+        with open(self.enriched_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
         self.notes = data['notes']
@@ -163,7 +163,7 @@ class LinkSuggester:
         output_file = Path(output_path)
         output_file.parent.mkdir(parents=True, exist_ok=True)
         
-        with open(output_file, 'w') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(self.suggestions, f, indent=2)
         
         logger.info(f"✅ Saved suggestions to {output_file}")

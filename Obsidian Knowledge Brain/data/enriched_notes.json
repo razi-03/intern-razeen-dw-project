@@ -1,7 +1,7 @@
 {
   "metadata": {
     "total_notes": 12,
-    "parsed_at": "2026-07-09T11:24:24.153487"
+    "parsed_at": "2026-07-09T11:26:41.665337"
   },
   "notes": [
     {
@@ -220,7 +220,7 @@
         "avg_words_per_line": 6.695364238410596,
         "avg_words_per_sentence": 7.170212765957447
       },
-      "parsed_at": "2026-07-09T11:24:24.135912"
+      "parsed_at": "2026-07-09T11:26:41.649405"
     },
     {
       "id": "CogniMuse - Journey",
@@ -404,7 +404,7 @@
         "avg_words_per_line": 6.130434782608695,
         "avg_words_per_sentence": 7.833333333333333
       },
-      "parsed_at": "2026-07-09T11:24:24.137830"
+      "parsed_at": "2026-07-09T11:26:41.650775"
     },
     {
       "id": "Freelance Key Features",
@@ -510,7 +510,7 @@
         "avg_words_per_line": 7.317073170731708,
         "avg_words_per_sentence": 37.5
       },
-      "parsed_at": "2026-07-09T11:24:24.139085"
+      "parsed_at": "2026-07-09T11:26:41.651673"
     },
     {
       "id": "Implementation of What & How",
@@ -614,7 +614,7 @@
         "avg_words_per_line": 12.439024390243903,
         "avg_words_per_sentence": 18.214285714285715
       },
-      "parsed_at": "2026-07-09T11:24:24.140625"
+      "parsed_at": "2026-07-09T11:26:41.652864"
     },
     {
       "id": "AWS Marketplace",
@@ -832,7 +832,7 @@
         "avg_words_per_line": 6.695364238410596,
         "avg_words_per_sentence": 7.170212765957447
       },
-      "parsed_at": "2026-07-09T11:24:24.143048"
+      "parsed_at": "2026-07-09T11:26:41.655723"
     },
     {
       "id": "CogniMuse - Journey",
@@ -1016,7 +1016,7 @@
         "avg_words_per_line": 6.130434782608695,
         "avg_words_per_sentence": 7.833333333333333
       },
-      "parsed_at": "2026-07-09T11:24:24.144265"
+      "parsed_at": "2026-07-09T11:26:41.656957"
     },
     {
       "id": "Freelance Key Features",
@@ -1122,7 +1122,7 @@
         "avg_words_per_line": 7.317073170731708,
         "avg_words_per_sentence": 37.5
       },
-      "parsed_at": "2026-07-09T11:24:24.145000"
+      "parsed_at": "2026-07-09T11:26:41.657773"
     },
     {
       "id": "Implementation of What & How",
@@ -1226,7 +1226,7 @@
         "avg_words_per_line": 12.439024390243903,
         "avg_words_per_sentence": 18.214285714285715
       },
-      "parsed_at": "2026-07-09T11:24:24.146282"
+      "parsed_at": "2026-07-09T11:26:41.658795"
     },
     {
       "id": "Sales Workflow Features",
@@ -1341,7 +1341,7 @@
         "avg_words_per_line": 6.0,
         "avg_words_per_sentence": 30.0
       },
-      "parsed_at": "2026-07-09T11:24:24.147185"
+      "parsed_at": "2026-07-09T11:26:41.659633"
     },
     {
       "id": "Social Media Workflow Features",
@@ -1514,7 +1514,7 @@
         "avg_words_per_line": 5.493975903614458,
         "avg_words_per_sentence": 15.2
       },
-      "parsed_at": "2026-07-09T11:24:24.148098"
+      "parsed_at": "2026-07-09T11:26:41.660727"
     },
     {
       "id": "Sales Workflow Features",
@@ -1629,7 +1629,7 @@
         "avg_words_per_line": 6.0,
         "avg_words_per_sentence": 30.0
       },
-      "parsed_at": "2026-07-09T11:24:24.149227"
+      "parsed_at": "2026-07-09T11:26:41.661614"
     },
     {
       "id": "Social Media Workflow Features",
@@ -1802,7 +1802,7 @@
         "avg_words_per_line": 5.493975903614458,
         "avg_words_per_sentence": 15.2
       },
-      "parsed_at": "2026-07-09T11:24:24.150283"
+      "parsed_at": "2026-07-09T11:26:41.662490"
     }
   ]
 }

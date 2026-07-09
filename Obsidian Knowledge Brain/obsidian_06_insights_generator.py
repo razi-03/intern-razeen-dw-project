@@ -122,7 +122,7 @@ def main():
     print("="*80)
     
     # Load notes
-    with open('data/enriched_notes.json', 'r') as f:
+    with open('data/enriched_notes.json', 'r', encoding='utf-8') as f:
         notes = json.load(f)['notes']
     
     print(f"\n   ✅ Loaded {len(notes)} notes")
@@ -158,7 +158,7 @@ def main():
         'top_topics': topics['top_topics']
     }
     
-    with open('data/insights.json', 'w') as f:
+    with open('data/insights.json', 'w', encoding='utf-8') as f:
         json.dump(insights_data, f, indent=2)
     
     logger.info(f"✅ Saved insights")

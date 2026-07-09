@@ -123,7 +123,7 @@ def main():
         print("⚠️  Run obsidian_02_note_parser.py first")
         return
     
-    with open(enriched_file, 'r') as f:
+    with open(enriched_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     notes = data['notes']
