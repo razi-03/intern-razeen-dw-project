@@ -9,7 +9,6 @@ import json
 from pathlib import Path
 from langchain_community.llms import Ollama
 from langchain_core.prompts import PromptTemplate
-from langchain.chains.llm import LLMChain
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -61,8 +60,9 @@ Summary:"""
     def generate_note_summary(self, note):
         """Generate summary for a single note."""
         try:
-            chain = LLMChain(llm=self.llm, prompt=self.summary_prompt)
-            summary = chain.run(content=note['content'][:1000])
+            # Use modern LCEL: prompt | llm
+            chain = self.summary_prompt | self.llm
+            summary = chain.invoke({"content": note['content'][:1000]})
             return summary.strip()
         except Exception as e:
             logger.error(f"Error: {e}")
@@ -83,8 +83,9 @@ Summary:"""
         ])
         
         try:
-            chain = LLMChain(llm=self.llm, prompt=self.insight_prompt)
-            insights = chain.run(notes_summary=summary)
+            # Use modern LCEL: prompt | llm
+            chain = self.insight_prompt | self.llm
+            insights = chain.invoke({"notes_summary": summary})
             logger.info(f"   ✅ Generated insights")
             return insights.strip()
         except Exception as e:
@@ -121,9 +122,24 @@ def main():
     print("💡 OBSIDIAN AI BRAIN - INSIGHTS GENERATOR")
     print("="*80)
     
-    # Load notes
+    # Load notes with defensive handling
     with open('data/enriched_notes.json', 'r', encoding='utf-8') as f:
-        notes = json.load(f)['notes']
+        data = json.load(f)
+    
+    # Extract notes from any format
+    if isinstance(data, list):
+        notes = data
+    elif isinstance(data, dict):
+        if 'notes' in data:
+            notes = data['notes']
+        else:
+            notes = list(data.values()) if data else []
+    else:
+        notes = []
+    
+    if not notes:
+        print("❌ No notes loaded from enriched_notes.json")
+        return
     
     print(f"\n   ✅ Loaded {len(notes)} notes")
     

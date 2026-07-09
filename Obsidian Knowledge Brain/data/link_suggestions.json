@@ -1,32 +1,146 @@
 {
   "AWS Marketplace": {
     "note_title": "AWS Marketplace",
-    "suggestions": [],
-    "suggestion_count": 0
+    "suggestions": [
+      {
+        "title": "Social Media Workflow Features",
+        "folder": "journey",
+        "relevance": 0.38536566495895386,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Sales Workflow Features",
+        "folder": "journey",
+        "relevance": 0.33307474851608276,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Freelance Key Features",
+        "folder": "root",
+        "relevance": 0.3157949447631836,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
   },
   "CogniMuse - Journey": {
     "note_title": "CogniMuse - Journey",
-    "suggestions": [],
-    "suggestion_count": 0
+    "suggestions": [
+      {
+        "title": "Implementation of What & How",
+        "folder": "root",
+        "relevance": 0.4615699052810669,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Freelance Key Features",
+        "folder": "root",
+        "relevance": 0.38095903396606445,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Sales Workflow Features",
+        "folder": "journey",
+        "relevance": 0.28691089153289795,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
   },
   "Freelance Key Features": {
     "note_title": "Freelance Key Features",
-    "suggestions": [],
-    "suggestion_count": 0
+    "suggestions": [
+      {
+        "title": "Sales Workflow Features",
+        "folder": "journey",
+        "relevance": 0.7007236480712891,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Social Media Workflow Features",
+        "folder": "journey",
+        "relevance": 0.6438289284706116,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Implementation of What & How",
+        "folder": "root",
+        "relevance": 0.5482815504074097,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
   },
   "Implementation of What & How": {
     "note_title": "Implementation of What & How",
-    "suggestions": [],
-    "suggestion_count": 0
+    "suggestions": [
+      {
+        "title": "Freelance Key Features",
+        "folder": "root",
+        "relevance": 0.5482815504074097,
+        "reason": "Similar content"
+      },
+      {
+        "title": "CogniMuse - Journey",
+        "folder": "root",
+        "relevance": 0.4615699052810669,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Sales Workflow Features",
+        "folder": "journey",
+        "relevance": 0.4013018012046814,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
   },
   "Sales Workflow Features": {
     "note_title": "Sales Workflow Features",
-    "suggestions": [],
-    "suggestion_count": 0
+    "suggestions": [
+      {
+        "title": "Social Media Workflow Features",
+        "folder": "journey",
+        "relevance": 0.7633776068687439,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Freelance Key Features",
+        "folder": "root",
+        "relevance": 0.7007235884666443,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Implementation of What & How",
+        "folder": "root",
+        "relevance": 0.4013018012046814,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
   },
   "Social Media Workflow Features": {
     "note_title": "Social Media Workflow Features",
-    "suggestions": [],
-    "suggestion_count": 0
+    "suggestions": [
+      {
+        "title": "Sales Workflow Features",
+        "folder": "journey",
+        "relevance": 0.7633776068687439,
+        "reason": "Similar content"
+      },
+      {
+        "title": "Freelance Key Features",
+        "folder": "root",
+        "relevance": 0.6438289284706116,
+        "reason": "Similar content"
+      },
+      {
+        "title": "AWS Marketplace",
+        "folder": "root",
+        "relevance": 0.38536566495895386,
+        "reason": "Similar content"
+      }
+    ],
+    "suggestion_count": 3
   }
 }

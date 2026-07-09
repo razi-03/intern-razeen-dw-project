@@ -17,7 +17,7 @@ st.set_page_config(page_title="🧠 Obsidian AI Brain", layout="wide", page_icon
 st.markdown("""
 <style>
     .metric-card { background-color: #f0f2f6; padding: 1.5rem; border-radius: 0.5rem; }
-    .insight-box { background-color: #e8f4f8; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; }
+    .insight-box { background-color: #e8f4f8; color: #000000; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -34,7 +34,14 @@ with st.sidebar:
     def load_data():
         try:
             with open('data/enriched_notes.json', 'r', encoding='utf-8') as f:
-                notes = json.load(f)['notes']
+                data = json.load(f)
+                if isinstance(data, list):
+                    notes = data
+                elif isinstance(data, dict) and 'notes' in data:
+                    notes = data['notes']
+                else:
+                    notes = list(data.values()) if isinstance(data, dict) else []
+            
             with open('data/graph_data.json', 'r', encoding='utf-8') as f:
                 graph_data = json.load(f)
             with open('data/insights.json', 'r', encoding='utf-8') as f:
@@ -42,7 +49,8 @@ with st.sidebar:
             with open('data/link_suggestions.json', 'r', encoding='utf-8') as f:
                 suggestions = json.load(f)
             return notes, graph_data, insights, suggestions
-        except:
+        except Exception as e:
+            st.error(f"Error loading data: {e}")
             return None, None, None, None
     
     notes, graph_data, insights, suggestions = load_data()

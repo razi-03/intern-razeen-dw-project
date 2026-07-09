@@ -38,13 +38,13 @@ class VaultSyncWorker:
     def _load_hashes(self):
         """Load file hashes."""
         if self.hash_file.exists():
-            with open(self.hash_file, 'r') as f:
+            with open(self.hash_file, 'r', encoding='utf-8') as f:
                 return json.load(f)
         return {}
     
     def _save_hashes(self):
         """Save file hashes."""
-        with open(self.hash_file, 'w') as f:
+        with open(self.hash_file, 'w', encoding='utf-8') as f:
             json.dump(self.vault_hashes, f)
     
     def _get_file_hash(self, file_path):

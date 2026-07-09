@@ -3,7 +3,7 @@
     {
       "id": "AWS Marketplace",
       "label": "AWS Marketplace",
-      "folder": "journey",
+      "folder": "root",
       "word_count": 1011,
       "tags": [],
       "concepts": [
@@ -22,7 +22,7 @@
     {
       "id": "CogniMuse - Journey",
       "label": "CogniMuse - Journey",
-      "folder": "journey",
+      "folder": "root",
       "word_count": 705,
       "tags": [],
       "concepts": [
@@ -41,7 +41,7 @@
     {
       "id": "Freelance Key Features",
       "label": "Freelance Key Features",
-      "folder": "journey",
+      "folder": "root",
       "word_count": 300,
       "tags": [],
       "concepts": []
@@ -49,7 +49,7 @@
     {
       "id": "Implementation of What & How",
       "label": "Implementation of What & How",
-      "folder": "journey",
+      "folder": "root",
       "word_count": 510,
       "tags": [],
       "concepts": [
@@ -61,7 +61,7 @@
     {
       "id": "Sales Workflow Features",
       "label": "Sales Workflow Features",
-      "folder": "root",
+      "folder": "journey",
       "word_count": 240,
       "tags": [],
       "concepts": [
@@ -71,7 +71,7 @@
     {
       "id": "Social Media Workflow Features",
       "label": "Social Media Workflow Features",
-      "folder": "root",
+      "folder": "journey",
       "word_count": 456,
       "tags": [],
       "concepts": [
@@ -83,9 +83,100 @@
       ]
     }
   ],
-  "edges": [],
+  "edges": [
+    {
+      "source": "AWS Marketplace",
+      "target": "Social Media Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "AWS Marketplace",
+      "target": "Sales Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "AWS Marketplace",
+      "target": "Freelance Key Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "CogniMuse - Journey",
+      "target": "Implementation of What & How",
+      "reason": "Similar content"
+    },
+    {
+      "source": "CogniMuse - Journey",
+      "target": "Freelance Key Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "CogniMuse - Journey",
+      "target": "Sales Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Freelance Key Features",
+      "target": "Sales Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Freelance Key Features",
+      "target": "Social Media Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Freelance Key Features",
+      "target": "Implementation of What & How",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Implementation of What & How",
+      "target": "Freelance Key Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Implementation of What & How",
+      "target": "CogniMuse - Journey",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Implementation of What & How",
+      "target": "Sales Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Sales Workflow Features",
+      "target": "Social Media Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Sales Workflow Features",
+      "target": "Freelance Key Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Sales Workflow Features",
+      "target": "Implementation of What & How",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Social Media Workflow Features",
+      "target": "Sales Workflow Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Social Media Workflow Features",
+      "target": "Freelance Key Features",
+      "reason": "Similar content"
+    },
+    {
+      "source": "Social Media Workflow Features",
+      "target": "AWS Marketplace",
+      "reason": "Similar content"
+    }
+  ],
   "stats": {
     "total_nodes": 6,
-    "total_edges": 0
+    "total_edges": 18
   }
 }

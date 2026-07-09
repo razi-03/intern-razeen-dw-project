@@ -25,17 +25,17 @@ class KnowledgeGraphBuilder:
         """Load notes and suggestions."""
         with open(enriched_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            if isinstance(data, list):
-                self.notes = {i: note for i, note in enumerate(data)}
-            elif isinstance(data, dict) and 'notes' in data:
-                if isinstance(data, list):
-                self.notes = {i: note for i, note in enumerate(data)}
-            elif isinstance(data, dict) and 'notes' in data:
-                self.notes = data['notes']
-            else:
-                self.notes = data
-            else:
-                self.notes = data
+        
+        # Always extract as a list
+        if isinstance(data, list):
+            self.notes = data
+        elif isinstance(data, dict) and 'notes' in data:
+            notes_data = data['notes']
+            self.notes = notes_data if isinstance(notes_data, list) else list(notes_data.values())
+        elif isinstance(data, dict):
+            self.notes = list(data.values())
+        else:
+            self.notes = data if isinstance(data, list) else []
         
         with open(suggestions_file, 'r', encoding='utf-8') as f:
             self.suggestions = json.load(f)

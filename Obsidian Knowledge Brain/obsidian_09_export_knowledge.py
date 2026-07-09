@@ -108,11 +108,18 @@ def main():
     
     # Load data
     try:
-        with open('data/enriched_notes.json', 'r') as f:
-            notes = json.load(f)['notes']
-        with open('data/insights.json', 'r') as f:
+        with open('data/enriched_notes.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            if isinstance(data, list):
+                notes = data
+            elif isinstance(data, dict) and 'notes' in data:
+                notes = data['notes']
+            else:
+                notes = list(data.values()) if isinstance(data, dict) else []
+        
+        with open('data/insights.json', 'r', encoding='utf-8') as f:
             insights = json.load(f)
-        with open('data/graph_data.json', 'r') as f:
+        with open('data/graph_data.json', 'r', encoding='utf-8') as f:
             graph_data = json.load(f)
     except Exception as e:
         print(f"⚠️  Error: {e}")
