@@ -1,162 +1,295 @@
 {
   "metadata": {
-    "total_notes": 5,
+    "total_notes": 13,
     "total_files": 0,
     "total_directories": 0,
-    "scan_date": "2026-07-09T10:15:10.496602"
+    "scan_date": "2026-07-09T11:24:23.743359"
   },
   "notes": [
     {
-      "id": "01_getting_started",
-      "title": "01_getting_started",
+      "id": "AWS Marketplace",
+      "title": "AWS Marketplace",
       "file_metadata": {
-        "file_name": "01_getting_started.md",
-        "file_path": "01_getting_started.md",
+        "file_name": "AWS Marketplace.md",
+        "file_path": "AWS Marketplace.md",
         "folder": "root",
-        "size_bytes": 570,
-        "created": "2026-07-08T14:49:16.083994",
-        "modified": "2026-07-08T14:49:16.083994"
+        "size_bytes": 8394,
+        "created": "2026-07-09T11:19:44.939512",
+        "modified": "2025-10-10T17:39:18.776672"
       },
       "frontmatter": {},
-      "content_preview": "# Getting Started with Python\n\nThis is a foundational note about Python programming.\n\n## What is Python?\n\nPython is a high-level, interpreted programming language known for its simplicity and readabil...",
-      "word_count": 80,
-      "links": [
-        "Data Science Basics",
-        "Python Best Practices",
-        "Programming Concepts"
-      ],
-      "tags": [
-        "python",
-        "beginner",
-        "programming"
-      ],
-      "linked_count": 3,
-      "tag_count": 3,
-      "scanned_at": "2026-07-09T10:15:10.519466"
+      "content_preview": "## AWS Account Plans\n\n<details> <summary>✨ Free Plan (6 Months)</summary>\n\n- **Purpose**: Learn, experiment, and build prototypes.\n    \n- **Credits**: Up to USD $200.\n\n    - $100 on sign-up.\n        \n...",
+      "word_count": 1011,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.765467"
     },
     {
-      "id": "02_data_science",
-      "title": "02_data_science",
+      "id": "CogniMuse - Journey",
+      "title": "CogniMuse - Journey",
       "file_metadata": {
-        "file_name": "02_data_science.md",
-        "file_path": "02_data_science.md",
+        "file_name": "CogniMuse - Journey.md",
+        "file_path": "CogniMuse - Journey.md",
         "folder": "root",
-        "size_bytes": 890,
-        "created": "2026-07-08T14:49:16.083994",
-        "modified": "2026-07-08T14:49:16.083994"
+        "size_bytes": 4935,
+        "created": "2026-07-09T11:19:44.943484",
+        "modified": "2025-10-10T17:02:12.873211"
       },
       "frontmatter": {},
-      "content_preview": "# Data Science Basics\n\nAn introduction to the field of data science and its applications.\n\n## What is Data Science?\n\nData science is an interdisciplinary field that uses scientific methods, processes,...",
-      "word_count": 115,
-      "links": [
-        "Machine Learning Algorithms",
-        "Getting Started with Python",
-        "Data Visualization"
-      ],
-      "tags": [
-        "analytics",
-        "datascience",
-        "ai"
-      ],
-      "linked_count": 3,
-      "tag_count": 3,
-      "scanned_at": "2026-07-09T10:15:10.535965"
+      "content_preview": "# CogniMuse Sales Journey & Outreach Plan\n\n## Day 1\n\n<details>\n<summary>Purpose, Goals, and Self-Discovery</summary>\n\n- **Why:** To work in Cognimuse and eventually become an entrepreneur — this is yo...",
+      "word_count": 705,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.768193"
     },
     {
-      "id": "03_machine_learning",
-      "title": "03_machine_learning",
+      "id": "Freelance Key Features",
+      "title": "Freelance Key Features",
       "file_metadata": {
-        "file_name": "03_machine_learning.md",
-        "file_path": "03_machine_learning.md",
+        "file_name": "Freelance Key Features.md",
+        "file_path": "Freelance Key Features.md",
         "folder": "root",
-        "size_bytes": 1140,
-        "created": "2026-07-08T14:49:16.083994",
-        "modified": "2026-07-08T14:49:16.099937"
+        "size_bytes": 1983,
+        "created": "2026-07-09T11:19:44.945486",
+        "modified": "2025-10-11T02:25:05.841915"
       },
       "frontmatter": {},
-      "content_preview": "# Machine Learning Algorithms\n\nAn overview of common machine learning algorithms and their applications.\n\n## What is Machine Learning?\n\nMachine Learning is a subset of artificial intelligence that ena...",
-      "word_count": 153,
-      "links": [
-        "Getting Started with Python",
-        "Data Science Basics",
-        "Programming Concepts"
-      ],
-      "tags": [
-        "algorithms",
-        "datascience",
-        "ml",
-        "ai"
-      ],
-      "linked_count": 3,
-      "tag_count": 4,
-      "scanned_at": "2026-07-09T10:15:10.552838"
+      "content_preview": "# Automated Job Discovery Workflow Overview\n\n## 1. Automated Job Discovery\n\n- Scrapes Reddit's r/forhire and r/freelance_forhire every 6 hours  \n- Uses free Reddit JSON API (no authentication needed) ...",
+      "word_count": 300,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.770731"
     },
     {
-      "id": "04_programming_concepts",
-      "title": "04_programming_concepts",
+      "id": "Implementation of What & How",
+      "title": "Implementation of What & How",
       "file_metadata": {
-        "file_name": "04_programming_concepts.md",
-        "file_path": "04_programming_concepts.md",
+        "file_name": "Implementation of What & How.md",
+        "file_path": "Implementation of What & How.md",
         "folder": "root",
-        "size_bytes": 997,
-        "created": "2026-07-08T14:49:16.099937",
-        "modified": "2026-07-08T14:49:16.099937"
+        "size_bytes": 3532,
+        "created": "2026-07-09T11:19:44.948484",
+        "modified": "2025-10-07T18:27:22.169975"
       },
       "frontmatter": {},
-      "content_preview": "# Programming Concepts\n\nCore programming concepts that apply across languages.\n\n## Object-Oriented Programming (OOP)\n\nOOP is a programming paradigm based on the concept of objects, which can contain d...",
-      "word_count": 134,
-      "links": [
-        "Getting Started with Python",
-        "Data Science Basics"
-      ],
-      "tags": [
-        "architecture",
-        "programming",
-        "concepts"
-      ],
-      "linked_count": 2,
-      "tag_count": 3,
-      "scanned_at": "2026-07-09T10:15:10.570418"
+      "content_preview": "# Ready-to-Use Reddit Sales Plan for CogniMuse\n\n## Target Subreddits\n\n- r/startups\n    \n- r/Entrepreneur\n    \n- r/MachineLearning\n    \n- r/ArtificialIntelligence\n    \n- r/DataScience\n    \n- r/TechStar...",
+      "word_count": 510,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.773398"
     },
     {
-      "id": "05_ai_ethics",
-      "title": "05_ai_ethics",
+      "id": "2026-07-09",
+      "title": "2026-07-09",
       "file_metadata": {
-        "file_name": "05_ai_ethics.md",
-        "file_path": "05_ai_ethics.md",
-        "folder": "root",
-        "size_bytes": 920,
-        "created": "2026-07-08T14:49:16.101952",
-        "modified": "2026-07-08T14:49:16.101952"
+        "file_name": "2026-07-09.md",
+        "file_path": "journey\\2026-07-09.md",
+        "folder": "journey",
+        "size_bytes": 0,
+        "created": "2026-07-09T11:24:06.342848",
+        "modified": "2026-07-09T11:21:48.336467"
       },
       "frontmatter": {},
-      "content_preview": "# AI Ethics\n\nImportant considerations when developing AI systems.\n\n## What is AI Ethics?\n\nAI Ethics is concerned with the responsible development and deployment of AI systems that respect human values...",
-      "word_count": 124,
-      "links": [
-        "Machine Learning Algorithms",
-        "Data Science Basics"
-      ],
-      "tags": [
-        "ethics",
-        "responsibility",
-        "governance",
-        "ai"
-      ],
-      "linked_count": 2,
-      "tag_count": 4,
-      "scanned_at": "2026-07-09T10:15:10.585873"
+      "content_preview": "",
+      "word_count": 0,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.773970"
+    },
+    {
+      "id": "AWS Marketplace",
+      "title": "AWS Marketplace",
+      "file_metadata": {
+        "file_name": "AWS Marketplace.md",
+        "file_path": "journey\\AWS Marketplace.md",
+        "folder": "journey",
+        "size_bytes": 8394,
+        "created": "2026-07-09T11:24:06.342848",
+        "modified": "2025-10-10T17:39:18.776672"
+      },
+      "frontmatter": {},
+      "content_preview": "## AWS Account Plans\n\n<details> <summary>✨ Free Plan (6 Months)</summary>\n\n- **Purpose**: Learn, experiment, and build prototypes.\n    \n- **Credits**: Up to USD $200.\n\n    - $100 on sign-up.\n        \n...",
+      "word_count": 1011,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.792776"
+    },
+    {
+      "id": "CogniMuse - Journey",
+      "title": "CogniMuse - Journey",
+      "file_metadata": {
+        "file_name": "CogniMuse - Journey.md",
+        "file_path": "journey\\CogniMuse - Journey.md",
+        "folder": "journey",
+        "size_bytes": 4935,
+        "created": "2026-07-09T11:24:06.342848",
+        "modified": "2025-10-10T17:02:12.873211"
+      },
+      "frontmatter": {},
+      "content_preview": "# CogniMuse Sales Journey & Outreach Plan\n\n## Day 1\n\n<details>\n<summary>Purpose, Goals, and Self-Discovery</summary>\n\n- **Why:** To work in Cognimuse and eventually become an entrepreneur — this is yo...",
+      "word_count": 705,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.795356"
+    },
+    {
+      "id": "Freelance Key Features",
+      "title": "Freelance Key Features",
+      "file_metadata": {
+        "file_name": "Freelance Key Features.md",
+        "file_path": "journey\\Freelance Key Features.md",
+        "folder": "journey",
+        "size_bytes": 1983,
+        "created": "2026-07-09T11:24:06.348012",
+        "modified": "2025-10-11T02:25:05.841915"
+      },
+      "frontmatter": {},
+      "content_preview": "# Automated Job Discovery Workflow Overview\n\n## 1. Automated Job Discovery\n\n- Scrapes Reddit's r/forhire and r/freelance_forhire every 6 hours  \n- Uses free Reddit JSON API (no authentication needed) ...",
+      "word_count": 300,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.798141"
+    },
+    {
+      "id": "Implementation of What & How",
+      "title": "Implementation of What & How",
+      "file_metadata": {
+        "file_name": "Implementation of What & How.md",
+        "file_path": "journey\\Implementation of What & How.md",
+        "folder": "journey",
+        "size_bytes": 3532,
+        "created": "2026-07-09T11:24:06.348012",
+        "modified": "2025-10-07T18:27:22.169975"
+      },
+      "frontmatter": {},
+      "content_preview": "# Ready-to-Use Reddit Sales Plan for CogniMuse\n\n## Target Subreddits\n\n- r/startups\n    \n- r/Entrepreneur\n    \n- r/MachineLearning\n    \n- r/ArtificialIntelligence\n    \n- r/DataScience\n    \n- r/TechStar...",
+      "word_count": 510,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.801681"
+    },
+    {
+      "id": "Sales Workflow Features",
+      "title": "Sales Workflow Features",
+      "file_metadata": {
+        "file_name": "Sales Workflow Features.md",
+        "file_path": "journey\\Sales Workflow Features.md",
+        "folder": "journey",
+        "size_bytes": 1606,
+        "created": "2026-07-09T11:24:06.351983",
+        "modified": "2025-10-11T02:27:27.407543"
+      },
+      "frontmatter": {},
+      "content_preview": "# Lead Generation Workflow Overview\n\n## 1. Lead Scraping & Data Extraction\n\n- Scheduled trigger (runs weekdays at 9 AM)  \n- HTTP requests to scrape target websites  \n- JavaScript-based data extraction...",
+      "word_count": 240,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.804274"
+    },
+    {
+      "id": "Social Media Workflow Features",
+      "title": "Social Media Workflow Features",
+      "file_metadata": {
+        "file_name": "Social Media Workflow Features.md",
+        "file_path": "journey\\Social Media Workflow Features.md",
+        "folder": "journey",
+        "size_bytes": 3332,
+        "created": "2026-07-09T11:24:06.352980",
+        "modified": "2025-10-11T02:25:58.432412"
+      },
+      "frontmatter": {},
+      "content_preview": "# Content Scheduling & Publishing Workflow Overview\n\n## 1. Content Scheduling & Publishing\n\n- Schedule-based triggers (checks every 4 hours)  \n- Google Sheets calendar management  \n- Multi-platform po...",
+      "word_count": 456,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.806878"
+    },
+    {
+      "id": "Sales Workflow Features",
+      "title": "Sales Workflow Features",
+      "file_metadata": {
+        "file_name": "Sales Workflow Features.md",
+        "file_path": "Sales Workflow Features.md",
+        "folder": "root",
+        "size_bytes": 1606,
+        "created": "2026-07-09T11:19:44.949485",
+        "modified": "2025-10-11T02:27:27.407543"
+      },
+      "frontmatter": {},
+      "content_preview": "# Lead Generation Workflow Overview\n\n## 1. Lead Scraping & Data Extraction\n\n- Scheduled trigger (runs weekdays at 9 AM)  \n- HTTP requests to scrape target websites  \n- JavaScript-based data extraction...",
+      "word_count": 240,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.810162"
+    },
+    {
+      "id": "Social Media Workflow Features",
+      "title": "Social Media Workflow Features",
+      "file_metadata": {
+        "file_name": "Social Media Workflow Features.md",
+        "file_path": "Social Media Workflow Features.md",
+        "folder": "root",
+        "size_bytes": 3332,
+        "created": "2026-07-09T11:19:44.949485",
+        "modified": "2025-10-11T02:25:58.432412"
+      },
+      "frontmatter": {},
+      "content_preview": "# Content Scheduling & Publishing Workflow Overview\n\n## 1. Content Scheduling & Publishing\n\n- Schedule-based triggers (checks every 4 hours)  \n- Google Sheets calendar management  \n- Multi-platform po...",
+      "word_count": 456,
+      "links": [],
+      "tags": [],
+      "linked_count": 0,
+      "tag_count": 0,
+      "scanned_at": "2026-07-09T11:24:23.812892"
     }
   ],
   "vault_structure": {
     "root": {
       "notes": [
-        "01_getting_started",
-        "02_data_science",
-        "03_machine_learning",
-        "04_programming_concepts",
-        "05_ai_ethics"
+        "AWS Marketplace",
+        "CogniMuse - Journey",
+        "Freelance Key Features",
+        "Implementation of What & How",
+        "Sales Workflow Features",
+        "Social Media Workflow Features"
       ],
-      "note_count": 5
+      "note_count": 6
+    },
+    "journey": {
+      "notes": [
+        "2026-07-09",
+        "AWS Marketplace",
+        "CogniMuse - Journey",
+        "Freelance Key Features",
+        "Implementation of What & How",
+        "Sales Workflow Features",
+        "Social Media Workflow Features"
+      ],
+      "note_count": 7
     }
   }
 }

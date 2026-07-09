@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "e6ec4424dcc1a500",
+    "type": "split",
+    "children": [
+      {
+        "id": "1213a662423a61b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0ad3033f7540ea54",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d03d96d980e51ae0",
+    "type": "split",
+    "children": [
+      {
+        "id": "80b1807de8b6417f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "726891f8fb675162",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d87f130894d5626a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "2fed264f080e697d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "080dcea275d2e6fa",
+    "type": "split",
+    "children": [
+      {
+        "id": "1ca67e3c8b3fb51b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7cbc84d426dbad38",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "721244b9579fd481",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CogniMuse - Journey.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from CogniMuse - Journey"
+            }
+          },
+          {
+            "id": "eeb740830346be16",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "91171bd8a0bae3cf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "0ad3033f7540ea54",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "2026-07-09.md",
+    "AWS Marketplace.md",
+    "CogniMuse - Journey.md",
+    "Social Media Workflow Features.md",
+    "Implementation of What & How.md",
+    "Prompt Engineering",
+    "Sales Workflow Features.md",
+    "Freelance Key Features.md",
+    "Lead Generation Workflow Overview.md",
+    "API Credentials Setup.md"
+  ]
+}

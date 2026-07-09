@@ -1,137 +1,38 @@
 {
   "metadata": {
-    "total_notes": 5,
-    "parsed_at": "2026-07-09T10:15:27.800019",
-    "content_preview": ""
+    "total_notes": 12,
+    "parsed_at": "2026-07-09T11:24:24.153487"
   },
   "notes": [
     {
-      "id": "01_getting_started",
-      "title": "01_getting_started",
+      "id": "AWS Marketplace",
+      "title": "AWS Marketplace",
       "file_metadata": {
-        "file_name": "01_getting_started.md",
-        "file_path": "01_getting_started.md",
+        "file_name": "AWS Marketplace.md",
+        "file_path": "AWS Marketplace.md",
         "folder": "root",
-        "size_bytes": 570,
-        "created": "2026-07-08T14:49:16.083994",
-        "modified": "2026-07-08T14:49:16.083994"
+        "size_bytes": 8394,
+        "created": "2026-07-09T11:19:44.939512",
+        "modified": "2025-10-10T17:39:18.776672"
       },
       "frontmatter": {},
-      "content": "# Getting Started with Python\n\nThis is a foundational note about Python programming.\n\n## What is Python?\n\nPython is a high-level, interpreted programming language known for its simplicity and readability.\n\n### Key Features\n- Easy to learn and read\n- Versatile (web, data science, automation)\n- Large standard library\n- Active community\n\n## Basic Syntax\n\n```python\n# Hello World\nprint(\"Hello, World!\")\n```\n\n## Related Topics\n- [[Data Science Basics]]\n- [[Python Best Practices]]\n- [[Programming Concepts]]\n\nTags: #python #programming #beginner\n",
-      "content_length": 543,
+      "content": " \n## AWS Account Plans\n\n<details> <summary>✨ Free Plan (6 Months)</summary>\n\n- **Purpose**: Learn, experiment, and build prototypes.\n    \n- **Credits**: Up to USD $200.\n\n    - $100 on sign-up.\n        \n    - Additional $100 by completing activities (e.g., creating a budget alert).\n        \n- **Included Usage**: Free monthly limits for select AWS services.\n    \n- **Scaling**: Workloads can scale beyond credit thresholds.\n    \n- **Access**:\n    \n    - Access to all AWS services and features.\n        \n    - Limited access to certain services and AWS Marketplace.\n        \n- **Expiration**:\n    \n    - Account closes after 6 months or when credits are used up.\n        \n    - Can upgrade to paid plan to continue.\n        \n\n</details> <details> <summary>💼 Paid Plan</summary>\n\n- **Purpose**: Develop production-ready workloads.\n    \n- **Credits**: Up to USD $200.\n    \n    - $100 on sign-up.\n        \n    - Additional $100 by completing activities.\n        \n- **Included Usage**: Free monthly limits for select AWS services.\n    \n- **Scaling**: Workloads can scale beyond credit thresholds.\n    \n- **Access**:\n    \n    - Full access to **all** AWS services and features.\n        \n    - No expiration or service interruption.\n        \n- **Pricing**: Standard AWS pricing applies after credits are exhausted.\n    \n\n</details> <details> <summary>📌 Additional Notes</summary>\n\n- **Shared Benefits**:\n    \n    - Both plans include free monthly usage for select services.\n        \n    - Both receive $100 base credits + $100 via activity completion.\n        \n- **Credit Usage**:\n    \n    - Credits apply to eligible AWS services.\n        \n    - Example activity: Setting up a budget alert to monitor usage.\n        \n- **Resources**:\n    \n    - [AWS Privacy Policy](https://aws.amazon.com/privacy/)\n        \n    - [AWS Terms of Use](https://aws.amazon.com/terms/)\n        \n    - [Free Tier Details](https://aws.amazon.com/free)\n        \n    - [Free Tier Plans Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-plans.html)\n        \n\n</details>\n\n\n# AWS Marketplace Seller Account Setup\n\n<details>\n<summary>AWS Account Types</summary>\n\n- **Root User**  \n  - Created by default for every AWS account.\n  - Has unrestricted access to all resources and billing.\n  - Use only for account/admin-level tasks, not for daily operations.\n  - Enable Multi-Factor Authentication (MFA) for security.\n- **IAM (Identity and Access Management) User**  \n  - Create multiple users with specific permissions.\n  - Assign roles such as seller admin, product publisher, billing.\n  - Best practice: Do not use root user for marketplace operations—use IAM users instead.\n\n</details>\n\n<details>\n<summary>Registering as a Seller on AWS Marketplace</summary>\n\n- **Prerequisites**\n  - AWS account (preferably separate from other workloads).\n  - Prepared company information, banking, and tax details (for paid listings).\n- **Steps**\n  1. Sign in to AWS Marketplace Management Portal with your AWS account.\n  2. Review and accept the seller terms and conditions.\n  3. Provide seller details:  \n     - Company display name and legal name  \n     - Company website  \n     - Public contact email and description  \n     - Company logo\n  4. Enter and verify tax details (W-9, W-8, VAT/GST depending on location).\n  5. Link and verify the bank account (required for paid products, US bank/virtual allowed).\n  6. Submit registration for review.\n- **Approval**\n  - AWS reviews submitted details; follow up if extra info is needed.\n  - You'll receive confirmation when ready to publish.\n\n</details>\n\n<details>\n<summary>Creating Your Public Profile</summary>\n\n- Display name (your AWS Marketplace name).\n- Company description, logo, and website.\n- Contact information for customer and AWS communication.\n- This information is visible to AWS customers on the Marketplace listing.\n\n</details>\n\n<details>\n<summary>Marketplace Management and Listing Products</summary>\n  \n- Access the AWS Marketplace Management Portal after approval.\n- Manage product listings, update pricing, and access customer reports.\n- Use IAM for granular team roles:  \n  - Product publishing  \n  - Billing and payment management  \n  - Support and customer queries\n- For software, follow the [SaaS/Product listing guides](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html).\n\n</details>\n\n<details>\n<summary>Security & Best Practices</summary>\n\n- Always use IAM users for daily management.\n- Limit root user access; enable MFA on all sensitive users.\n- Assign permissions based on roles (least privilege approach).\n- Regularly audit users, roles, and billing activity.\n- Read more on [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html).\n\n</details>\n\n<details>\n<summary>Additional Resources</summary>\n\n- [AWS Marketplace Seller User Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)\n- [Public Profile Creation](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html)\n- [Seller Account Types](https://docs.aws.amazon.com/signin/latest/userguide/user-types-list.html)\n- [Root vs IAM User Comparison](https://arshsharma.com/posts/2024-11-02-root-vs-iam-user/)\n\n</details>\n\n\n## **User Guide**\n\n<details> <summary>🛡️ Root User vs IAM User: Key Differences</summary>\n\n- **Root User**\n    \n    - Created when the AWS account is set up (uses the account email).\n        \n    - Has unrestricted access to all AWS resources and billing.\n        \n    - Only one root user per account.\n        \n    - Should only be used for critical tasks (e.g., closing account, changing billing info, enabling MFA).\n        \n    - Cannot be restricted by IAM policies.\n        \n- **IAM User**\n    \n    - Created by the root user or an IAM admin.\n        \n    - Can have custom permissions (least privilege principle).\n        \n    - Multiple IAM users can exist per account.\n        \n    - Used for daily operations and team access.\n        \n    - Permissions can be changed or revoked at any time.\n        \n- **Best Practice**: Use the root user only for tasks that require it, and use IAM users for everything else. Always enable MFA for the root user and admin IAM users.\n    \n\n</details> <details> <summary>📝 Tasks Only the Root User Can Perform</summary>\n\n- Change account settings and contact information.\n    \n- Close the AWS account.\n    \n- Change or cancel AWS support plans.\n    \n- Restore IAM user access to the billing console.\n    \n- Enable or disable MFA on the root account.\n    \n- Manage some advanced security and payment settings.\n    \n\n</details> <details> <summary>🔑 Security Essentials for Beginners</summary>\n\n- Enable Multi-Factor Authentication (MFA) for all users, especially root.\n    \n- Never share root credentials.\n    \n- Regularly review IAM users and permissions.\n    \n- Use strong, unique passwords for all AWS accounts.\n    \n- Set up billing alerts to avoid unexpected charges.\n    \n- Rotate access keys and passwords regularly.\n    \n\n</details> <details> <summary>📦 Product Listing Types on AWS Marketplace</summary>\n\n- **AMI (Amazon Machine Image)**: Pre-configured virtual machine images.\n    \n- **SaaS (Software as a Service)**: Cloud-based software products.\n    \n- **Container Products**: Docker images for ECS/EKS.\n    \n- **Data Products**: Datasets for analytics and ML.\n    \n- **Professional Services**: Consulting, support, and implementation services.\n    \n- Each type has specific listing and integration requirements.\n    \n\n</details> <details> <summary>📊 Monitoring & Billing Basics</summary>\n\n- Use AWS Cost Explorer and billing dashboard to track usage.\n    \n- Set up budget alerts and cost anomaly detection.\n    \n- Download detailed usage and billing reports.\n    \n- Understand how credits are applied and when charges begin.\n    \n\n</details> <details> <summary>📚 Learning & Support Resources</summary>\n\n- [AWS Marketplace Seller Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)\n    \n- [AWS Free Tier Details](https://aws.amazon.com/free)\n    \n- [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)\n    \n- [AWS Support Center](https://aws.amazon.com/support)\n    \n- [AWS Training and Certification](https://aws.amazon.com/training)\n    \n\n</details>\n",
+      "content_length": 8364,
       "headers": {
         "h1": [],
         "h2": [
-          "What is Python?",
-          "Basic Syntax",
-          "Related Topics"
-        ],
-        "h3": [
-          "Key Features"
-        ],
-        "all": [
-          [
-            "h2",
-            "What is Python?"
-          ],
-          [
-            "h3",
-            "Key Features"
-          ],
-          [
-            "h2",
-            "Basic Syntax"
-          ],
-          [
-            "h2",
-            "Related Topics"
-          ]
-        ]
-      },
-      "code_blocks": [
-        {
-          "language": "python",
-          "code": "# Hello World\nprint(\"Hello, World!\")",
-          "lines": 2
-        }
-      ],
-      "code_block_count": 1,
-      "quotes": [],
-      "quote_count": 0,
-      "lists": {
-        "unordered": [
-          "Easy to learn and read",
-          "Versatile (web, data science, automation)",
-          "Large standard library",
-          "Active community",
-          "[[Data Science Basics]]",
-          "[[Python Best Practices]]",
-          "[[Programming Concepts]]"
-        ],
-        "ordered": [],
-        "checkbox": []
-      },
-      "bold_text": [],
-      "important_concepts": [],
-      "links": [
-        "Data Science Basics",
-        "Python Best Practices",
-        "Programming Concepts"
-      ],
-      "tags": [
-        "python",
-        "beginner",
-        "programming"
-      ],
-      "readability": {
-        "total_lines": 28,
-        "non_empty_lines": 19,
-        "total_words": 80,
-        "total_sentences": 5,
-        "avg_words_per_line": 4.2105263157894735,
-        "avg_words_per_sentence": 16.0
-      },
-      "parsed_at": "2026-07-09T10:15:27.791247"
-    },
-    {
-      "id": "02_data_science",
-      "title": "02_data_science",
-      "file_metadata": {
-        "file_name": "02_data_science.md",
-        "file_path": "02_data_science.md",
-        "folder": "root",
-        "size_bytes": 890,
-        "created": "2026-07-08T14:49:16.083994",
-        "modified": "2026-07-08T14:49:16.083994"
-      },
-      "frontmatter": {},
-      "content": "# Data Science Basics\n\nAn introduction to the field of data science and its applications.\n\n## What is Data Science?\n\nData science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data.\n\n## Key Components\n\n1. **Statistics** - Understanding data distributions\n2. **Programming** - Implementing solutions (Python, R)\n3. **Domain Knowledge** - Understanding the problem\n4. **Visualization** - Communicating insights\n\n## Tools and Technologies\n\n- Python (pandas, NumPy, scikit-learn)\n- SQL (data querying)\n- Machine Learning frameworks (TensorFlow, PyTorch)\n- Visualization (Matplotlib, Seaborn, Plotly)\n\n## Important Concepts\n- [[Machine Learning Algorithms]]\n- [[Getting Started with Python]]\n- [[Data Visualization]]\n\nTags: #datascience #ai #analytics\n",
-      "content_length": 862,
-      "headers": {
-        "h1": [],
-        "h2": [
-          "What is Data Science?",
-          "Key Components",
-          "Tools and Technologies",
-          "Important Concepts"
+          "AWS Account Plans",
+          "**User Guide**"
         ],
         "h3": [],
         "all": [
           [
             "h2",
-            "What is Data Science?"
+            "AWS Account Plans"
           ],
           [
             "h2",
-            "Key Components"
-          ],
-          [
-            "h2",
-            "Tools and Technologies"
-          ],
-          [
-            "h2",
-            "Important Concepts"
+            "**User Guide**"
           ]
         ]
       },
@@ -141,109 +42,525 @@
       "quote_count": 0,
       "lists": {
         "unordered": [
-          "Python (pandas, NumPy, scikit-learn)",
-          "SQL (data querying)",
-          "Machine Learning frameworks (TensorFlow, PyTorch)",
-          "Visualization (Matplotlib, Seaborn, Plotly)",
-          "[[Machine Learning Algorithms]]",
-          "[[Getting Started with Python]]",
-          "[[Data Visualization]]"
+          "**Purpose**: Learn, experiment, and build prototypes.",
+          "**Credits**: Up to USD $200.",
+          "$100 on sign-up.",
+          "Additional $100 by completing activities (e.g., creating a budget alert).",
+          "**Included Usage**: Free monthly limits for select AWS services.",
+          "**Scaling**: Workloads can scale beyond credit thresholds.",
+          "**Access**:",
+          "Access to all AWS services and features.",
+          "Limited access to certain services and AWS Marketplace.",
+          "**Expiration**:",
+          "Account closes after 6 months or when credits are used up.",
+          "Can upgrade to paid plan to continue.",
+          "**Purpose**: Develop production-ready workloads.",
+          "**Credits**: Up to USD $200.",
+          "$100 on sign-up.",
+          "Additional $100 by completing activities.",
+          "**Included Usage**: Free monthly limits for select AWS services.",
+          "**Scaling**: Workloads can scale beyond credit thresholds.",
+          "**Access**:",
+          "Full access to **all** AWS services and features.",
+          "No expiration or service interruption.",
+          "**Pricing**: Standard AWS pricing applies after credits are exhausted.",
+          "**Shared Benefits**:",
+          "Both plans include free monthly usage for select services.",
+          "Both receive $100 base credits + $100 via activity completion.",
+          "**Credit Usage**:",
+          "Credits apply to eligible AWS services.",
+          "Example activity: Setting up a budget alert to monitor usage.",
+          "**Resources**:",
+          "[AWS Privacy Policy](https://aws.amazon.com/privacy/)",
+          "[AWS Terms of Use](https://aws.amazon.com/terms/)",
+          "[Free Tier Details](https://aws.amazon.com/free)",
+          "[Free Tier Plans Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-plans.html)",
+          "**Root User**",
+          "Created by default for every AWS account.",
+          "Has unrestricted access to all resources and billing.",
+          "Use only for account/admin-level tasks, not for daily operations.",
+          "Enable Multi-Factor Authentication (MFA) for security.",
+          "**IAM (Identity and Access Management) User**",
+          "Create multiple users with specific permissions.",
+          "Assign roles such as seller admin, product publisher, billing.",
+          "Best practice: Do not use root user for marketplace operations—use IAM users instead.",
+          "**Prerequisites**",
+          "AWS account (preferably separate from other workloads).",
+          "Prepared company information, banking, and tax details (for paid listings).",
+          "**Steps**",
+          "Company display name and legal name",
+          "Company website",
+          "Public contact email and description",
+          "Company logo",
+          "**Approval**",
+          "AWS reviews submitted details; follow up if extra info is needed.",
+          "You'll receive confirmation when ready to publish.",
+          "Display name (your AWS Marketplace name).",
+          "Company description, logo, and website.",
+          "Contact information for customer and AWS communication.",
+          "This information is visible to AWS customers on the Marketplace listing.",
+          "Access the AWS Marketplace Management Portal after approval.",
+          "Manage product listings, update pricing, and access customer reports.",
+          "Use IAM for granular team roles:",
+          "Product publishing",
+          "Billing and payment management",
+          "Support and customer queries",
+          "For software, follow the [SaaS/Product listing guides](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html).",
+          "Always use IAM users for daily management.",
+          "Limit root user access; enable MFA on all sensitive users.",
+          "Assign permissions based on roles (least privilege approach).",
+          "Regularly audit users, roles, and billing activity.",
+          "Read more on [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html).",
+          "[AWS Marketplace Seller User Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)",
+          "[Public Profile Creation](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html)",
+          "[Seller Account Types](https://docs.aws.amazon.com/signin/latest/userguide/user-types-list.html)",
+          "[Root vs IAM User Comparison](https://arshsharma.com/posts/2024-11-02-root-vs-iam-user/)",
+          "**Root User**",
+          "Created when the AWS account is set up (uses the account email).",
+          "Has unrestricted access to all AWS resources and billing.",
+          "Only one root user per account.",
+          "Should only be used for critical tasks (e.g., closing account, changing billing info, enabling MFA).",
+          "Cannot be restricted by IAM policies.",
+          "**IAM User**",
+          "Created by the root user or an IAM admin.",
+          "Can have custom permissions (least privilege principle).",
+          "Multiple IAM users can exist per account.",
+          "Used for daily operations and team access.",
+          "Permissions can be changed or revoked at any time.",
+          "**Best Practice**: Use the root user only for tasks that require it, and use IAM users for everything else. Always enable MFA for the root user and admin IAM users.",
+          "Change account settings and contact information.",
+          "Close the AWS account.",
+          "Change or cancel AWS support plans.",
+          "Restore IAM user access to the billing console.",
+          "Enable or disable MFA on the root account.",
+          "Manage some advanced security and payment settings.",
+          "Enable Multi-Factor Authentication (MFA) for all users, especially root.",
+          "Never share root credentials.",
+          "Regularly review IAM users and permissions.",
+          "Use strong, unique passwords for all AWS accounts.",
+          "Set up billing alerts to avoid unexpected charges.",
+          "Rotate access keys and passwords regularly.",
+          "**AMI (Amazon Machine Image)**: Pre-configured virtual machine images.",
+          "**SaaS (Software as a Service)**: Cloud-based software products.",
+          "**Container Products**: Docker images for ECS/EKS.",
+          "**Data Products**: Datasets for analytics and ML.",
+          "**Professional Services**: Consulting, support, and implementation services.",
+          "Each type has specific listing and integration requirements.",
+          "Use AWS Cost Explorer and billing dashboard to track usage.",
+          "Set up budget alerts and cost anomaly detection.",
+          "Download detailed usage and billing reports.",
+          "Understand how credits are applied and when charges begin.",
+          "[AWS Marketplace Seller Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)",
+          "[AWS Free Tier Details](https://aws.amazon.com/free)",
+          "[AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)",
+          "[AWS Support Center](https://aws.amazon.com/support)",
+          "[AWS Training and Certification](https://aws.amazon.com/training)"
         ],
         "ordered": [
-          "**Statistics** - Understanding data distributions",
-          "**Programming** - Implementing solutions (Python, R)",
-          "**Domain Knowledge** - Understanding the problem",
-          "**Visualization** - Communicating insights"
+          "Sign in to AWS Marketplace Management Portal with your AWS account.",
+          "Review and accept the seller terms and conditions.",
+          "Provide seller details:",
+          "Enter and verify tax details (W-9, W-8, VAT/GST depending on location).",
+          "Link and verify the bank account (required for paid products, US bank/virtual allowed).",
+          "Submit registration for review."
         ],
         "checkbox": []
       },
       "bold_text": [
-        "Statistics",
-        "Programming",
-        "Domain Knowledge",
-        "Visualization"
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling",
+        "Access",
+        "Expiration",
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling",
+        "Access",
+        "all",
+        "Pricing",
+        "Shared Benefits",
+        "Credit Usage",
+        "Resources",
+        "Root User",
+        "IAM (Identity and Access Management) User",
+        "Prerequisites",
+        "Steps",
+        "Approval",
+        "User Guide",
+        "Root User",
+        "IAM User",
+        "Best Practice",
+        "AMI (Amazon Machine Image)",
+        "SaaS (Software as a Service)",
+        "Container Products",
+        "Data Products",
+        "Professional Services"
       ],
       "important_concepts": [
-        "Statistics",
-        "Programming",
-        "Domain Knowledge",
-        "Visualization"
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling",
+        "Access",
+        "Expiration",
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling"
       ],
-      "links": [
-        "Machine Learning Algorithms",
-        "Getting Started with Python",
-        "Data Visualization"
-      ],
-      "tags": [
-        "analytics",
-        "datascience",
-        "ai"
-      ],
+      "links": [],
+      "tags": [],
       "readability": {
-        "total_lines": 29,
-        "non_empty_lines": 19,
-        "total_words": 115,
+        "total_lines": 268,
+        "non_empty_lines": 151,
+        "total_words": 1011,
+        "total_sentences": 141,
+        "avg_words_per_line": 6.695364238410596,
+        "avg_words_per_sentence": 7.170212765957447
+      },
+      "parsed_at": "2026-07-09T11:24:24.135912"
+    },
+    {
+      "id": "CogniMuse - Journey",
+      "title": "CogniMuse - Journey",
+      "file_metadata": {
+        "file_name": "CogniMuse - Journey.md",
+        "file_path": "CogniMuse - Journey.md",
+        "folder": "root",
+        "size_bytes": 4935,
+        "created": "2026-07-09T11:19:44.943484",
+        "modified": "2025-10-10T17:02:12.873211"
+      },
+      "frontmatter": {},
+      "content": "# CogniMuse Sales Journey & Outreach Plan\n\n## Day 1\n\n<details>\n<summary>Purpose, Goals, and Self-Discovery</summary>\n\n- **Why:** To work in Cognimuse and eventually become an entrepreneur — this is your long-term purpose and motivation.\n- **What:** Find what you’re good at so you can either work in that area or start something of your own.\n- **How:** Use the Ikigai framework—discover what you’re good at, love, can be paid for, and what the world needs. This leads you to focus on Sales & Marketing.\n\n</details>\n\n---\n\n## Day 2\n\n<details>\n<summary>2.1 Ikigai Exercise Outcomes</summary>\n\n- Activity: Completed the Ikigai exercise for 3 people under the guidance of Manoj Sir.\n- **Results:**\n    - Mansi: Fullstack Developer\n    - Payal: Designer\n    - Gladia: Business & Sales & Marketing\n\n</details>\n\n<details>\n<summary>2.2 Sales Target & Approach</summary>\n\n- **Why:** Set meetings with CEOs of 10 companies to pitch your service, creating initial business opportunities.\n- **What:** Goal is to get at least 2 CEOs to sign deals after meetings.\n- **How:** Use Reddit for outreach and engagement with a time limit of 2 weeks (personal stretch: 3 days, regular: 1 week).\n- **Strategy:**\n    - Find relevant Reddit communities.\n    - Personalized, value-driven outreach messages.\n    - Share useful AI content to build credibility.\n    - Direct message after initial engagement.\n    - Use Scheduling tool (Calendly).\n    - Follow up, prepare the team for meetings.\n\n</details>\n\n<details>\n<summary>2.2.1 Detailed Plan for 10 Meetings via Reddit (3 Days)</summary>\n\n**Why:**\n- Generate high-quality leads rapidly.\n- Build awareness of Cognimuse’s value to startups.\n- Accelerate the sales pipeline through direct conversations.\n\n**What:**\n- Identify key subreddits (startups, AI, tech).\n- Craft value-driven messages (not salesy).\n- Share insightful content to build trust and credibility.\n- Utilize private messaging for meeting invites.\n\n**How:**\n- Join/observe: Key subreddits (r/startups, r/Entrepreneur, r/ArtificialIntelligence, r/MachineLearning, etc.).\n- Engage: Comment with valuable insights and advice.\n- Share: Create/share content positioning Cognimuse as an expert.\n- Outreach: DM users with personalized meeting requests after rapport.\n- Use a non-salesy message template.\n- Offer easy scheduling.\n- Prompt follow-up and prep for meetings.\n\n</details>\n\n<details>\n<summary>2.2.1.1 Activity Breakdown: What & How</summary>\n\n## What to Do:\n1. Identify Relevant Subreddits.\n2. Provide valuable insights via comments.\n3. Share content: articles, case studies, AI benefit stories.\n4. Personalized DM outreach with a meeting ask.\n5. Use Calendly or similar for appointments.\n\n## How to Do It:\n1. Join and observe trending discussions, note key users.\n2. Share knowledge, ask thoughtful questions in comments.\n3. Build relationships via ongoing engagement.\n4. After connection, send:  \n   _\"Hi [Name], I saw your post on AI for startups. I help startups leverage AI efficiently. Can we schedule a quick 15-minute chat?\"_\n5. Follow up once if needed.\n6. Prep team: case studies, elevator pitch, demo plans.\n\n</details>\n\n---\n\n<details>\n<summary>To Do for CogniMuse: Service-Aligned Sales Approach</summary>\n\n## Service Segmentation:\n- AI Strategy & Consulting\n- Generative AI (for marketing/products)\n- Core AI/ML Development\n- AI Implementation & Integration\n- AI Support & Optimization\n- Training & Upskilling\n\n## Value Propositions:\n- Fast AI adoption, no technical guesswork (Strategy)\n- Automated content and workflow (Generative AI)\n- Custom models for business growth (Core AI)\n- Seamless scaling and integration (Implementation)\n- ROI via ongoing optimization (Support)\n- Empower teams with AI skills (Training)\n\n## Tailored Messaging:\n- Speak to pain points and desired outcomes.\n- Highlight quick wins/ROI.\n- Invite for discovery/consultation calls.\n\n## Multi-Channel Prospecting:\n- Blend Reddit, LinkedIn, email, and community forums.\n\n</details>\n\n<details>\n<summary>Execution: Outreach Steps</summary>\n\n1. Identify audience on Reddit/LinkedIn.\n2. Research subreddits, provide value in threads.\n3. Share tailored content: use cases, whitepapers, posts.\n4. Personalized message with clear benefit, e.g.:\n   - _\"Hi [Name], Cognimuse specializes in AI strategies for startups. Can we have a quick call to discuss your challenges/goals?\"_\n5. Use Calendly, simplify scheduling.\n6. Nurture leads, follow-up with tailored responses.\n\n</details>\n\n<details>\n<summary>Implementation Requirements</summary>\n\n- Personas for each service bucket/target.\n- Templates for messaging by service type.\n- Case studies/testimonials for credibility.\n- Scheduling tool access (e.g., Calendly).\n- Prepped team for calls/demos.\n- Reddit profiles with posting rights in key communities.\n- Tools to monitor and track engagement/leads.\n- Content library: blogs, whitepapers, posts fit for platform + context.\n\n</details>\n\n---\n\n# Day 3\n\n\n\n",
+      "content_length": 4925,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "Day 1",
+          "Day 2",
+          "What to Do:",
+          "How to Do It:",
+          "Service Segmentation:",
+          "Value Propositions:",
+          "Tailored Messaging:",
+          "Multi-Channel Prospecting:"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "Day 1"
+          ],
+          [
+            "h2",
+            "Day 2"
+          ],
+          [
+            "h2",
+            "What to Do:"
+          ],
+          [
+            "h2",
+            "How to Do It:"
+          ],
+          [
+            "h2",
+            "Service Segmentation:"
+          ],
+          [
+            "h2",
+            "Value Propositions:"
+          ],
+          [
+            "h2",
+            "Tailored Messaging:"
+          ],
+          [
+            "h2",
+            "Multi-Channel Prospecting:"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "**Why:** To work in Cognimuse and eventually become an entrepreneur — this is your long-term purpose and motivation.",
+          "**What:** Find what you’re good at so you can either work in that area or start something of your own.",
+          "**How:** Use the Ikigai framework—discover what you’re good at, love, can be paid for, and what the world needs. This leads you to focus on Sales & Marketing.",
+          "Activity: Completed the Ikigai exercise for 3 people under the guidance of Manoj Sir.",
+          "**Results:**",
+          "Mansi: Fullstack Developer",
+          "Payal: Designer",
+          "Gladia: Business & Sales & Marketing",
+          "**Why:** Set meetings with CEOs of 10 companies to pitch your service, creating initial business opportunities.",
+          "**What:** Goal is to get at least 2 CEOs to sign deals after meetings.",
+          "**How:** Use Reddit for outreach and engagement with a time limit of 2 weeks (personal stretch: 3 days, regular: 1 week).",
+          "**Strategy:**",
+          "Find relevant Reddit communities.",
+          "Personalized, value-driven outreach messages.",
+          "Share useful AI content to build credibility.",
+          "Direct message after initial engagement.",
+          "Use Scheduling tool (Calendly).",
+          "Follow up, prepare the team for meetings.",
+          "Generate high-quality leads rapidly.",
+          "Build awareness of Cognimuse’s value to startups.",
+          "Accelerate the sales pipeline through direct conversations.",
+          "Identify key subreddits (startups, AI, tech).",
+          "Craft value-driven messages (not salesy).",
+          "Share insightful content to build trust and credibility.",
+          "Utilize private messaging for meeting invites.",
+          "Join/observe: Key subreddits (r/startups, r/Entrepreneur, r/ArtificialIntelligence, r/MachineLearning, etc.).",
+          "Engage: Comment with valuable insights and advice.",
+          "Share: Create/share content positioning Cognimuse as an expert.",
+          "Outreach: DM users with personalized meeting requests after rapport.",
+          "Use a non-salesy message template.",
+          "Offer easy scheduling.",
+          "Prompt follow-up and prep for meetings.",
+          "AI Strategy & Consulting",
+          "Generative AI (for marketing/products)",
+          "Core AI/ML Development",
+          "AI Implementation & Integration",
+          "AI Support & Optimization",
+          "Training & Upskilling",
+          "Fast AI adoption, no technical guesswork (Strategy)",
+          "Automated content and workflow (Generative AI)",
+          "Custom models for business growth (Core AI)",
+          "Seamless scaling and integration (Implementation)",
+          "ROI via ongoing optimization (Support)",
+          "Empower teams with AI skills (Training)",
+          "Speak to pain points and desired outcomes.",
+          "Highlight quick wins/ROI.",
+          "Invite for discovery/consultation calls.",
+          "Blend Reddit, LinkedIn, email, and community forums.",
+          "_\"Hi [Name], Cognimuse specializes in AI strategies for startups. Can we have a quick call to discuss your challenges/goals?\"_",
+          "Personas for each service bucket/target.",
+          "Templates for messaging by service type.",
+          "Case studies/testimonials for credibility.",
+          "Scheduling tool access (e.g., Calendly).",
+          "Prepped team for calls/demos.",
+          "Reddit profiles with posting rights in key communities.",
+          "Tools to monitor and track engagement/leads.",
+          "Content library: blogs, whitepapers, posts fit for platform + context."
+        ],
+        "ordered": [
+          "Identify Relevant Subreddits.",
+          "Provide valuable insights via comments.",
+          "Share content: articles, case studies, AI benefit stories.",
+          "Personalized DM outreach with a meeting ask.",
+          "Use Calendly or similar for appointments.",
+          "Join and observe trending discussions, note key users.",
+          "Share knowledge, ask thoughtful questions in comments.",
+          "Build relationships via ongoing engagement.",
+          "After connection, send:",
+          "Follow up once if needed.",
+          "Prep team: case studies, elevator pitch, demo plans.",
+          "Identify audience on Reddit/LinkedIn.",
+          "Research subreddits, provide value in threads.",
+          "Share tailored content: use cases, whitepapers, posts.",
+          "Personalized message with clear benefit, e.g.:",
+          "Use Calendly, simplify scheduling.",
+          "Nurture leads, follow-up with tailored responses."
+        ],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Why:",
+        "What:",
+        "How:",
+        "Results:",
+        "Why:",
+        "What:",
+        "How:",
+        "Strategy:",
+        "Why:",
+        "What:",
+        "How:"
+      ],
+      "important_concepts": [
+        "Why:",
+        "What:",
+        "How:",
+        "Results:",
+        "Why:",
+        "What:",
+        "How:",
+        "Strategy:",
+        "Why:",
+        "What:"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 155,
+        "non_empty_lines": 115,
+        "total_words": 705,
+        "total_sentences": 90,
+        "avg_words_per_line": 6.130434782608695,
+        "avg_words_per_sentence": 7.833333333333333
+      },
+      "parsed_at": "2026-07-09T11:24:24.137830"
+    },
+    {
+      "id": "Freelance Key Features",
+      "title": "Freelance Key Features",
+      "file_metadata": {
+        "file_name": "Freelance Key Features.md",
+        "file_path": "Freelance Key Features.md",
+        "folder": "root",
+        "size_bytes": 1983,
+        "created": "2026-07-09T11:19:44.945486",
+        "modified": "2025-10-11T02:25:05.841915"
+      },
+      "frontmatter": {},
+      "content": "\n# Automated Job Discovery Workflow Overview\n\n## 1. Automated Job Discovery\n\n- Scrapes Reddit's r/forhire and r/freelance_forhire every 6 hours  \n- Uses free Reddit JSON API (no authentication needed)  \n- Easily expandable to other free sources  \n\n## 2. Intelligent Filtering\n\n- Scores opportunities based on skill matches (customize to your expertise)  \n- Filters out spam and irrelevant posts  \n- Prioritizes posts with budget indicators  \n\n## 3. Automated Tracking\n\n- Stores all opportunities in Google Sheets  \n- Tracks relevance scores, matched skills, and status  \n- Maintains complete history for analysis  \n\n## 4. Real-Time Notifications\n\n- Slack alerts for high-priority opportunities (score ≥30)  \n- Instant visibility into the best matches  \n- Enables quick response times  \n\n## 5. Personalized Pitch Generation\n\n- Auto-creates tailored proposals based on job details  \n- Ready-to-send messages that reference specific skills  \n- Professional template you can customize  \n\n## 6. Follow-up Automation\n\n- Checks for unresponded leads every 3 days  \n- Sends Slack reminders to follow up  \n- Helps maintain persistence without being pushy  \n\n---\n\n# Setup Steps\n\n- Import the JSON workflow into n8n  \n- Create Google Sheet with the specified columns  \n- Connect credentials (Google OAuth2, Slack API)  \n- Customize skills array to match your expertise  \n- Update pitch templates with your info and portfolio  \n- Activate the workflow and start generating opportunities!  \n\n---\n\n# Pro Tips\n\n- Respond fast: High scores = hot opportunities  \n- Track conversions: Update status column (New → Sent → Won/Lost)  \n- Refine skills: Adjust keywords based on what converts  \n- Expand sources: Add more free job boards to the scraping nodes  \n- Stay compliant: Respect rate limits and terms of service  \n- This workflow is completely free to run and can generate real income by automating the tedious parts of freelance hunting while keeping you in control of the actual outreach!\n",
+      "content_length": 1977,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "1. Automated Job Discovery",
+          "2. Intelligent Filtering",
+          "3. Automated Tracking",
+          "4. Real-Time Notifications",
+          "5. Personalized Pitch Generation",
+          "6. Follow-up Automation"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "1. Automated Job Discovery"
+          ],
+          [
+            "h2",
+            "2. Intelligent Filtering"
+          ],
+          [
+            "h2",
+            "3. Automated Tracking"
+          ],
+          [
+            "h2",
+            "4. Real-Time Notifications"
+          ],
+          [
+            "h2",
+            "5. Personalized Pitch Generation"
+          ],
+          [
+            "h2",
+            "6. Follow-up Automation"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Scrapes Reddit's r/forhire and r/freelance_forhire every 6 hours",
+          "Uses free Reddit JSON API (no authentication needed)",
+          "Easily expandable to other free sources",
+          "Scores opportunities based on skill matches (customize to your expertise)",
+          "Filters out spam and irrelevant posts",
+          "Prioritizes posts with budget indicators",
+          "Stores all opportunities in Google Sheets",
+          "Tracks relevance scores, matched skills, and status",
+          "Maintains complete history for analysis",
+          "Slack alerts for high-priority opportunities (score ≥30)",
+          "Instant visibility into the best matches",
+          "Enables quick response times",
+          "Auto-creates tailored proposals based on job details",
+          "Ready-to-send messages that reference specific skills",
+          "Professional template you can customize",
+          "Checks for unresponded leads every 3 days",
+          "Sends Slack reminders to follow up",
+          "Helps maintain persistence without being pushy",
+          "Import the JSON workflow into n8n",
+          "Create Google Sheet with the specified columns",
+          "Connect credentials (Google OAuth2, Slack API)",
+          "Customize skills array to match your expertise",
+          "Update pitch templates with your info and portfolio",
+          "Activate the workflow and start generating opportunities!",
+          "Respond fast: High scores = hot opportunities",
+          "Track conversions: Update status column (New → Sent → Won/Lost)",
+          "Refine skills: Adjust keywords based on what converts",
+          "Expand sources: Add more free job boards to the scraping nodes",
+          "Stay compliant: Respect rate limits and terms of service",
+          "This workflow is completely free to run and can generate real income by automating the tedious parts of freelance hunting while keeping you in control of the actual outreach!"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [],
+      "important_concepts": [],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 61,
+        "non_empty_lines": 41,
+        "total_words": 300,
         "total_sentences": 8,
-        "avg_words_per_line": 6.052631578947368,
-        "avg_words_per_sentence": 14.375
+        "avg_words_per_line": 7.317073170731708,
+        "avg_words_per_sentence": 37.5
       },
-      "parsed_at": "2026-07-09T10:15:27.792195"
+      "parsed_at": "2026-07-09T11:24:24.139085"
     },
     {
-      "id": "03_machine_learning",
-      "title": "03_machine_learning",
+      "id": "Implementation of What & How",
+      "title": "Implementation of What & How",
       "file_metadata": {
-        "file_name": "03_machine_learning.md",
-        "file_path": "03_machine_learning.md",
+        "file_name": "Implementation of What & How.md",
+        "file_path": "Implementation of What & How.md",
         "folder": "root",
-        "size_bytes": 1140,
-        "created": "2026-07-08T14:49:16.083994",
-        "modified": "2026-07-08T14:49:16.099937"
+        "size_bytes": 3532,
+        "created": "2026-07-09T11:19:44.948484",
+        "modified": "2025-10-07T18:27:22.169975"
       },
       "frontmatter": {},
-      "content": "# Machine Learning Algorithms\n\nAn overview of common machine learning algorithms and their applications.\n\n## What is Machine Learning?\n\nMachine Learning is a subset of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed.\n\n## Types of Learning\n\n### Supervised Learning\n- Regression (predicting continuous values)\n- Classification (predicting categories)\n- Examples: [[Getting Started with Python]], Linear Regression\n\n### Unsupervised Learning\n- Clustering (grouping similar data)\n- Dimensionality reduction\n- Pattern discovery\n\n### Reinforcement Learning\n- Learning through rewards and punishments\n- Game playing, robotics\n\n## Popular Algorithms\n\n| Algorithm | Type | Use Case |\n|-----------|------|----------|\n| Linear Regression | Supervised | Predicting continuous values |\n| Decision Trees | Supervised | Classification |\n| K-Means | Unsupervised | Clustering |\n| Neural Networks | Both | Complex pattern recognition |\n\n## Related Reading\n- [[Data Science Basics]]\n- [[Programming Concepts]]\n\nTags: #ml #ai #algorithms #datascience\n",
-      "content_length": 1102,
+      "content": "\n# Ready-to-Use Reddit Sales Plan for CogniMuse\n\n## Target Subreddits\n\n- r/startups\n    \n- r/Entrepreneur\n    \n- r/MachineLearning\n    \n- r/ArtificialIntelligence\n    \n- r/DataScience\n    \n- r/TechStartups\n    \n\n---\n\n## Engagement Comments (Examples for Different Audiences)\n\n- To Tech Leads / CTOs in r/MachineLearning:  \n    \"Hey, great point about model deployment challenges! At Cognimuse, we help companies streamline AI model integration smoothly — setting up MLOps pipelines and API integrations to scale efficiently. Happy to share tips or chat about your experience!\"\n    \n- To Marketing/Product Folks in r/Entrepreneur:  \n    \"Loved your post on content creation challenges! We just rolled out Generative AI tools that automate marketing copy and personalized content — freeing teams to focus on strategy. DM me if curious how this might help your workflow.\"\n    \n- To Founders in r/startups:  \n    \"Starting AI projects can be daunting, I hear this a lot. We've developed an AI readiness checklist and roadmap framework at Cognimuse that cuts through confusion to set clear goals. If interested, I can share our approach!\"\n    \n\n---\n\n## Posting Content Ideas (One per Day)\n\n- Day 1 (r/startups): \"How to Know If Your Startup Is Ready for AI — a simple readiness checklist from Cognimuse\"\n    \n- Day 2 (r/ArtificialIntelligence): \"Boosting AI Impact: Combining LLMs with Retrieval-Augmented Generation (RAG)\"\n    \n- Day 3 (r/Entrepreneur): \"Leveraging AI to Automate Day-to-Day Tasks: Real Startup Use Cases\"\n    \n\nInclude links to blog posts or short summaries, always ending with a soft call to action inviting questions.\n\n---\n\n## Sample Direct Message Scripts\n\n- **AI Strategy / Leadership (r/startups, r/Entrepreneur):**  \n    \"Hi [Name], I saw your post about scaling your startup’s tech. Cognimuse specializes in AI strategy and creating tailored roadmaps that align perfectly with business goals. Would you be open to a quick 15-minute call to explore if we can support your plans? Here's my calendar link: [Calendly_Link]\"\n    \n- **Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):**  \n    \"Hi [Name], I noticed your interest in automating content creation. We’ve developed Generative AI solutions that help startups create marketing copy and creatives faster. Could we schedule a brief chat to see if it fits your needs? [Calendly_Link]\"\n    \n- **Technical / Implementation Leads (r/MachineLearning, r/DataScience):**  \n    \"Hi [Name], your discussion on AI deployment caught my eye. Cognimuse helps with seamless AI model integration and MLOps to scale operations efficiently. Interested in a quick intro call? My calendar is here: [Calendly_Link]\"\n    \n\n---\n\n## Follow-Up Message (1 Day After No Reply)\n\n\"Hi [Name], just wanted to check if you saw my previous message. I’m happy to answer any questions you might have about how Cognimuse can help with your AI goals. Let me know if you’re interested!\"\n\n---\n\n## Tips for Effective Posting & Messaging\n\n- Always personalize messages with recipient’s name and mention something specific from their post if possible.\n    \n- Avoid hard selling; offer help or share knowledge first.\n    \n- Keep posts informative, not promotional.\n    \n- Post during high-traffic times: mornings and early evenings (Reddit local time).\n    \n- Track engagement: reply promptly to comments and messages.\n    \n\nThis should enable you to start engaging on Reddit immediately with scripts and content aligned to Cognimuse’s services and audience needs.",
+      "content_length": 3514,
       "headers": {
         "h1": [],
         "h2": [
-          "What is Machine Learning?",
-          "Types of Learning",
-          "Popular Algorithms",
-          "Related Reading"
+          "Target Subreddits",
+          "Engagement Comments (Examples for Different Audiences)",
+          "Posting Content Ideas (One per Day)",
+          "Sample Direct Message Scripts",
+          "Follow-Up Message (1 Day After No Reply)",
+          "Tips for Effective Posting & Messaging"
         ],
-        "h3": [
-          "Supervised Learning",
-          "Unsupervised Learning",
-          "Reinforcement Learning"
-        ],
+        "h3": [],
         "all": [
           [
             "h2",
-            "What is Machine Learning?"
+            "Target Subreddits"
           ],
           [
             "h2",
-            "Types of Learning"
-          ],
-          [
-            "h3",
-            "Supervised Learning"
-          ],
-          [
-            "h3",
-            "Unsupervised Learning"
-          ],
-          [
-            "h3",
-            "Reinforcement Learning"
+            "Engagement Comments (Examples for Different Audiences)"
           ],
           [
             "h2",
-            "Popular Algorithms"
+            "Posting Content Ideas (One per Day)"
           ],
           [
             "h2",
-            "Related Reading"
+            "Sample Direct Message Scripts"
+          ],
+          [
+            "h2",
+            "Follow-Up Message (1 Day After No Reply)"
+          ],
+          [
+            "h2",
+            "Tips for Effective Posting & Messaging"
           ]
         ]
       },
@@ -253,185 +570,609 @@
       "quote_count": 0,
       "lists": {
         "unordered": [
-          "Regression (predicting continuous values)",
-          "Classification (predicting categories)",
-          "Examples: [[Getting Started with Python]], Linear Regression",
-          "Clustering (grouping similar data)",
-          "Dimensionality reduction",
-          "Pattern discovery",
-          "Learning through rewards and punishments",
-          "Game playing, robotics",
-          "[[Data Science Basics]]",
-          "[[Programming Concepts]]"
+          "r/startups",
+          "r/Entrepreneur",
+          "r/MachineLearning",
+          "r/ArtificialIntelligence",
+          "r/DataScience",
+          "r/TechStartups",
+          "To Tech Leads / CTOs in r/MachineLearning:",
+          "To Marketing/Product Folks in r/Entrepreneur:",
+          "To Founders in r/startups:",
+          "Day 1 (r/startups): \"How to Know If Your Startup Is Ready for AI — a simple readiness checklist from Cognimuse\"",
+          "Day 2 (r/ArtificialIntelligence): \"Boosting AI Impact: Combining LLMs with Retrieval-Augmented Generation (RAG)\"",
+          "Day 3 (r/Entrepreneur): \"Leveraging AI to Automate Day-to-Day Tasks: Real Startup Use Cases\"",
+          "**AI Strategy / Leadership (r/startups, r/Entrepreneur):**",
+          "**Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):**",
+          "**Technical / Implementation Leads (r/MachineLearning, r/DataScience):**",
+          "Always personalize messages with recipient’s name and mention something specific from their post if possible.",
+          "Avoid hard selling; offer help or share knowledge first.",
+          "Keep posts informative, not promotional.",
+          "Post during high-traffic times: mornings and early evenings (Reddit local time).",
+          "Track engagement: reply promptly to comments and messages."
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [
+        "AI Strategy / Leadership (r/startups, r/Entrepreneur):",
+        "Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):",
+        "Technical / Implementation Leads (r/MachineLearning, r/DataScience):"
+      ],
+      "important_concepts": [
+        "AI Strategy / Leadership (r/startups, r/Entrepreneur):",
+        "Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):",
+        "Technical / Implementation Leads (r/MachineLearning, r/DataScience):"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 81,
+        "non_empty_lines": 41,
+        "total_words": 510,
+        "total_sentences": 28,
+        "avg_words_per_line": 12.439024390243903,
+        "avg_words_per_sentence": 18.214285714285715
+      },
+      "parsed_at": "2026-07-09T11:24:24.140625"
+    },
+    {
+      "id": "AWS Marketplace",
+      "title": "AWS Marketplace",
+      "file_metadata": {
+        "file_name": "AWS Marketplace.md",
+        "file_path": "journey\\AWS Marketplace.md",
+        "folder": "journey",
+        "size_bytes": 8394,
+        "created": "2026-07-09T11:24:06.342848",
+        "modified": "2025-10-10T17:39:18.776672"
+      },
+      "frontmatter": {},
+      "content": " \n## AWS Account Plans\n\n<details> <summary>✨ Free Plan (6 Months)</summary>\n\n- **Purpose**: Learn, experiment, and build prototypes.\n    \n- **Credits**: Up to USD $200.\n\n    - $100 on sign-up.\n        \n    - Additional $100 by completing activities (e.g., creating a budget alert).\n        \n- **Included Usage**: Free monthly limits for select AWS services.\n    \n- **Scaling**: Workloads can scale beyond credit thresholds.\n    \n- **Access**:\n    \n    - Access to all AWS services and features.\n        \n    - Limited access to certain services and AWS Marketplace.\n        \n- **Expiration**:\n    \n    - Account closes after 6 months or when credits are used up.\n        \n    - Can upgrade to paid plan to continue.\n        \n\n</details> <details> <summary>💼 Paid Plan</summary>\n\n- **Purpose**: Develop production-ready workloads.\n    \n- **Credits**: Up to USD $200.\n    \n    - $100 on sign-up.\n        \n    - Additional $100 by completing activities.\n        \n- **Included Usage**: Free monthly limits for select AWS services.\n    \n- **Scaling**: Workloads can scale beyond credit thresholds.\n    \n- **Access**:\n    \n    - Full access to **all** AWS services and features.\n        \n    - No expiration or service interruption.\n        \n- **Pricing**: Standard AWS pricing applies after credits are exhausted.\n    \n\n</details> <details> <summary>📌 Additional Notes</summary>\n\n- **Shared Benefits**:\n    \n    - Both plans include free monthly usage for select services.\n        \n    - Both receive $100 base credits + $100 via activity completion.\n        \n- **Credit Usage**:\n    \n    - Credits apply to eligible AWS services.\n        \n    - Example activity: Setting up a budget alert to monitor usage.\n        \n- **Resources**:\n    \n    - [AWS Privacy Policy](https://aws.amazon.com/privacy/)\n        \n    - [AWS Terms of Use](https://aws.amazon.com/terms/)\n        \n    - [Free Tier Details](https://aws.amazon.com/free)\n        \n    - [Free Tier Plans Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-plans.html)\n        \n\n</details>\n\n\n# AWS Marketplace Seller Account Setup\n\n<details>\n<summary>AWS Account Types</summary>\n\n- **Root User**  \n  - Created by default for every AWS account.\n  - Has unrestricted access to all resources and billing.\n  - Use only for account/admin-level tasks, not for daily operations.\n  - Enable Multi-Factor Authentication (MFA) for security.\n- **IAM (Identity and Access Management) User**  \n  - Create multiple users with specific permissions.\n  - Assign roles such as seller admin, product publisher, billing.\n  - Best practice: Do not use root user for marketplace operations—use IAM users instead.\n\n</details>\n\n<details>\n<summary>Registering as a Seller on AWS Marketplace</summary>\n\n- **Prerequisites**\n  - AWS account (preferably separate from other workloads).\n  - Prepared company information, banking, and tax details (for paid listings).\n- **Steps**\n  1. Sign in to AWS Marketplace Management Portal with your AWS account.\n  2. Review and accept the seller terms and conditions.\n  3. Provide seller details:  \n     - Company display name and legal name  \n     - Company website  \n     - Public contact email and description  \n     - Company logo\n  4. Enter and verify tax details (W-9, W-8, VAT/GST depending on location).\n  5. Link and verify the bank account (required for paid products, US bank/virtual allowed).\n  6. Submit registration for review.\n- **Approval**\n  - AWS reviews submitted details; follow up if extra info is needed.\n  - You'll receive confirmation when ready to publish.\n\n</details>\n\n<details>\n<summary>Creating Your Public Profile</summary>\n\n- Display name (your AWS Marketplace name).\n- Company description, logo, and website.\n- Contact information for customer and AWS communication.\n- This information is visible to AWS customers on the Marketplace listing.\n\n</details>\n\n<details>\n<summary>Marketplace Management and Listing Products</summary>\n  \n- Access the AWS Marketplace Management Portal after approval.\n- Manage product listings, update pricing, and access customer reports.\n- Use IAM for granular team roles:  \n  - Product publishing  \n  - Billing and payment management  \n  - Support and customer queries\n- For software, follow the [SaaS/Product listing guides](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html).\n\n</details>\n\n<details>\n<summary>Security & Best Practices</summary>\n\n- Always use IAM users for daily management.\n- Limit root user access; enable MFA on all sensitive users.\n- Assign permissions based on roles (least privilege approach).\n- Regularly audit users, roles, and billing activity.\n- Read more on [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html).\n\n</details>\n\n<details>\n<summary>Additional Resources</summary>\n\n- [AWS Marketplace Seller User Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)\n- [Public Profile Creation](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html)\n- [Seller Account Types](https://docs.aws.amazon.com/signin/latest/userguide/user-types-list.html)\n- [Root vs IAM User Comparison](https://arshsharma.com/posts/2024-11-02-root-vs-iam-user/)\n\n</details>\n\n\n## **User Guide**\n\n<details> <summary>🛡️ Root User vs IAM User: Key Differences</summary>\n\n- **Root User**\n    \n    - Created when the AWS account is set up (uses the account email).\n        \n    - Has unrestricted access to all AWS resources and billing.\n        \n    - Only one root user per account.\n        \n    - Should only be used for critical tasks (e.g., closing account, changing billing info, enabling MFA).\n        \n    - Cannot be restricted by IAM policies.\n        \n- **IAM User**\n    \n    - Created by the root user or an IAM admin.\n        \n    - Can have custom permissions (least privilege principle).\n        \n    - Multiple IAM users can exist per account.\n        \n    - Used for daily operations and team access.\n        \n    - Permissions can be changed or revoked at any time.\n        \n- **Best Practice**: Use the root user only for tasks that require it, and use IAM users for everything else. Always enable MFA for the root user and admin IAM users.\n    \n\n</details> <details> <summary>📝 Tasks Only the Root User Can Perform</summary>\n\n- Change account settings and contact information.\n    \n- Close the AWS account.\n    \n- Change or cancel AWS support plans.\n    \n- Restore IAM user access to the billing console.\n    \n- Enable or disable MFA on the root account.\n    \n- Manage some advanced security and payment settings.\n    \n\n</details> <details> <summary>🔑 Security Essentials for Beginners</summary>\n\n- Enable Multi-Factor Authentication (MFA) for all users, especially root.\n    \n- Never share root credentials.\n    \n- Regularly review IAM users and permissions.\n    \n- Use strong, unique passwords for all AWS accounts.\n    \n- Set up billing alerts to avoid unexpected charges.\n    \n- Rotate access keys and passwords regularly.\n    \n\n</details> <details> <summary>📦 Product Listing Types on AWS Marketplace</summary>\n\n- **AMI (Amazon Machine Image)**: Pre-configured virtual machine images.\n    \n- **SaaS (Software as a Service)**: Cloud-based software products.\n    \n- **Container Products**: Docker images for ECS/EKS.\n    \n- **Data Products**: Datasets for analytics and ML.\n    \n- **Professional Services**: Consulting, support, and implementation services.\n    \n- Each type has specific listing and integration requirements.\n    \n\n</details> <details> <summary>📊 Monitoring & Billing Basics</summary>\n\n- Use AWS Cost Explorer and billing dashboard to track usage.\n    \n- Set up budget alerts and cost anomaly detection.\n    \n- Download detailed usage and billing reports.\n    \n- Understand how credits are applied and when charges begin.\n    \n\n</details> <details> <summary>📚 Learning & Support Resources</summary>\n\n- [AWS Marketplace Seller Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)\n    \n- [AWS Free Tier Details](https://aws.amazon.com/free)\n    \n- [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)\n    \n- [AWS Support Center](https://aws.amazon.com/support)\n    \n- [AWS Training and Certification](https://aws.amazon.com/training)\n    \n\n</details>\n",
+      "content_length": 8364,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "AWS Account Plans",
+          "**User Guide**"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "AWS Account Plans"
+          ],
+          [
+            "h2",
+            "**User Guide**"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "**Purpose**: Learn, experiment, and build prototypes.",
+          "**Credits**: Up to USD $200.",
+          "$100 on sign-up.",
+          "Additional $100 by completing activities (e.g., creating a budget alert).",
+          "**Included Usage**: Free monthly limits for select AWS services.",
+          "**Scaling**: Workloads can scale beyond credit thresholds.",
+          "**Access**:",
+          "Access to all AWS services and features.",
+          "Limited access to certain services and AWS Marketplace.",
+          "**Expiration**:",
+          "Account closes after 6 months or when credits are used up.",
+          "Can upgrade to paid plan to continue.",
+          "**Purpose**: Develop production-ready workloads.",
+          "**Credits**: Up to USD $200.",
+          "$100 on sign-up.",
+          "Additional $100 by completing activities.",
+          "**Included Usage**: Free monthly limits for select AWS services.",
+          "**Scaling**: Workloads can scale beyond credit thresholds.",
+          "**Access**:",
+          "Full access to **all** AWS services and features.",
+          "No expiration or service interruption.",
+          "**Pricing**: Standard AWS pricing applies after credits are exhausted.",
+          "**Shared Benefits**:",
+          "Both plans include free monthly usage for select services.",
+          "Both receive $100 base credits + $100 via activity completion.",
+          "**Credit Usage**:",
+          "Credits apply to eligible AWS services.",
+          "Example activity: Setting up a budget alert to monitor usage.",
+          "**Resources**:",
+          "[AWS Privacy Policy](https://aws.amazon.com/privacy/)",
+          "[AWS Terms of Use](https://aws.amazon.com/terms/)",
+          "[Free Tier Details](https://aws.amazon.com/free)",
+          "[Free Tier Plans Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-plans.html)",
+          "**Root User**",
+          "Created by default for every AWS account.",
+          "Has unrestricted access to all resources and billing.",
+          "Use only for account/admin-level tasks, not for daily operations.",
+          "Enable Multi-Factor Authentication (MFA) for security.",
+          "**IAM (Identity and Access Management) User**",
+          "Create multiple users with specific permissions.",
+          "Assign roles such as seller admin, product publisher, billing.",
+          "Best practice: Do not use root user for marketplace operations—use IAM users instead.",
+          "**Prerequisites**",
+          "AWS account (preferably separate from other workloads).",
+          "Prepared company information, banking, and tax details (for paid listings).",
+          "**Steps**",
+          "Company display name and legal name",
+          "Company website",
+          "Public contact email and description",
+          "Company logo",
+          "**Approval**",
+          "AWS reviews submitted details; follow up if extra info is needed.",
+          "You'll receive confirmation when ready to publish.",
+          "Display name (your AWS Marketplace name).",
+          "Company description, logo, and website.",
+          "Contact information for customer and AWS communication.",
+          "This information is visible to AWS customers on the Marketplace listing.",
+          "Access the AWS Marketplace Management Portal after approval.",
+          "Manage product listings, update pricing, and access customer reports.",
+          "Use IAM for granular team roles:",
+          "Product publishing",
+          "Billing and payment management",
+          "Support and customer queries",
+          "For software, follow the [SaaS/Product listing guides](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html).",
+          "Always use IAM users for daily management.",
+          "Limit root user access; enable MFA on all sensitive users.",
+          "Assign permissions based on roles (least privilege approach).",
+          "Regularly audit users, roles, and billing activity.",
+          "Read more on [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html).",
+          "[AWS Marketplace Seller User Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)",
+          "[Public Profile Creation](https://docs.aws.amazon.com/marketplace/latest/userguide/create-public-profile.html)",
+          "[Seller Account Types](https://docs.aws.amazon.com/signin/latest/userguide/user-types-list.html)",
+          "[Root vs IAM User Comparison](https://arshsharma.com/posts/2024-11-02-root-vs-iam-user/)",
+          "**Root User**",
+          "Created when the AWS account is set up (uses the account email).",
+          "Has unrestricted access to all AWS resources and billing.",
+          "Only one root user per account.",
+          "Should only be used for critical tasks (e.g., closing account, changing billing info, enabling MFA).",
+          "Cannot be restricted by IAM policies.",
+          "**IAM User**",
+          "Created by the root user or an IAM admin.",
+          "Can have custom permissions (least privilege principle).",
+          "Multiple IAM users can exist per account.",
+          "Used for daily operations and team access.",
+          "Permissions can be changed or revoked at any time.",
+          "**Best Practice**: Use the root user only for tasks that require it, and use IAM users for everything else. Always enable MFA for the root user and admin IAM users.",
+          "Change account settings and contact information.",
+          "Close the AWS account.",
+          "Change or cancel AWS support plans.",
+          "Restore IAM user access to the billing console.",
+          "Enable or disable MFA on the root account.",
+          "Manage some advanced security and payment settings.",
+          "Enable Multi-Factor Authentication (MFA) for all users, especially root.",
+          "Never share root credentials.",
+          "Regularly review IAM users and permissions.",
+          "Use strong, unique passwords for all AWS accounts.",
+          "Set up billing alerts to avoid unexpected charges.",
+          "Rotate access keys and passwords regularly.",
+          "**AMI (Amazon Machine Image)**: Pre-configured virtual machine images.",
+          "**SaaS (Software as a Service)**: Cloud-based software products.",
+          "**Container Products**: Docker images for ECS/EKS.",
+          "**Data Products**: Datasets for analytics and ML.",
+          "**Professional Services**: Consulting, support, and implementation services.",
+          "Each type has specific listing and integration requirements.",
+          "Use AWS Cost Explorer and billing dashboard to track usage.",
+          "Set up budget alerts and cost anomaly detection.",
+          "Download detailed usage and billing reports.",
+          "Understand how credits are applied and when charges begin.",
+          "[AWS Marketplace Seller Guide](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html)",
+          "[AWS Free Tier Details](https://aws.amazon.com/free)",
+          "[AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)",
+          "[AWS Support Center](https://aws.amazon.com/support)",
+          "[AWS Training and Certification](https://aws.amazon.com/training)"
+        ],
+        "ordered": [
+          "Sign in to AWS Marketplace Management Portal with your AWS account.",
+          "Review and accept the seller terms and conditions.",
+          "Provide seller details:",
+          "Enter and verify tax details (W-9, W-8, VAT/GST depending on location).",
+          "Link and verify the bank account (required for paid products, US bank/virtual allowed).",
+          "Submit registration for review."
+        ],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling",
+        "Access",
+        "Expiration",
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling",
+        "Access",
+        "all",
+        "Pricing",
+        "Shared Benefits",
+        "Credit Usage",
+        "Resources",
+        "Root User",
+        "IAM (Identity and Access Management) User",
+        "Prerequisites",
+        "Steps",
+        "Approval",
+        "User Guide",
+        "Root User",
+        "IAM User",
+        "Best Practice",
+        "AMI (Amazon Machine Image)",
+        "SaaS (Software as a Service)",
+        "Container Products",
+        "Data Products",
+        "Professional Services"
+      ],
+      "important_concepts": [
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling",
+        "Access",
+        "Expiration",
+        "Purpose",
+        "Credits",
+        "Included Usage",
+        "Scaling"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 268,
+        "non_empty_lines": 151,
+        "total_words": 1011,
+        "total_sentences": 141,
+        "avg_words_per_line": 6.695364238410596,
+        "avg_words_per_sentence": 7.170212765957447
+      },
+      "parsed_at": "2026-07-09T11:24:24.143048"
+    },
+    {
+      "id": "CogniMuse - Journey",
+      "title": "CogniMuse - Journey",
+      "file_metadata": {
+        "file_name": "CogniMuse - Journey.md",
+        "file_path": "journey\\CogniMuse - Journey.md",
+        "folder": "journey",
+        "size_bytes": 4935,
+        "created": "2026-07-09T11:24:06.342848",
+        "modified": "2025-10-10T17:02:12.873211"
+      },
+      "frontmatter": {},
+      "content": "# CogniMuse Sales Journey & Outreach Plan\n\n## Day 1\n\n<details>\n<summary>Purpose, Goals, and Self-Discovery</summary>\n\n- **Why:** To work in Cognimuse and eventually become an entrepreneur — this is your long-term purpose and motivation.\n- **What:** Find what you’re good at so you can either work in that area or start something of your own.\n- **How:** Use the Ikigai framework—discover what you’re good at, love, can be paid for, and what the world needs. This leads you to focus on Sales & Marketing.\n\n</details>\n\n---\n\n## Day 2\n\n<details>\n<summary>2.1 Ikigai Exercise Outcomes</summary>\n\n- Activity: Completed the Ikigai exercise for 3 people under the guidance of Manoj Sir.\n- **Results:**\n    - Mansi: Fullstack Developer\n    - Payal: Designer\n    - Gladia: Business & Sales & Marketing\n\n</details>\n\n<details>\n<summary>2.2 Sales Target & Approach</summary>\n\n- **Why:** Set meetings with CEOs of 10 companies to pitch your service, creating initial business opportunities.\n- **What:** Goal is to get at least 2 CEOs to sign deals after meetings.\n- **How:** Use Reddit for outreach and engagement with a time limit of 2 weeks (personal stretch: 3 days, regular: 1 week).\n- **Strategy:**\n    - Find relevant Reddit communities.\n    - Personalized, value-driven outreach messages.\n    - Share useful AI content to build credibility.\n    - Direct message after initial engagement.\n    - Use Scheduling tool (Calendly).\n    - Follow up, prepare the team for meetings.\n\n</details>\n\n<details>\n<summary>2.2.1 Detailed Plan for 10 Meetings via Reddit (3 Days)</summary>\n\n**Why:**\n- Generate high-quality leads rapidly.\n- Build awareness of Cognimuse’s value to startups.\n- Accelerate the sales pipeline through direct conversations.\n\n**What:**\n- Identify key subreddits (startups, AI, tech).\n- Craft value-driven messages (not salesy).\n- Share insightful content to build trust and credibility.\n- Utilize private messaging for meeting invites.\n\n**How:**\n- Join/observe: Key subreddits (r/startups, r/Entrepreneur, r/ArtificialIntelligence, r/MachineLearning, etc.).\n- Engage: Comment with valuable insights and advice.\n- Share: Create/share content positioning Cognimuse as an expert.\n- Outreach: DM users with personalized meeting requests after rapport.\n- Use a non-salesy message template.\n- Offer easy scheduling.\n- Prompt follow-up and prep for meetings.\n\n</details>\n\n<details>\n<summary>2.2.1.1 Activity Breakdown: What & How</summary>\n\n## What to Do:\n1. Identify Relevant Subreddits.\n2. Provide valuable insights via comments.\n3. Share content: articles, case studies, AI benefit stories.\n4. Personalized DM outreach with a meeting ask.\n5. Use Calendly or similar for appointments.\n\n## How to Do It:\n1. Join and observe trending discussions, note key users.\n2. Share knowledge, ask thoughtful questions in comments.\n3. Build relationships via ongoing engagement.\n4. After connection, send:  \n   _\"Hi [Name], I saw your post on AI for startups. I help startups leverage AI efficiently. Can we schedule a quick 15-minute chat?\"_\n5. Follow up once if needed.\n6. Prep team: case studies, elevator pitch, demo plans.\n\n</details>\n\n---\n\n<details>\n<summary>To Do for CogniMuse: Service-Aligned Sales Approach</summary>\n\n## Service Segmentation:\n- AI Strategy & Consulting\n- Generative AI (for marketing/products)\n- Core AI/ML Development\n- AI Implementation & Integration\n- AI Support & Optimization\n- Training & Upskilling\n\n## Value Propositions:\n- Fast AI adoption, no technical guesswork (Strategy)\n- Automated content and workflow (Generative AI)\n- Custom models for business growth (Core AI)\n- Seamless scaling and integration (Implementation)\n- ROI via ongoing optimization (Support)\n- Empower teams with AI skills (Training)\n\n## Tailored Messaging:\n- Speak to pain points and desired outcomes.\n- Highlight quick wins/ROI.\n- Invite for discovery/consultation calls.\n\n## Multi-Channel Prospecting:\n- Blend Reddit, LinkedIn, email, and community forums.\n\n</details>\n\n<details>\n<summary>Execution: Outreach Steps</summary>\n\n1. Identify audience on Reddit/LinkedIn.\n2. Research subreddits, provide value in threads.\n3. Share tailored content: use cases, whitepapers, posts.\n4. Personalized message with clear benefit, e.g.:\n   - _\"Hi [Name], Cognimuse specializes in AI strategies for startups. Can we have a quick call to discuss your challenges/goals?\"_\n5. Use Calendly, simplify scheduling.\n6. Nurture leads, follow-up with tailored responses.\n\n</details>\n\n<details>\n<summary>Implementation Requirements</summary>\n\n- Personas for each service bucket/target.\n- Templates for messaging by service type.\n- Case studies/testimonials for credibility.\n- Scheduling tool access (e.g., Calendly).\n- Prepped team for calls/demos.\n- Reddit profiles with posting rights in key communities.\n- Tools to monitor and track engagement/leads.\n- Content library: blogs, whitepapers, posts fit for platform + context.\n\n</details>\n\n---\n\n# Day 3\n\n\n\n",
+      "content_length": 4925,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "Day 1",
+          "Day 2",
+          "What to Do:",
+          "How to Do It:",
+          "Service Segmentation:",
+          "Value Propositions:",
+          "Tailored Messaging:",
+          "Multi-Channel Prospecting:"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "Day 1"
+          ],
+          [
+            "h2",
+            "Day 2"
+          ],
+          [
+            "h2",
+            "What to Do:"
+          ],
+          [
+            "h2",
+            "How to Do It:"
+          ],
+          [
+            "h2",
+            "Service Segmentation:"
+          ],
+          [
+            "h2",
+            "Value Propositions:"
+          ],
+          [
+            "h2",
+            "Tailored Messaging:"
+          ],
+          [
+            "h2",
+            "Multi-Channel Prospecting:"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "**Why:** To work in Cognimuse and eventually become an entrepreneur — this is your long-term purpose and motivation.",
+          "**What:** Find what you’re good at so you can either work in that area or start something of your own.",
+          "**How:** Use the Ikigai framework—discover what you’re good at, love, can be paid for, and what the world needs. This leads you to focus on Sales & Marketing.",
+          "Activity: Completed the Ikigai exercise for 3 people under the guidance of Manoj Sir.",
+          "**Results:**",
+          "Mansi: Fullstack Developer",
+          "Payal: Designer",
+          "Gladia: Business & Sales & Marketing",
+          "**Why:** Set meetings with CEOs of 10 companies to pitch your service, creating initial business opportunities.",
+          "**What:** Goal is to get at least 2 CEOs to sign deals after meetings.",
+          "**How:** Use Reddit for outreach and engagement with a time limit of 2 weeks (personal stretch: 3 days, regular: 1 week).",
+          "**Strategy:**",
+          "Find relevant Reddit communities.",
+          "Personalized, value-driven outreach messages.",
+          "Share useful AI content to build credibility.",
+          "Direct message after initial engagement.",
+          "Use Scheduling tool (Calendly).",
+          "Follow up, prepare the team for meetings.",
+          "Generate high-quality leads rapidly.",
+          "Build awareness of Cognimuse’s value to startups.",
+          "Accelerate the sales pipeline through direct conversations.",
+          "Identify key subreddits (startups, AI, tech).",
+          "Craft value-driven messages (not salesy).",
+          "Share insightful content to build trust and credibility.",
+          "Utilize private messaging for meeting invites.",
+          "Join/observe: Key subreddits (r/startups, r/Entrepreneur, r/ArtificialIntelligence, r/MachineLearning, etc.).",
+          "Engage: Comment with valuable insights and advice.",
+          "Share: Create/share content positioning Cognimuse as an expert.",
+          "Outreach: DM users with personalized meeting requests after rapport.",
+          "Use a non-salesy message template.",
+          "Offer easy scheduling.",
+          "Prompt follow-up and prep for meetings.",
+          "AI Strategy & Consulting",
+          "Generative AI (for marketing/products)",
+          "Core AI/ML Development",
+          "AI Implementation & Integration",
+          "AI Support & Optimization",
+          "Training & Upskilling",
+          "Fast AI adoption, no technical guesswork (Strategy)",
+          "Automated content and workflow (Generative AI)",
+          "Custom models for business growth (Core AI)",
+          "Seamless scaling and integration (Implementation)",
+          "ROI via ongoing optimization (Support)",
+          "Empower teams with AI skills (Training)",
+          "Speak to pain points and desired outcomes.",
+          "Highlight quick wins/ROI.",
+          "Invite for discovery/consultation calls.",
+          "Blend Reddit, LinkedIn, email, and community forums.",
+          "_\"Hi [Name], Cognimuse specializes in AI strategies for startups. Can we have a quick call to discuss your challenges/goals?\"_",
+          "Personas for each service bucket/target.",
+          "Templates for messaging by service type.",
+          "Case studies/testimonials for credibility.",
+          "Scheduling tool access (e.g., Calendly).",
+          "Prepped team for calls/demos.",
+          "Reddit profiles with posting rights in key communities.",
+          "Tools to monitor and track engagement/leads.",
+          "Content library: blogs, whitepapers, posts fit for platform + context."
+        ],
+        "ordered": [
+          "Identify Relevant Subreddits.",
+          "Provide valuable insights via comments.",
+          "Share content: articles, case studies, AI benefit stories.",
+          "Personalized DM outreach with a meeting ask.",
+          "Use Calendly or similar for appointments.",
+          "Join and observe trending discussions, note key users.",
+          "Share knowledge, ask thoughtful questions in comments.",
+          "Build relationships via ongoing engagement.",
+          "After connection, send:",
+          "Follow up once if needed.",
+          "Prep team: case studies, elevator pitch, demo plans.",
+          "Identify audience on Reddit/LinkedIn.",
+          "Research subreddits, provide value in threads.",
+          "Share tailored content: use cases, whitepapers, posts.",
+          "Personalized message with clear benefit, e.g.:",
+          "Use Calendly, simplify scheduling.",
+          "Nurture leads, follow-up with tailored responses."
+        ],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Why:",
+        "What:",
+        "How:",
+        "Results:",
+        "Why:",
+        "What:",
+        "How:",
+        "Strategy:",
+        "Why:",
+        "What:",
+        "How:"
+      ],
+      "important_concepts": [
+        "Why:",
+        "What:",
+        "How:",
+        "Results:",
+        "Why:",
+        "What:",
+        "How:",
+        "Strategy:",
+        "Why:",
+        "What:"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 155,
+        "non_empty_lines": 115,
+        "total_words": 705,
+        "total_sentences": 90,
+        "avg_words_per_line": 6.130434782608695,
+        "avg_words_per_sentence": 7.833333333333333
+      },
+      "parsed_at": "2026-07-09T11:24:24.144265"
+    },
+    {
+      "id": "Freelance Key Features",
+      "title": "Freelance Key Features",
+      "file_metadata": {
+        "file_name": "Freelance Key Features.md",
+        "file_path": "journey\\Freelance Key Features.md",
+        "folder": "journey",
+        "size_bytes": 1983,
+        "created": "2026-07-09T11:24:06.348012",
+        "modified": "2025-10-11T02:25:05.841915"
+      },
+      "frontmatter": {},
+      "content": "\n# Automated Job Discovery Workflow Overview\n\n## 1. Automated Job Discovery\n\n- Scrapes Reddit's r/forhire and r/freelance_forhire every 6 hours  \n- Uses free Reddit JSON API (no authentication needed)  \n- Easily expandable to other free sources  \n\n## 2. Intelligent Filtering\n\n- Scores opportunities based on skill matches (customize to your expertise)  \n- Filters out spam and irrelevant posts  \n- Prioritizes posts with budget indicators  \n\n## 3. Automated Tracking\n\n- Stores all opportunities in Google Sheets  \n- Tracks relevance scores, matched skills, and status  \n- Maintains complete history for analysis  \n\n## 4. Real-Time Notifications\n\n- Slack alerts for high-priority opportunities (score ≥30)  \n- Instant visibility into the best matches  \n- Enables quick response times  \n\n## 5. Personalized Pitch Generation\n\n- Auto-creates tailored proposals based on job details  \n- Ready-to-send messages that reference specific skills  \n- Professional template you can customize  \n\n## 6. Follow-up Automation\n\n- Checks for unresponded leads every 3 days  \n- Sends Slack reminders to follow up  \n- Helps maintain persistence without being pushy  \n\n---\n\n# Setup Steps\n\n- Import the JSON workflow into n8n  \n- Create Google Sheet with the specified columns  \n- Connect credentials (Google OAuth2, Slack API)  \n- Customize skills array to match your expertise  \n- Update pitch templates with your info and portfolio  \n- Activate the workflow and start generating opportunities!  \n\n---\n\n# Pro Tips\n\n- Respond fast: High scores = hot opportunities  \n- Track conversions: Update status column (New → Sent → Won/Lost)  \n- Refine skills: Adjust keywords based on what converts  \n- Expand sources: Add more free job boards to the scraping nodes  \n- Stay compliant: Respect rate limits and terms of service  \n- This workflow is completely free to run and can generate real income by automating the tedious parts of freelance hunting while keeping you in control of the actual outreach!\n",
+      "content_length": 1977,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "1. Automated Job Discovery",
+          "2. Intelligent Filtering",
+          "3. Automated Tracking",
+          "4. Real-Time Notifications",
+          "5. Personalized Pitch Generation",
+          "6. Follow-up Automation"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "1. Automated Job Discovery"
+          ],
+          [
+            "h2",
+            "2. Intelligent Filtering"
+          ],
+          [
+            "h2",
+            "3. Automated Tracking"
+          ],
+          [
+            "h2",
+            "4. Real-Time Notifications"
+          ],
+          [
+            "h2",
+            "5. Personalized Pitch Generation"
+          ],
+          [
+            "h2",
+            "6. Follow-up Automation"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Scrapes Reddit's r/forhire and r/freelance_forhire every 6 hours",
+          "Uses free Reddit JSON API (no authentication needed)",
+          "Easily expandable to other free sources",
+          "Scores opportunities based on skill matches (customize to your expertise)",
+          "Filters out spam and irrelevant posts",
+          "Prioritizes posts with budget indicators",
+          "Stores all opportunities in Google Sheets",
+          "Tracks relevance scores, matched skills, and status",
+          "Maintains complete history for analysis",
+          "Slack alerts for high-priority opportunities (score ≥30)",
+          "Instant visibility into the best matches",
+          "Enables quick response times",
+          "Auto-creates tailored proposals based on job details",
+          "Ready-to-send messages that reference specific skills",
+          "Professional template you can customize",
+          "Checks for unresponded leads every 3 days",
+          "Sends Slack reminders to follow up",
+          "Helps maintain persistence without being pushy",
+          "Import the JSON workflow into n8n",
+          "Create Google Sheet with the specified columns",
+          "Connect credentials (Google OAuth2, Slack API)",
+          "Customize skills array to match your expertise",
+          "Update pitch templates with your info and portfolio",
+          "Activate the workflow and start generating opportunities!",
+          "Respond fast: High scores = hot opportunities",
+          "Track conversions: Update status column (New → Sent → Won/Lost)",
+          "Refine skills: Adjust keywords based on what converts",
+          "Expand sources: Add more free job boards to the scraping nodes",
+          "Stay compliant: Respect rate limits and terms of service",
+          "This workflow is completely free to run and can generate real income by automating the tedious parts of freelance hunting while keeping you in control of the actual outreach!"
         ],
         "ordered": [],
         "checkbox": []
       },
       "bold_text": [],
       "important_concepts": [],
-      "links": [
-        "Getting Started with Python",
-        "Data Science Basics",
-        "Programming Concepts"
-      ],
-      "tags": [
-        "algorithms",
-        "datascience",
-        "ml",
-        "ai"
-      ],
+      "links": [],
+      "tags": [],
       "readability": {
-        "total_lines": 39,
-        "non_empty_lines": 27,
-        "total_words": 153,
-        "total_sentences": 4,
-        "avg_words_per_line": 5.666666666666667,
-        "avg_words_per_sentence": 38.25
+        "total_lines": 61,
+        "non_empty_lines": 41,
+        "total_words": 300,
+        "total_sentences": 8,
+        "avg_words_per_line": 7.317073170731708,
+        "avg_words_per_sentence": 37.5
       },
-      "parsed_at": "2026-07-09T10:15:27.793323"
+      "parsed_at": "2026-07-09T11:24:24.145000"
     },
     {
-      "id": "04_programming_concepts",
-      "title": "04_programming_concepts",
+      "id": "Implementation of What & How",
+      "title": "Implementation of What & How",
       "file_metadata": {
-        "file_name": "04_programming_concepts.md",
-        "file_path": "04_programming_concepts.md",
-        "folder": "root",
-        "size_bytes": 997,
-        "created": "2026-07-08T14:49:16.099937",
-        "modified": "2026-07-08T14:49:16.099937"
+        "file_name": "Implementation of What & How.md",
+        "file_path": "journey\\Implementation of What & How.md",
+        "folder": "journey",
+        "size_bytes": 3532,
+        "created": "2026-07-09T11:24:06.348012",
+        "modified": "2025-10-07T18:27:22.169975"
       },
       "frontmatter": {},
-      "content": "# Programming Concepts\n\nCore programming concepts that apply across languages.\n\n## Object-Oriented Programming (OOP)\n\nOOP is a programming paradigm based on the concept of objects, which can contain data and code.\n\n### Key OOP Principles\n- **Encapsulation** - Bundling data and methods\n- **Inheritance** - Deriving new classes from existing ones\n- **Polymorphism** - Using objects of different types interchangeably\n- **Abstraction** - Hiding complex implementation details\n\n## Functional Programming\n\nA programming paradigm where computation is treated as the evaluation of mathematical functions.\n\n### Key Concepts\n- First-class functions\n- Pure functions (no side effects)\n- Immutability\n- Higher-order functions\n\n## Design Patterns\n\nReusable solutions to common programming problems.\n\n- Singleton\n- Factory\n- Observer\n- Strategy\n\n## Important to Know\n- [[Getting Started with Python]]\n- [[Data Science Basics]]\n\nTags: #programming #concepts #architecture\n",
-      "content_length": 959,
+      "content": "\n# Ready-to-Use Reddit Sales Plan for CogniMuse\n\n## Target Subreddits\n\n- r/startups\n    \n- r/Entrepreneur\n    \n- r/MachineLearning\n    \n- r/ArtificialIntelligence\n    \n- r/DataScience\n    \n- r/TechStartups\n    \n\n---\n\n## Engagement Comments (Examples for Different Audiences)\n\n- To Tech Leads / CTOs in r/MachineLearning:  \n    \"Hey, great point about model deployment challenges! At Cognimuse, we help companies streamline AI model integration smoothly — setting up MLOps pipelines and API integrations to scale efficiently. Happy to share tips or chat about your experience!\"\n    \n- To Marketing/Product Folks in r/Entrepreneur:  \n    \"Loved your post on content creation challenges! We just rolled out Generative AI tools that automate marketing copy and personalized content — freeing teams to focus on strategy. DM me if curious how this might help your workflow.\"\n    \n- To Founders in r/startups:  \n    \"Starting AI projects can be daunting, I hear this a lot. We've developed an AI readiness checklist and roadmap framework at Cognimuse that cuts through confusion to set clear goals. If interested, I can share our approach!\"\n    \n\n---\n\n## Posting Content Ideas (One per Day)\n\n- Day 1 (r/startups): \"How to Know If Your Startup Is Ready for AI — a simple readiness checklist from Cognimuse\"\n    \n- Day 2 (r/ArtificialIntelligence): \"Boosting AI Impact: Combining LLMs with Retrieval-Augmented Generation (RAG)\"\n    \n- Day 3 (r/Entrepreneur): \"Leveraging AI to Automate Day-to-Day Tasks: Real Startup Use Cases\"\n    \n\nInclude links to blog posts or short summaries, always ending with a soft call to action inviting questions.\n\n---\n\n## Sample Direct Message Scripts\n\n- **AI Strategy / Leadership (r/startups, r/Entrepreneur):**  \n    \"Hi [Name], I saw your post about scaling your startup’s tech. Cognimuse specializes in AI strategy and creating tailored roadmaps that align perfectly with business goals. Would you be open to a quick 15-minute call to explore if we can support your plans? Here's my calendar link: [Calendly_Link]\"\n    \n- **Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):**  \n    \"Hi [Name], I noticed your interest in automating content creation. We’ve developed Generative AI solutions that help startups create marketing copy and creatives faster. Could we schedule a brief chat to see if it fits your needs? [Calendly_Link]\"\n    \n- **Technical / Implementation Leads (r/MachineLearning, r/DataScience):**  \n    \"Hi [Name], your discussion on AI deployment caught my eye. Cognimuse helps with seamless AI model integration and MLOps to scale operations efficiently. Interested in a quick intro call? My calendar is here: [Calendly_Link]\"\n    \n\n---\n\n## Follow-Up Message (1 Day After No Reply)\n\n\"Hi [Name], just wanted to check if you saw my previous message. I’m happy to answer any questions you might have about how Cognimuse can help with your AI goals. Let me know if you’re interested!\"\n\n---\n\n## Tips for Effective Posting & Messaging\n\n- Always personalize messages with recipient’s name and mention something specific from their post if possible.\n    \n- Avoid hard selling; offer help or share knowledge first.\n    \n- Keep posts informative, not promotional.\n    \n- Post during high-traffic times: mornings and early evenings (Reddit local time).\n    \n- Track engagement: reply promptly to comments and messages.\n    \n\nThis should enable you to start engaging on Reddit immediately with scripts and content aligned to Cognimuse’s services and audience needs.",
+      "content_length": 3514,
       "headers": {
         "h1": [],
         "h2": [
-          "Object-Oriented Programming (OOP)",
-          "Functional Programming",
-          "Design Patterns",
-          "Important to Know"
-        ],
-        "h3": [
-          "Key OOP Principles",
-          "Key Concepts"
-        ],
-        "all": [
-          [
-            "h2",
-            "Object-Oriented Programming (OOP)"
-          ],
-          [
-            "h3",
-            "Key OOP Principles"
-          ],
-          [
-            "h2",
-            "Functional Programming"
-          ],
-          [
-            "h3",
-            "Key Concepts"
-          ],
-          [
-            "h2",
-            "Design Patterns"
-          ],
-          [
-            "h2",
-            "Important to Know"
-          ]
-        ]
-      },
-      "code_blocks": [],
-      "code_block_count": 0,
-      "quotes": [],
-      "quote_count": 0,
-      "lists": {
-        "unordered": [
-          "**Encapsulation** - Bundling data and methods",
-          "**Inheritance** - Deriving new classes from existing ones",
-          "**Polymorphism** - Using objects of different types interchangeably",
-          "**Abstraction** - Hiding complex implementation details",
-          "First-class functions",
-          "Pure functions (no side effects)",
-          "Immutability",
-          "Higher-order functions",
-          "Singleton",
-          "Factory",
-          "Observer",
-          "Strategy",
-          "[[Getting Started with Python]]",
-          "[[Data Science Basics]]"
-        ],
-        "ordered": [],
-        "checkbox": []
-      },
-      "bold_text": [
-        "Encapsulation",
-        "Inheritance",
-        "Polymorphism",
-        "Abstraction"
-      ],
-      "important_concepts": [
-        "Encapsulation",
-        "Inheritance",
-        "Polymorphism",
-        "Abstraction"
-      ],
-      "links": [
-        "Getting Started with Python",
-        "Data Science Basics"
-      ],
-      "tags": [
-        "architecture",
-        "programming",
-        "concepts"
-      ],
-      "readability": {
-        "total_lines": 39,
-        "non_empty_lines": 26,
-        "total_words": 134,
-        "total_sentences": 5,
-        "avg_words_per_line": 5.153846153846154,
-        "avg_words_per_sentence": 26.8
-      },
-      "parsed_at": "2026-07-09T10:15:27.794432"
-    },
-    {
-      "id": "05_ai_ethics",
-      "title": "05_ai_ethics",
-      "file_metadata": {
-        "file_name": "05_ai_ethics.md",
-        "file_path": "05_ai_ethics.md",
-        "folder": "root",
-        "size_bytes": 920,
-        "created": "2026-07-08T14:49:16.101952",
-        "modified": "2026-07-08T14:49:16.101952"
-      },
-      "frontmatter": {},
-      "content": "# AI Ethics\n\nImportant considerations when developing AI systems.\n\n## What is AI Ethics?\n\nAI Ethics is concerned with the responsible development and deployment of AI systems that respect human values, rights, and dignity.\n\n## Key Concerns\n\n1. **Bias and Fairness**\n   - Algorithmic bias can perpetuate discrimination\n   - Need diverse training data\n   - Regular audits for bias\n\n2. **Transparency and Explainability**\n   - Users should understand how AI makes decisions\n   - Black box models are problematic\n   - Need interpretable AI\n\n3. **Privacy**\n   - Data protection and security\n   - Informed consent\n   - Data minimization\n\n4. **Accountability**\n   - Who is responsible for AI decisions?\n   - Clear governance frameworks\n   - Liability considerations\n\n## Related Topics\n- [[Machine Learning Algorithms]]\n- [[Data Science Basics]]\n\nTags: #ai #ethics #responsibility #governance\n",
-      "content_length": 885,
-      "headers": {
-        "h1": [],
-        "h2": [
-          "What is AI Ethics?",
-          "Key Concerns",
-          "Related Topics"
+          "Target Subreddits",
+          "Engagement Comments (Examples for Different Audiences)",
+          "Posting Content Ideas (One per Day)",
+          "Sample Direct Message Scripts",
+          "Follow-Up Message (1 Day After No Reply)",
+          "Tips for Effective Posting & Messaging"
         ],
         "h3": [],
         "all": [
           [
             "h2",
-            "What is AI Ethics?"
+            "Target Subreddits"
           ],
           [
             "h2",
-            "Key Concerns"
+            "Engagement Comments (Examples for Different Audiences)"
           ],
           [
             "h2",
-            "Related Topics"
+            "Posting Content Ideas (One per Day)"
+          ],
+          [
+            "h2",
+            "Sample Direct Message Scripts"
+          ],
+          [
+            "h2",
+            "Follow-Up Message (1 Day After No Reply)"
+          ],
+          [
+            "h2",
+            "Tips for Effective Posting & Messaging"
           ]
         ]
       },
@@ -441,60 +1182,627 @@
       "quote_count": 0,
       "lists": {
         "unordered": [
-          "Algorithmic bias can perpetuate discrimination",
-          "Need diverse training data",
-          "Regular audits for bias",
-          "Users should understand how AI makes decisions",
-          "Black box models are problematic",
-          "Need interpretable AI",
-          "Data protection and security",
-          "Informed consent",
-          "Data minimization",
-          "Who is responsible for AI decisions?",
-          "Clear governance frameworks",
-          "Liability considerations",
-          "[[Machine Learning Algorithms]]",
-          "[[Data Science Basics]]"
+          "r/startups",
+          "r/Entrepreneur",
+          "r/MachineLearning",
+          "r/ArtificialIntelligence",
+          "r/DataScience",
+          "r/TechStartups",
+          "To Tech Leads / CTOs in r/MachineLearning:",
+          "To Marketing/Product Folks in r/Entrepreneur:",
+          "To Founders in r/startups:",
+          "Day 1 (r/startups): \"How to Know If Your Startup Is Ready for AI — a simple readiness checklist from Cognimuse\"",
+          "Day 2 (r/ArtificialIntelligence): \"Boosting AI Impact: Combining LLMs with Retrieval-Augmented Generation (RAG)\"",
+          "Day 3 (r/Entrepreneur): \"Leveraging AI to Automate Day-to-Day Tasks: Real Startup Use Cases\"",
+          "**AI Strategy / Leadership (r/startups, r/Entrepreneur):**",
+          "**Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):**",
+          "**Technical / Implementation Leads (r/MachineLearning, r/DataScience):**",
+          "Always personalize messages with recipient’s name and mention something specific from their post if possible.",
+          "Avoid hard selling; offer help or share knowledge first.",
+          "Keep posts informative, not promotional.",
+          "Post during high-traffic times: mornings and early evenings (Reddit local time).",
+          "Track engagement: reply promptly to comments and messages."
         ],
-        "ordered": [
-          "**Bias and Fairness**",
-          "**Transparency and Explainability**",
-          "**Privacy**",
-          "**Accountability**"
-        ],
+        "ordered": [],
         "checkbox": []
       },
       "bold_text": [
-        "Bias and Fairness",
-        "Transparency and Explainability",
-        "Privacy",
-        "Accountability"
+        "AI Strategy / Leadership (r/startups, r/Entrepreneur):",
+        "Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):",
+        "Technical / Implementation Leads (r/MachineLearning, r/DataScience):"
       ],
       "important_concepts": [
-        "Bias and Fairness",
-        "Transparency and Explainability",
-        "Privacy",
-        "Accountability"
+        "AI Strategy / Leadership (r/startups, r/Entrepreneur):",
+        "Generative AI / Marketing Teams (r/Entrepreneur, r/MachineLearning):",
+        "Technical / Implementation Leads (r/MachineLearning, r/DataScience):"
       ],
-      "links": [
-        "Machine Learning Algorithms",
-        "Data Science Basics"
-      ],
-      "tags": [
-        "ethics",
-        "responsibility",
-        "governance",
-        "ai"
-      ],
+      "links": [],
+      "tags": [],
       "readability": {
-        "total_lines": 36,
-        "non_empty_lines": 25,
-        "total_words": 124,
-        "total_sentences": 9,
-        "avg_words_per_line": 4.96,
-        "avg_words_per_sentence": 13.777777777777779
+        "total_lines": 81,
+        "non_empty_lines": 41,
+        "total_words": 510,
+        "total_sentences": 28,
+        "avg_words_per_line": 12.439024390243903,
+        "avg_words_per_sentence": 18.214285714285715
       },
-      "parsed_at": "2026-07-09T10:15:27.795747"
+      "parsed_at": "2026-07-09T11:24:24.146282"
+    },
+    {
+      "id": "Sales Workflow Features",
+      "title": "Sales Workflow Features",
+      "file_metadata": {
+        "file_name": "Sales Workflow Features.md",
+        "file_path": "journey\\Sales Workflow Features.md",
+        "folder": "journey",
+        "size_bytes": 1606,
+        "created": "2026-07-09T11:24:06.351983",
+        "modified": "2025-10-11T02:27:27.407543"
+      },
+      "frontmatter": {},
+      "content": "# Lead Generation Workflow Overview\n\n## 1. Lead Scraping & Data Extraction\n\n- Scheduled trigger (runs weekdays at 9 AM)  \n- HTTP requests to scrape target websites  \n- JavaScript-based data extraction (emails, names, companies, phone numbers)  \n- Data cleaning and deduplication  \n\n## 2. Google Sheets Integration\n\n- Automatic storage of leads  \n- Status tracking (contacted, response received)  \n- Free tier compatible  \n\n## 3. Email Outreach\n\n- Personalized email generation  \n- Gmail SMTP integration  \n- 3-day automatic follow-up system  \n- Works within Gmail's free sending limits  \n\n## 4. Slack Notifications\n\n- New lead alerts  \n- Follow-up notifications  \n- Response tracking alerts  \n\n## 5. Response Handling\n\n- Webhook to capture lead responses  \n- Automatic status updates in Google Sheets  \n\n---\n\n## 📋 Setup Instructions\n\n- Import the JSON into n8n  \n- Replace placeholders:  \n  - `YOUR_GOOGLE_SHEET_ID` - Your Google Sheet ID  \n  - `YOUR_SLACK_CHANNEL_ID` - Your Slack channel ID  \n  - `your-email@gmail.com` - Your Gmail address  \n  - Credential IDs for Google Sheets, Gmail, and Slack  \n- Configure Target URLs in the **Define Target URLs** node  \n- Customize email templates in the personalization nodes  \n- Set up credentials for Google Sheets, Gmail, and Slack APIs  \n\n---\n\n## ⚠️ Important Notes\n\n- Always respect `robots.txt` and website terms of service  \n- LinkedIn scraping may violate their ToS - use public business directories instead  \n- Stay within Gmail's 500 emails/day limit  \n- Test with a small batch first  \n- The workflow is fully functional and ready to import!  \n",
+      "content_length": 1599,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "1. Lead Scraping & Data Extraction",
+          "2. Google Sheets Integration",
+          "3. Email Outreach",
+          "4. Slack Notifications",
+          "5. Response Handling",
+          "📋 Setup Instructions",
+          "⚠️ Important Notes"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "1. Lead Scraping & Data Extraction"
+          ],
+          [
+            "h2",
+            "2. Google Sheets Integration"
+          ],
+          [
+            "h2",
+            "3. Email Outreach"
+          ],
+          [
+            "h2",
+            "4. Slack Notifications"
+          ],
+          [
+            "h2",
+            "5. Response Handling"
+          ],
+          [
+            "h2",
+            "📋 Setup Instructions"
+          ],
+          [
+            "h2",
+            "⚠️ Important Notes"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Scheduled trigger (runs weekdays at 9 AM)",
+          "HTTP requests to scrape target websites",
+          "JavaScript-based data extraction (emails, names, companies, phone numbers)",
+          "Data cleaning and deduplication",
+          "Automatic storage of leads",
+          "Status tracking (contacted, response received)",
+          "Free tier compatible",
+          "Personalized email generation",
+          "Gmail SMTP integration",
+          "3-day automatic follow-up system",
+          "Works within Gmail's free sending limits",
+          "New lead alerts",
+          "Follow-up notifications",
+          "Response tracking alerts",
+          "Webhook to capture lead responses",
+          "Automatic status updates in Google Sheets",
+          "Import the JSON into n8n",
+          "Replace placeholders:",
+          "`YOUR_GOOGLE_SHEET_ID` - Your Google Sheet ID",
+          "`YOUR_SLACK_CHANNEL_ID` - Your Slack channel ID",
+          "`your-email@gmail.com` - Your Gmail address",
+          "Credential IDs for Google Sheets, Gmail, and Slack",
+          "Configure Target URLs in the **Define Target URLs** node",
+          "Customize email templates in the personalization nodes",
+          "Set up credentials for Google Sheets, Gmail, and Slack APIs",
+          "Always respect `robots.txt` and website terms of service",
+          "LinkedIn scraping may violate their ToS - use public business directories instead",
+          "Stay within Gmail's 500 emails/day limit",
+          "Test with a small batch first",
+          "The workflow is fully functional and ready to import!"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Define Target URLs"
+      ],
+      "important_concepts": [
+        "Define Target URLs"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 57,
+        "non_empty_lines": 40,
+        "total_words": 240,
+        "total_sentences": 8,
+        "avg_words_per_line": 6.0,
+        "avg_words_per_sentence": 30.0
+      },
+      "parsed_at": "2026-07-09T11:24:24.147185"
+    },
+    {
+      "id": "Social Media Workflow Features",
+      "title": "Social Media Workflow Features",
+      "file_metadata": {
+        "file_name": "Social Media Workflow Features.md",
+        "file_path": "journey\\Social Media Workflow Features.md",
+        "folder": "journey",
+        "size_bytes": 3332,
+        "created": "2026-07-09T11:24:06.352980",
+        "modified": "2025-10-11T02:25:58.432412"
+      },
+      "frontmatter": {},
+      "content": "# Content Scheduling & Publishing Workflow Overview\n\n## 1. Content Scheduling & Publishing\n\n- Schedule-based triggers (checks every 4 hours)  \n- Google Sheets calendar management  \n- Multi-platform posting:  \n  - Twitter (API v2)  \n  - Facebook Pages (Graph API)  \n  - LinkedIn  \n- Automatic status tracking  \n\n## 2. Engagement Tracking\n\n- Real-time metrics (checks every 2 hours):  \n  - Likes/Reactions  \n  - Comments  \n  - Shares/Retweets  \n- Platform-specific API calls  \n- Automated data storage in Google Sheets  \n\n## 3. Smart Notifications\n\n- Slack alerts for:  \n  - Successful posts  \n  - High engagement (>10 interactions)  \n- Email notifications via Gmail  \n- Real-time team updates  \n\n## 4. Manual Posting\n\n- Webhook endpoint for on-demand posts  \n- API-based manual triggers  \n- Instant publishing  \n\n---\n\n## 📋 Setup Instructions\n\n### Step 1: Google Sheets Setup  \nCreate a sheet with these columns:  \nRow ID | Platform | Content | Media URL | Hashtags | Link  \nScheduled Date | Status | Post ID | Post URL | Posted At  \nLikes | Comments | Shares | Total Engagement | Last Checked  \n\n### Step 2: Get API Credentials  \n\n- **Twitter API (Free Tier):**  \n  - Go to [https://developer.twitter.com/en/portal/dashboard](https://developer.twitter.com/en/portal/dashboard)  \n  - Create a new app  \n  - Get API Key, API Secret, Access Token, Access Token Secret  \n  - Enable OAuth 2.0  \n  - Free tier: 1,500 tweets/month  \n\n- **Facebook Graph API (Free Tier):**  \n  - Go to [https://developers.facebook.com/](https://developers.facebook.com/)  \n  - Create an app  \n  - Add Facebook Login and Pages API  \n  - Get Page Access Token from Graph API Explorer  \n  - Token endpoint: [https://graph.facebook.com/v18.0/me/accounts](https://graph.facebook.com/v18.0/me/accounts)  \n  - Free tier: Unlimited posts to your own pages  \n\n- **LinkedIn API:**  \n  - Go to [https://www.linkedin.com/developers/](https://www.linkedin.com/developers/)  \n  - Create an app  \n  - Request \"Share on LinkedIn\" permissions  \n  - Get Client ID and Client Secret  \n  - Free tier: Limited to your own profile/company page  \n\n- **Slack API (Free Tier):**  \n  - Go to [https://api.slack.com/apps](https://api.slack.com/apps)  \n  - Create new app  \n  - Add OAuth scope: chat:write  \n  - Install to workspace  \n  - Get Bot Token  \n  - Free tier: 10,000 messages/month  \n\n- **Gmail API (Free Tier):**  \n  - Use Gmail OAuth in n8n  \n  - Free tier: 500 emails/day  \n\n### Step 3: Configure n8n Credentials  \nIn n8n, add these credentials:  \n- Google Sheets OAuth2 (grant sheets read/write access)  \n- Twitter OAuth2 API (add API Key and Secret, complete OAuth)  \n- Gmail OAuth2 (standard setup)  \n- Slack API (add Bot Token, select your channel)  \n\n### Step 4: Update Placeholders  \nReplace in the JSON:  \n- YOUR_GOOGLE_SHEET_ID - Google Sheets URL ID  \n- YOUR_PAGE_ID - Facebook Page ID  \n- YOUR_FACEBOOK_PAGE_ACCESS_TOKEN - From Graph API Explorer  \n- YOUR_TWITTER_CREDENTIAL_ID - n8n credential ID  \n- YOUR_GOOGLE_SHEETS_CREDENTIAL_ID - n8n credential ID  \n- YOUR_GMAIL_CREDENTIAL_ID - n8n credential ID  \n- YOUR_SLACK_CREDENTIAL_ID - n8n credential ID  \n- YOUR_SLACK_CHANNEL_ID - Slack channel ID  \n- your-email@gmail.com - Your email  \n- team@yourcompany.com - Team email  \n\n### Step 5: Populate Content Calendar  \nAdd rows to your Google Sheet accordingly.\n",
+      "content_length": 3329,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "1. Content Scheduling & Publishing",
+          "2. Engagement Tracking",
+          "3. Smart Notifications",
+          "4. Manual Posting",
+          "📋 Setup Instructions"
+        ],
+        "h3": [
+          "Step 1: Google Sheets Setup",
+          "Step 2: Get API Credentials",
+          "Step 3: Configure n8n Credentials",
+          "Step 4: Update Placeholders",
+          "Step 5: Populate Content Calendar"
+        ],
+        "all": [
+          [
+            "h2",
+            "1. Content Scheduling & Publishing"
+          ],
+          [
+            "h2",
+            "2. Engagement Tracking"
+          ],
+          [
+            "h2",
+            "3. Smart Notifications"
+          ],
+          [
+            "h2",
+            "4. Manual Posting"
+          ],
+          [
+            "h2",
+            "📋 Setup Instructions"
+          ],
+          [
+            "h3",
+            "Step 1: Google Sheets Setup"
+          ],
+          [
+            "h3",
+            "Step 2: Get API Credentials"
+          ],
+          [
+            "h3",
+            "Step 3: Configure n8n Credentials"
+          ],
+          [
+            "h3",
+            "Step 4: Update Placeholders"
+          ],
+          [
+            "h3",
+            "Step 5: Populate Content Calendar"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Schedule-based triggers (checks every 4 hours)",
+          "Google Sheets calendar management",
+          "Multi-platform posting:",
+          "Twitter (API v2)",
+          "Facebook Pages (Graph API)",
+          "LinkedIn",
+          "Automatic status tracking",
+          "Real-time metrics (checks every 2 hours):",
+          "Likes/Reactions",
+          "Comments",
+          "Shares/Retweets",
+          "Platform-specific API calls",
+          "Automated data storage in Google Sheets",
+          "Slack alerts for:",
+          "Successful posts",
+          "High engagement (>10 interactions)",
+          "Email notifications via Gmail",
+          "Real-time team updates",
+          "Webhook endpoint for on-demand posts",
+          "API-based manual triggers",
+          "Instant publishing",
+          "**Twitter API (Free Tier):**",
+          "Go to [https://developer.twitter.com/en/portal/dashboard](https://developer.twitter.com/en/portal/dashboard)",
+          "Create a new app",
+          "Get API Key, API Secret, Access Token, Access Token Secret",
+          "Enable OAuth 2.0",
+          "Free tier: 1,500 tweets/month",
+          "**Facebook Graph API (Free Tier):**",
+          "Go to [https://developers.facebook.com/](https://developers.facebook.com/)",
+          "Create an app",
+          "Add Facebook Login and Pages API",
+          "Get Page Access Token from Graph API Explorer",
+          "Token endpoint: [https://graph.facebook.com/v18.0/me/accounts](https://graph.facebook.com/v18.0/me/accounts)",
+          "Free tier: Unlimited posts to your own pages",
+          "**LinkedIn API:**",
+          "Go to [https://www.linkedin.com/developers/](https://www.linkedin.com/developers/)",
+          "Create an app",
+          "Request \"Share on LinkedIn\" permissions",
+          "Get Client ID and Client Secret",
+          "Free tier: Limited to your own profile/company page",
+          "**Slack API (Free Tier):**",
+          "Go to [https://api.slack.com/apps](https://api.slack.com/apps)",
+          "Create new app",
+          "Add OAuth scope: chat:write",
+          "Install to workspace",
+          "Get Bot Token",
+          "Free tier: 10,000 messages/month",
+          "**Gmail API (Free Tier):**",
+          "Use Gmail OAuth in n8n",
+          "Free tier: 500 emails/day",
+          "Google Sheets OAuth2 (grant sheets read/write access)",
+          "Twitter OAuth2 API (add API Key and Secret, complete OAuth)",
+          "Gmail OAuth2 (standard setup)",
+          "Slack API (add Bot Token, select your channel)",
+          "YOUR_GOOGLE_SHEET_ID - Google Sheets URL ID",
+          "YOUR_PAGE_ID - Facebook Page ID",
+          "YOUR_FACEBOOK_PAGE_ACCESS_TOKEN - From Graph API Explorer",
+          "YOUR_TWITTER_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_GMAIL_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_SLACK_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_SLACK_CHANNEL_ID - Slack channel ID",
+          "your-email@gmail.com - Your email",
+          "team@yourcompany.com - Team email"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Twitter API (Free Tier):",
+        "Facebook Graph API (Free Tier):",
+        "LinkedIn API:",
+        "Slack API (Free Tier):",
+        "Gmail API (Free Tier):"
+      ],
+      "important_concepts": [
+        "Twitter API (Free Tier):",
+        "Facebook Graph API (Free Tier):",
+        "LinkedIn API:",
+        "Slack API (Free Tier):",
+        "Gmail API (Free Tier):"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 104,
+        "non_empty_lines": 83,
+        "total_words": 456,
+        "total_sentences": 30,
+        "avg_words_per_line": 5.493975903614458,
+        "avg_words_per_sentence": 15.2
+      },
+      "parsed_at": "2026-07-09T11:24:24.148098"
+    },
+    {
+      "id": "Sales Workflow Features",
+      "title": "Sales Workflow Features",
+      "file_metadata": {
+        "file_name": "Sales Workflow Features.md",
+        "file_path": "Sales Workflow Features.md",
+        "folder": "root",
+        "size_bytes": 1606,
+        "created": "2026-07-09T11:19:44.949485",
+        "modified": "2025-10-11T02:27:27.407543"
+      },
+      "frontmatter": {},
+      "content": "# Lead Generation Workflow Overview\n\n## 1. Lead Scraping & Data Extraction\n\n- Scheduled trigger (runs weekdays at 9 AM)  \n- HTTP requests to scrape target websites  \n- JavaScript-based data extraction (emails, names, companies, phone numbers)  \n- Data cleaning and deduplication  \n\n## 2. Google Sheets Integration\n\n- Automatic storage of leads  \n- Status tracking (contacted, response received)  \n- Free tier compatible  \n\n## 3. Email Outreach\n\n- Personalized email generation  \n- Gmail SMTP integration  \n- 3-day automatic follow-up system  \n- Works within Gmail's free sending limits  \n\n## 4. Slack Notifications\n\n- New lead alerts  \n- Follow-up notifications  \n- Response tracking alerts  \n\n## 5. Response Handling\n\n- Webhook to capture lead responses  \n- Automatic status updates in Google Sheets  \n\n---\n\n## 📋 Setup Instructions\n\n- Import the JSON into n8n  \n- Replace placeholders:  \n  - `YOUR_GOOGLE_SHEET_ID` - Your Google Sheet ID  \n  - `YOUR_SLACK_CHANNEL_ID` - Your Slack channel ID  \n  - `your-email@gmail.com` - Your Gmail address  \n  - Credential IDs for Google Sheets, Gmail, and Slack  \n- Configure Target URLs in the **Define Target URLs** node  \n- Customize email templates in the personalization nodes  \n- Set up credentials for Google Sheets, Gmail, and Slack APIs  \n\n---\n\n## ⚠️ Important Notes\n\n- Always respect `robots.txt` and website terms of service  \n- LinkedIn scraping may violate their ToS - use public business directories instead  \n- Stay within Gmail's 500 emails/day limit  \n- Test with a small batch first  \n- The workflow is fully functional and ready to import!  \n",
+      "content_length": 1599,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "1. Lead Scraping & Data Extraction",
+          "2. Google Sheets Integration",
+          "3. Email Outreach",
+          "4. Slack Notifications",
+          "5. Response Handling",
+          "📋 Setup Instructions",
+          "⚠️ Important Notes"
+        ],
+        "h3": [],
+        "all": [
+          [
+            "h2",
+            "1. Lead Scraping & Data Extraction"
+          ],
+          [
+            "h2",
+            "2. Google Sheets Integration"
+          ],
+          [
+            "h2",
+            "3. Email Outreach"
+          ],
+          [
+            "h2",
+            "4. Slack Notifications"
+          ],
+          [
+            "h2",
+            "5. Response Handling"
+          ],
+          [
+            "h2",
+            "📋 Setup Instructions"
+          ],
+          [
+            "h2",
+            "⚠️ Important Notes"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Scheduled trigger (runs weekdays at 9 AM)",
+          "HTTP requests to scrape target websites",
+          "JavaScript-based data extraction (emails, names, companies, phone numbers)",
+          "Data cleaning and deduplication",
+          "Automatic storage of leads",
+          "Status tracking (contacted, response received)",
+          "Free tier compatible",
+          "Personalized email generation",
+          "Gmail SMTP integration",
+          "3-day automatic follow-up system",
+          "Works within Gmail's free sending limits",
+          "New lead alerts",
+          "Follow-up notifications",
+          "Response tracking alerts",
+          "Webhook to capture lead responses",
+          "Automatic status updates in Google Sheets",
+          "Import the JSON into n8n",
+          "Replace placeholders:",
+          "`YOUR_GOOGLE_SHEET_ID` - Your Google Sheet ID",
+          "`YOUR_SLACK_CHANNEL_ID` - Your Slack channel ID",
+          "`your-email@gmail.com` - Your Gmail address",
+          "Credential IDs for Google Sheets, Gmail, and Slack",
+          "Configure Target URLs in the **Define Target URLs** node",
+          "Customize email templates in the personalization nodes",
+          "Set up credentials for Google Sheets, Gmail, and Slack APIs",
+          "Always respect `robots.txt` and website terms of service",
+          "LinkedIn scraping may violate their ToS - use public business directories instead",
+          "Stay within Gmail's 500 emails/day limit",
+          "Test with a small batch first",
+          "The workflow is fully functional and ready to import!"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Define Target URLs"
+      ],
+      "important_concepts": [
+        "Define Target URLs"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 57,
+        "non_empty_lines": 40,
+        "total_words": 240,
+        "total_sentences": 8,
+        "avg_words_per_line": 6.0,
+        "avg_words_per_sentence": 30.0
+      },
+      "parsed_at": "2026-07-09T11:24:24.149227"
+    },
+    {
+      "id": "Social Media Workflow Features",
+      "title": "Social Media Workflow Features",
+      "file_metadata": {
+        "file_name": "Social Media Workflow Features.md",
+        "file_path": "Social Media Workflow Features.md",
+        "folder": "root",
+        "size_bytes": 3332,
+        "created": "2026-07-09T11:19:44.949485",
+        "modified": "2025-10-11T02:25:58.432412"
+      },
+      "frontmatter": {},
+      "content": "# Content Scheduling & Publishing Workflow Overview\n\n## 1. Content Scheduling & Publishing\n\n- Schedule-based triggers (checks every 4 hours)  \n- Google Sheets calendar management  \n- Multi-platform posting:  \n  - Twitter (API v2)  \n  - Facebook Pages (Graph API)  \n  - LinkedIn  \n- Automatic status tracking  \n\n## 2. Engagement Tracking\n\n- Real-time metrics (checks every 2 hours):  \n  - Likes/Reactions  \n  - Comments  \n  - Shares/Retweets  \n- Platform-specific API calls  \n- Automated data storage in Google Sheets  \n\n## 3. Smart Notifications\n\n- Slack alerts for:  \n  - Successful posts  \n  - High engagement (>10 interactions)  \n- Email notifications via Gmail  \n- Real-time team updates  \n\n## 4. Manual Posting\n\n- Webhook endpoint for on-demand posts  \n- API-based manual triggers  \n- Instant publishing  \n\n---\n\n## 📋 Setup Instructions\n\n### Step 1: Google Sheets Setup  \nCreate a sheet with these columns:  \nRow ID | Platform | Content | Media URL | Hashtags | Link  \nScheduled Date | Status | Post ID | Post URL | Posted At  \nLikes | Comments | Shares | Total Engagement | Last Checked  \n\n### Step 2: Get API Credentials  \n\n- **Twitter API (Free Tier):**  \n  - Go to [https://developer.twitter.com/en/portal/dashboard](https://developer.twitter.com/en/portal/dashboard)  \n  - Create a new app  \n  - Get API Key, API Secret, Access Token, Access Token Secret  \n  - Enable OAuth 2.0  \n  - Free tier: 1,500 tweets/month  \n\n- **Facebook Graph API (Free Tier):**  \n  - Go to [https://developers.facebook.com/](https://developers.facebook.com/)  \n  - Create an app  \n  - Add Facebook Login and Pages API  \n  - Get Page Access Token from Graph API Explorer  \n  - Token endpoint: [https://graph.facebook.com/v18.0/me/accounts](https://graph.facebook.com/v18.0/me/accounts)  \n  - Free tier: Unlimited posts to your own pages  \n\n- **LinkedIn API:**  \n  - Go to [https://www.linkedin.com/developers/](https://www.linkedin.com/developers/)  \n  - Create an app  \n  - Request \"Share on LinkedIn\" permissions  \n  - Get Client ID and Client Secret  \n  - Free tier: Limited to your own profile/company page  \n\n- **Slack API (Free Tier):**  \n  - Go to [https://api.slack.com/apps](https://api.slack.com/apps)  \n  - Create new app  \n  - Add OAuth scope: chat:write  \n  - Install to workspace  \n  - Get Bot Token  \n  - Free tier: 10,000 messages/month  \n\n- **Gmail API (Free Tier):**  \n  - Use Gmail OAuth in n8n  \n  - Free tier: 500 emails/day  \n\n### Step 3: Configure n8n Credentials  \nIn n8n, add these credentials:  \n- Google Sheets OAuth2 (grant sheets read/write access)  \n- Twitter OAuth2 API (add API Key and Secret, complete OAuth)  \n- Gmail OAuth2 (standard setup)  \n- Slack API (add Bot Token, select your channel)  \n\n### Step 4: Update Placeholders  \nReplace in the JSON:  \n- YOUR_GOOGLE_SHEET_ID - Google Sheets URL ID  \n- YOUR_PAGE_ID - Facebook Page ID  \n- YOUR_FACEBOOK_PAGE_ACCESS_TOKEN - From Graph API Explorer  \n- YOUR_TWITTER_CREDENTIAL_ID - n8n credential ID  \n- YOUR_GOOGLE_SHEETS_CREDENTIAL_ID - n8n credential ID  \n- YOUR_GMAIL_CREDENTIAL_ID - n8n credential ID  \n- YOUR_SLACK_CREDENTIAL_ID - n8n credential ID  \n- YOUR_SLACK_CHANNEL_ID - Slack channel ID  \n- your-email@gmail.com - Your email  \n- team@yourcompany.com - Team email  \n\n### Step 5: Populate Content Calendar  \nAdd rows to your Google Sheet accordingly.\n",
+      "content_length": 3329,
+      "headers": {
+        "h1": [],
+        "h2": [
+          "1. Content Scheduling & Publishing",
+          "2. Engagement Tracking",
+          "3. Smart Notifications",
+          "4. Manual Posting",
+          "📋 Setup Instructions"
+        ],
+        "h3": [
+          "Step 1: Google Sheets Setup",
+          "Step 2: Get API Credentials",
+          "Step 3: Configure n8n Credentials",
+          "Step 4: Update Placeholders",
+          "Step 5: Populate Content Calendar"
+        ],
+        "all": [
+          [
+            "h2",
+            "1. Content Scheduling & Publishing"
+          ],
+          [
+            "h2",
+            "2. Engagement Tracking"
+          ],
+          [
+            "h2",
+            "3. Smart Notifications"
+          ],
+          [
+            "h2",
+            "4. Manual Posting"
+          ],
+          [
+            "h2",
+            "📋 Setup Instructions"
+          ],
+          [
+            "h3",
+            "Step 1: Google Sheets Setup"
+          ],
+          [
+            "h3",
+            "Step 2: Get API Credentials"
+          ],
+          [
+            "h3",
+            "Step 3: Configure n8n Credentials"
+          ],
+          [
+            "h3",
+            "Step 4: Update Placeholders"
+          ],
+          [
+            "h3",
+            "Step 5: Populate Content Calendar"
+          ]
+        ]
+      },
+      "code_blocks": [],
+      "code_block_count": 0,
+      "quotes": [],
+      "quote_count": 0,
+      "lists": {
+        "unordered": [
+          "Schedule-based triggers (checks every 4 hours)",
+          "Google Sheets calendar management",
+          "Multi-platform posting:",
+          "Twitter (API v2)",
+          "Facebook Pages (Graph API)",
+          "LinkedIn",
+          "Automatic status tracking",
+          "Real-time metrics (checks every 2 hours):",
+          "Likes/Reactions",
+          "Comments",
+          "Shares/Retweets",
+          "Platform-specific API calls",
+          "Automated data storage in Google Sheets",
+          "Slack alerts for:",
+          "Successful posts",
+          "High engagement (>10 interactions)",
+          "Email notifications via Gmail",
+          "Real-time team updates",
+          "Webhook endpoint for on-demand posts",
+          "API-based manual triggers",
+          "Instant publishing",
+          "**Twitter API (Free Tier):**",
+          "Go to [https://developer.twitter.com/en/portal/dashboard](https://developer.twitter.com/en/portal/dashboard)",
+          "Create a new app",
+          "Get API Key, API Secret, Access Token, Access Token Secret",
+          "Enable OAuth 2.0",
+          "Free tier: 1,500 tweets/month",
+          "**Facebook Graph API (Free Tier):**",
+          "Go to [https://developers.facebook.com/](https://developers.facebook.com/)",
+          "Create an app",
+          "Add Facebook Login and Pages API",
+          "Get Page Access Token from Graph API Explorer",
+          "Token endpoint: [https://graph.facebook.com/v18.0/me/accounts](https://graph.facebook.com/v18.0/me/accounts)",
+          "Free tier: Unlimited posts to your own pages",
+          "**LinkedIn API:**",
+          "Go to [https://www.linkedin.com/developers/](https://www.linkedin.com/developers/)",
+          "Create an app",
+          "Request \"Share on LinkedIn\" permissions",
+          "Get Client ID and Client Secret",
+          "Free tier: Limited to your own profile/company page",
+          "**Slack API (Free Tier):**",
+          "Go to [https://api.slack.com/apps](https://api.slack.com/apps)",
+          "Create new app",
+          "Add OAuth scope: chat:write",
+          "Install to workspace",
+          "Get Bot Token",
+          "Free tier: 10,000 messages/month",
+          "**Gmail API (Free Tier):**",
+          "Use Gmail OAuth in n8n",
+          "Free tier: 500 emails/day",
+          "Google Sheets OAuth2 (grant sheets read/write access)",
+          "Twitter OAuth2 API (add API Key and Secret, complete OAuth)",
+          "Gmail OAuth2 (standard setup)",
+          "Slack API (add Bot Token, select your channel)",
+          "YOUR_GOOGLE_SHEET_ID - Google Sheets URL ID",
+          "YOUR_PAGE_ID - Facebook Page ID",
+          "YOUR_FACEBOOK_PAGE_ACCESS_TOKEN - From Graph API Explorer",
+          "YOUR_TWITTER_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_GMAIL_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_SLACK_CREDENTIAL_ID - n8n credential ID",
+          "YOUR_SLACK_CHANNEL_ID - Slack channel ID",
+          "your-email@gmail.com - Your email",
+          "team@yourcompany.com - Team email"
+        ],
+        "ordered": [],
+        "checkbox": []
+      },
+      "bold_text": [
+        "Twitter API (Free Tier):",
+        "Facebook Graph API (Free Tier):",
+        "LinkedIn API:",
+        "Slack API (Free Tier):",
+        "Gmail API (Free Tier):"
+      ],
+      "important_concepts": [
+        "Twitter API (Free Tier):",
+        "Facebook Graph API (Free Tier):",
+        "LinkedIn API:",
+        "Slack API (Free Tier):",
+        "Gmail API (Free Tier):"
+      ],
+      "links": [],
+      "tags": [],
+      "readability": {
+        "total_lines": 104,
+        "non_empty_lines": 83,
+        "total_words": 456,
+        "total_sentences": 30,
+        "avg_words_per_line": 5.493975903614458,
+        "avg_words_per_sentence": 15.2
+      },
+      "parsed_at": "2026-07-09T11:24:24.150283"
     }
   ]
 }
