@@ -1,8 +1,9 @@
 """
-Obsidian AI Brain - Phase 6: AI Insights Generator
+Obsidian AI Brain - Phase 6: AI Insights Generator (FIXED)
 Purpose: Generate insights using local LLM
 Author: RAze
 Date: 2026-07-08
+Fix: Corrected data structure in analyze_learning_topics() to return dicts instead of strings
 """
 
 import json
@@ -93,7 +94,7 @@ Summary:"""
             return "Unable to generate insights"
     
     def analyze_learning_topics(self, notes):
-        """Identify learning topics."""
+        """Identify learning topics - FIXED to return dict structure."""
         all_concepts = []
         for note in notes:
             all_concepts.extend(note['important_concepts'])
@@ -103,16 +104,33 @@ Summary:"""
         for concept in all_concepts:
             concept_freq[concept] = concept_freq.get(concept, 0) + 1
         
-        # Sort
+        # Sort by frequency
         sorted_concepts = sorted(
             concept_freq.items(),
             key=lambda x: x[1],
             reverse=True
         )
         
+        # ✅ FIXED: Return as list of dicts for consistency with UI expectations
         return {
-            'top_topics': [c[0] for c in sorted_concepts[:10]],
-            'topic_frequency': sorted_concepts[:10]
+            'top_topics': [
+                {
+                    'name': concept,
+                    'frequency': freq,
+                    'rank': rank + 1
+                }
+                for rank, (concept, freq) in enumerate(sorted_concepts[:10])
+            ],
+            'topic_frequency': [
+                {
+                    'name': concept,
+                    'frequency': freq,
+                    'rank': rank + 1
+                }
+                for rank, (concept, freq) in enumerate(sorted_concepts[:10])
+            ],
+            'total_unique_concepts': len(concept_freq),
+            'total_concept_mentions': len(all_concepts)
         }
 
 
@@ -162,23 +180,34 @@ def main():
     vault_insights = generator.generate_vault_insights(notes)
     print(f"\n{vault_insights}")
     
-    # Analyze topics
+    # Analyze topics - NOW RETURNS DICTS ✅
     print(f"\n📊 Learning Topics:")
     topics = generator.analyze_learning_topics(notes)
-    for i, (topic, freq) in enumerate(topics['topic_frequency'][:5], 1):
-        print(f"   {i}. {topic} (mentioned {freq} times)")
     
-    # Save insights
+    print(f"   Total unique concepts: {topics['total_unique_concepts']}")
+    print(f"   Total mentions: {topics['total_concept_mentions']}")
+    print(f"\n   Top Topics:")
+    
+    for topic in topics['top_topics'][:5]:
+        print(f"   {topic['rank']}. {topic['name']} (mentioned {topic['frequency']} times)")
+    
+    # Save insights - FIXED FORMAT ✅
     insights_data = {
         'vault_insights': vault_insights,
-        'top_topics': topics['top_topics']
+        'top_topics': topics['top_topics'],
+        'topic_frequency': topics['topic_frequency'],
+        'stats': {
+            'total_unique_concepts': topics['total_unique_concepts'],
+            'total_concept_mentions': topics['total_concept_mentions']
+        }
     }
     
     with open('data/insights.json', 'w', encoding='utf-8') as f:
         json.dump(insights_data, f, indent=2)
     
-    logger.info(f"✅ Saved insights")
+    logger.info(f"✅ Saved insights with correct format")
     print("\n✅ INSIGHTS COMPLETE!")
+    print("   Data format: ✅ Returns dicts with 'name' and 'frequency' fields")
     print("   Next: Run: python obsidian_07_streamlit_ui.py")
     print("="*80)
 

@@ -1,281 +1,422 @@
-"""
-Obsidian AI Brain - Phase 7: Streamlit Web Interface
-Purpose: Beautiful dashboard for knowledge brain
-Author: RAze
-Date: 2026-07-08
-"""
-
 import streamlit as st
 import json
+import os
+from datetime import datetime
+import pandas as pd
 from pathlib import Path
-import networkx as nx
-import matplotlib.pyplot as plt
+import re
 
-st.set_page_config(page_title="🧠 Obsidian AI Brain", layout="wide", page_icon="🧠")
+try:
+    from pyvis.network import Network
+    import networkx as nx
+except ImportError:
+    st.warning("⚠️ Install pyvis and networkx: pip install pyvis networkx")
 
-# CSS
+# Page config
+st.set_page_config(page_title="🧠 Obsidian AI Brain", layout="wide")
+
+# Custom CSS
 st.markdown("""
 <style>
-    .metric-card { background-color: #f0f2f6; padding: 1.5rem; border-radius: 0.5rem; }
-    .insight-box { background-color: #e8f4f8; color: #000000; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; }
+    .main { padding: 2rem; }
+    .metric-card { 
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .insight-box {
+        background: #f0f4ff;
+        border-left: 4px solid #667eea;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-radius: 4px;
+    }
+    .note-preview {
+        background: #fafafa;
+        padding: 1rem;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+    }
+    .knowledge-graph-container {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
 </style>
 """, unsafe_allow_html=True)
 
-# ============================================================================
-# SIDEBAR
-# ============================================================================
+# Initialize session state
+if "current_note" not in st.session_state:
+    st.session_state.current_note = None
 
-with st.sidebar:
-    st.title("⚙️ Settings")
-    st.divider()
+# Load data
+@st.cache_resource
+def load_data():
+    data = {}
+    try:
+        if os.path.exists("data/vault_scan.json"):
+            with open("data/vault_scan.json") as f:
+                data["vault_scan"] = json.load(f)
+    except: pass
     
-    # Try to load data
-    @st.cache_data
-    def load_data():
-        try:
-            with open('data/enriched_notes.json', 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                if isinstance(data, list):
-                    notes = data
-                elif isinstance(data, dict) and 'notes' in data:
-                    notes = data['notes']
-                else:
-                    notes = list(data.values()) if isinstance(data, dict) else []
-            
-            with open('data/graph_data.json', 'r', encoding='utf-8') as f:
-                graph_data = json.load(f)
-            with open('data/insights.json', 'r', encoding='utf-8') as f:
-                insights = json.load(f)
-            with open('data/link_suggestions.json', 'r', encoding='utf-8') as f:
-                suggestions = json.load(f)
-            return notes, graph_data, insights, suggestions
-        except Exception as e:
-            st.error(f"Error loading data: {e}")
-            return None, None, None, None
+    try:
+        if os.path.exists("data/enriched_notes.json"):
+            with open("data/enriched_notes.json") as f:
+                data["enriched_notes"] = json.load(f)
+    except: pass
     
-    notes, graph_data, insights, suggestions = load_data()
+    try:
+        if os.path.exists("data/knowledge_graph.json"):
+            with open("data/knowledge_graph.json") as f:
+                data["knowledge_graph"] = json.load(f)
+    except: pass
     
-    if notes is None:
-        st.warning("⚠️  Run setup phases first!")
-        st.stop()
+    try:
+        if os.path.exists("data/insights.json"):
+            with open("data/insights.json") as f:
+                data["insights"] = json.load(f)
+    except: pass
     
-    st.metric("Total Notes", len(notes))
-    st.metric("Total Connections", graph_data['stats']['total_edges'])
-    st.divider()
+    try:
+        if os.path.exists("data/link_suggestions.json"):
+            with open("data/link_suggestions.json") as f:
+                data["link_suggestions"] = json.load(f)
+    except: pass
     
-    search_query = st.text_input("🔍 Search notes:")
+    return data
 
-# ============================================================================
-# MAIN TABS
-# ============================================================================
+data = load_data()
 
+# HEADER
+col1, col2 = st.columns([0.8, 0.2])
+with col1:
+    st.title("🧠 Obsidian AI Brain")
+    st.markdown("Your intelligent second brain • Locally powered • Always yours")
+with col2:
+    if st.button("🔄 Refresh Data", key="refresh_btn"):
+        st.cache_resource.clear()
+        st.rerun()
+
+# TABS
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📊 Dashboard", "📝 Notes", "🕸️ Graph", "💡 Insights", "🔗 Links"
+    "📚 Notes Browser",
+    "🕸️ Knowledge Graph",
+    "💡 Vault Intelligence",
+    "🔗 Link Suggestions",
+    "⚙️ Settings"
 ])
 
-# ============================================================================
-# TAB 1: DASHBOARD
-# ============================================================================
-
+# ============ TAB 1: NOTES BROWSER ============
 with tab1:
-    st.title("🧠 Your Knowledge Brain")
-    st.markdown("Powered by AI-enhanced Obsidian vault analysis")
+    st.header("📚 Browse Your Notes")
     
-    st.divider()
-    
-    # Key metrics
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.metric("📚 Total Notes", len(notes))
-    with col2:
-        total_words = sum(n['readability']['total_words'] for n in notes)
-        st.metric("📝 Total Words", f"{total_words:,}")
-    with col3:
-        all_tags = set()
-        for n in notes:
-            all_tags.update(n['tags'])
-        st.metric("🏷️ Unique Tags", len(all_tags))
-    with col4:
-        st.metric("🔗 Total Links", graph_data['stats']['total_edges'])
-    
-    st.divider()
-    
-    # Insights
-    if insights:
-        st.subheader("💡 Vault Insights")
-        st.markdown(f"""
-<div class="insight-box">
-{insights.get('vault_insights', 'Insights generating...')}
-</div>
-""", unsafe_allow_html=True)
-    
-    st.divider()
-    
-    # Top topics
-    col1, col2 = st.columns([1, 1])
-    
-    with col1:
-        st.subheader("🎯 Top Learning Topics")
-        if insights and 'top_topics' in insights:
-            for i, topic in enumerate(insights['top_topics'][:5], 1):
-                st.write(f"{i}. **{topic}**")
-    
-    with col2:
-        st.subheader("📊 Notes Distribution")
-        folders = {}
+    if "enriched_notes" in data and data["enriched_notes"]:
+        notes = data["enriched_notes"]
+        
+        # Search & filter
+        col1, col2 = st.columns([0.7, 0.3])
+        with col1:
+            search_term = st.text_input("🔍 Search notes", placeholder="type to filter...")
+        with col2:
+            view_mode = st.radio("View:", ["Expanded", "Compact", "Table"], horizontal=True)
+        
+        # Filter notes
+        filtered_notes = []
         for note in notes:
-            folder = note['file_metadata']['folder']
-            folders[folder] = folders.get(folder, 0) + 1
+            title = note.get("title", "").lower()
+            content = note.get("content", "").lower()
+            if search_term.lower() in title or search_term.lower() in content:
+                filtered_notes.append(note)
         
-        fig, ax = plt.subplots(figsize=(6, 4))
-        ax.pie(folders.values(), labels=folders.keys(), autopct='%1.1f%%')
-        ax.set_title('Notes by Folder')
-        st.pyplot(fig)
-
-# ============================================================================
-# TAB 2: NOTES BROWSER
-# ============================================================================
-
-with tab2:
-    st.title("📚 Notes Browser")
-    
-    # Filter options
-    col1, col2 = st.columns([1, 1])
-    with col1:
-        selected_folder = st.selectbox(
-            "Filter by folder:",
-            ['All'] + list(set(n['file_metadata']['folder'] for n in notes))
-        )
-    with col2:
-        sort_by = st.radio("Sort by:", ["Title", "Word Count", "Modified Date"])
-    
-    # Filter notes
-    filtered_notes = notes
-    if selected_folder != 'All':
-        filtered_notes = [n for n in notes if n['file_metadata']['folder'] == selected_folder]
-    
-    # Sort notes
-    if sort_by == "Word Count":
-        filtered_notes = sorted(filtered_notes, key=lambda x: x['readability']['total_words'], reverse=True)
-    elif sort_by == "Modified Date":
-        filtered_notes = sorted(filtered_notes, key=lambda x: x['file_metadata']['modified'], reverse=True)
+        st.markdown(f"**Found {len(filtered_notes)} of {len(notes)} notes**")
+        
+        if view_mode == "Expanded":
+            # EXPANDED VIEW: Dual layout with content
+            for i, note in enumerate(filtered_notes[:50]):  # Limit to 50 for performance
+                with st.container():
+                    col1, col2 = st.columns([0.6, 0.4])
+                    
+                    with col1:
+                        st.markdown(f"### {note.get('title', 'Untitled')}")
+                        st.markdown(f"📁 `{note.get('path', 'unknown')}`")
+                        
+                        content = note.get("content", "")[:500]
+                        st.markdown(f"```\n{content}...\n```")
+                    
+                    with col2:
+                        st.markdown("**📊 Metrics**")
+                        col_a, col_b, col_c = st.columns(3)
+                        with col_a:
+                            st.metric("Words", note.get("word_count", 0))
+                        with col_b:
+                            st.metric("Headers", note.get("header_count", 0))
+                        with col_c:
+                            st.metric("Links", len(note.get("links", [])))
+                        
+                        tags = note.get("tags", [])
+                        if tags:
+                            st.markdown("**🏷️ Tags**")
+                            for tag in tags[:5]:
+                                st.write(f"`{tag}`")
+                    
+                    st.divider()
+        
+        elif view_mode == "Compact":
+            # COMPACT VIEW: Streamlined list
+            for note in filtered_notes[:100]:
+                st.markdown(f"""
+                **{note.get('title', 'Untitled')}**  
+                📁 {note.get('path', 'unknown')} | 📝 {note.get('word_count', 0)} words | 🔗 {len(note.get('links', []))} links
+                """)
+                st.divider()
+        
+        else:  # Table view
+            # TABLE VIEW: Sortable dataframe
+            table_data = []
+            for note in filtered_notes:
+                table_data.append({
+                    "Title": note.get("title", "Untitled"),
+                    "Path": note.get("path", "unknown"),
+                    "Words": note.get("word_count", 0),
+                    "Headers": note.get("header_count", 0),
+                    "Links": len(note.get("links", [])),
+                    "Modified": note.get("modified", "unknown")
+                })
+            
+            if table_data:
+                df = pd.DataFrame(table_data)
+                st.dataframe(df, use_container_width=True, height=500)
+            else:
+                st.info("No notes found matching your search.")
     else:
-        filtered_notes = sorted(filtered_notes, key=lambda x: x['title'])
+        st.info("No notes loaded. Run obsidian_02_note_parser.py first.")
+
+# ============ TAB 2: KNOWLEDGE GRAPH ============
+with tab2:
+    st.header("🕸️ Knowledge Graph")
     
-    # Display notes
-    for note in filtered_notes:
-        with st.expander(f"📄 {note['title']} ({note['readability']['total_words']} words)"):
-            st.write(f"**Folder:** {note['file_metadata']['folder']}")
-            preview = note.get('content_preview', note.get('content', 'No preview available')[:200]); st.write(f"**Preview:** {preview}")
+    if "knowledge_graph" in data and data["knowledge_graph"]:
+        graph_data = data["knowledge_graph"]
+        
+        col1, col2 = st.columns([0.7, 0.3])
+        with col1:
+            st.subheader("Interactive Network Visualization")
+        with col2:
+            physics = st.checkbox("Physics simulation", value=True)
+        
+        try:
+            # Create PyVis network
+            net = Network(height='600px', directed=True, physics=physics)
+            net.barnes_hut()
             
-            if note['tags']:
-                tags = " ".join([f"`{t}`" for t in note['tags'][:5]])
-                st.write(f"**Tags:** {tags}")
+            # Add nodes
+            nodes = graph_data.get("nodes", [])
+            for node in nodes:
+                size = min(30, max(10, node.get("size", 15)))
+                color = "#667eea" if node.get("centrality", 0) > 0.1 else "#a0aec0"
+                net.add_node(
+                    node["id"],
+                    label=node.get("label", node["id"])[:30],
+                    title=node.get("label", node["id"]),
+                    size=size,
+                    color=color
+                )
             
-            if note['links']:
-                st.write(f"**Links to:** {', '.join(note['links'][:3])}")
+            # Add edges
+            edges = graph_data.get("edges", [])
+            for edge in edges:
+                net.add_edge(edge["source"], edge["target"], weight=edge.get("weight", 1))
+            
+            # Save and display
+            net.show("temp_graph.html")
+            with open("temp_graph.html", "r", encoding="utf-8") as f:
+                html_string = f.read()
+            
+            st.components.v1.html(html_string, height=650)
+            
+            # Graph statistics
+            st.markdown("---")
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("Total Notes", len(nodes))
+            with col2:
+                st.metric("Total Connections", len(edges))
+            with col3:
+                avg_connections = len(edges) / max(1, len(nodes))
+                st.metric("Avg Links/Note", f"{avg_connections:.1f}")
+            with col4:
+                st.metric("Network Density", f"{graph_data.get('density', 0):.2%}")
+            
+            # Top connected notes
+            st.subheader("🌟 Most Connected Notes")
+            top_nodes = sorted(nodes, key=lambda x: x.get("centrality", 0), reverse=True)[:10]
+            for rank, node in enumerate(top_nodes, 1):
+                st.markdown(f"**{rank}. {node.get('label', 'Unknown')}** ({node.get('centrality', 0):.2f})")
+        
+        except Exception as e:
+            st.error(f"⚠️ Graph rendering error: {str(e)}")
+            st.info("Ensure pyvis is installed: `pip install pyvis`")
+    else:
+        st.info("No knowledge graph data. Run obsidian_05_knowledge_graph.py first.")
 
-# ============================================================================
-# TAB 3: KNOWLEDGE GRAPH
-# ============================================================================
-
+# ============ TAB 3: VAULT INTELLIGENCE ============
 with tab3:
-    st.title("🕸️ Knowledge Graph")
-    st.info("Visual representation of connections between your notes")
+    st.header("💡 Vault Intelligence")
     
-    # Simple stats
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.metric("Nodes", graph_data['stats']['total_nodes'])
-    with col2:
-        st.metric("Edges", graph_data['stats']['total_edges'])
-    with col3:
-        density = graph_data['stats']['total_edges'] / max(graph_data['stats']['total_nodes'], 1)
-        st.metric("Connectivity", f"{density:.2f}")
-    
-    st.divider()
-    
-    # Top connected notes
-    st.subheader("🌟 Most Connected Notes")
-    
-    # Calculate in-degree
-    note_connections = {}
-    for edge in graph_data['edges']:
-        target = edge['target']
-        note_connections[target] = note_connections.get(target, 0) + 1
-    
-    sorted_notes = sorted(note_connections.items(), key=lambda x: x[1], reverse=True)
-    
-    for node_id, count in sorted_notes[:10]:
-        # Find note title
-        note_title = None
-        for node in graph_data['nodes']:
-            if node['id'] == node_id:
-                note_title = node['label']
-                break
+    if "insights" in data and data["insights"]:
+        insights = data["insights"]
         
-        if note_title:
-            st.write(f"📍 **{note_title}** - {count} connections")
+        # Overview metrics
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("Total Notes", insights.get("total_notes", 0))
+        with col2:
+            st.metric("Total Words", f"{insights.get('total_words', 0):,}")
+        with col3:
+            st.metric("Average Note Length", f"{insights.get('avg_note_length', 0):.0f} words")
+        with col4:
+            st.metric("Network Density", f"{insights.get('network_density', 0):.2%}")
+        
+        st.markdown("---")
+        
+        # AI-Generated Insights
+        st.subheader("🤖 AI Analysis")
+        
+        if "analysis" in insights:
+            analysis = insights["analysis"]
+            
+            # Parse and format insights with proper line breaks
+            if isinstance(analysis, str):
+                # Split by numbered patterns (1., 2., etc)
+                parts = re.split(r'(\d+\.)', analysis)
+                
+                insight_text = ""
+                for i in range(1, len(parts), 2):
+                    if i+1 < len(parts):
+                        number = parts[i]
+                        content = parts[i+1].strip()
+                        insight_text += f"**{number}** {content}\n\n"
+                
+                st.markdown(insight_text)
+            else:
+                st.json(analysis)
+        
+        st.markdown("---")
+        
+        # Top Topics
+        st.subheader("📚 Top Topics")
+        if "top_topics" in insights:
+            topics = insights["top_topics"]
+            
+            # Create columns for topics
+            cols = st.columns(5)
+            for i, topic in enumerate(topics[:10]):
+                with cols[i % 5]:
+                    st.metric(
+                        topic.get("name", "Unknown"),
+                        f"{topic.get('frequency', 0)} notes"
+                    )
+        
+        st.markdown("---")
+        
+        # Learning Patterns
+        st.subheader("🎯 Learning Patterns")
+        if "patterns" in insights:
+            for pattern in insights["patterns"][:5]:
+                st.markdown(f"• {pattern}")
+        
+    else:
+        st.info("No insights generated. Run obsidian_06_insights_generator.py first.")
 
-# ============================================================================
-# TAB 4: INSIGHTS
-# ============================================================================
-
+# ============ TAB 4: LINK SUGGESTIONS ============
 with tab4:
-    st.title("💡 AI-Generated Insights")
+    st.header("🔗 Suggested Connections")
     
-    if insights:
-        st.subheader("Vault Intelligence")
-        st.markdown(f"""
-<div class="insight-box">
-{insights.get('vault_insights', 'Generating insights...')}
-</div>
-""", unsafe_allow_html=True)
+    if "link_suggestions" in data and data["link_suggestions"]:
+        suggestions = data["link_suggestions"]
         
-        st.divider()
+        # Filter by threshold
+        threshold = st.slider("Similarity Threshold", 0.0, 1.0, 0.5)
         
-        st.subheader("🎯 What You're Learning")
-        st.write("Based on your notes, these are your main learning topics:")
+        suggestion_list = suggestions.get("suggestions", [])
+        filtered_suggestions = [s for s in suggestion_list if s.get("score", 0) >= threshold]
         
-        for i, topic in enumerate(insights.get('top_topics', [])[:10], 1):
-            st.write(f"{i}. {topic}")
+        st.markdown(f"**Showing {len(filtered_suggestions)} suggestions**")
+        
+        for sugg in filtered_suggestions[:50]:
+            col1, col2, col3 = st.columns([0.4, 0.1, 0.4])
+            
+            with col1:
+                st.markdown(f"📄 **{sugg.get('note1', 'Unknown')}**")
+            
+            with col2:
+                score = sugg.get("score", 0)
+                st.markdown(f"<div style='text-align: center; color: #667eea; font-weight: bold;'>{score:.2%}</div>", unsafe_allow_html=True)
+            
+            with col3:
+                st.markdown(f"📄 **{sugg.get('note2', 'Unknown')}**")
+            
+            reason = sugg.get("reason", "")
+            st.caption(f"💡 {reason}")
+            st.divider()
+    
+    else:
+        st.info("No link suggestions. Run obsidian_04_link_suggester.py first.")
 
-# ============================================================================
-# TAB 5: LINK SUGGESTIONS
-# ============================================================================
-
+# ============ TAB 5: SETTINGS ============
 with tab5:
-    st.title("🔗 Smart Link Suggestions")
+    st.header("⚙️ Settings & Tools")
     
-    # Select a note
-    selected_note_title = st.selectbox(
-        "Choose a note to see suggestions:",
-        [n['title'] for n in notes]
-    )
+    col1, col2 = st.columns(2)
     
-    # Find note ID
-    selected_note_id = None
-    for note in notes:
-        if note['title'] == selected_note_title:
-            selected_note_id = note['id']
-            break
-    
-    if selected_note_id and selected_note_id in suggestions:
-        sugg_data = suggestions[selected_note_id]
+    with col1:
+        st.subheader("Data Status")
         
-        st.subheader(f"Suggested links for: {selected_note_title}")
+        status = {
+            "Vault Scan": os.path.exists("data/vault_scan.json"),
+            "Enriched Notes": os.path.exists("data/enriched_notes.json"),
+            "Knowledge Graph": os.path.exists("data/knowledge_graph.json"),
+            "Insights": os.path.exists("data/insights.json"),
+            "Vector Store": os.path.exists("vector_store/"),
+        }
         
-        if sugg_data['suggestions']:
-            for i, sugg in enumerate(sugg_data['suggestions'], 1):
-                with st.expander(f"{i}. {sugg['title']} - {sugg['reason']}"):
-                    st.write(f"**Reason:** {sugg['reason']}")
-                    st.write(f"**Location:** {sugg['folder']}")
-        else:
-            st.info("No suggestions found for this note")
-
-# ============================================================================
-# FOOTER
-# ============================================================================
-
-st.divider()
-st.caption("🧠 Obsidian AI Brain | Powered by AI & ChromaDB | Made with Streamlit")
+        for name, exists in status.items():
+            status_icon = "✅" if exists else "❌"
+            st.write(f"{status_icon} {name}")
+    
+    with col2:
+        st.subheader("Quick Actions")
+        
+        if st.button("🔄 Clear Cache", key="cache_clear"):
+            st.cache_resource.clear()
+            st.success("Cache cleared!")
+        
+        if st.button("📊 Export as JSON", key="export_json"):
+            export_data = json.dumps(data, indent=2)
+            st.download_button(
+                label="Download JSON",
+                data=export_data,
+                file_name=f"obsidian_export_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                mime="application/json"
+            )
+    
+    st.markdown("---")
+    
+    st.subheader("📖 How to Use")
+    st.markdown("""
+    1. **Setup Phase**: Run scripts in order from 01 to 06
+    2. **Notes Browser**: Search and explore your vault
+    3. **Knowledge Graph**: See connections between ideas
+    4. **Vault Intelligence**: AI-generated insights
+    5. **Link Suggestions**: Discover new connections
+    
+    **Need help?** See README.md in project folder
+    """)
+    
+    st.subheader("🔧 Environment")
+    st.write(f"App Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    st.write(f"Data Path: {os.path.abspath('data/')}")
+    st.write(f"Vector Store Path: {os.path.abspath('vector_store/')}")
