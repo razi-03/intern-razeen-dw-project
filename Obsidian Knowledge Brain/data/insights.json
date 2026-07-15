@@ -1,15 +1,111 @@
 {
-  "vault_insights": "1. The main theme or pattern is the use of various tools and platforms to improve sales workflows, marketing strategies, technical implementation, social media presence, and freelance work.\n2. A unique combination of ideas includes the use of generative AI in marketing teams, technical leadership in data science, and social media APIs for better engagement with customers.\n3. An actionable takeaway is to explore the potential benefits of using AWS Marketplace for scaling sales workflows and implementing technical solutions, as well as leveraging CogniMuse's journey strategy for improving freelance work.",
+  "vault_insights": "1. Main theme or pattern: The notes cover a variety of topics related to sales workflow, social media workflow, AWS marketplace, freelance key features, implementation of what and how, and CogniMuse journey. However, there is no clear main theme or pattern that ties all these topics together.\n2. Unique combination of ideas: The notes include a mix of technical and non-technical topics, such as social media APIs, AI strategy, leadership, generative AI, marketing teams, technical implementation leads, AWS marketplace, freelance key features, CogniMuse journey, and more. This unique combination of ideas suggests that the author is knowledgeable in multiple areas and has a broad perspective on various topics.\n3. Actionable takeaway: The notes provide insights into specific tools and strategies for each topic covered. For example, they mention free tiers for social media APIs, AWS marketplace, and Gmail API, as well as AI strategy, leadership, generative AI, marketing teams, technical implementation leads, and CogniMuse journey. These actionable takeaways can help readers implement these strategies in their own work or business.",
   "top_topics": [
-    "Why:",
-    "What:",
-    "Purpose",
-    "Credits",
-    "Included Usage",
-    "Scaling",
-    "How:",
-    "Access",
-    "Expiration",
-    "Results:"
-  ]
+    {
+      "name": "Why:",
+      "frequency": 3,
+      "rank": 1
+    },
+    {
+      "name": "What:",
+      "frequency": 3,
+      "rank": 2
+    },
+    {
+      "name": "Purpose",
+      "frequency": 2,
+      "rank": 3
+    },
+    {
+      "name": "Credits",
+      "frequency": 2,
+      "rank": 4
+    },
+    {
+      "name": "Included Usage",
+      "frequency": 2,
+      "rank": 5
+    },
+    {
+      "name": "Scaling",
+      "frequency": 2,
+      "rank": 6
+    },
+    {
+      "name": "How:",
+      "frequency": 2,
+      "rank": 7
+    },
+    {
+      "name": "Access",
+      "frequency": 1,
+      "rank": 8
+    },
+    {
+      "name": "Expiration",
+      "frequency": 1,
+      "rank": 9
+    },
+    {
+      "name": "Results:",
+      "frequency": 1,
+      "rank": 10
+    }
+  ],
+  "topic_frequency": [
+    {
+      "name": "Why:",
+      "frequency": 3,
+      "rank": 1
+    },
+    {
+      "name": "What:",
+      "frequency": 3,
+      "rank": 2
+    },
+    {
+      "name": "Purpose",
+      "frequency": 2,
+      "rank": 3
+    },
+    {
+      "name": "Credits",
+      "frequency": 2,
+      "rank": 4
+    },
+    {
+      "name": "Included Usage",
+      "frequency": 2,
+      "rank": 5
+    },
+    {
+      "name": "Scaling",
+      "frequency": 2,
+      "rank": 6
+    },
+    {
+      "name": "How:",
+      "frequency": 2,
+      "rank": 7
+    },
+    {
+      "name": "Access",
+      "frequency": 1,
+      "rank": 8
+    },
+    {
+      "name": "Expiration",
+      "frequency": 1,
+      "rank": 9
+    },
+    {
+      "name": "Results:",
+      "frequency": 1,
+      "rank": 10
+    }
+  ],
+  "stats": {
+    "total_unique_concepts": 20,
+    "total_concept_mentions": 29
+  }
 }
