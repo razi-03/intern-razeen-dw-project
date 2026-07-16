@@ -2,10 +2,10 @@
 
 **A comprehensive collection of 6 production-ready AI, ML, and Data Engineering projects.**
 
-> Built by \*\*Razeen Sheikh Ansar\*\* | AI \& Data Science Student | Data Engineering Intern  
-> \*Last Updated: July 16, 2026\*
+> Built by Razeen Sheikh Ansar | AI \& Data Science Student | Data Engineering Intern  
+Last Updated: July 16, 2026
 
-\---
+
 
 ## 📋 Table of Contents
 
@@ -19,7 +19,7 @@
 * [Key Technologies](#key-technologies)
 * [Learning Outcomes](#learning-outcomes)
 
-\---
+
 
 ## 🎯 Quick Overview
 
@@ -35,11 +35,11 @@
 **Total Portfolio Size:** \~28 Python scripts + dashboards + production-ready code    
 **All Projects:** 100% Local-capable (except Finance which uses Gemini API)
 
-\---
+
 
 ## 📦 All 6 Projects
 
-### 1\. 🎫 Support Ticket Classifier — AI-Powered POC
+### 1\. 🎫 Support Ticket Classifier - AI-Powered POC
 
 **What it does:** Automatically classifies customer support tickets by category, analyzes sentiment, and assigns priority levels.
 
