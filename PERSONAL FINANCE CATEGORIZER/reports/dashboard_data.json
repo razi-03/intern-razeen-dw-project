@@ -1,0 +1,85 @@
+{
+  "currency": "USD",
+  "currency_symbol": "$",
+  "timestamp": "2026-07-16T09:50:20.291116",
+  "transactions": [
+    {
+      "date": "2024-07-08",
+      "description": "Starbucks",
+      "amount": 45.5,
+      "category": "Food",
+      "confidence": 0.95,
+      "flagged": false
+    },
+    {
+      "date": "2024-07-08",
+      "description": "Uber",
+      "amount": 12.0,
+      "category": "Transportation",
+      "confidence": 0.98,
+      "flagged": false
+    },
+    {
+      "date": "2024-07-07",
+      "description": "Amazon",
+      "amount": 89.99,
+      "category": "Shopping",
+      "confidence": 0.92,
+      "flagged": true
+    }
+  ],
+  "statistics": {
+    "total_transactions": 3,
+    "total_spent": 147.49,
+    "average_transaction": 49.16,
+    "median_transaction": 45.5,
+    "min_transaction": 12.0,
+    "max_transaction": 89.99,
+    "std_deviation": 39.12
+  },
+  "by_category": {
+    "Shopping": {
+      "total": 89.99,
+      "count": 1,
+      "percentage": 61.0,
+      "avg": 89.99
+    },
+    "Food": {
+      "total": 45.5,
+      "count": 1,
+      "percentage": 30.8,
+      "avg": 45.5
+    },
+    "Transportation": {
+      "total": 12.0,
+      "count": 1,
+      "percentage": 8.1,
+      "avg": 12.0
+    }
+  },
+  "top_merchants": {
+    "Amazon": {
+      "total": 89.99,
+      "count": 1
+    },
+    "Starbucks": {
+      "total": 45.5,
+      "count": 1
+    },
+    "Uber": {
+      "total": 12.0,
+      "count": 1
+    }
+  },
+  "anomalies": [
+    {
+      "type": "amount_outlier",
+      "reason": "High amount for category",
+      "severity": "medium"
+    }
+  ],
+  "anomaly_count": 1,
+  "high_severity_count": 0,
+  "medium_severity_count": 1,
+  "low_severity_count": 0
+}

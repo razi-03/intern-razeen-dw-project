@@ -1,9 +1,8 @@
 """
-Personal Finance Categorizer - Streamlit Dashboard
-Web interface for uploading and analyzing bank statements
+Personal Finance Categorizer - Streamlit Dashboard (Custom Format)
+Web interface for Indian bank statements: date,DrCr,amount,balance,mode,name
 Author: RAze
-Date: 2026-07-08
-Updated: 2026-07-16 - Added Analyse button and improved UI flow
+Date: 2026-07-16
 """
 
 import streamlit as st
@@ -16,7 +15,7 @@ from datetime import datetime
 # Import our modules
 from finance_01_categorizer import FinanceCategorizer
 from finance_02_anomaly_detector import AnomalyDetector
-from finance_03_csv_handler import CSVHandler
+from finance_03_csv_handler_CUSTOM import CustomBankStatementHandler
 from finance_04_report_generator import ReportGenerator
 
 st.set_page_config(
@@ -50,8 +49,8 @@ def init_systems():
         
         categorizer = FinanceCategorizer(api_key=api_key)
         detector = AnomalyDetector()
-        csv_handler = CSVHandler()
-        reporter = ReportGenerator()
+        csv_handler = CustomBankStatementHandler()
+        reporter = ReportGenerator(currency='INR')
         
         return categorizer, detector, csv_handler, reporter
     except Exception as e:
@@ -92,6 +91,7 @@ with st.sidebar:
     st.write("""
 **Personal Finance Categorizer**
 
+Indian Bank Statement Analyzer
 - Upload bank statement CSV
 - AI categorizes transactions
 - Detects unusual spending
@@ -122,10 +122,10 @@ with tab1:
         # Show preview of uploaded CSV
         try:
             preview_df = pd.read_csv(uploaded_file)
-            st.subheader("📋 Preview of your data:")
+            st.subheader("📋 Preview of your data (first 5 rows):")
             st.dataframe(preview_df.head(5), use_container_width=True)
-        except:
-            st.warning("Could not preview file")
+        except Exception as e:
+            st.warning(f"Could not preview file: {e}")
         
         # Analyse button
         if st.button("🚀 ANALYSE", use_container_width=True, type="primary"):
@@ -136,12 +136,12 @@ with tab1:
                     with open(temp_path, "wb") as f:
                         f.write(uploaded_file.getbuffer())
                     
-                    # Load CSV
+                    # Load CSV with custom format
                     progress_bar = st.progress(0)
                     status_text = st.empty()
                     
                     status_text.text("📂 Loading transactions...")
-                    transactions = csv_handler.load_csv(temp_path)
+                    transactions = csv_handler.load_custom_format(temp_path)
                     currency = csv_handler.currency
                     symbol = csv_handler.get_currency_symbol()
                     
@@ -189,7 +189,7 @@ with tab1:
                         st.session_state.currency = currency
                         st.session_state.symbol = symbol
                         
-                        st.success("✅ Analysis Complete! Check the other tabs for results.")
+                        st.success("✅ Analysis Complete! Check the Dashboard tab for results.")
                         
                         # Clean up
                         temp_path.unlink()
@@ -198,17 +198,17 @@ with tab1:
                     st.error(f"❌ Error during analysis: {str(e)}")
     
     else:
-        st.info("👆 Upload a CSV file to get started")
+        st.info("👆 Upload your bank statement CSV to get started")
         
-        # Show example format
+        # Show expected format
         st.divider()
         st.subheader("📋 Expected CSV Format")
-        st.code("""Date,Description,Amount
-2024-07-08,Starbucks Coffee,-45.50
-2024-07-08,Salary Deposit,5000.00
-2024-07-07,Amazon Purchase,-89.99
-2024-07-06,Netflix,-15.99
-""", language="csv")
+        st.write("Your bank statement should have these columns:")
+        st.code("""date,DrCr,amount,balance,mode,name,Day,Month,Year,Tday
+2022-01-01,Db,10000.0,473292.87,ATM,,01,01,2022,1
+2022-01-02,Db,930.0,462362.87,UPI,AYUBRAJE,02,01,2022,2
+2022-01-07,Db,2000.0,460362.87,UPI,ABUTALAH,07,01,2022,3
+2022-01-10,Cr,5000.0,465362.87,NEFT,,10,01,2022,4""", language="csv")
 
 # ============================================================================
 # TAB 2: DASHBOARD
@@ -230,7 +230,7 @@ with tab2:
         with col1:
             st.metric("💳 Transactions", stats['total_transactions'])
         with col2:
-            st.metric("💰 Total Spent", f"{symbol}{stats['total_spent']:.2f}")
+            st.metric("💰 Total Spent", f"{symbol}{abs(stats['total_spent']):.2f}")
         with col3:
             st.metric("📊 Average", f"{symbol}{stats['average_transaction']:.2f}")
         with col4:
@@ -256,7 +256,7 @@ with tab2:
         with col2:
             st.subheader("📊 Distribution")
             
-            # Pie chart data
+            # Bar chart
             df = pd.DataFrame({
                 'Category': categories.keys(),
                 'Amount': [info['total'] for info in categories.values()]
@@ -300,7 +300,6 @@ with tab3:
         # List anomalies
         for i, anom in enumerate(anomalies):
             severity = anom.get('severity', 'low')
-            
             css_class = f"anomaly-{severity}"
             
             if 'transaction' in anom:
@@ -362,7 +361,7 @@ with tab4:
         with col1:
             wrong_txn = st.selectbox(
                 "Select transaction:",
-                [f"{t['description']} ({t['category']})" for t in categorized[:5]]
+                [f"{t['description']} ({t['category']})" for t in categorized[:10]]
             )
         
         with col2:
@@ -391,4 +390,4 @@ with tab4:
 # ============================================================================
 
 st.divider()
-st.caption("💰 Personal Finance Categorizer | Powered by Google Gemini (Latest) | Made by Razeen")
+st.caption("💰 Personal Finance Categorizer | Indian Bank Statements | Powered by Google Gemini | Made by RAze")
