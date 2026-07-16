@@ -28,7 +28,15 @@ st.set_page_config(
 st.markdown("""
 <style>
     .metric-card { background-color: #f0f2f6; padding: 1rem; border-radius: 0.5rem; }
-    .category-box { background-color: #e8f4f8; padding: 1rem; border-radius: 0.5rem; margin: 0.5rem 0; }
+    .category-box { 
+        background-color: #e8f4f8; 
+        padding: 1rem; 
+        border-radius: 0.5rem; 
+        margin: 0.5rem 0;
+        color: #000000 !important;
+    }
+    .category-box b { color: #000000 !important; }
+    .category-box small { color: #333333 !important; }
     .anomaly-high { background-color: #ffcccc; padding: 1rem; border-radius: 0.5rem; border-left: 4px solid #cc0000; }
     .anomaly-medium { background-color: #fff3cd; padding: 1rem; border-radius: 0.5rem; border-left: 4px solid #ff9800; }
     .anomaly-low { background-color: #e7f3ff; padding: 1rem; border-radius: 0.5rem; border-left: 4px solid #2196f3; }
@@ -256,13 +264,42 @@ with tab2:
         with col2:
             st.subheader("📊 Distribution")
             
-            # Bar chart
-            df = pd.DataFrame({
-                'Category': categories.keys(),
-                'Amount': [info['total'] for info in categories.values()]
-            })
+            st.info("Pie chart hidden for now. Matplotlib implementation in backend.")
             
-            st.bar_chart(df.set_index('Category'))
+            # ===== MATPLOTLIB PIE CHART (HIDDEN FROM UI) =====
+            # Kept in backend for future use when matplotlib is stable
+            # 
+            # import matplotlib.pyplot as plt
+            # 
+            # categories_list = list(categories.keys())
+            # amounts_list = [info['total'] for info in categories.values()]
+            # 
+            # fig, ax = plt.subplots(figsize=(8, 6))
+            # 
+            # colors = plt.cm.Set3(range(len(categories_list)))
+            # wedges, texts, autotexts = ax.pie(
+            #     amounts_list,
+            #     labels=categories_list,
+            #     autopct='%1.1f%%',
+            #     colors=colors,
+            #     startangle=90
+            # )
+            # 
+            # # Make percentage text readable
+            # for autotext in autotexts:
+            #     autotext.set_color('black')
+            #     autotext.set_fontsize(10)
+            #     autotext.set_weight('bold')
+            # 
+            # # Make labels readable
+            # for text in texts:
+            #     text.set_fontsize(10)
+            #     text.set_weight('bold')
+            # 
+            # ax.set_title('Spending Distribution', fontsize=14, fontweight='bold', pad=20)
+            # 
+            # st.pyplot(fig, use_container_width=True)
+            # ===== END MATPLOTLIB PIE CHART =====
         
         st.divider()
         
