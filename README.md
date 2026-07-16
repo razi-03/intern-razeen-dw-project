@@ -362,39 +362,39 @@ Retail-Sales-Data-Engineering/
 
 ### Machine Learning \& Data Science
 
-* **scikit-learn** — Classification, anomaly detection
-* **Pandas** — Data manipulation
-* **NumPy** — Numerical computing
-* **Scipy** — Statistical analysis
-* **statsmodels** — Time series (ARIMA)
+* **scikit-learn** :lassification, anomaly detection
+* **Pandas** : Data manipulation
+* **NumPy** : Numerical computing
+* **Scipy** : Statistical analysis
+* **statsmodels** : Time series (ARIMA)
 
 ### LLM \& AI
 
-* **Ollama** — Local LLM inference
-* **Google Gemini API** — Cloud LLM (Finance)
-* **LangChain** — LLM orchestration
-* **Sentence Transformers** — Embeddings
-* **ChromaDB** — Vector database
+* **Ollama** : Local LLM inference
+* **Google Gemini API** : Cloud LLM (Finance)
+* **LangChain** : LLM orchestration
+* **Sentence Transformers** : Embeddings
+* **ChromaDB** : Vector database
 
 ### Web \& Dashboards
 
-* **Streamlit** — Interactive web apps
-* **Power BI** — Enterprise dashboards
-* **Plotly** — Visualizations
+* **Streamlit** : Interactive web apps
+* **Power BI** : Enterprise dashboards
+* **Plotly** : Visualizations
 
 ### Data Engineering
 
-* **Microsoft Fabric** — Cloud data warehouse
-* **PySpark** — Distributed processing
-* **Delta Lake** — Table format
-* **SQL** — Analytics queries
+* **Microsoft Fabric** : Cloud data warehouse
+* **PySpark** : Distributed processing
+* **Delta Lake** : Table format
+* **SQL** : Analytics queries
 
 ### Infrastructure
 
-* **Python 3.8+** — Core language
-* **pip/venv** — Package management
-* **Git** — Version control
-* **Docker** — Optional containerization
+* **Python 3.8+** : Core language
+* **pip/venv** : Package management
+* **Git** : Version control
+* **Docker** : Optional containerization
 
 \---
 
@@ -550,14 +550,14 @@ Portfolio-Projects/
 
 ### From All Projects You'll Learn:
 
-* ✅ **Machine Learning** — Classification, anomaly detection, ensemble methods
-* ✅ **LLMs \& RAG** — Local inference, vector embeddings, semantic search
-* ✅ **Data Engineering** — ETL pipelines, medallion architecture, SQL
-* ✅ **NLP** — Text preprocessing, sentiment analysis, embeddings
-* ✅ **Web Development** — Streamlit dashboards, interactive UIs
-* ✅ **Production Patterns** — Error handling, monitoring, deployment
-* ✅ **Cloud Platforms** — Google Gemini API, Microsoft Fabric
-* ✅ **Data Structures** — Vector databases, knowledge graphs, time series
+* ✅ **Machine Learning** : Classification, anomaly detection, ensemble methods
+* ✅ **LLMs \& RAG** : Local inference, vector embeddings, semantic search
+* ✅ **Data Engineering** : ETL pipelines, medallion architecture, SQL
+* ✅ **NLP** : Text preprocessing, sentiment analysis, embeddings
+* ✅ **Web Development** : Streamlit dashboards, interactive UIs
+* ✅ **Production Patterns**: Error handling, monitoring, deployment
+* ✅ **Cloud Platforms** : Google Gemini API, Microsoft Fabric
+* ✅ **Data Structures** : Vector databases, knowledge graphs, time series
 
 \---
 
