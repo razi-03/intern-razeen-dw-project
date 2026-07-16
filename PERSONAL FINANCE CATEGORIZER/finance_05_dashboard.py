@@ -3,6 +3,7 @@ Personal Finance Categorizer - Streamlit Dashboard
 Web interface for uploading and analyzing bank statements
 Author: RAze
 Date: 2026-07-08
+Updated: 2026-07-16 - Migrated to google.genai (non-deprecated)
 """
 
 import streamlit as st
@@ -96,7 +97,7 @@ with st.sidebar:
 - Detects unusual spending
 - Learn from corrections
 
-Powered by Google Gemini
+Powered by Google Gemini (latest)
     """)
 
 # ============================================================================
@@ -356,4 +357,4 @@ with tab4:
 # ============================================================================
 
 st.divider()
-st.caption("💰 Personal Finance Categorizer | Powered by Google Gemini | Made by RAze")
+st.caption("💰 Personal Finance Categorizer | Powered by Google Gemini (Latest) | Made by RAze")

@@ -3,9 +3,10 @@ Personal Finance Categorizer - Main Categorization Engine
 Uses Google Gemini API to categorize transactions
 Author: RAze
 Date: 2026-07-08
+Updated: 2026-07-16 - Migrated to google.genai (non-deprecated)
 """
 
-import google.generativeai as genai
+import google.genai as genai
 import json
 from pathlib import Path
 import os
@@ -25,8 +26,7 @@ class FinanceCategorizer:
         if not api_key:
             raise ValueError("GEMINI_API_KEY not found. Set it as env variable or pass it.")
         
-        genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.client = genai.Client(api_key=api_key)
         self.learned_categories = self._load_learned_categories()
         logger.info("✅ Gemini API initialized")
     
@@ -97,7 +97,10 @@ Respond ONLY with valid JSON:
 Must use one of the common categories above."""
         
         try:
-            response = self.model.generate_content(prompt)
+            response = self.client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=prompt
+            )
             result = json.loads(response.text)
             result['description'] = description
             result['amount'] = amount
